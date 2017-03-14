@@ -1,0 +1,25 @@
+---
+title: hexo感染js
+categories:
+  - 尺工
+comments: false
+date: 2017-03-03 17:54:28
+---
+<p></p>
+<!-- more -->
+## 前言
+之前在放自己的游戏和自定义页面的时候，写的代码莫名其妙的会被转成不同的格式，比如 html 文件加很多个 `</br>` ，js 文件加了 '=' ,' ',导致解析出错。没想到办法只好先生成 public 后再把页面自己放进 public 里面去。
+这么搞极其麻烦，不过现在找到了一种好方法
+
+## 解决
+在 hexo 的站点配置文件 _config.yml 下有一个 skip_render 参数，使 hexo 不去渲染指定的文件或文件夹，路径相对于 source 文件夹
+用法如下
+
+## 代码
+```
+skip_render:
+  - "album/vue.min.js" //针对某个文件
+  - "album/*"			//针对某个文件夹
+  - "album/*.html"		//针对某种类型
+```
+

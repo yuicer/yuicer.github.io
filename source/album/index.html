@@ -1,0 +1,27 @@
+---
+comments: false
+---
+<div id="album_box" v-cloak>
+	<link rel="stylesheet" href="./main.css">
+	<div class="col">
+		<div class="col_box" v-for="(item,index) in imgsrc" v-if="index%3==0">
+			<img class="col_img" :src="item" alt="">
+			<p></p>
+		</div>
+	</div>
+	<div class="col">
+		<div class="col_box" v-for="(item,index) in imgsrc" v-if="index%3==1">
+			<img class="col_img" :src="item" alt="">
+			<p></p>
+		</div>
+	</div>
+	<div class="col">
+		<div class="col_box" v-for="(item,index) in imgsrc" v-if="index%3==2">
+			<img class="col_img" :src="item" alt="">
+			<p></p>
+		</div>
+	</div>
+</div>
+
+<script src="vue.min.js"></script>
+<script src="main.js"></script>

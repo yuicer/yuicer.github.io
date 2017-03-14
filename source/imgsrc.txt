@@ -1,0 +1,1 @@
+./img/album/1.png,./img/album/10.jpg,./img/album/11.jpg,./img/album/12.jpg,./img/album/2.png,./img/album/3.jpg,./img/album/4.jpg,./img/album/5.jpg,./img/album/6.jpg,./img/album/7.jpg,./img/album/8.jpg,./img/album/9.jpg,./img/autom.jpg,./img/me.png,./img/pay.jpg,./img/spring.jpg,./img/summer.jpg,./img/winter.jpg

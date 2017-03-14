@@ -1,0 +1,67 @@
+<h1 id="diary_title">公告</h1>
+<div id="diary_outbox">
+	<div class="diary">
+		<p>请在下方留言</p>
+	</div>
+</div>
+<h1 id="diary_title">日志</h1>
+<div id="diary_outbox">
+	<div class="diary">
+		<p>deemo egret <span>--- 17/3/2</span></p>
+		<p>发现一个好网站 <a href="https://www.codewars.com">www.codewars.com</a><span>--- 17/3/2</span></p>
+		<p>anonymous<span>--- 17/3/1</span></p>
+		<p>并不是大佬。。被忽悠了。<span>--- 17/2/28</span></p>
+		<p>被大佬教育了什么是前端，自己还是局限在web前端的范围了 <span>--- 17/2/28</span></p>
+		<p>tel your world 想把播放器计划开坑了。。。 <span>--- 17/2/25</span></p>
+		<p>相册简单的搭好了，下滑加载，自动化啥的以后再搞吧。。不管了。丢 <span>--- 17/2/24</span></p>
+		<p>梨花院落溶溶月，柳絮池塘淡淡风 <span>--- 17/2/23</span></p>
+
+	</div>
+</div>
+<style>
+	#diary_title {
+		text-align: center;
+		margin-bottom: 30px;
+	}
+	
+	#diary_title:after {
+		content: "";
+		display: block;
+		width: 12%;
+		height: 2px;
+		background: rgba(0, 0, 0, .8);
+		margin: 0 auto;
+	}
+	
+	#diary_outbox {
+		width: 80%;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	
+	.diary {
+		overflow: auto;
+		/*		width: 100%;*/
+		margin-right: -18px;
+	}
+	
+	@media(min-width:1010px) {
+		.diary {
+			min-height: 100px;
+			max-height: 600px;
+		}
+	}
+	
+	@media(max-width:1010px) {
+		.diary {
+			min-height: 50px;
+			max-height: 350px;
+		}
+	}
+	
+	.diary>p>span {
+		float: right;
+		margin-right: 18px;
+	}
+
+</style>

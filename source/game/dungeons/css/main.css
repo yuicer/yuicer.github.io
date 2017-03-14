@@ -1,0 +1,49 @@
+body,
+html {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #333;
+	color: white;
+	font-family: "微软雅黑";
+	font-size: 18px;
+}
+
+#canvas {
+	position: absolute;
+	left: calc(50% - 400px);
+	top: calc(50% - 300px);
+}
+
+@media screen and (min-width: 1201px) {
+	#game_intro {
+		text-indent: 4em;
+		position: absolute;
+		width: 60%;
+		left: 20%;
+		bottom: 0px;
+		word-break: break-all;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	#game_intro {
+		text-indent: 4em;
+		font-size: 20px;
+		position: absolute;
+		bottom: 0px;
+		word-break: break-all;
+	}
+}
+
+#section3>p {
+	display: block;
+}
+
+@media screen and (min-width: 990px) {
+	#section3>p {
+		display: none;
+	}
+}
