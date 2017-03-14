@@ -50,6 +50,7 @@ export NODE_PATH=$NODE_HOME/lib/node_modules
 坑：将项目直接传过去之后用 npm start 启动项目完全没效果。原先的后台把端口号给禁用了。。
 
 但是这种开启不能后台开启，挂掉0秒重载，所以需要用到 pm2 工具。
+******
 在查找 pm2 的时候偶然看到了尤雨溪大大的一个部署工具 pod ，所以果断去试着用了用。
 首先在服务端和本地都要安装 `npm install pod -g`
 安装之后配置一个路径生成目录，也可以不配置，第一次 create 会自动生成，目录如下
@@ -64,6 +65,7 @@ export NODE_PATH=$NODE_HOME/lib/node_modules
 服务端 `pod create myapp`，会在 apps 下创建一个 myapp 的 git 仓库
 本地拉取`git clone ssh://yourserver/pod_dir/repos/myapp.git`
 之后就可以在本地进行修改，之后 git push 直接上传，不用麻烦的传文件到服务器上了。并且还有版本管理功能。
-
+********
+事实证明并不是那么好用。。看文档没学会后又滚回了直接用 pm2 。毕竟 pm2 的文档以及用法很容易找
 
 
