@@ -28,7 +28,7 @@ code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
   - "album/vue.min.js"
-  - "game/dungeons/*"
+  - "game/dungeons/**"
 
 
 # Writing
