@@ -48,7 +48,7 @@ webpack-dev-server     MISSING  2.1.0-beta.12  1.16.2  test
 
 ## 生成ssh密钥，
 在git-bash中，`cat ~/.ssh/id_rsa.pub`用来查看ssh密钥，
-如果没有则创建ssh-keygen -t rsa -C "yuicer@yeah.net"
+如果没有则创建 `ssh-keygen -t rsa -C "you@mail.com"`  【你的git邮箱】
 windows下用`clip < ~/.ssh/id_rsa.pub`来复制到剪贴板中
 
 
