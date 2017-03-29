@@ -52,7 +52,9 @@ export NODE_PATH=$NODE_HOME/lib/node_modules
 但是这种开启不能后台开启，挂掉0秒重载等功能，所以需要用到高大上的 pm2 工具了。
 ******
 在查找 pm2 的时候偶然看到了尤雨溪大大的一个部署工具 pod ，所以果断去试着用了用。
-然而1个小时后由于没学会。。。又滚回了直接用 pm2 。pm2 的官网文档很不错[官网](http://pm2.keymetrics.io/)
+然而1个小时后由于没学会。。。又滚回了直接用 pm2 。
+******
+pm2 的官网文档很不错[官网](http://pm2.keymetrics.io/)
 对于项目配置文件，这里是 json 格式
 ```
 {
@@ -80,11 +82,13 @@ export NODE_PATH=$NODE_HOME/lib/node_modules
 }
 
 ```
-如果有多个项目，再想数组里加上一个就好。配置文件可以放在跟目录。
-配置好后直接 pm2 start all 就好。
-
-
-
+如果有多个项目，再向数组里加上一个就好。配置文件可以放在根目录。
+配置好后直接 pm2 start all。
+******
+额，用了之后感觉还是得有个 git 仓库来管理比较好，所以，，，我又用回了 pod 。。
+远端 pod create myapp
+本地git clone ssh://your-server/pod_dir/myapp.git
+这样就建好了一个 git 仓库
 
 
 
