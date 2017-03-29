@@ -3,7 +3,7 @@ title: linux服务器部署node
 categories:
   - 尺工
 comments: false
-date: 2017-03-08 11:02:54
+date: 2017-03-29 17:02:54
 ---
 <p></p>
 <!-- more -->
@@ -86,12 +86,29 @@ pm2 的官网文档很不错[官网](http://pm2.keymetrics.io/)
 配置好后直接 pm2 start all。
 ******
 额，用了之后感觉还是得有个 git 仓库来管理比较好，所以，，，我又用回了 pod 。。
-远端 pod create myapp
-本地git clone ssh://your-server/pod_dir/myapp.git
+远端 pod create myapp 会建立一个目录
+
+> root
+  -pod
+  --apps
+  ---myapp
+  --repos
+  ---myapp.git
+  
 这样就建好了一个 git 仓库
+本地git clone ssh://your-server/pod_dir/myapp.git
+运行
+pm2 start nodeserver.json
+重启
+pm2 restart all
+停止
+pm2 stop all
+关闭
+pm2 kill
+不过 pod 的配置文件依旧没看懂，还是用的 pm2 的配置文件，把这个配置文件放在 pod 文件夹下，改下 cwd 就好 
 
-
-
+******
+我又回来了。。。其实 pm2 自带有 deploy 来着。
 
 
 
