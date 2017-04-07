@@ -37,7 +37,7 @@ import "my-module"
 ```
 
 ## require
-require 是 commonjs 规范里面的，node 采用了 commonjs 格式，而 webpack 是 node 格式。
+require 是 commonjs 规范里面的，node 采用了 commonjs 格式，而 webpack 运行在 node 中的。
 require 主要是用来加载文件，不写相对路径，加载的就是内置模块（具体还不知道是在 webpack 中哪里设置的），node_module 中的，加了相对路径就是加载自己写的文件。
 require 后会去执行这个文件。
 
