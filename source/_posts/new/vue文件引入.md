@@ -20,7 +20,8 @@ date: 2017-04-07 17:09:52
 
 2.在需要的地方使用 var name = require('./name')
 比如`var THREE = require('../../../static/three.min.js')`
-缺点，对于每一个 vue 组件，都需要去这样写，而且还要根据文件的路径去做更改，（或许可以用别名？）
+缺点，对于每一个 vue 组件，都需要去这样写，而且还要根据文件的路径去做更改【这里可以用到别名，见最下】
+
 
 3.绑定 vue 全局对象，
 ```
@@ -100,3 +101,8 @@ function resolve(dir) {
 }
 ```
 注意此别名路径一定要写对，否则它会去把这个别名当作一个安装的模块，到 node_modules 里去查找，然后报错找不到，提示你 npm 安装。
+使用： 
+js： require('src/main.js')/import a from ('src/main.js')
+html/css: src = "~assets/me.png"
+
+
