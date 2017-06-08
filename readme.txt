@@ -32,5 +32,6 @@ tags标签去掉
 相册
 关于的个人介绍
 
-
+图片上传 图片放到img文件夹后，node upload.js
+site-meta样式 搜颜色
 
