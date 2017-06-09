@@ -75,9 +75,25 @@ mongod.exe --dbpath d:\mongo\db
 pause
 ```
 之后本机的 27017 端口就可以连接
+也可以写入全局变量然后运行
 
 ### robomongo
 这是一个 mongodb 的可视化工具，挺方便的。
+
+###  连接
+用 mongoskin 或者 mongoose 都可以，不过用 mongoose 的多很多
+连接端口号`mongodb://localhost:27017/test`
+之后直接返回就可以
+```
+router.get('/users', function (req, res, next) {
+	db.collection('users').find().toArray(function (err, result) {
+		if (err) throw err;
+		res.send(result)
+	});
+});
+```
+test为你的某一个数据库，之后就可以进行操作了。这里我用的是mongoose，这个再找一篇说这个。
+
 
 
 
