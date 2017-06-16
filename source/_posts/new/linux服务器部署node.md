@@ -3,7 +3,7 @@ title: linux服务器部署node
 categories:
   - 尺工
 comments: false
-date: 2017-03-29 17:02:54
+date: 2017-06-1 17:02:54
 ---
 <p></p>
 <!-- more -->
@@ -34,7 +34,7 @@ node -v  // 之后就可以在任意位置使用
 ```
 坑：我自己之前自作聪明，下到本地后先解压后改了名字【想着好打一点】，把文件夹传了过去，可是`./node -v`根本就没用。。哎。
 
-配置 node 环境变量 
+### 配置 node 环境变量 
 首先进入`vim /etc/profile`
 按 i 进入编辑模式，在文本的最下面输入以下语句
 ```
@@ -45,29 +45,30 @@ export NODE_PATH=$NODE_HOME/lib/node_modules
 按 esc 退出编辑模式，打 :wq 退出保存，
 输入 `source/etc/profile`使配置生效
 坑：之前不知道这个玩意，npm 装的全局包一直保没有报 not command，因为找不到装的路径位置。后来把环境变量加上去的时候【复制的网上的代码】错打了几个字符，然后就还是报错。导致折腾了一个小时。
-### 启动项目
+
+## 启动项目
 项目目录下面启动 node start.js，之后就可以访问了
 坑：将项目直接传过去之后用 npm start 启动项目完全没效果。原先的后台把端口号给禁用了。。
 
-但是这种开启不能后台开启，挂掉0秒重载等功能，所以需要用到高大上的 pm2 工具了。
-******
-在查找 pm2 的时候偶然看到了尤雨溪大大的一个部署工具 pod ，所以果断去试着用了用。
-然而1个小时后由于没学会。。。又滚回了直接用 pm2 。
-******
+一般开发都是在本地，然后运行放服务器上，两边同步很麻烦，所以一般都是在服务器上弄个 git 仓库。
+在服务器上一般都会用 pm2 工具，他能让后台程序一直在服务器上跑。然后 pm2 里面自带一个 deployment ，可以设置后同步远程
+我最开始用的是尤大大的 pod 工具,也是一样的逻辑，只不过稍微有点区别。
+
+### pm2
 pm2 的官网文档很不错[官网](http://pm2.keymetrics.io/)
-对于项目配置文件，这里是 json 格式
+对于pm2项目配置文件nodeserver.json,可管理多个项目
 ```
 {
     "apps": [{
         // Application #1
-        "name": "front_end",
+        "name": "server",
         "script": "./bin/www",      //脚本位置，默认由 node 执行
         "cwd": "./front_end",       //文件启动位置
         "args": ["--toto=heya coco", "-d", "1"],
-        "node_args": "--harmony",
+        "node_args": "--harmony",		//有改动自动跟新
         "merge_logs": true,
         "instances": 4,         //4个实例
-        "exec_mode": "cluster",     //多进程模式
+        "exec_mode": "cluster",     /多核cpu模拟多进程模式
         "error_file": "./log/err.log",      //以下为 log 日志
         "out_file": "./log/out.log",
         "pid_file": "./log/pids.pid",
@@ -83,20 +84,6 @@ pm2 的官网文档很不错[官网](http://pm2.keymetrics.io/)
 
 ```
 如果有多个项目，再向数组里加上一个就好。配置文件可以放在根目录。
-配置好后直接 pm2 start all。
-******
-额，用了之后感觉还是得有个 git 仓库来管理比较好，所以，，，我又用回了 pod 。。
-远端 pod create myapp 会建立一个目录
-
-> root
-  -pod
-  --apps
-  ---myapp
-  --repos
-  ---myapp.git
-  
-这样就建好了一个 git 仓库
-本地git clone ssh://your-server/pod_dir/myapp.git
 运行
 pm2 start nodeserver.json
 重启
@@ -105,13 +92,34 @@ pm2 restart all
 pm2 stop all
 关闭
 pm2 kill
-不过 pod 的配置文件依旧没看懂，还是用的 pm2 的配置文件，把这个配置文件放在 pod 文件夹下，改下 cwd 就好 
 
-******
-我又回来了。。。其实 pm2 自带有 deploy 来着。
+#### pm2开机自启动
+pm2 list 看到已启动的进程后 pm2 startup 
+之后它会打印出一系列命令，中间有一部分是让你执行的，复制后执行一遍
+当把它所说的执行完后，会再度打印一串内容
+之后 pm2 save 就完成了，非常简单。
 
+### pod
+远端 pod create myapp 会建立一个目录
 
+> root
+  -pod
+   -apps
+    +myapp
+    -repos
+     +myapp.git
+  
+这样就建好了一个 git 仓库
+本地git clone ssh://your-server/pod_dir/myapp.git
+然后将项目结构修改如下
 
+> nodeserver
+ -noserver.json
+ -README.md
+ -apps
+  +server
+  	
+ 
 
 
 
