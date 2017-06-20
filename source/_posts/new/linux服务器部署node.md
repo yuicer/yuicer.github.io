@@ -64,15 +64,13 @@ pm2 的官网文档很不错[官网](http://pm2.keymetrics.io/)
         "name": "server",
         "script": "./bin/www",      //脚本位置，默认由 node 执行
         "cwd": "./front_end",       //文件启动位置
-        "args": ["--toto=heya coco", "-d", "1"],
-        "node_args": "--harmony",		//有改动自动跟新
-        "merge_logs": true,
+		"watch": ["routes","models","views"],	//监听改变自动加载
         "instances": 4,         //4个实例
         "exec_mode": "cluster",     /多核cpu模拟多进程模式
         "error_file": "./log/err.log",      //以下为 log 日志
         "out_file": "./log/out.log",
         "pid_file": "./log/pids.pid",
-        "env": {
+        "env": {						//环境配置
             "NODE_ENV": "development",
             "AWESOME_SERVICE_API_TOKEN": "xxx"
         },

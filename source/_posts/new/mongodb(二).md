@@ -77,7 +77,7 @@ var mongoose = require('mongoose'),
 			min:0
 		}
 	}, {
-		versionKey: false
+		versionKey: false 		//取消版本锁，否则每条数据都会有个 _v 字段
 	});
 
 var users = con.model('users', UsersSchema)
@@ -95,6 +95,20 @@ string类型特有 enum, match, maxlength, minlength
 enum: 确定字符串为给定枚举中的
 match: 正则匹配
 
+### bug
+在 mongoose 中，你给 model 定的名字会自动给你转成复数形式，【什么坑爹玩意】。除非你显示声明
+```
+var schema = new Schema({ name: String }, { collection: 'actor' });
+
+// or
+
+schema.set('collection', 'actor');
+
+// or
+
+var collectionName = 'actor'
+var M = mongoose.model('Actor', schema, collectionName);
+```
 
 
 

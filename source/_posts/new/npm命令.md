@@ -57,3 +57,8 @@ windows下用`clip < ~/.ssh/id_rsa.pub`来复制到剪贴板中
 
 ## npm update
 跟新依赖
+
+## git submodule add
+添加子模块 
+init 克隆下来后初始化
+update 克隆下来后跟新
