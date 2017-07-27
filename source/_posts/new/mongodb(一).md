@@ -8,9 +8,9 @@ date: 2017-06-07 09:21:44
 <p></p>
 <!-- more -->
 ## 前言
-想向全栈发展，所以就准备去学下后台。node+mongodb
+node+mongodb
 
-## 简单后台框架
+## 后台框架
 直接用了 express 生成了一个，方便好用。由于是基于node的，文件引入用require。
 项目结构也比较简单。
 > servre

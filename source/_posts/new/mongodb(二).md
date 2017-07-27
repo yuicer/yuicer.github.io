@@ -106,8 +106,8 @@ schema.set('collection', 'actor');
 
 // or
 
-var collectionName = 'actor'
-var M = mongoose.model('Actor', schema, collectionName);
+
+var M = mongoose.model('Actor', schema, 'Actor');
 ```
 
 
