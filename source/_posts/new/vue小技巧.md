@@ -7,6 +7,23 @@ date: 2017-05-02 11:23:44
 ---
 <p></p>
 <!-- more -->
+## v-for 数据显示开关
+当有一大推数据且需要对每一条数据设置一个开关时可以这么做
+在当前组件中
+```
+ data(){
+ 	return{
+		switch: new Array(size)
+	}
+ },
+ methods:{
+ 	change_switch(index){
+		this.switch.splice(index,1,this.switch[index])
+	}
+ }
+```
+这样做就可以比较方便的为每一条数据设置一个开关。
+唯一不足是 size 可能不知道，就只能设置一个比较大的数。且开销比直接设置 = [] 大
 
 ## keep-alive
 保存组件的状态在路由重新导航过来的时候不进行重新渲染。

@@ -26,13 +26,13 @@ while(true){}
 把 js 的运行想象成先编译后执行。这里以 setTimeout 来代替事件【click，mouseover等】
 ```
 function f(b){
-setTimeout(function(){console.log(2)},0)
+  setTimeout(function(){console.log(2)},0)
   console.log(b)
   return b+35;
 }
 
 function g(x){
-setTimeout(function(){console.log(1)},0)
+  setTimeout(function(){console.log(1)},0)
   console.log(x)
   return f(4*x);
 }
