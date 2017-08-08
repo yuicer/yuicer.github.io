@@ -1,6 +1,6 @@
 const fs = require('fs')
-const path = "./img"
-const path_album = "./img/album"
+const path = "./qiniu"
+const path_album = "./qiniu/img/album"
 var qiniu = require("qiniu"),
 	file_path = [],
 	album_file_path = [],

@@ -1,1 +1,1 @@
-./img/album/1.png,./img/album/2.png,./img/album/3.jpg,./img/album/4.jpg,./img/album/5.jpg,./img/album/6.jpg,./img/album/7.jpg
+./qiniu/img/album/1.png,./qiniu/img/album/2.png,./qiniu/img/album/3.jpg,./qiniu/img/album/4.jpg,./qiniu/img/album/5.jpg,./qiniu/img/album/6.jpg,./qiniu/img/album/7.jpg

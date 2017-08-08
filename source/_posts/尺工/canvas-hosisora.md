@@ -74,7 +74,7 @@ var hoxisora = {
 主要问题是绕中心旋转以及旋转的时候全屏覆盖
 
 首先随机生成星星的对象数组，保存其位置，大小，移动速度，注意这里星星的 x，y 坐标点，生成星星的范围导致绕中心旋转的时候是否会出现屏幕的部分没有星星，即星星图的中心并不是屏幕的中心。
-<img src="/svg/hoxi.svg">
+<img src="http://olti9qjwg.bkt.clouddn.com/qiniu/svg/hoxi.svg">
 星星的生成范围为
 横坐标：[(x-y)/2,(x+y)/2]
 纵坐标：[0,y]
@@ -129,7 +129,7 @@ save 和 restore 可以看成是新建图层和返回上一图层，translate �
 ```
 这里注意流星的产生位置，首先是45度从右上到坐下，在屏幕中出现的范围设置为屏幕上边的[x/3,x],屏幕右边的[0,2y/3]
 所以流星的实际画布位置，纵坐标为了保持是在画布外出现为 -90
-<img src="/svg/ryuusei.svg">
+<img src="http://olti9qjwg.bkt.clouddn.com/qiniu/svg/ryuusei.svg">
 ```
  new_meteor: function () {
         var me = this,
