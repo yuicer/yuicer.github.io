@@ -2,5 +2,6 @@
 comments: false
 date: 2017-01-03 16:33:51
 ---
-粗制滥造的游戏
+粗制滥造的游戏，这游戏太龊了，别点开。
+准备从头搞个大项目，具体可以看看我的 github catice项目
 [地下城](./slime/index.html)
