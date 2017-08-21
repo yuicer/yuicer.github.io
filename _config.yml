@@ -30,6 +30,7 @@ skip_render:
   - "album/vue.min.js"
   - "game/slime/**"
   - "qiniu/**"
+  - "demo/**"
 
 
 # Writing

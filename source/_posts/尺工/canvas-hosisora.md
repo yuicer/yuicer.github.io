@@ -2,8 +2,6 @@
 title: canvas_hosisora
 categories:
   - 尺工
-  - 杂乱
-  - 叹言
 comments: false
 date: 2017-03-16 23:49:00
 ---

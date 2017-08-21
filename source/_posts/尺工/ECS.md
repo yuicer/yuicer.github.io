@@ -2,8 +2,6 @@
 title: ECS
 categories:
   - 尺工
-  - 杂乱
-  - 叹言
 comments: false
 date: 2017-08-07 17:58:57
 ---

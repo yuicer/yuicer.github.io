@@ -2,8 +2,6 @@
 title: mongodb(二)
 categories:
   - 尺工
-  - 杂乱
-  - 叹言
 comments: false
 date: 2017-06-12 15:12:52
 ---
