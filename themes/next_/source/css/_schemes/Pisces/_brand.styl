@@ -1,0 +1,40 @@
+.site-title{
+	color:white;
+}
+.site-meta {
+  padding: 20px 0;
+  color: white;
+  background:#688b82;
+  background-image:
+ linear-gradient(30deg, #276096 10px, transparent 0), linear-gradient(45deg, #c7f3ef 20px, transparent 0), linear-gradient(15deg, #8abbea 20px, transparent 0)
+  background-size:80px 100%,60px 100%,40px 100%;
+  
+//  棋盘
+//  background: #666;
+//  background-image:
+//  linear-gradient(45deg,#333 25%,transparent 0),
+//  linear-gradient(45deg,transparent 75%,#333 0),
+//  linear-gradient(45deg,#333 25%,transparent 0),
+//  linear-gradient(45deg,transparent 75%,#333 0);
+//  background-position:0 0,15px 15px,15px 15px,30px 30px;
+//  background-size:30px 30px;
+
+  +tablet() {
+    box-shadow: 0 0 16px rgba(0,0,0,0.5);
+  }
+  +mobile() {
+    box-shadow: 0 0 16px rgba(0,0,0,0.5);
+  }
+}
+
+.brand {
+  display: block;
+  padding: 0;
+  background: none;
+
+  &:hover { color: white; }
+}
+
+.site-subtitle { margin: 0; }
+
+.site-search form { display: none; }
