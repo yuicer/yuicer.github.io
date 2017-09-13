@@ -60,7 +60,6 @@ axios.post('http://something.com/', querystring.stringify({ foo: 'bar' }));
    装转为正式的json格式
    {"mail": "b", password: "bb"}
    
-## 使用方法
 ```
 var express = require('express')
 var bodyParser = require('body-parser')
@@ -81,11 +80,3 @@ app.use(function (req, res) {
 ```
 emmm,官方给的用法，注意下面的那个请求， body-parser 只是帮你转成了类 json 格式，还需要自己再去转。
 	
-
-
-
-
-
-
-
-

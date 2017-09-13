@@ -104,19 +104,5 @@ schema.set('collection', 'actor');
 
 // or
 
-
 var M = mongoose.model('Actor', schema, 'Actor');
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
