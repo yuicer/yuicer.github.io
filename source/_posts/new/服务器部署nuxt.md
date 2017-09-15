@@ -2,7 +2,7 @@
 title: 服务器部署nuxt
 categories:
   - 尺工
-comments: false
+ 
 date: 2017-07-20 09:46:56
 ---
 <p></p>

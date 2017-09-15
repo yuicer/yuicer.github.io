@@ -2,7 +2,7 @@
 title: linux服务器部署node
 categories:
   - 尺工
-comments: false
+ 
 date: 2017-06-1 17:02:54
 ---
 <p></p>

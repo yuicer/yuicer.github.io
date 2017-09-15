@@ -2,7 +2,7 @@
 title: es6整理
 categories:
   - 尺工
-comments: false
+ 
 date: 2017-02-03 17:06:01
 ---
 <p></p>

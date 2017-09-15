@@ -2,7 +2,7 @@
 title: wind_song听后感
 categories:
   - 叹言
-comments: false
+ 
 date: 2014-11-03 11:35:03
 ---
 <p></p>

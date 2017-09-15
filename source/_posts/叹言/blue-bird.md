@@ -2,7 +2,7 @@
 title: blue_bird
 categories:
   - 叹言
-comments: false
+ 
 date: 2017-06-14 18:53:59
 ---
 <p></p>

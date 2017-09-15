@@ -279,7 +279,7 @@ baidu_analytics: fc515cb84f85ab78c6ddae0d885911db
 duoshuo_shortname:
 
 # Disqus
-#disqus_shortname:
+disqus_shortname: yuicer
 
 # Hypercomments
 #hypercomments_id:

@@ -3,7 +3,7 @@ title: svgo
 categories:
   - 尺工
 
-comments: false
+ 
 date: 2016-12-16 19:02:11
 ---
 <p></p>

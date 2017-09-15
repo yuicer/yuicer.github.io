@@ -2,7 +2,7 @@
 title: js小知识
 categories:
   - 尺工
-comments: false
+ 
 date: 2016-12-20 14:47:58
 ---
 <p></p>

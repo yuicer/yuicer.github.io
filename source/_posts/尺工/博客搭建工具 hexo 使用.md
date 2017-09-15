@@ -3,7 +3,7 @@ title: 博客搭建工具 hexo 使用
 date: 2016-12-08 17:15:14
 categories:
   - 尺工
-comments: false
+ 
 ---
 <p></p>
 <!-- more -->

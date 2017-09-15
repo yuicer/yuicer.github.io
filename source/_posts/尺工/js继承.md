@@ -2,7 +2,7 @@
 title: js继承
 categories:
   - 尺工
-comments: false
+ 
 date: 2017-03-01 11:36:59
 ---
 <p></p>

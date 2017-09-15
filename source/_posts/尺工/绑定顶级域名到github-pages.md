@@ -1,6 +1,6 @@
 ---
 title: 绑定顶级域名到github_pages
-comments: false
+ 
 date: 2016-12-15 17:45:24
 categories:
   - 尺工

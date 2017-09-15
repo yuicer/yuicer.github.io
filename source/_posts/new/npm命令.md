@@ -2,7 +2,7 @@
 title: npm命令
 categories:
   - 尺工
-comments: false
+ 
 date: 2017-01-05 12:16:19
 ---
 <p></p>

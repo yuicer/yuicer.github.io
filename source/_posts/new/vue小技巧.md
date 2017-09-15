@@ -2,7 +2,7 @@
 title: vue小技巧
 categories:
   - 尺工
-comments: false
+ 
 date: 2017-05-02 11:23:44
 ---
 <p></p>

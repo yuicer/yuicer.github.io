@@ -2,7 +2,7 @@
 title: vue文件引入
 categories:
   - 尺工
-comments: false
+ 
 date: 2017-04-07 17:09:52
 ---
 <p></p>

@@ -2,7 +2,7 @@
 title: hexo感染js
 categories:
   - 尺工
-comments: false
+ 
 date: 2017-03-03 17:54:28
 ---
 <p></p>
