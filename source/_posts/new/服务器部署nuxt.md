@@ -12,12 +12,12 @@ date: 2017-07-20 09:46:56
 nuxt.js 是一个基于 vue.js 的服务端渲染应用框架（集成了 vue webpack babel），主要注重于 ui 渲染，可生成静态站点，框架灵活。
 
 ## 安装
-`vue init nuxt/exoress <project-name>`
+`vue init nuxt/express <project-name>`
 对 express 比较熟悉，所以装这个模板
 [文档](https://zh.nuxtjs.org/)
 
-## nuxt 机构
-nuxt 采用 vue webpack 等来构建渲染，相当于 vue-cli 了。
+## nuxt 结构
+nuxt 采用 vue webpack 等来构建渲染。
 基本结构如下
 > .nuxt
    +assets
@@ -42,7 +42,7 @@ pages: 服务端渲染的主要 vue 文件，内置 vue-router 根据 pages 目�
 store: vuex,可通过传统的 vuex 配置或者和 pages 一样的，新建很多文件然后自动配置为 models，具体看文档
 plugins: 插件
 server: 服务器功能，接口等，在这里面接上 mongodb 进行接口处理。
-nuxt.config.js: 总配置文件，可自己扩展。
+nuxt.config.js: 配置文件，可自己扩展 webpack 等。
 
 nuxt 中有很多不同的概念
 
@@ -52,6 +52,8 @@ nuxt 中有很多不同的概念
 
 nuxt 其实和 express 比就多了个服务端渲染页面的功能，而且和 vue 的用法很像，上手也比较容易
 
+server 文件夹下其实就是 express ，在其中写接口也挺方便的，在将 mongoose 引进来。
+route 在 nuxt 中有默认生成，按照文件的位置。当然也可以自己定义
 
 ## 目前所知bug
 1. 
@@ -70,3 +72,6 @@ build: {
 	}
 }
 ```
+
+## 跟新
+最近 nuxt 跟新的很快，不过一直都是 rc 版本，什么时候发了 1.0 再研究研究

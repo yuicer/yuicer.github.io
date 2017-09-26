@@ -28,7 +28,7 @@ taka 甩起红话筒的那一刹那
 地点
 横滨演唱会 nothing helps
 发病
-tomoya 前奏的清脆双鼓点，以及排练瞎tm甩膀子时
+tomoya 前奏的清脆双鼓点，以及排练瞎甩膀子时
 
 地点
 枪花 Sweet Child O' Mine 
