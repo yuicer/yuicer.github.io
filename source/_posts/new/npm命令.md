@@ -7,6 +7,12 @@ date: 2017-01-05 12:16:19
 ---
 <p></p>
 <!-- more -->
+## 建立源仓库
+`git init --bare` or `git init name.git --bare`
+前一个是把当前地址当作 git clone 目录，后一个是在当前目录再建立一个 name.git 以便 clone
+加 --bare 则是会建立裸仓库，不包含工作目录，只有一个 git 目录文件，只做远端的接受推送。
+
+
 npm下载去官网或者安装node的时候会自带安装，之后在命令行使用就好。
 打开命令行的快捷方式（windows下）
 1. shell脚本
