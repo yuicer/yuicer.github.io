@@ -31,32 +31,6 @@
           <p class="site-author-name" itemprop="name">{{ theme.author }}</p>
           <p class="site-description motion-element" itemprop="description">{{ theme.description }}</p>
         </div>
-        <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="{{ url_for(theme.menu.archives) }}">
-              <span class="site-state-item-count">{{ site.posts.length }}</span>
-              <span class="site-state-item-name">{{ __('state.posts') }}</span>
-            </a>
-          </div>
-
-      {% if site.categories.length > 0 %}
-		<div class="site-state-item site-state-categories">
-			<a href="{{ url_for(theme.menu.categories+'/categories') }}">
-				<span class="site-state-item-count">{{ site.categories.length }}</span>
-				<span class="site-state-item-name">{{ __('state.categories') }}</span>
-			</a>
-		</div>
-		{% endif %}
-		{% if site.tags.length > 0 %}
-			<div class="site-state-item site-state-tags">
-				<a href="{{ url_for(theme.menu.tags+'/tags') }}">
-					<span class="site-state-item-count">{{ site.tags.length }}</span>
-					<span class="site-state-item-name">{{ __('state.tags') }}</span>
-				</a>
-			</div>
-		{% endif %}
-
-        </nav>
 
         {% if theme.rss %}
           <div class="feed-link motion-element">
