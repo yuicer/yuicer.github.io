@@ -73,4 +73,39 @@ axios.get('https://targetWebsite.com/').then(
 )
 ```
 
+-------------
+为了尝试解决上次爬虫的图片加载失败，尝试每回进行一个读取操作，操作完成再进行下一个请求。本来考虑的是回调，但是感觉很麻烦所以用了递归函数去操作，虽然这次 http 请求是按次同步执行，但是感觉 pipe 的执行还是异步，所以又尝试给 pipe 加监听。
+```
+function DownLoad(i, src, max) {
+    if (i == max)
+        return;
+    axios.get(src, {
+            responseType: 'stream'
+        })
+        .then(
+            (res1) => {
+                res1.data.pipe(fs.createWriteStream('./img' + i + '.jpg'))
+                res1.data.on('error', (err) => {
+                    console.log('err:' + err)
+                })
+                res1.data.on('end', () => {
+                    console.log('end:' + i)
+                    DownLoad(i + 1, imgs_store[i + 1], max)
+                });
+            },
+            (res1) => {
+                console.log(res1)
+            }
+        )
+}
+```
+然鹅。。。并没有什么用。。。我现在怀疑纯粹是网络原因，因为那个网站是搬用的 pixel 。。。
+之后我又换成 lofter 的网址，试了两种方式都可以。
+
+放点爬到的猫片
+他喵的，竟然做了防盗链，访问403，我还是传七牛吧。
+
+<img src="http://olti9qjwg.bkt.clouddn.com/qiniu/img/photos/cat0.jpg">
+<img src="http://olti9qjwg.bkt.clouddn.com/qiniu/img/photos/cat1.jpg"> 
+<img src="http://olti9qjwg.bkt.clouddn.com/qiniu/img/photos/cat2.jpg"> 
 

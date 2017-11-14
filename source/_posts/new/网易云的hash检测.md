@@ -2,16 +2,13 @@
 title: 网易云的hash检测。。
 categories:
   - 尺工
-  - 杂乱
-  - 叹言
 date: 2017-11-13 17:21:40
 ---
 <p></p>
 <!-- more -->
 
 ## 前言
-闲着没事爬了下，，发现这个玩意写的好糙啊
-还是用的一个 iframe 注入。。
+闲着没事爬了下
 ```
 function isHashChangeSupported() {
     var a = "onhashchange",
@@ -44,3 +41,9 @@ var monitor = function () {
 }();
 isHashChangeSupported() ? window.onhashchange = onHashChange : window.setInterval(monitor, 100);
 ```
+
+然后去查了一下这个 hashchange，发现了一个新的方法
+`window.addEventListener('hashchange',function(){console.log(1)})`
+查了下[兼容](https://caniuse.com/#search=hashchange)，辣鸡 ie 不行，其他挺好的
+感叹做兼容真是辛苦
+
