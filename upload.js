@@ -1,6 +1,7 @@
 const fs = require('fs')
 const path = "./qiniu"
 const path_album = "./qiniu/img/album"
+const path_imgsrc = './source/album/imgsrc.txt'
 var qiniu = require("qiniu"),
 	file_path = [],
 	album_file_path = [],
@@ -17,8 +18,7 @@ function get_file_path(path) {
 		if (fs.statSync(path + '/' + files[i]).isFile()) {
 			file_path.push(path + '/' + files[i])
 			if (path == path_album)
-				album_file_path.push(path + '/' + files[i])
-
+				album_file_path.push(path_album + '/' + files[i])
 		} else
 			get_file_path(path + '/' + files[i])
 
@@ -27,7 +27,7 @@ function get_file_path(path) {
 get_file_path(path)
 
 //存储album下图片的名字
-fs.writeFile('./album/imgsrc.txt', album_file_path, (err) => {
+fs.writeFile(path_imgsrc, album_file_path, (err) => {
 	if (err) throw err;
 	console.log('It\'s saved!');
 });
