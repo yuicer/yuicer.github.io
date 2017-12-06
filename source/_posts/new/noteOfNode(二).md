@@ -52,30 +52,31 @@ async function g() {
     try {
         var flag = await new Promise(function (resolve, reject) {
             setTimeout(() => {
-                // resolve(2);
-                reject(3)
-                console.log(1)
+                //三种状态 resolve reject pending(处于 pending 的时候只会一直等待)
+                resolve(2);
+                //reject(3)
             }, 1000);
         })
     } catch (err) {
-        console.log(err)
+        console.log('err' + err)
     }
-    console.log(flag)
-    return 'done'
+    console.log('flag' + flag)
+    //return 'done'
 }
+```
+await 后跟 promise 对象，跟一般对象没意义。
+await 有返回值 flag，不过只返回 resolve 的情况，错误情况需使用 try catch 捕捉，或者对这个 promise 写 then(f1,f_err)
+但当错误被 then 处理后 try catch 并不会触发。因为此时程序正确执行
 
+```
 g().then(a => {
-        console.log(a)
+        console.log('g' + a)
     },
     err => {
-        console.log(err)
+        console.log('gerr' +　err)
     }
 )
 ```
-await 后跟 promise 对象，跟一般对象没意义。
-await 有返回值 flag，不过只返回 resolve 的情况，情况需使用 try catch 捕捉，或者对这个 promise 写 then(f1,f_err)
-但当错误被 then 处理后 try catch 并不会触发。因为此时程序正确执行
-
 async 函数返回的是一个 promise 对象，也通过 .then(f1,f2)可捕捉，函数里的 return 相当于 resolve()，函数里的错误会被传给 reject();
 
 
