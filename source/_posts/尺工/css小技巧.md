@@ -3,33 +3,44 @@ title: css小技巧
 categories:
   - 尺工
  
-date: 2017-04-18 18:18:40
+date: 2017-12-13 18:18:40
 ---
 <p></p>
 <!-- more -->
-## 页面变高时滚动条出现导致网页内容左移
-```
+
+### 可编辑div
+`contenteditable = "true"` 可以让普通的 div 进入可编辑模式，但是发现他有一个比较奇怪的特性，当定位 absolute 时，回车换行的出现方式有两种，向上出现和向下出现。
+修改下方css top 为 bottom 后再按回车
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=400 height=250 src="/demo/demo_171213"></iframe>
+
+### 滚动条
+滚动条在 css3 中有很多自定义的样式，下面的图可以很清楚的说明他们的关系
+<img src="http://upload-images.jianshu.io/upload_images/4415565-784b4b9fe215261f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700"/>
+
+### 页面变高时滚动条出现导致网页内容左移
+```css
 html {
-		overflow-y: scroll;
-	}
-	
-	:root {
-		overflow-y: auto;
-		overflow-x: hidden;
-	}
-	
-	:root body {
-		position: absolute;
-	}
-	
-	body {
-		width: 100vw;
-		overflow: hidden;
-	}
+	overflow-y: scroll;
+}
+
+:root {
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+:root body {
+	position: absolute;
+}
+
+body {
+	width: 100vw;
+	overflow: hidden;
+}
 ```
-## 高度动画
+### 高度动画
 让高度从固定到不固定产生动画效果
-```
+```css
 #box{
 	min-height: 200px;
 	max-height: 200px;
@@ -38,35 +49,5 @@ html {
 
 #box: hover{
 	max-height: 500px;
-}
-```
-## 手机动画前缀
-```
-
-#test {
-	width: 150px;
-	height: 100px;
-	background: red;
-	animation: test 5s infinite;
-	-webkit-animation: test 5s infinite;
-	position: relative;
-}
-
-@keyframes test {
-	from {
-		left: 0px;
-	}
-	to {
-		left: 200px;
-	}
-}
-
-@-webkit-keyframes test {
-	from {
-		left: 0px;
-	}
-	to {
-		left: 200px;
-	}
 }
 ```
