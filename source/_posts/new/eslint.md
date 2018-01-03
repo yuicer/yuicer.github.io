@@ -12,11 +12,13 @@ date: 2017-12-07 09:34:20
 
 ## 使用
 一般使用
+
 1. 全局安装 eslint
 2. eslint --init
 3. eslint your.js
 
 vsc下需要安装插件eslint包
+
 使用 vue 的话需要下载`eslint-plugin-html`,最简单就把脚手架那一套拿过来，开箱即用
 编辑器设置如下
 ```
@@ -29,6 +31,7 @@ vsc下需要安装插件eslint包
 ```
 ## 规则
 规则这个东西嘛，，，人多说了算。。
+
 eslint --int 会提示你几种方法，
 ```
 Answer questions about your style
@@ -36,13 +39,17 @@ Use a popular style guide
 Inspect your Javascript file(s)
 ```
 第一个是比较简单的设置，问你几个问题生成对应的简单配置
+
 第二个用别人家的，会有三种模板选择
+
 ```
 standard
 google
 airbnb
 ```
+
 从上到下依次变严，一般应该用 standard 就可以
+
 第三个是检测你的文件生成对应规则。不过我没试过
 
 ### 自定义

@@ -7,6 +7,7 @@ date: 2017-02-04 17:11:35
 ---
 <p></p>
 <!-- more -->
+
 ## 前言
 webpack 主要是用来做模块管理，但是到了现在，功能变的越来越强大，前端真是隔一两年大换血一次，感觉像什么 gulp grunt bower Browserify 到现在都被 npm + webpack 给挤下来了。
 对于一个大点的项目，都会分开发环境，测试环境，生产环境。解决不同环境的问题，并要做到自动化就需要用到 npm + webpack
@@ -32,7 +33,7 @@ app 中的是开发写的内容，src 是生成的静态内容，放在服务器
 ## package.json
 创建 package.json 文件
 在项目里打开命令行后输入 npm init 会询问你一些问题，【可以一路回车】然后创建 package.json 文件
-```
+```json
 {
   "name": "webpack",
   "version": "1.0.0",
@@ -50,7 +51,7 @@ app 中的是开发写的内容，src 是生成的静态内容，放在服务器
 
 ```
  然后做一些修改改为下面这个样子
-```
+```json
  {
 	"name": "webpack",
 	"version": "1.0.0",
@@ -79,7 +80,7 @@ cross-env 使不同系统都可以设置 node 的 process.env 环境变量。[cr
 其中 scripts 中写了2条命令分别对应 npm run dev 和 npm run build ,这里就要提到 npm 的脚本命令了
 ### npm 脚本命令
 npm 允许在 package.json 文件中，定义 scripts 命令，如
-```
+```json
 "scripts": {
 	"build":　"node server.js"
 }
@@ -96,7 +97,7 @@ build 会去执行 webpack ，它的作用是去打包生成静态文件，--pro
 另外 webpack 会将 es6 的 import export 自动解析成 es5，但是如果想用更多的 es6 语法，需要使用 babel-loader 加载器去加载解析 js
 ## webpack.config.js
 webpack 的主要配置文件
-```
+```js
 var path = require("path")		//node模块，路径解析
 var webpack = require("webpack")	
 var ExtractTextPlugin = require("extract-text-webpack-plugin")	//单独分离出css，需安装
