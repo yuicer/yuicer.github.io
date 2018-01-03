@@ -2,25 +2,25 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Document</title>
-	<link rel="stylesheet" href="./main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./main.css">
 </head>
 
 <body>
-	<div id="album_box" v-cloak>
-		<div class="col" v-for="(sitem,sindex) in 3">
-			<div class="col_box" v-for="(item,index) in imgsrc" v-if="index%3==sindex">
-				<img class="col_img" :src="item" alt="">
-				<p></p>
-			</div>
-		</div>
-	</div>
+  <div id="album_box" v-cloak>
+    <div class="col" v-for="(sitem,sindex) in 3">
+      <div class="col_box" v-for="(item,index) in imgsrc" v-if="index%3==sindex">
+        <img class="col_img" :src="item" alt="">
+        <p></p>
+      </div>
+    </div>
+  </div>
 
-	<script src="vue.min.js"></script>
-	<script src="main.js"></script>
+  <script src="./vue.min.js"></script>
+  <script src="./main.js"></script>
 </body>
 
 </html>
