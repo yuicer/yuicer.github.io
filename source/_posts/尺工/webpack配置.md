@@ -221,5 +221,8 @@ index.html
 [webpack--更优秀的打包管理工具](http://jixianqianduan.com/frontend-build/2015/04/01/webpack-tool.html)
 
 
-
+## 更新
+最近又去研究了下 webpack ，里面的插件还是给我搞晕了。。
+特别是 dev 环境下想 devServer 和 HtmlWebpackPlugin 一起使用的时候，资源的相对位置头都大了。
+最后还是直接把 vue-cli 的 webpack 配置直接拿过来用了。。
 

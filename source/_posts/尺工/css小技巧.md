@@ -8,6 +8,47 @@ date: 2017-12-13 18:18:40
 <p></p>
 <!-- more -->
 
+### margin 垂直方向上撑起父元素
+```css
+<div id="box">
+	<div id="content"></div>
+</div>
+<style>
+	#box {
+		width: 400px;
+		height: 400px;
+		background: #333;
+	}
+
+	#content {
+		width: 100px;
+		height: 100px;
+		background: #fff;
+		margin-top: 20px;
+	}
+</style>
+```
+cotent 的 margin-top 会变成父元素的 margin-top
+这种情况是典型的 marging 在垂直方向上的重叠
+
+解决 父元素添加
+overflow: auto hiiden
+padding
+border
+posi
+### 垂直居中
+
+```css
+{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+```
+
 ### 可编辑div
 `contenteditable = "true"` 可以让普通的 div 进入可编辑模式，但是发现他有一个比较奇怪的特性，当定位 absolute 时，回车换行的出现方式有两种，向上出现和向下出现。
 修改下方css top 为 bottom 后再按回车
