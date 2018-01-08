@@ -22,23 +22,23 @@ date: 2017-11-14 10:19:22
 感觉就是个语法糖，还是回调的原理，只不过写法变的更好了
 ```
 function getPromise(ms) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            console.log(1)
-            resolve(ms)
-        }, ms);
-    });
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log(1)
+      resolve(ms)
+    }, ms);
+  });
 }
 var promise = getPromise(100);
 var promise_ = getPromise(2000);
 var p = Promise.all([promise, promise_])
 p.then(
-    (value) => {
-        console.log(value || 'compelete')
-    },
-    (error) => {
-        console.log(error || 'error')
-    }
+  (value) => {
+    console.log(value || 'compelete')
+  },
+  (error) => {
+    console.log(error || 'error')
+  }
 )
 ```
 
@@ -49,19 +49,19 @@ p.then(
 写法最简单
 ```
 async function g() {
-    try {
-        var flag = await new Promise(function (resolve, reject) {
-            setTimeout(() => {
-                //三种状态 resolve reject pending(处于 pending 的时候只会一直等待)
-                resolve(2);
-                //reject(3)
-            }, 1000);
-        })
-    } catch (err) {
-        console.log('err' + err)
-    }
-    console.log('flag' + flag)
-    //return 'done'
+  try {
+    var flag = await new Promise(function (resolve, reject) {
+      setTimeout(() => {
+        //三种状态 resolve reject pending(处于 pending 的时候会一直等待)
+        resolve(2);
+        //reject(3)
+      }, 1000);
+    })
+  } catch (err) {
+    console.log('err' + err)
+  }
+  console.log('flag' + flag)
+  // return 'done'
 }
 ```
 await 后跟 promise 对象，跟一般对象没意义。
@@ -70,11 +70,11 @@ await 有返回值 flag，不过只返回 resolve 的情况，错误情况需使
 
 ```
 g().then(a => {
-        console.log('g' + a)
-    },
-    err => {
-        console.log('gerr' +　err)
-    }
+    console.log('g' + a)
+  },
+  err => {
+    console.log('gerr' +　err)
+  }
 )
 ```
 async 函数返回的是一个 promise 对象，也通过 .then(f1,f2)可捕捉，函数里的 return 相当于 resolve()，函数里的错误会被传给 reject();

@@ -35,9 +35,18 @@ cotent 的 margin-top 会变成父元素的 margin-top
 overflow: auto hiiden
 padding
 border
-posi
+position: absolute fixed
 ### 垂直居中
+和以前的 margin 负值差不多，只不过变成动态计算
+```css
+	{
+		top: 50%;
+		left: 50%;
+		transform: translate3d(-50%,-50%,0)
+	}
+```
 
+拉伸元素后 margin auto
 ```css
 {
 	position: absolute;

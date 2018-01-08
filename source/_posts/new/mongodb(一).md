@@ -49,8 +49,3 @@ router.get('/', function (req, res, next) {
 });
 ```
 test为你的某一个数据库，之后就可以进行操作了。这里我用的是mongoose，这个再找一篇说这个。
-
-
-
-
-
