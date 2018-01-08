@@ -7,6 +7,17 @@ date: 2017-05-02 11:23:44
 ---
 <p></p>
 <!-- more -->
+
+##  webpack anaylzer
+可以用來检查哪些文件过大可以优化
+`npm install --save-dev webpack-bundle-analyzer`
+```
+var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+ 
+// ...
+plugins: [new BundleAnalyzerPlugin()]
+```
+
 ## dom中执行方法
 ```
 <div v-if="isF">f()<div>
