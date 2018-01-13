@@ -8,6 +8,9 @@ date: 2017-12-13 18:18:40
 <p></p>
 <!-- more -->
 
+### 修改网页标题
+document.title = ''
+
 ### margin 垂直方向上撑起父元素
 ```css
 <div id="box">
