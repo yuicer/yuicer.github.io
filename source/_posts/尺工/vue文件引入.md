@@ -68,7 +68,7 @@ export default new Vue({
 ### vue 引入外部css
 1. require('./css')
 2. import './css'
-3. 在 style 标签下 @import './csss'，加 scoped="true" 也没办法用
+3. 在 style 标签下 @import './css'，加 scoped="true" 也没办法用
 这3种都不能固定作用域
 4. 更改 style 标签的 src
 ```
@@ -92,6 +92,13 @@ img.src = img;
 
 3. js 中
 写外部 cdn 完整路径或者 require 之后的 src
+
+4. background
+:style = style ...
+style:{
+    backgroundImage: `url(${require('src')})`
+}
+
 
 ## 加载字体等特殊文件
 需要在 file-loader 或者 url-loader 中进行配置

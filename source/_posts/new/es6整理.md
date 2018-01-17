@@ -8,8 +8,6 @@ date: 2017-02-03 17:06:01
 <p></p>
 <!-- more -->
 
-## 前言
-最近es6很火，以至于有说这是面试中的一环了，所以在这里整理整理关于 es6 的东西，浏览器的支持可能还不是能在生产中用的感觉，可以下载 bable，作为 js 的 loader 来解析写的 es6 语法。
 ## let
 let 是新增的变量声明标志，它和 var 有什么不同呢？
 ### let是一个块级作用变量
@@ -104,10 +102,9 @@ window.b // undefined
 var a = 1, b = 0
 [a, b] = [b, a]
 ```
+## for of & for in
+of 遍历 values
+in 遍历 keys
 
-
-
-
-
-
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=39122297&auto=1&height=66"></iframe>
+且，in会把遍历对象所有可枚举的属性都输出
+推荐数组用 of，对象用 in

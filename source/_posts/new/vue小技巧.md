@@ -3,11 +3,30 @@ title: vue小技巧
 categories:
   - 尺工
  
-date: 2017-05-02 11:23:44
+date: 2018-01-15 11:23:44
 ---
 <p></p>
 <!-- more -->
 
+## 设置请求域名
+var url = Vue.config.devtools ? '//test.xxx.com/api' : '/api'
+Vue.http.options.root = url
+
+## proxyTable
+解决跨域，会将 请求 localhost 的请求转发
+```
+proxyTable: {
+	'/api': {
+		target: 'http://www.xxx.com/some/api',
+		changeOrigin: true,
+		pathRewrite: {
+			'^/api': ''
+		}
+	}
+}
+...
+$http.get('api')
+```
 ##  webpack anaylzer
 可以用來检查哪些文件过大可以优化
 `npm install --save-dev webpack-bundle-analyzer`
