@@ -11,7 +11,7 @@ date: 2017-12-13 18:18:40
 ### 修改网页标题
 document.title = ''
 
-### margin 垂直方向上撑起父元素
+### margin 垂直方向上撑出父元素
 ```css
 <div id="box">
 	<div id="content"></div>
