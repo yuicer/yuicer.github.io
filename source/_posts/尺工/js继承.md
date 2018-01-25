@@ -7,6 +7,7 @@ date: 2017-03-01 11:36:59
 ---
 <p></p>
 <!-- more -->
+
 ## es5 继承
 es5 实质是先创造子类的实例对象 this，然后再将父类方法放到 this 上。
 ```
@@ -22,22 +23,23 @@ Foo.prototype = {
 	}
 };
 
-function Bar(v,name) {
-	Foo.call(this,v)
+function Bar(value,name) {
 	this.name = name
+	Foo.call(this,value)
 }
-
-// 设置Bar的prototype属性为Foo的实例对象
-Bar.prototype = new Foo()
-Bar.prototype = {
-   	say: function() {
-		console.log("Bar")
-	}
-};
-
 var test = new Bar(2,"cat") // 创建Bar的一个新实例
-
 ```
+####　如果设置Bar的 prototype 属性为 Foo 的构造函数
+Bar.prototype = new Foo()
+
+这时　new Bar() 就会直接使用 new For()，虽然确实继承了 prototype 方法，但是 Bar 构造函数就会被忽略，this.name 不会被挂载
+所以需要加上 Bar.prototype.constructor = Bar
+
+或者直接
+Bar.prototype = Foo.prototype
+
+这里子类的 prototype 其实是父类的 prototype 的引用，所以修改子类的 prototype 也会修改父类的，所以可以采用浅/深复制来隔离开来
+
 ## es6 继承
 es6 实质是先创造父类的实例对象 this， 然后用子类的构造函数去修改 this
 ```
