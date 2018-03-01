@@ -1,0 +1,784 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="yuicer的闲言乱语" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue小技巧">
+<meta property="og:url" content="http://yuicer.com/2018/02/28/new/vue小技巧/index.html">
+<meta property="og:site_name" content="yuicer">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-02-28T10:42:23.082Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vue小技巧">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: "",
+      labels: ""
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yuicer.com/2018/02/28/new/vue小技巧/"/>
+
+
+
+
+
+  <title> vue小技巧 | yuicer </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?fc515cb84f85ab78c6ddae0d885911db";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="//s95.cnzz.com/z_stat.php?id=1261001148&web_id=1261001148" language="JavaScript"></script>
+  </div>
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">yuicer</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">colorful wanted</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-game">
+          <a href="/catice" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-gamepad"></i> <br />
+            
+            游戏
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-diary">
+          <a href="/diary" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-columns"></i> <br />
+            
+            日记
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-album">
+          <a href="/album" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-photo"></i> <br />
+            
+            相册
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yuicer.com/2018/02/28/new/vue小技巧/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="yuicer">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="http://olti9qjwg.bkt.clouddn.com/qiniu/img/me.config/me.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="yuicer">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="yuicer" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                vue小技巧
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-28T18:23:44+08:00">
+                2018-02-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/尺工/" itemprop="url" rel="index">
+                    <span itemprop="name">尺工</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+<!--shandiao-->
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p></p><p></p><br><a id="more"></a><p></p>
+<h2 id="批量读取模块"><a href="#批量读取模块" class="headerlink" title="批量读取模块"></a>批量读取模块</h2><p>vue-router<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> Modules = <span class="built_in">require</span>.context(<span class="string">"./../component/pages"</span>, <span class="literal">true</span>, /\.vue$/);</span><br><span class="line">Modules.keys().forEach(<span class="function"><span class="keyword">function</span>(<span class="params">v, i</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> key = v.replace(<span class="regexp">/(\.\/|\.vue)/g</span>, <span class="string">''</span>);</span><br><span class="line">    routesObj.push(&#123;</span><br><span class="line">        path: <span class="string">'/'</span> + key,</span><br><span class="line">        name: key,</span><br><span class="line">        component: Modules(v)[<span class="string">'default'</span>]</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p><code>Modules(v)[&#39;default&#39;]</code> 为引入的模块</p>
+<h2 id="设置请求域名"><a href="#设置请求域名" class="headerlink" title="设置请求域名"></a>设置请求域名</h2><p>var url = Vue.config.devtools ? ‘//test.xxx.com/api’ : ‘/api’<br>Vue.http.options.root = url</p>
+<h2 id="proxyTable"><a href="#proxyTable" class="headerlink" title="proxyTable"></a>proxyTable</h2><p>解决跨域，会将 请求 localhost 的请求转发<br><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">proxyTable: &#123;</span><br><span class="line">	<span class="string">'/api'</span>: &#123;</span><br><span class="line">		target: <span class="string">'http://www.xxx.com/some/api'</span>,</span><br><span class="line">		changeOrigin: true,</span><br><span class="line">		pathRewrite: &#123;</span><br><span class="line">			<span class="string">'^/api'</span>: <span class="string">''</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">...</span><br><span class="line">$http.get(<span class="string">'api'</span>)</span><br></pre></td></tr></table></figure></p>
+<h2 id="webpack-anaylzer"><a href="#webpack-anaylzer" class="headerlink" title="webpack anaylzer"></a>webpack anaylzer</h2><p>可以用來检查哪些文件过大可以优化<br><code>npm install --save-dev webpack-bundle-analyzer</code><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> BundleAnalyzerPlugin = <span class="built_in">require</span>(<span class="string">'webpack-bundle-analyzer'</span>).BundleAnalyzerPlugin;</span><br><span class="line"> </span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line">plugins: [<span class="keyword">new</span> BundleAnalyzerPlugin()]</span><br></pre></td></tr></table></figure></p>
+<h2 id="dom中执行方法"><a href="#dom中执行方法" class="headerlink" title="dom中执行方法"></a>dom中执行方法</h2><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="keyword">div</span> v-<span class="keyword">if</span>=<span class="string">"isF"</span>&gt;f()&lt;<span class="keyword">div</span>&gt;</span><br></pre></td></tr></table></figure>
+<p>这种写法很取巧，一般是监听$store.state或者其他数据的时候这么写，其实不正规，还是应该用$store.actions或者mutations来对数据进行监测。</p>
+<h2 id="v-for-数据显示开关"><a href="#v-for-数据显示开关" class="headerlink" title="v-for 数据显示开关"></a>v-for 数据显示开关</h2><p>当有一大推数据且需要对每一条数据设置一个开关时可以这么做<br>在当前组件中<br><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">data()&#123;</span><br><span class="line">	<span class="keyword">return</span>&#123;</span><br><span class="line">	<span class="keyword">switch</span>: <span class="keyword">new</span> Array(size)</span><br><span class="line">&#125;</span><br><span class="line">&#125;,</span><br><span class="line">methods:&#123;</span><br><span class="line">	change_switch(<span class="keyword">index</span>)&#123;</span><br><span class="line">	<span class="keyword">this</span>.<span class="keyword">switch</span>.splice(<span class="keyword">index</span>,<span class="number">1</span>,<span class="keyword">this</span>.<span class="keyword">switch</span>[<span class="keyword">index</span>])</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这样做就可以比较方便的为每一条数据设置一个开关。<br>唯一不足是 size 可能不知道，就只能设置一个比较大的数。且开销比直接设置 = [] 大</p>
+<h2 id="监听vue数据"><a href="#监听vue数据" class="headerlink" title="监听vue数据"></a>监听vue数据</h2><p>在 dom 中写三元表达式判断<br><figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$store</span>.<span class="keyword">state</span>.some == <span class="literal">any</span> ? func() : else()</span><br></pre></td></tr></table></figure></p>
+<p>这样就可以知道 vuex 数据更改然后进行操作</p>
+<h2 id="vue-resource-root"><a href="#vue-resource-root" class="headerlink" title="vue-resource root"></a>vue-resource root</h2><p>vue-resource 中可以设置 url 的公共部分，方便测试转正式<br>在 main.js 中<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Vue.http.<span class="keyword">options</span>.root = url;</span><br><span class="line">Vue.http.<span class="keyword">options</span>.emulateJSON = <span class="keyword">true</span>;</span><br></pre></td></tr></table></figure></p>
+<p>之后可以通过 vue 实例(vm)来访问<br>vm.$http.options.root</p>
+<h2 id="数据渲染"><a href="#数据渲染" class="headerlink" title="数据渲染"></a>数据渲染</h2><p>vue 的数据绑定渲染对数组和对象的检测是浅复制的检测<br>所以当更改数组或对象的时候需要用到 js 方法 splice push 等</p>
+
+      
+    </div>
+
+<!--/删掉一段-->
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/02/28/new/mac环境/" rel="next" title="mac环境">
+                <i class="fa fa-chevron-left"></i> mac环境
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://olti9qjwg.bkt.clouddn.com/qiniu/img/me.config/me.png"
+               alt="yuicer" />
+          <p class="site-author-name" itemprop="name">yuicer</p>
+          <p class="site-description motion-element" itemprop="description">秋露坠。滴尽楚兰红泪。往事旧欢何限意。思量如梦寐。人貌老于前岁。风月宛然无异。座有嘉宾尊有桂。莫辞终夕醉。</p>
+        </div>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/yuicer" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  Github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://space.bilibili.com/3069623" target="_blank" title="BiliBili">
+                  
+                    <i class="fa fa-fw fa-play"></i>
+                  
+                  BiliBili
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#批量读取模块"><span class="nav-number">1.</span> <span class="nav-text">批量读取模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置请求域名"><span class="nav-number">2.</span> <span class="nav-text">设置请求域名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#proxyTable"><span class="nav-number">3.</span> <span class="nav-text">proxyTable</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webpack-anaylzer"><span class="nav-number">4.</span> <span class="nav-text">webpack anaylzer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dom中执行方法"><span class="nav-number">5.</span> <span class="nav-text">dom中执行方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#v-for-数据显示开关"><span class="nav-number">6.</span> <span class="nav-text">v-for 数据显示开关</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#监听vue数据"><span class="nav-number">7.</span> <span class="nav-text">监听vue数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vue-resource-root"><span class="nav-number">8.</span> <span class="nav-text">vue-resource root</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据渲染"><span class="nav-number">9.</span> <span class="nav-text">数据渲染</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">yuicer</span>
+</div>
+
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'yuicer';
+      var disqus_identifier = '2018/02/28/new/vue小技巧/';
+
+      var disqus_title = "vue小技巧";
+
+
+      function run_disqus_script(disqus_script) {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+
+      
+        var disqus_config = function () {
+            this.page.url = disqus_url;
+            this.page.identifier = disqus_identifier;
+            this.page.title = disqus_title;
+        };
+        run_disqus_script('embed.js');
+      
+
+    </script>
+  
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>

@@ -1,0 +1,789 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="yuicer的闲言乱语" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="noteOfNode(一)">
+<meta property="og:url" content="http://yuicer.com/2017/11/13/new/noteOfNode(一)/index.html">
+<meta property="og:site_name" content="yuicer">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://olti9qjwg.bkt.clouddn.com/qiniu/img/photos/cat0.jpg">
+<meta property="og:image" content="http://olti9qjwg.bkt.clouddn.com/qiniu/img/photos/cat1.jpg">
+<meta property="og:image" content="http://olti9qjwg.bkt.clouddn.com/qiniu/img/photos/cat2.jpg">
+<meta property="og:updated_time" content="2018-02-28T02:44:39.150Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="noteOfNode(一)">
+<meta name="twitter:image" content="http://olti9qjwg.bkt.clouddn.com/qiniu/img/photos/cat0.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: "",
+      labels: ""
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yuicer.com/2017/11/13/new/noteOfNode(一)/"/>
+
+
+
+
+
+  <title> noteOfNode(一) | yuicer </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?fc515cb84f85ab78c6ddae0d885911db";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="//s95.cnzz.com/z_stat.php?id=1261001148&web_id=1261001148" language="JavaScript"></script>
+  </div>
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">yuicer</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">colorful wanted</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-game">
+          <a href="/catice" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-gamepad"></i> <br />
+            
+            游戏
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-diary">
+          <a href="/diary" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-columns"></i> <br />
+            
+            日记
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-album">
+          <a href="/album" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-photo"></i> <br />
+            
+            相册
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yuicer.com/2017/11/13/new/noteOfNode(一)/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="yuicer">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="http://olti9qjwg.bkt.clouddn.com/qiniu/img/me.config/me.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="yuicer">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="yuicer" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                noteOfNode(一)
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-13T11:37:18+08:00">
+                2017-11-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/尺工/" itemprop="url" rel="index">
+                    <span itemprop="name">尺工</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+<!--shandiao-->
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p></p><p></p><br><a id="more"></a><p></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近做 <a href="yuicer.com/catice">catice</a> 感觉差不多了，虽然2个做的都很糙，只能算是过一遍 api 做出来的东西。<br>然后现在把游戏稍微放一下，开始学习 node。很久之前就有开始看，不过也只是有一些初步的了解，看了些东西，没有实践。对于后端的很多概念和思想都不了解，现在感觉 node 和 js 真是两个语言。。</p>
+<h3 id="CPU-bound-计算密集型-和I-O-bound-I-O密集型"><a href="#CPU-bound-计算密集型-和I-O-bound-I-O密集型" class="headerlink" title="CPU-bound(计算密集型) 和I/O bound(I/O密集型)"></a>CPU-bound(计算密集型) 和I/O bound(I/O密集型)</h3><p>对于服务端服务来说，主要分两个类型，一个是需要大量计算，比如人脸识别，小数点精度10的计算以及 ai 智能等，另一个则是大量读取，比如 web 服务器，文件读取返回。<br>对于 node 来说，应该是属于 I/O bound</p>
+<h3 id="进程，线程"><a href="#进程，线程" class="headerlink" title="进程，线程"></a>进程，线程</h3><p>进程：qq，线程：某一个好友窗口<br>线程挂掉会导致进程挂<br>任务分配到多线程速度要比多进程快<br>单一进程（非主进程）不会导致其他进程挂掉</p>
+<h3 id="爬虫"><a href="#爬虫" class="headerlink" title="爬虫"></a>爬虫</h3><p>爬虫作为上手 demo 真是好用，，又能锻炼又还比较有意思。。<br>写这个爬虫的时候也遇到了很多问题。<br>首先请求目标网页获取到返回的 html，并用 cheerio 解析，之后获取 img 标签的 src 属性。<br>node 对文件操作采用的是覆盖式，所以多图片的时候需要考虑命名问题。这里为了方便只获取了有 http 头的外链图片<br>这里踩的第一个坑就是他获取到的并不是真的传统的 dom 节点，而是它封装的格式，必须使用它的解析，而且普通循环对它也没用。。得用它的 each 方法才可以。<br>第二个坑是在 axios 请求数据回来之后的格式，需要增加一个 config <code>responseType: &#39;stream&#39;</code>。。</p>
+<h4 id="bug"><a href="#bug" class="headerlink" title="bug"></a>bug</h4><p>图片在下载之后会有几率随机出现某张（某几张）下载不完整，感觉应该是缓冲区的问题，同时多个 pipe 时出了错。再多去看看文档<br>另外此爬虫获取到的 html 为初始 html，即若有后来的数据注入生成的 img ，并不能取到。<br>某些网站做了反爬虫，多次获取会被禁。。。<br>某些情况下会报错<code>read ECONNRESET</code>，查了下这个应该是访问时连接断掉产生的错误，不知道有什么好的解决办法</p>
+<p>完整代码<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">axios.get(<span class="string">'https://targetWebsite.com/'</span>).then(</span><br><span class="line">    (res) =&gt; &#123;</span><br><span class="line">        <span class="keyword">var</span> imgs_store = [];</span><br><span class="line">        <span class="keyword">var</span> $ = cheerio.load(res.data);</span><br><span class="line">        <span class="keyword">var</span> imgs = $(<span class="string">'img'</span>);</span><br><span class="line">        imgs.each(<span class="function"><span class="keyword">function</span> (<span class="params">i, e</span>) </span>&#123;</span><br><span class="line">            imgs_store.push($(e).attr(<span class="string">"src"</span>))</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> i <span class="keyword">in</span> imgs_store) &#123;</span><br><span class="line">            <span class="keyword">if</span> (imgs_store[i].slice(<span class="number">0</span>, <span class="number">4</span>) !== <span class="string">'http'</span>) &#123;</span><br><span class="line">                imgs_store.splice(i, <span class="number">1</span>)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; imgs_store.length; i++) &#123;</span><br><span class="line">            axios.get(imgs_store[i], &#123;</span><br><span class="line">                    responseType: <span class="string">'stream'</span></span><br><span class="line">                &#125;)</span><br><span class="line">                .then(</span><br><span class="line">                    (res1) =&gt; &#123;</span><br><span class="line">                        res1.data.pipe(fs.createWriteStream(<span class="string">'./img'</span> + i + <span class="string">'.jpg'</span>))</span><br><span class="line">                    &#125;,</span><br><span class="line">                    (res1) =&gt; &#123;</span><br><span class="line">                        <span class="built_in">console</span>.log(err)</span><br><span class="line">                    &#125;</span><br><span class="line">                )</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    (res) =&gt; &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'error：'</span> + res)</span><br><span class="line">    &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure></p>
+<hr>
+<p>为了尝试解决上次爬虫的图片加载失败，尝试每回进行一个读取操作，操作完成再进行下一个请求。本来考虑的是回调，但是感觉很麻烦所以用了递归函数去操作，虽然这次 http 请求是按次同步执行，但是感觉 pipe 的执行还是异步，所以又尝试给 pipe 加监听。<br><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">function DownLoad(i, src, max) &#123;</span><br><span class="line">    <span class="keyword">if</span> (i == max)</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    axios.get(src, &#123;</span><br><span class="line">            responseType: <span class="string">'stream'</span></span><br><span class="line">        &#125;)</span><br><span class="line">        .<span class="keyword">then</span>(</span><br><span class="line">            (res1) =&gt; &#123;</span><br><span class="line">                res1.data.pipe(fs.createWriteStream(<span class="string">'./img'</span> + i + <span class="string">'.jpg'</span>))</span><br><span class="line">                res1.data.<span class="literal">on</span>(<span class="string">'error'</span>, <span class="function"><span class="params">(err)</span> =&gt;</span> &#123;</span><br><span class="line">                    <span class="built_in">console</span>.log(<span class="string">'err:'</span> + err)</span><br><span class="line">                &#125;)</span><br><span class="line">                res1.data.<span class="literal">on</span>(<span class="string">'end'</span>, <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">                    <span class="built_in">console</span>.log(<span class="string">'end:'</span> + i)</span><br><span class="line">                    DownLoad(i + <span class="number">1</span>, imgs_store[i + <span class="number">1</span>], max)</span><br><span class="line">                &#125;);</span><br><span class="line">            &#125;,</span><br><span class="line">            (res1) =&gt; &#123;</span><br><span class="line">                <span class="built_in">console</span>.log(res1)</span><br><span class="line">            &#125;</span><br><span class="line">        )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>然鹅。。。并没有什么用。。。我现在怀疑纯粹是网络原因，因为那个网站是搬用的 pixel 。。。<br>之后我又换成 lofter 的网址，试了两种方式都可以。</p>
+<p>放点爬到的猫片<br>他喵的，竟然做了防盗链，访问403，我还是传七牛吧。</p>
+<p><img src="http://olti9qjwg.bkt.clouddn.com/qiniu/img/photos/cat0.jpg"><br><img src="http://olti9qjwg.bkt.clouddn.com/qiniu/img/photos/cat1.jpg"><br><img src="http://olti9qjwg.bkt.clouddn.com/qiniu/img/photos/cat2.jpg"> </p>
+
+      
+    </div>
+
+<!--/删掉一段-->
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/07/尺工/日常小技巧/" rel="next" title="日常小技巧">
+                <i class="fa fa-chevron-left"></i> 日常小技巧
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/11/13/new/网易云的hash检测/" rel="prev" title="网易云的hash检测。。">
+                网易云的hash检测。。 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://olti9qjwg.bkt.clouddn.com/qiniu/img/me.config/me.png"
+               alt="yuicer" />
+          <p class="site-author-name" itemprop="name">yuicer</p>
+          <p class="site-description motion-element" itemprop="description">秋露坠。滴尽楚兰红泪。往事旧欢何限意。思量如梦寐。人貌老于前岁。风月宛然无异。座有嘉宾尊有桂。莫辞终夕醉。</p>
+        </div>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/yuicer" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  Github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://space.bilibili.com/3069623" target="_blank" title="BiliBili">
+                  
+                    <i class="fa fa-fw fa-play"></i>
+                  
+                  BiliBili
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CPU-bound-计算密集型-和I-O-bound-I-O密集型"><span class="nav-number">1.1.</span> <span class="nav-text">CPU-bound(计算密集型) 和I/O bound(I/O密集型)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#进程，线程"><span class="nav-number">1.2.</span> <span class="nav-text">进程，线程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#爬虫"><span class="nav-number">1.3.</span> <span class="nav-text">爬虫</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#bug"><span class="nav-number">1.3.1.</span> <span class="nav-text">bug</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">yuicer</span>
+</div>
+
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'yuicer';
+      var disqus_identifier = '2017/11/13/new/noteOfNode(一)/';
+
+      var disqus_title = "noteOfNode(一)";
+
+
+      function run_disqus_script(disqus_script) {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+
+      
+        var disqus_config = function () {
+            this.page.url = disqus_url;
+            this.page.identifier = disqus_identifier;
+            this.page.title = disqus_title;
+        };
+        run_disqus_script('embed.js');
+      
+
+    </script>
+  
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>

@@ -1,0 +1,821 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="yuicer的闲言乱语" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue文件引入">
+<meta property="og:url" content="http://yuicer.com/2017/04/07/尺工/vue文件引入/index.html">
+<meta property="og:site_name" content="yuicer">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-02-28T02:44:39.160Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vue文件引入">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: "",
+      labels: ""
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yuicer.com/2017/04/07/尺工/vue文件引入/"/>
+
+
+
+
+
+  <title> vue文件引入 | yuicer </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?fc515cb84f85ab78c6ddae0d885911db";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="//s95.cnzz.com/z_stat.php?id=1261001148&web_id=1261001148" language="JavaScript"></script>
+  </div>
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">yuicer</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">colorful wanted</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-game">
+          <a href="/catice" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-gamepad"></i> <br />
+            
+            游戏
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-diary">
+          <a href="/diary" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-columns"></i> <br />
+            
+            日记
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-album">
+          <a href="/album" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-photo"></i> <br />
+            
+            相册
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yuicer.com/2017/04/07/尺工/vue文件引入/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="yuicer">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="http://olti9qjwg.bkt.clouddn.com/qiniu/img/me.config/me.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="yuicer">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="yuicer" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                vue文件引入
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-07T17:09:52+08:00">
+                2017-04-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/尺工/" itemprop="url" rel="index">
+                    <span itemprop="name">尺工</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+<!--shandiao-->
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p></p><p></p><br><a id="more"></a><p></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p> vue 引用的时候出现了很多问题，综合如下。</p>
+<h2 id="文件引入"><a href="#文件引入" class="headerlink" title="文件引入"></a>文件引入</h2><p>在 webpack 中有 require 和 import 两种方法，可以看前一篇文章</p>
+<h3 id="vue-引入插件"><a href="#vue-引入插件" class="headerlink" title="vue 引入插件"></a>vue 引入插件</h3><p>比如 tween jq three 等想要在每一个 vue 组件使用</p>
+<ol>
+<li><p>在 index.html 下手动加 script 标签加载。<br>缺点，无法应用 webpack 的打包，而且不符合模块化规范</p>
+</li>
+<li><p>在需要的地方使用 var name = require(‘./name’)<br>比如<code>var THREE = require(&#39;../../../static/three.min.js&#39;)</code><br>缺点，对于每一个 vue 组件，都需要去这样写，而且还要根据文件的路径去做更改【这里可以用到别名，见最下】</p>
+</li>
+</ol>
+<ol>
+<li>绑定到 vue 全局对象，<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">var</span> jq = require(./jq)</span><br><span class="line">Vue<span class="selector-class">.prototype</span><span class="selector-class">.jq</span> = jq</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>缺点，写法麻烦，都得加 this.jq</p>
+<ol>
+<li>修改 webpack 中的配置<br>webpack.config<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">plugins:</span> [</span><br><span class="line">  <span class="keyword">new</span> webpack.ProvidePlugin(&#123;</span><br><span class="line"><span class="symbol">    $:</span> <span class="string">'jquery'</span>,</span><br><span class="line"><span class="symbol">    jquery:</span> <span class="string">'jquery'</span>,</span><br><span class="line">  &#125;)</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>之后 import $ from ‘jquery</p>
+<ol>
+<li>import export<br>文件小可以直接放到一个 js 中然后用一个对象包裹它并导出<br>缺点，需要文件小且能放为对象格式</li>
+</ol>
+<h3 id="外部-js-获取-vue-对象"><a href="#外部-js-获取-vue-对象" class="headerlink" title="外部 js 获取 vue 对象"></a>外部 js 获取 vue 对象</h3><p>1.在 main.js 配置文件中将 vue 实例 export 出来，在外部 js 中 import 。<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">export</span> <span class="selector-tag">default</span> <span class="selector-tag">new</span> <span class="selector-tag">Vue</span>(&#123;</span><br><span class="line">    <span class="attribute">el</span>: <span class="string">'#app'</span>,</span><br><span class="line">    router,</span><br><span class="line">    store,</span><br><span class="line">    <span class="attribute">template</span>: <span class="string">'&lt;App/&gt;'</span>,</span><br><span class="line">    <span class="attribute">components</span>: &#123;</span><br><span class="line">        App</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>在外部 js 中 <code>import vm from &#39;./main.js&#39;</code> 之后就可以用 vm.$store,vm.$http 等等<br>注意，如果有一个 vue 组件要去引用这个 js ，会报错 <code>vm is not found</code>，这个时候 vue 的实例还没有生成，而 imort 的 js 已经在去找这个实例<br>个人认为所有的组件都执行完后 vue 实例才会生成<br>可以使用官方提供的懒加载<br><code>const Test = resolve =&gt; require([&#39;components/test&#39;], resolve)</code><br>这样的话只有在访问后才会去执行这个组件中的代码</p>
+<h3 id="vue-引入外部css"><a href="#vue-引入外部css" class="headerlink" title="vue 引入外部css"></a>vue 引入外部css</h3><ol>
+<li>require(‘./css’)</li>
+<li>import ‘./css’</li>
+<li>在 style 标签下 @import ‘./css’，加 scoped=”true” 也没办法用<br>这3种都不能固定作用域</li>
+<li>更改 style 标签的 src<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;style <span class="attribute">scoped</span>=<span class="string">"true"</span> <span class="attribute">src</span>=<span class="string">"./css/main.css"</span>&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>这个可以确定作用域。</p>
+<h2 id="vue-加载图片"><a href="#vue-加载图片" class="headerlink" title="vue 加载图片"></a>vue 加载图片</h2><ol>
+<li><p>html 中<br>写 <code>src = &#39;~assets/logo.png&#39;</code> 或者 :src = ‘img.src’<br>这里的 img.src 为 data 的数据。这个数据中的 src 不能直接写原路径，必须写解析后的 src<br>由于图片会被 loader 给解析，可能会变成 base64 格式，或者被改名加 hash 后缀等。写法如下</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> img = <span class="built_in">require</span>(<span class="string">'path/to/img'</span>)</span><br><span class="line">img.src = img;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>css 中，<br><code>src = &#39;~assets/logo.png&#39;</code></p>
+</li>
+<li><p>js 中<br>写外部 cdn 完整路径或者 require 之后的 src</p>
+</li>
+<li><p>background<br>:style = style …<br>style:{<br> backgroundImage: <code>url(${require(&#39;src&#39;)})</code><br>}</p>
+</li>
+</ol>
+<h2 id="加载字体等特殊文件"><a href="#加载字体等特殊文件" class="headerlink" title="加载字体等特殊文件"></a>加载字体等特殊文件</h2><p>需要在 file-loader 或者 url-loader 中进行配置</p>
+<h3 id="使用别名"><a href="#使用别名" class="headerlink" title="使用别名"></a>使用别名</h3><p>在不同的路径深度中引用【import 或者 require】一个固定路径的文件时很不方便，得../../的去找，所以在 webpack 的 config 文件中定义一个 alias<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">alias</span>: &#123;</span><br><span class="line">           <span class="attribute">static</span>: <span class="built_in">resolve</span>(<span class="string">'static'</span>),</span><br><span class="line">           src: <span class="built_in">resolve</span>(<span class="string">'src'</span>),</span><br><span class="line">           assets: <span class="built_in">resolve</span>(<span class="string">'src/assets'</span>)</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure></p>
+<p>resolve 是一个方法，如下。__dirname 是当前所在路径，path.join 是 node 的方法，拼接字符串。<br><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">resolve</span><span class="params">(dir)</span></span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">path</span>.join(__dirname, <span class="string">'..'</span>, dir)  //这个 <span class="string">'..'</span> 是为了返回到跟路径</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>注意此别名路径一定要写对，否则它会去把这个别名当作一个安装的模块，到 node_modules 里去查找，然后报错找不到，提示你 npm 安装。<br>使用：<br>js： require(‘src/main.js’)/import a from (‘src/main.js’)<br>html/css: src = “~assets/me.png”</p>
+
+      
+    </div>
+
+<!--/删掉一段-->
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/06/尺工/require-import/" rel="next" title="require_import">
+                <i class="fa fa-chevron-left"></i> require_import
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/04/10/杂乱/厕所堵住/" rel="prev" title="厕所堵住">
+                厕所堵住 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://olti9qjwg.bkt.clouddn.com/qiniu/img/me.config/me.png"
+               alt="yuicer" />
+          <p class="site-author-name" itemprop="name">yuicer</p>
+          <p class="site-description motion-element" itemprop="description">秋露坠。滴尽楚兰红泪。往事旧欢何限意。思量如梦寐。人貌老于前岁。风月宛然无异。座有嘉宾尊有桂。莫辞终夕醉。</p>
+        </div>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/yuicer" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  Github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://space.bilibili.com/3069623" target="_blank" title="BiliBili">
+                  
+                    <i class="fa fa-fw fa-play"></i>
+                  
+                  BiliBili
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件引入"><span class="nav-number">2.</span> <span class="nav-text">文件引入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#vue-引入插件"><span class="nav-number">2.1.</span> <span class="nav-text">vue 引入插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#外部-js-获取-vue-对象"><span class="nav-number">2.2.</span> <span class="nav-text">外部 js 获取 vue 对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vue-引入外部css"><span class="nav-number">2.3.</span> <span class="nav-text">vue 引入外部css</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vue-加载图片"><span class="nav-number">3.</span> <span class="nav-text">vue 加载图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#加载字体等特殊文件"><span class="nav-number">4.</span> <span class="nav-text">加载字体等特殊文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用别名"><span class="nav-number">4.1.</span> <span class="nav-text">使用别名</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">yuicer</span>
+</div>
+
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'yuicer';
+      var disqus_identifier = '2017/04/07/尺工/vue文件引入/';
+
+      var disqus_title = "vue文件引入";
+
+
+      function run_disqus_script(disqus_script) {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+
+      
+        var disqus_config = function () {
+            this.page.url = disqus_url;
+            this.page.identifier = disqus_identifier;
+            this.page.title = disqus_title;
+        };
+        run_disqus_script('embed.js');
+      
+
+    </script>
+  
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>

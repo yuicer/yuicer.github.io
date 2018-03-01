@@ -1,0 +1,794 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="yuicer的闲言乱语" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux服务器部署node">
+<meta property="og:url" content="http://yuicer.com/2017/06/01/new/服务器部署node/index.html">
+<meta property="og:site_name" content="yuicer">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-02-28T02:44:39.151Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="linux服务器部署node">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: "",
+      labels: ""
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yuicer.com/2017/06/01/new/服务器部署node/"/>
+
+
+
+
+
+  <title> linux服务器部署node | yuicer </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?fc515cb84f85ab78c6ddae0d885911db";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="//s95.cnzz.com/z_stat.php?id=1261001148&web_id=1261001148" language="JavaScript"></script>
+  </div>
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">yuicer</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">colorful wanted</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-game">
+          <a href="/catice" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-gamepad"></i> <br />
+            
+            游戏
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-diary">
+          <a href="/diary" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-columns"></i> <br />
+            
+            日记
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-album">
+          <a href="/album" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-photo"></i> <br />
+            
+            相册
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yuicer.com/2017/06/01/new/服务器部署node/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="yuicer">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="http://olti9qjwg.bkt.clouddn.com/qiniu/img/me.config/me.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="yuicer">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="yuicer" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                linux服务器部署node
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-01T17:02:54+08:00">
+                2017-06-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/尺工/" itemprop="url" rel="index">
+                    <span itemprop="name">尺工</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+<!--shandiao-->
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p></p><p></p><br><a id="more"></a><p></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在活动项目中自己利用 node 搭建后台</p>
+<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><p>PuTTY<br>连接 windows 服务器的话直接在运行里面输入 msysc 进行远程连接就可以，但是 Linux 服务器是通过 ssh 来连接的，所以需要下这么一个工具去进行连接，下载后直接输入服务器 ip，进入后输入账号，密码就可以进到 Linux 的命令行。</p>
+<p>WinSCP<br>图形化文件传输系统，可以方便的将文件传到服务器上</p>
+<h2 id="配置服务器"><a href="#配置服务器" class="headerlink" title="配置服务器"></a>配置服务器</h2><h3 id="安装node"><a href="#安装node" class="headerlink" title="安装node"></a>安装node</h3><p>打开 PuTTY，输入服务器 ip 后就看到命令行界面，输入账号和密码进入服务器。<br>检查服务器多少位下载对应的 node 版本。<br>下载之后利用 WinSCP 将下好的压缩包拖进去，然后执行以下代码<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">tar xvf <span class="keyword">node</span><span class="title">-v6</span>.<span class="number">10.0</span>-linux-x64.tar.xz //解压</span><br><span class="line"></span><br><span class="line">cd <span class="keyword">node</span><span class="title">-v6</span>.<span class="number">10.0</span>-linux-x64/bin</span><br><span class="line">设置软连接</span><br><span class="line">ls</span><br><span class="line">./<span class="keyword">node</span> <span class="title">-v</span>	//输出版本号，表示在当前目录下可用</span><br><span class="line"></span><br><span class="line">ln -s /root/<span class="keyword">node</span><span class="title">-v6</span>.<span class="number">10.0</span>-linux-x64/bin/<span class="keyword">node</span> <span class="title">/usr</span>/local/bin/<span class="keyword">node</span>  <span class="title">设置全局</span></span><br><span class="line"><span class="title">ln</span> -s /root/<span class="keyword">node</span><span class="title">-v6</span>.<span class="number">10.0</span>-linux-x64/bin/npm /usr/local/bin/npm</span><br><span class="line"></span><br><span class="line"><span class="keyword">node</span> <span class="title">-v</span>  // 之后就可以在任意位置使用</span><br></pre></td></tr></table></figure></p>
+<p>坑：我自己之前自作聪明，下到本地后先解压后改了名字【想着好打一点】，把文件夹传了过去，可是<code>./node -v</code>根本就没用。。哎。因为覆盖过去的没有权限</p>
+<h3 id="配置-node-环境变量"><a href="#配置-node-环境变量" class="headerlink" title="配置 node 环境变量"></a>配置 node 环境变量</h3><p>设置全局变量<br>首先进入<code>vim /etc/profile</code><br>按 i 进入编辑模式，在文本的最下面输入以下语句<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="builtin-name">export</span> <span class="attribute">NODE_HOME</span>=/root/node-v6.10.0-linux-x64</span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">PATH</span>=<span class="variable">$PATH</span>:$NODE_HOME/bin</span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">NODE_PATH</span>=<span class="variable">$NODE_HOME</span>/lib/node_modules</span><br></pre></td></tr></table></figure></p>
+<p>按 esc 退出编辑模式，打 :wq 退出保存，<br>输入 <code>source/etc/profile</code>使配置生效<br>坑：之前不知道这个玩意，npm 装的全局包一直保没有报 not command，因为找不到装的路径位置。后来把环境变量加上去的时候【复制的网上的代码】错打了几个字符，然后就还是报错。导致折腾了一个小时。</p>
+<h2 id="启动项目"><a href="#启动项目" class="headerlink" title="启动项目"></a>启动项目</h2><p>项目目录下面启动 node start.js，之后就可以访问了【用 express 很方便】<br>坑：将项目直接传过去之后用 npm start 启动项目完全没效果。原先的后台把端口号给禁用了。。</p>
+<p>一般开发都是在本地，然后运行放服务器上，两边同步很麻烦，所以一般都是在服务器上弄个 git 仓库。<br>在服务器上一般都会用 pm2 工具，他能让后台程序一直在服务器上跑。然后 pm2 里面自带一个 deployment ，可以设置后同步远程<br>我最开始用的是尤大的 pod 工具,也是一样的逻辑，只不过稍微有点区别。</p>
+<h3 id="pm2"><a href="#pm2" class="headerlink" title="pm2"></a>pm2</h3><p>pm2 的官网文档很不错<a href="http://pm2.keymetrics.io/" target="_blank" rel="noopener">官网</a><br>对于pm2项目配置文件nodeserver.json,可管理多个项目<br><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"apps"</span>: [&#123;</span><br><span class="line">        <span class="string">//</span> Application <span class="comment">#1</span></span><br><span class="line">        <span class="string">"name"</span>: <span class="string">"server"</span>,</span><br><span class="line">        <span class="string">"script"</span>: <span class="string">"./bin/www"</span>,      <span class="string">//</span>脚本位置，默认由 node 执行</span><br><span class="line">        <span class="string">"cwd"</span>: <span class="string">"./front_end"</span>,       <span class="string">//</span>文件启动位置</span><br><span class="line">		<span class="string">"watch"</span>: [<span class="string">"routes"</span>,<span class="string">"models"</span>,<span class="string">"views"</span>],	<span class="string">//</span>监听改变自动加载</span><br><span class="line">        <span class="string">"instances"</span>: 4,         <span class="string">//4</span>个实例</span><br><span class="line">        <span class="string">"exec_mode"</span>: <span class="string">"cluster"</span>,     /多核cpu模拟多进程模式</span><br><span class="line">        <span class="string">"error_file"</span>: <span class="string">"./log/err.log"</span>,      <span class="string">//</span>以下为 log 日志</span><br><span class="line">        <span class="string">"out_file"</span>: <span class="string">"./log/out.log"</span>,</span><br><span class="line">        <span class="string">"pid_file"</span>: <span class="string">"./log/pids.pid"</span>,</span><br><span class="line">        <span class="string">"env"</span>: &#123;						<span class="string">//</span>环境配置</span><br><span class="line">            <span class="string">"NODE_ENV"</span>: <span class="string">"development"</span>,</span><br><span class="line">            <span class="string">"AWESOME_SERVICE_API_TOKEN"</span>: <span class="string">"xxx"</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="string">"env_production"</span>: &#123;</span><br><span class="line">            <span class="string">"NODE_ENV"</span>: <span class="string">"production"</span></span><br><span class="line">        &#125;</span><br><span class="line">  &#125;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>如果有多个项目，再向数组里加上一个就好。配置文件可以放在根目录。<br>运行<br>pm2 start nodeserver.json<br>重启<br>pm2 restart all<br>停止<br>pm2 stop all<br>关闭<br>pm2 kill</p>
+<h4 id="pm2开机自启动"><a href="#pm2开机自启动" class="headerlink" title="pm2开机自启动"></a>pm2开机自启动</h4><p>pm2 list 看到已启动的进程后 pm2 startup<br>之后它会打印出一系列命令，中间有一部分是让你执行的，复制后执行一遍<br>当把它所说的执行完后，会再度打印一串内容<br>之后 pm2 save 就完成了，非常简单。</p>
+<h3 id="pod"><a href="#pod" class="headerlink" title="pod"></a>pod</h3><p>远端 pod create myapp 会建立一个目录</p>
+<blockquote>
+<p>root<br>  -pod<br>   -apps<br>    +myapp<br>    -repos<br>     +myapp.git</p>
+</blockquote>
+<p>这样就建好了一个 git 仓库<br>本地git clone ssh://your-server/pod_dir/myapp.git<br>然后将项目结构修改如下</p>
+<blockquote>
+<p>nodeserver<br> -noserver.json<br> -README.md<br> -apps<br>  +server</p>
+</blockquote>
+
+      
+    </div>
+
+<!--/删掉一段-->
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/05/31/尺工/vue-live/" rel="next" title="vue_live">
+                <i class="fa fa-chevron-left"></i> vue_live
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/06/07/new/mongodb(一)/" rel="prev" title="mongodb(一)">
+                mongodb(一) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://olti9qjwg.bkt.clouddn.com/qiniu/img/me.config/me.png"
+               alt="yuicer" />
+          <p class="site-author-name" itemprop="name">yuicer</p>
+          <p class="site-description motion-element" itemprop="description">秋露坠。滴尽楚兰红泪。往事旧欢何限意。思量如梦寐。人貌老于前岁。风月宛然无异。座有嘉宾尊有桂。莫辞终夕醉。</p>
+        </div>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/yuicer" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  Github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://space.bilibili.com/3069623" target="_blank" title="BiliBili">
+                  
+                    <i class="fa fa-fw fa-play"></i>
+                  
+                  BiliBili
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工具"><span class="nav-number">2.</span> <span class="nav-text">工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置服务器"><span class="nav-number">3.</span> <span class="nav-text">配置服务器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装node"><span class="nav-number">3.1.</span> <span class="nav-text">安装node</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置-node-环境变量"><span class="nav-number">3.2.</span> <span class="nav-text">配置 node 环境变量</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动项目"><span class="nav-number">4.</span> <span class="nav-text">启动项目</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#pm2"><span class="nav-number">4.1.</span> <span class="nav-text">pm2</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#pm2开机自启动"><span class="nav-number">4.1.1.</span> <span class="nav-text">pm2开机自启动</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pod"><span class="nav-number">4.2.</span> <span class="nav-text">pod</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">yuicer</span>
+</div>
+
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'yuicer';
+      var disqus_identifier = '2017/06/01/new/服务器部署node/';
+
+      var disqus_title = "linux服务器部署node";
+
+
+      function run_disqus_script(disqus_script) {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+
+      
+        var disqus_config = function () {
+            this.page.url = disqus_url;
+            this.page.identifier = disqus_identifier;
+            this.page.title = disqus_title;
+        };
+        run_disqus_script('embed.js');
+      
+
+    </script>
+  
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
