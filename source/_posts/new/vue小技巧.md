@@ -3,10 +3,25 @@ title: vue小技巧
 categories:
   - 尺工
  
-date: 2018-01-15 11:23:44
+date: 2018-02-28 18:23:44
 ---
 <p></p>
 <!-- more -->
+
+## 批量读取模块
+vue-router
+```js
+let Modules = require.context("./../component/pages", true, /\.vue$/);
+Modules.keys().forEach(function(v, i) {
+    let key = v.replace(/(\.\/|\.vue)/g, '');
+    routesObj.push({
+        path: '/' + key,
+        name: key,
+        component: Modules(v)['default']
+    });
+});
+```
+`Modules(v)['default']` 为引入的模块
 
 ## 设置请求域名
 var url = Vue.config.devtools ? '//test.xxx.com/api' : '/api'
