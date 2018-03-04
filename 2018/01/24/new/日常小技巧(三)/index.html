@@ -63,7 +63,7 @@
 <meta property="og:url" content="http://yuicer.com/2018/01/24/new/日常小技巧(三)/index.html">
 <meta property="og:site_name" content="yuicer">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-01T02:37:49.057Z">
+<meta property="og:updated_time" content="2018-03-04T10:34:05.405Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="日常小技巧(三)">
 
@@ -338,27 +338,69 @@
 
       
         <p></p><p></p><br><a id="more"></a><p></p>
-<h2 id="9"><a href="#9" class="headerlink" title="9"></a>9</h2><p>arr 方法<br>map 对每一个元素都执行一个方法，并将返回值组成一个新的数组<br>filter 对每个元素都执行一个方法，返回值为 true 的元素组成一个新的数组<br>some 对每个元素都执行一个方法，当其中一个返回为 true 时，此方法返回为 true<br>every 对每个元素都执行一个方法，当所有元素都返回为 true 时，此方法返回为 true</p>
-<h2 id="8"><a href="#8" class="headerlink" title="8"></a>8</h2><p>osi 7 层模型</p>
-<p>应用层<br>1.主要功能 ：用户接口、应用程序<br>application 2.典型设备：网关<br>3.典型协议、标准和应用：TELNET, FTP, HTTP </p>
-<p>表示层<br>1.主要功能 ：数据的表示、压缩和加密<br>presentation2.典型设备：网关<br>3.典型协议、标准和应用：ASCLL、PICT、TIFF、JPEG、 MIDI、MPEG </p>
-<p>会话层<br>1.主要功能 ：会话的建立和结束<br>session2.典型设备：网关<br>3.典型协议、标准和应用：RPC、SQL、NFS 、X WINDOWS、ASP </p>
-<p>传输层<br>1.主要功能 ：端到端控制<br>transport 2.典型设备：网关<br>3.典型协议、标准和应用：TCP、UDP、SPX </p>
-<p>网络层<br>1.主要功能 ：路由，寻址<br>network2.典型设备：路由器<br>3.典型协议、标准和应用：IP、IPX、APPLETALK、ICMP </p>
-<p>数据链路层<br>1.主要功能 ：保证误差错的数据链路<br>data link 2.典型设备：交换机、网桥、网卡<br>3.典型协议、标准和应用：802.2、802.3ATM、HDLC、FRAME RELAY </p>
-<p>物理层<br>1.主要功能 ：传输比特流<br>physical2.典型设备：集线器、中继器<br>3.典型协议、标准和应用：V.35、EIA/TIA-232 </p>
-<h2 id="7"><a href="#7" class="headerlink" title="7"></a>7</h2><p>Object.defineProperty，为某个对象新增属性<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">Object.defineProperty(obj,</span> <span class="string">"key"</span><span class="string">,</span> <span class="string">&#123;</span></span><br><span class="line"><span class="attr">  enumerable:</span> <span class="literal">false</span><span class="string">,</span> <span class="string">//</span> <span class="string">默认</span> <span class="literal">false</span><span class="string">，可否被枚举</span></span><br><span class="line"><span class="attr">  configurable:</span> <span class="literal">false</span><span class="string">,</span> <span class="string">//</span> <span class="string">默认</span> <span class="literal">false</span><span class="string">，可否被配置（删除）</span></span><br><span class="line"><span class="attr">  writable:</span> <span class="literal">false</span><span class="string">,</span> <span class="string">//</span> <span class="string">默认</span> <span class="literal">false</span><span class="string">，可否被修改</span></span><br><span class="line"><span class="attr">  value:</span> <span class="string">"static"</span> <span class="string">//</span> <span class="string">要被定义的值</span></span><br><span class="line"><span class="string">&#125;);</span></span><br><span class="line"><span class="string">定义多个属性</span></span><br></pre></td></tr></table></figure></p>
-<p>Object.defineProperties(obj, {<br>  ‘property1’: {<br>    value: true,<br>    writable: true<br>  },<br>  ‘property2’: {<br>    value: ‘Hello’,<br>    writable: false<br>  }<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line"></span><br><span class="line">## <span class="number">6</span></span><br><span class="line">`mailto:yourmail.com`</span><br><span class="line">邮箱协议，在支持的页面会自动调起邮箱程序</span><br><span class="line"></span><br><span class="line">## <span class="number">5</span></span><br><span class="line">object.create</span><br><span class="line">这个感觉就是拿来做继承的</span><br></pre></td></tr></table></figure></p>
-<p>var son = function(name,value){<br>  father.call(this,name)<br>  this.value = value<br>}<br>son.prototype = Object.create(father.prototype)<br>son.prototype.constructor = son<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">create 创建的是拷贝，所以更改 son.prototype 不会更改 father 的 prototype</span><br><span class="line"></span><br><span class="line"><span class="comment">## 4</span></span><br><span class="line">object.assign</span><br><span class="line">对象的浅复制，方法用于将所有可枚举属性的值从一个或多个源对象复制到目标对象。它将返回目标对象。</span><br><span class="line"></span><br><span class="line"><span class="comment">## 3</span></span><br><span class="line">jsonp </span><br><span class="line">看着挺厉害，其实就是个漏洞。</span><br><span class="line">原理其实就是因为 js 的同源策略并没有对带有 src 标签的 dom 请求做限制，比如 img<span class="built_in"> script </span>。所以就可以用<span class="built_in"> script </span>来取巧</span><br></pre></td></tr></table></figure></p>
-<p><script><br>  function say(param) {<br>    console.log(‘jsonp’，param)<br>  }<br></script></p>
-<p><script src="http://127.0.0.1:3000/"></script><br><code>`</code><br>第二个脚本服务端直接拼接字符串返回 say(‘data’)，就可以执行 say 输出了</p>
-<h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><p>javascript 垃圾回收</p>
+<h2 id="withCredentials"><a href="#withCredentials" class="headerlink" title="withCredentials"></a>withCredentials</h2><p>允许不同域情况下向后端发送 cookie<br><figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> <span class="type">XMLHttpRequest</span>();</span><br><span class="line">xhr.open(<span class="string">'GET'</span>, <span class="string">'http://example.com/'</span>, <span class="literal">true</span>);</span><br><span class="line">xhr.withCredentials = <span class="literal">true</span>;</span><br><span class="line">xhr.send(<span class="literal">null</span>);</span><br></pre></td></tr></table></figure></p>
+<p>9</p>
+<h2 id="arr-方法"><a href="#arr-方法" class="headerlink" title="arr 方法"></a>arr 方法</h2><blockquote>
+<p>map 对每一个元素都执行一个方法，并将返回值组成一个新的数组<br>filter 对每个元素都执行一个方法，返回值为 true 的元素组成一个新的数组<br>some 对每个元素都执行一个方法，当其中一个返回为 true 时，此方法返回为 true<br>every 对每个元素都执行一个方法，当所有元素都返回为 true 时，此方法返回为 true</p>
+</blockquote>
+<p>8</p>
+<h2 id="osi-7-层模型"><a href="#osi-7-层模型" class="headerlink" title="osi 7 层模型"></a>osi 7 层模型</h2><p>应用层 </p>
 <ol>
+<li>主要功能 ：用户接口、应用程序 </li>
+<li>典型设备：网关 </li>
+<li>典型协议、标准和应用：TELNET, FTP, HTTP </li>
+</ol>
+<p>表示层 </p>
+<ol>
+<li>主要功能 ：数据的表示、压缩和加密 </li>
+<li>典型设备：网关 </li>
+<li>典型协议、标准和应用：ASCLL、PICT、TIFF、JPEG、 MIDI、MPEG </li>
+</ol>
+<p>会话层 </p>
+<ol>
+<li>主要功能 ：会话的建立和结束 </li>
+<li>典型设备：网关 </li>
+<li>典型协议、标准和应用：RPC、SQL、NFS 、X WINDOWS、ASP </li>
+</ol>
+<p>传输层 </p>
+<ol>
+<li>主要功能 ：端到端控制 </li>
+<li>典型设备：网关 </li>
+<li>典型协议、标准和应用：TCP、UDP、SPX </li>
+</ol>
+<p>网络层 </p>
+<ol>
+<li>主要功能 ：路由，寻址 </li>
+<li>典型设备：路由器 </li>
+<li>典型协议、标准和应用：IP、IPX、APPLETALK、ICMP </li>
+</ol>
+<p>数据链路层 </p>
+<ol>
+<li>主要功能 ：保证误差错的数据链路 </li>
+<li>典型设备：交换机、网桥、网卡 </li>
+<li>典型协议、标准和应用：802.2、802.3ATM、HDLC、FRAME RELAY </li>
+</ol>
+<p>物理层 </p>
+<ol>
+<li>主要功能 ：传输比特流 </li>
+<li>典型设备：集线器、中继器 </li>
+<li>典型协议、标准和应用：V.35、EIA/TIA-232 </li>
+</ol>
+<h2 id="Object-defineProperty，为某个对象新增属性"><a href="#Object-defineProperty，为某个对象新增属性" class="headerlink" title="Object.defineProperty，为某个对象新增属性"></a>Object.defineProperty，为某个对象新增属性</h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">Object.defineProperty(obj,</span> <span class="string">"key"</span><span class="string">,</span> <span class="string">&#123;</span></span><br><span class="line"><span class="attr">  enumerable:</span> <span class="literal">false</span><span class="string">,</span> <span class="string">//</span> <span class="string">默认</span> <span class="literal">false</span><span class="string">，可否被枚举</span></span><br><span class="line"><span class="attr">  configurable:</span> <span class="literal">false</span><span class="string">,</span> <span class="string">//</span> <span class="string">默认</span> <span class="literal">false</span><span class="string">，可否被配置（删除）</span></span><br><span class="line"><span class="attr">  writable:</span> <span class="literal">false</span><span class="string">,</span> <span class="string">//</span> <span class="string">默认</span> <span class="literal">false</span><span class="string">，可否被修改</span></span><br><span class="line"><span class="attr">  value:</span> <span class="string">"static"</span> <span class="string">//</span> <span class="string">要被定义的值</span></span><br><span class="line"><span class="string">&#125;);</span></span><br><span class="line"><span class="string">定义多个属性</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">Object.defineProperties(obj,</span> <span class="string">&#123;</span></span><br><span class="line"><span class="attr">  'property1':</span> <span class="string">&#123;</span></span><br><span class="line"><span class="attr">    value:</span> <span class="literal">true</span><span class="string">,</span></span><br><span class="line"><span class="attr">    writable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="string">&#125;,</span></span><br><span class="line"><span class="attr">  'property2':</span> <span class="string">&#123;</span></span><br><span class="line"><span class="attr">    value:</span> <span class="string">'Hello'</span><span class="string">,</span></span><br><span class="line"><span class="attr">    writable:</span> <span class="literal">false</span></span><br><span class="line">  <span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="mailto-yourmail-com"><a href="#mailto-yourmail-com" class="headerlink" title="mailto:yourmail.com"></a><code>mailto:yourmail.com</code></h2><p>邮箱协议，在支持的页面会自动调起邮箱程序</p>
+<h2 id="object-create"><a href="#object-create" class="headerlink" title="object.create"></a>object.create</h2><p>这个感觉就是拿来做继承的<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">var</span> son = function(name,value)&#123;</span><br><span class="line">  father.call(this,name)</span><br><span class="line">  this<span class="selector-class">.value</span> = value</span><br><span class="line">&#125;</span><br><span class="line">son<span class="selector-class">.prototype</span> = Object.create(father.prototype)</span><br><span class="line">son<span class="selector-class">.prototype</span><span class="selector-class">.constructor</span> = son</span><br></pre></td></tr></table></figure></p>
+<p>create 创建的是拷贝，所以更改 son.prototype 不会更改 father 的 prototype</p>
+<h2 id="object-assign"><a href="#object-assign" class="headerlink" title="object.assign"></a>object.assign</h2><p>对象的浅复制，方法用于将所有可枚举属性的值从一个或多个源对象复制到目标对象。它将返回目标对象。</p>
+<h2 id="jsonp"><a href="#jsonp" class="headerlink" title="jsonp"></a>jsonp</h2><p>看着挺厉害，其实就是个漏洞。<br>原理其实就是因为 js 的同源策略并没有对带有 src 标签的 dom 请求做限制，比如 img script 。所以就可以用 script 来取巧<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="actionscript">  <span class="function"><span class="keyword">function</span> <span class="title">say</span><span class="params">(param)</span> </span>&#123;</span></span><br><span class="line"><span class="javascript">    <span class="built_in">console</span>.log(<span class="string">'jsonp'</span>，param)</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://127.0.0.1:3000/"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>第二个脚本服务端直接拼接字符串返回 say(‘data’)，就可以执行 say 输出了</p>
+<h2 id="javascript-垃圾回收"><a href="#javascript-垃圾回收" class="headerlink" title="javascript 垃圾回收"></a>javascript 垃圾回收</h2><ol>
 <li>分配内存</li>
 <li>内存读写</li>
-<li>内存回收<br>在第三部的时候，如何判断哪些是可以回收的是个难点，js 中内置有垃圾自动回收机制，主要有两种，引用技术和标记清除。<br>第一种是判断对象有没有被引用，第二种则是判断对象能不能被获得<br>但是第一种对于一个循环引用的无法判断，现在大多是用的第二种，具体方法是从根元素开始(全局对象)，向下寻找所有对象。然后删除不能获得的对象</li>
+<li>内存回收</li>
 </ol>
-<h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><p>事件委托（代理）<br>这个实际上就是通过事件机制（捕获，冒泡）来实现，比如一个场景，ul 下几个 li，与其给每个 li 加事件，也可以直接给 ul 加上事件，通过 target 来判断到底是哪个 li。</p>
+<p>在第三部的时候，如何判断哪些是可以回收的是个难点，js 中内置有垃圾自动回收机制，主要有两种，引用技术和标记清除。<br>第一种是判断对象有没有被引用，第二种则是判断对象能不能被获得<br>但是第一种对于一个循环引用的无法判断，现在大多是用的第二种，具体方法是从根元素开始(全局对象)，向下寻找所有对象。然后删除不能获得的对象</p>
+<h2 id="事件委托（代理）"><a href="#事件委托（代理）" class="headerlink" title="事件委托（代理）"></a>事件委托（代理）</h2><p>这个实际上就是通过事件机制（捕获，冒泡）来实现，比如一个场景，ul 下几个 li，与其给每个 li 加事件，也可以直接给 ul 加上事件，通过 target 来判断到底是哪个 li。</p>
 
       
     </div>
@@ -504,7 +546,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#9"><span class="nav-number">1.</span> <span class="nav-text">9</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8"><span class="nav-number">2.</span> <span class="nav-text">8</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7"><span class="nav-number">3.</span> <span class="nav-text">7</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2"><span class="nav-number">4.</span> <span class="nav-text">2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1"><span class="nav-number">5.</span> <span class="nav-text">1</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#withCredentials"><span class="nav-number">1.</span> <span class="nav-text">withCredentials</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#arr-方法"><span class="nav-number">2.</span> <span class="nav-text">arr 方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#osi-7-层模型"><span class="nav-number">3.</span> <span class="nav-text">osi 7 层模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Object-defineProperty，为某个对象新增属性"><span class="nav-number">4.</span> <span class="nav-text">Object.defineProperty，为某个对象新增属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mailto-yourmail-com"><span class="nav-number">5.</span> <span class="nav-text">mailto:yourmail.com</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#object-create"><span class="nav-number">6.</span> <span class="nav-text">object.create</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#object-assign"><span class="nav-number">7.</span> <span class="nav-text">object.assign</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jsonp"><span class="nav-number">8.</span> <span class="nav-text">jsonp</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#javascript-垃圾回收"><span class="nav-number">9.</span> <span class="nav-text">javascript 垃圾回收</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件委托（代理）"><span class="nav-number">10.</span> <span class="nav-text">事件委托（代理）</span></a></li></ol></div>
             
 
           </div>
