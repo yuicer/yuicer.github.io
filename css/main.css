@@ -1677,7 +1677,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff8f5d;
+  background: #e2ec1a;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2450,7 +2450,7 @@ a.search-result {
   text-indent: 2em;
 }
 body {
-  background: url("http://olti9qjwg.bkt.clouddn.com/qiniu/img/bg/winter.jpg") no-repeat;
+  background: url("http://olti9qjwg.bkt.clouddn.com/qiniu/img/bg/sunset.jpg") no-repeat;
   background-size: 100vw;
   background-attachment: fixed;
   background-size: cover;
@@ -2659,8 +2659,8 @@ body {
 }
 .site-meta {
   padding: 20px 0;
-  background: #5d687a;
-  background-image: linear-gradient(60deg, #cfd2cb 20px, transparent 0), linear-gradient(50deg, #2c4a65 20px, transparent 0), linear-gradient(20deg, #121a27 20px, transparent 0);
+  background: #cea25e;
+  background-image: linear-gradient(60deg, #97cea8 20px, transparent 0), linear-gradient(50deg, #dcf189 20px, transparent 0), linear-gradient(20deg, #fff 20px, transparent 0);
   background-size: 60px 100%, 50px 100%, 40px 100%;
 }
 @media (min-width: 768px) and (max-width: 991px) {
