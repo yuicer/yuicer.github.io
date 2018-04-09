@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[html2canvas]]></title>
+    <url>%2F2018%2F04%2F09%2Fnew%2Fhtml2canvas%2F</url>
+    <content type="text"><![CDATA[前言网页截图这个需求之前也有遇到，虽然做了个小 demo，用 canvas 可以生成图片，但是没有具体去看细节，还是有很多坑 原理截图功能原理基本就是通过 canvas 提供了一个 api，canvas.toDataUrl()，通过它可以将 canvas 的内容转化为 base64 的格式，另外还有一个 api 是转化为 blob 格式，canvas.toBlob()。所以我们将 dom 上需要截屏的区域画到 canvas 上后，再保存为数据，之后 new Image，当作 src 传进去就可以生成图片了。 canvas.toDataURL(type, encoderOptions)第一个字符串参数是保存的类型，默认为 image/png，第二个是保存的质量，默认为 0.92 canvas.toBlob(callback, type, encoderOptions)callback,回调函数，可获得一个单独的Blob对象参数。第二，三个参数同上 html2canvas地址 123html2canvas(document.body).then(function(canvas) &#123; document.body.appendChild(canvas);&#125;); 这个库简化了将 dom 转化为 canvas 上的图像一过程。同时它也有很多的限制，作者也明确说了这个东西是在实验阶段，不建议用到开发环境。btw需求需要。。 坑它对浏览器有要求，需要支持 promise，用个 ployfill 可以解决 对 css 样式有部分不支持。但是基本够用了 图片生成可能会模糊，网上确实能找到很多办法，其实无非就是将 canvas 元素宽高设大，样式设小，等同与将高倍画布缩小。而且可能是版本问题，网上大部分方法无效【自己生成一个canvas传入】，最后使用大官方提供的属性 scale ，其实感觉这个属性也不是很好用， 测试就只有设置为 1 的时候效果最好，但是这个最好的效果还是比较模糊 图片需要处理跨域问题，不然就截取不到图片，这个其实是 canvas 的问题 尽管不通过 CORS 就可以在画布中使用图片，但是这会污染画布。一旦画布被污染，你就无法读取其数据。例如，你不能再使用画布的 toBlob(), toDataURL() 或 getImageData() 方法，调用它们会抛出安全错误。这种机制可以避免未经许可拉取远程网站信息而导致的用户隐私泄露。 但是很多对图片都是用的图床 cdn，不方便去设置跨域。所以解决方法一半都是将请求到的图片转化为 base64 后替换图片 src。 另外在一种极限情况下，网页刚打开就去截图的时候，可能会由于图片没有渲染完毕或加载完毕导致截图截的是部分图片 其他奇怪bug。。项目里面设置的一个弹窗竟然会顶导致生成的图片也被顶上去了。。。。此bug没找到原因，最后绕道而行了。。。]]></content>
+      <categories>
+        <category>尺工</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[移动端滚动穿透]]></title>
+    <url>%2F2018%2F04%2F09%2Fnew%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E6%BB%9A%E5%8A%A8%E7%A9%BF%E9%80%8F%2F</url>
+    <content type="text"><![CDATA[前言作移动端项目的时候经常会遇到一个场景，一个全屏幕的遮罩层，然后内部可以滚动，外部不能滚动。讲道理这个需求看起来不麻烦。。。但是意外的实现起来很麻烦。 浏览器行为默认滚动的都是 document.documentElement 这个最外层元素，当内层再出现一个滚动框后滚动行为会变成滚动内层时到达顶部或者底部的时候就去滚动外层元素。 之前在 pc 端时通过 mousewheel 属性的方向以及内部是否滚动到底部和顶部来判断。。现在想起来真是一个蠢方法。。。。 在移动端的时候又遇到了这个问题，然后去搜了下。发现可以采用另一种不同的思路来实现。css 属性的 absolute fixed 属性会默认禁止滚动，利用这个特性就可以很好的去实现这个效果，当遮罩层出现的时候给 body 【或者其他的】元素设置为 fixed，但是这样会丢失滚动记录，fixed不可滚动，所以就需要记录当前屏幕滚动的 scrollTop 值，设置 body 元素的 top，定位过来，当遮罩层消失的时候再设置为 static 就可以完美的实现这个需求了 1234567891011var me = thisvar dom = document.querySelector('#app')if (!me.isShow) &#123; me.scrollTop = document.documentElement.scrollTop || document.body.scrollTop dom.style.position = 'fixed' dom.style.top = `-$&#123;me.scrollTop&#125;px`&#125; else &#123; dom.style.position = 'static' document.body.scrollTop = document.documentElement.scrollTop = me.scrollTop&#125;me.isShow = !me.isShow]]></content>
+      <categories>
+        <category>尺工</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[日常小技巧（五）]]></title>
+    <url>%2F2018%2F04%2F09%2Fnew%2F%E6%97%A5%E5%B8%B8%E5%B0%8F%E6%8A%80%E5%B7%A7%EF%BC%88%E4%BA%94%EF%BC%89%2F</url>
+    <content type="text"><![CDATA[vue 数据相应之前使用 vue 的时候，对于非跟元素属性的改变不能自动更新这件事情没有什么好对处理方法，都是用对数组方法 push pop splice 这种会改变数组对方法来实现属性对跟新。然后使用这种方法解决大部分问题后就没有继续深入去了解。今天看到一个新对解决方法 vue 中其实提供了相应对解决方法 vue.set vue.delete，后者可能不常用，两者都是可以更新非 vue 实例和根元素下对属性。1234vue.set( target, key, value )&#123;Object | Array&#125; target&#123;string | number&#125; key&#123;any&#125; value vue-router 简便方法当有很多组件对时候不需要一个一个去写了，但是不知道怎么去实现懒加载。12345678910111213141516171819let Modules = require.context("@/components/", true, /\.vue$/)let routesObj = [&#123; path: '/', redirect: '/index',&#125;]Modules.keys().forEach(function (v, i) &#123; let key = v.replace(/(\.\/|\.vue)/g, '') routesObj.push(&#123; path: '/' + key, name: key, component: Modules(v)['default'] &#125;)&#125;)export default new Router(&#123; routes: routesObj&#125;)]]></content>
+      <categories>
+        <category>尺工</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[addEventListener]]></title>
+    <url>%2F2018%2F04%2F09%2Fnew%2FaddEventListener%2F</url>
+    <content type="text"><![CDATA[前言冬去春来，这段时间真是发生了好多的事情，算是一个新的人生转折点了。换了新城市，新公司，新生活。体验到了北漂生活。这2，3个月过的真是匆匆忙忙。 现在想做的事情有已经堆了有山一样高了，要时有更多对时间就好了 addEventListener这个方法算是最基本的，但是之前去用到的时候还是有疑惑。。。在这里再总结整理下基本结构target.addEventListener(type, listener, options) options一个指定有关 listener 属性的可选参数对象。可用的选项如下：capture: Boolean，表示 listener 会在该类型的事件捕获阶段传播到该 EventTarget 时触发。once: Boolean，表示 listener 在添加之后最多只调用一次。如果是 true， listener 会在其被调用之后自动移除。passive: Boolean，表示 listener 永远不会调用 preventDefault()。如果 listener 仍然调用了这个函数，客户端将会忽略它并抛出一个控制台警告。mozSystemGroup: 只能在 XBL 或者是 Firefox’ chrome 使用，这是个 Boolean，表示 listener 被添加到 system group。 这里对 capture 就和以前的 useCapture[boolean] 默认 false 值是一样的。都是捕获阶段触发,once 就是这个绑定对事件只执行一次，执行之后就把解绑这个事件passive 基本是为了提高流畅度，以滑动事件举例子。当绑定一个滑动事件之后，我在内部可能执行一段自己的代码，但是对于浏览器来说，它并不知道你的代码里面有没有使用 preventDeafault 事件来组织默认行为，所以浏览器会等待你的代码处理完之后在进行默认行为，这样会造成当你对逻辑很长，且没有使用 preventDeafault 时，浏览器会等待你执行完毕再去滑动，从而造成卡顿，而添加这个 passive 则会告诉浏览器我不会使用 preventDeafault ，从而让滚动这个默认行为不会去等待，也就不会卡顿。 option支持的安全检测在旧版本的DOM的规定中， addEventListener()的第三个参数是一个布尔值表示是否在捕获阶段调用事件处理程序。随着时间的推移，很明显需要更多的选项。与其在方法之中添加更多参数（传递可选值将会变得异常复杂），倒不如把第三个参数改为一个包含了各种属性的对象，这些属性的值用来被配置删除事件侦听器的过程。因为旧版本的浏览器（以及一些相对不算古老的）仍然假定第三个参数是布尔值，你需要编写一些代码来有效地处理这种情况。你可以对每一个你感兴趣的options值进行特性检测。 1234567891011var passiveSupported = false;try &#123; var options = Object.defineProperty(&#123;&#125;, "passive", &#123; get: function() &#123; passiveSupported = true; &#125; &#125;); window.addEventListener("test", null, options);&#125; catch(err) &#123;&#125; 这段代码确实写的很有意思，突然联想到一个以前看到的有趣项目 Can (a== 1 &amp;&amp; a ==2 &amp;&amp; a==3) ever evaluate to true? 有一个回答就是使用 get 来实现的123456789var val = 0Object.defineProperty(window,'a',&#123; get:function()&#123; return ++val &#125;&#125;)if (a === 1 &amp;&amp; a === 2 &amp;&amp; a === 3) console.log('∑:）') 两者都是通过使用 get ，在 js 去检查目标元素的时候去改变元素来达到目标效果在 addEventListener 中，如果浏览器支持 option 为对象的时候，就会去自动查看里面有没有目标选项 key 的 value，这里就是查看 options 对象的属性 capture once passive 是否存在。当查看 passive 的时候，就会触发对 passive 设置的 get 函数，从而得知浏览器是否支持 passive。]]></content>
+      <categories>
+        <category>尺工</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[uuid-uid]]></title>
     <url>%2F2018%2F03%2F21%2Fnew%2Fuuid-uid%2F</url>
     <content type="text"><![CDATA[前言作统计的时候看到 pv 和 uv，很奇怪 pv 到底是怎么算出来的，于是就查了下 uid uuiduid: User Identifier uuid: Universally Unique Identifier uidcookie/sessionuid 的实现，一般来说 uid 都是在用户登陆成功后，服务端会生成一个 uid 用来标志这个用户并返回给客户端，写进 cookie。同时在服务端维护一个数据表存储这个 uid。当用户再次访问时会自动带上这个已经存储在本地的 uid 一并发送给服务端，这样就实现了有状态的登陆控制。 比如拿 github 来做个实验，首次访问时状态是未登录的。它会在 cookie 和 localhost 都写上标志量。再登陆后会设置很多标志，最主要的用户标志就是 user_session 。 另外找了下浏览器端有没有办法自己生成标志，因为上面的标志一旦 cookie 被清除就作废。很不稳定然而找到的感觉都是一些玄学方法。。。都属于是那种取巧的，基本上就是疯狂找出在浏览器中能被js脚本检测数的不同设备之间可能会有的不同标志，然后再组合到一起提高准确率。比如下面说到的一些 —— 来自fingerprintjs2 用户代理语言颜色深度屏幕分辨率时区有会话存储与否有本地存储或没有索引了数据库具有IE特定的’AddBehavior’已打开数据库CPU类平台DoNotTrack或不使用Flash实现的已安装字体的完整列表（维护其顺序，从而增加熵）。使用JS / CSS（侧通道技术）检测到的已安装字体列表可以检测多达500个安装的字体，而无需使用闪光灯帆布指纹WebGL指纹识别插件（包含IE）是否安装AdBlock用户是否篡改了其语言1用户是否篡改了其屏幕分辨率1用户是否篡改了其操作系统1用户是否篡改了浏览器1触摸屏检测和功能像素比例系统用户代理可用的逻辑处理器总数。设备内存 觉的这个东西很不稳。。。。。。 uuiduuid 这个已经有了成熟的方案规范，基本都有库来实现 UUID Version 1：基于时间的UUID基于时间的UUID通过计算当前时间戳、随机数和机器MAC地址得到。由于在算法中使用了MAC地址，这个版本的UUID可以保证在全球范围的唯一性。但与此同时，使用MAC地址会带来安全性问题，这就是这个版本UUID受到批评的地方。如果应用只是在局域网中使用，也可以使用退化的算法，以IP地址来代替MAC地址－－Java的UUID往往是这样实现的（当然也考虑了获取MAC的难度）。 UUID Version 2：DCE安全的UUIDDCE（Distributed Computing Environment）安全的UUID和基于时间的UUID算法相同，但会把时间戳的前4位置换为POSIX的UID或GID。这个版本的UUID在实际中较少用到。 UUID Version 3：基于名字的UUID（MD5）基于名字的UUID通过计算名字和名字空间的MD5散列值得到。这个版本的UUID保证了：相同名字空间中不同名字生成的UUID的唯一性；不同名字空间中的UUID的唯一性；相同名字空间中相同名字的UUID重复生成是相同的。 UUID Version 4：随机UUID根据随机数，或者伪随机数生成UUID。这种UUID产生重复的概率是可以计算出来的，但随机的东西就像是买彩票：你指望它发财是不可能的，但狗屎运通常会在不经意中到来。 UUID Version 5：基于名字的UUID（SHA1）和版本3的UUID算法类似，只是散列值计算使用SHA1（Secure Hash Algorithm 1）算法。]]></content>
