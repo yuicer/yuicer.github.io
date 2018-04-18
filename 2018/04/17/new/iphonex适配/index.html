@@ -59,13 +59,13 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:title" content="html2canvas">
-<meta property="og:url" content="http://yuicer.com/2018/04/09/new/html2canvas/index.html">
+<meta property="og:title" content="iphonex适配">
+<meta property="og:url" content="http://yuicer.com/2018/04/17/new/iphonex适配/index.html">
 <meta property="og:site_name" content="yuicer">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-18T02:37:49.421Z">
+<meta property="og:updated_time" content="2018-04-18T02:30:29.899Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="html2canvas">
+<meta name="twitter:title" content="iphonex适配">
 
 
 
@@ -93,13 +93,13 @@
 
 
 
-  <link rel="canonical" href="http://yuicer.com/2018/04/09/new/html2canvas/"/>
+  <link rel="canonical" href="http://yuicer.com/2018/04/17/new/iphonex适配/"/>
 
 
 
 
 
-  <title> html2canvas | yuicer </title>
+  <title> iphonex适配 | yuicer </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -249,7 +249,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yuicer.com/2018/04/09/new/html2canvas/">
+  <link itemprop="mainEntityOfPage" href="http://yuicer.com/2018/04/17/new/iphonex适配/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="yuicer">
@@ -273,7 +273,7 @@
             
             
               
-                html2canvas
+                iphonex适配
               
             
           </h1>
@@ -286,8 +286,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-09T18:09:27+08:00">
-                2018-04-09
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-17T13:59:23+08:00">
+                2018-04-17
               </time>
             
 
@@ -338,24 +338,12 @@
 
       
         <p></p><p></p><br><a id="more"></a><p></p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>网页截图这个需求之前也有遇到，虽然做了个小 demo，用 canvas 可以生成图片，但是没有具体去看细节，还是有很多坑</p>
-<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>截图功能原理基本就是通过 canvas 提供了一个 api，canvas.toDataUrl()，通过它可以将 canvas 的内容转化为 base64 的格式，另外还有一个 api 是转化为 blob 格式，canvas.toBlob()。所以我们将 dom 上需要截屏的区域画到 canvas 上后，再保存为数据，之后 new Image，当作 src 传进去就可以生成图片了。</p>
-<p><code>canvas.toDataURL(type, encoderOptions)</code><br>第一个字符串参数是保存的类型，默认为 image/png，第二个是保存的质量，默认为 0.92</p>
-<p><code>canvas.toBlob(callback, type, encoderOptions)</code><br>callback,回调函数，可获得一个单独的Blob对象参数。第二，三个参数同上</p>
-<h2 id="html2canvas"><a href="#html2canvas" class="headerlink" title="html2canvas"></a>html2canvas</h2><p><a href="https://github.com/niklasvh/html2canvas" target="_blank" rel="noopener">地址</a></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">html2canvas(<span class="built_in">document</span>.body).then(<span class="function"><span class="keyword">function</span>(<span class="params">canvas</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">document</span>.body.appendChild(canvas);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>这个库简化了将 dom 转化为 canvas 上的图像一过程。同时它也有很多的限制，作者也明确说了这个东西是在实验阶段，不建议用到开发环境。</p>
-<h2 id="坑"><a href="#坑" class="headerlink" title="坑"></a>坑</h2><p>它对浏览器有要求，需要支持 promise，用个 ployfill 可以解决</p>
-<p>对 css 样式有部分不支持。但是基本够用了</p>
-<p>图片生成可能会模糊，有两个方法，第一个是在最新版本 html2canvas 中有提供 scale 属性，设置为2即可<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">me</span><span class="selector-class">.html2canvas</span>(<span class="selector-tag">dom</span>, &#123;</span><br><span class="line">  <span class="attribute">scale</span>: <span class="number">2</span>,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
-<p>另一种则是自己去设置 canvas，通过放大 canvas 到绘画内容，缩小 canvas 到样式宽高来达到目的，原理就是样式是去拉伸 canvas，js 中设置的宽高是原本实际宽高<br><figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">canvas</span> &#123;</span><br><span class="line">  width: <span class="number">100</span>%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var <span class="keyword">canvas</span> = document.querySelector(<span class="string">'canvas'</span>)</span><br><span class="line">var <span class="keyword">scale</span> = <span class="number">2</span></span><br><span class="line"><span class="keyword">canvas</span>.width = document.documentElement.clientWidth * <span class="keyword">scale</span></span><br><span class="line"><span class="keyword">canvas</span>.height = <span class="number">100</span> * <span class="keyword">scale</span></span><br><span class="line">var ctx = <span class="keyword">canvas</span>.getContext(<span class="string">'2d'</span>)</span><br><span class="line">ctx.<span class="keyword">scale</span>(<span class="keyword">scale</span>, <span class="keyword">scale</span>)</span><br></pre></td></tr></table></figure></p>
-<p>图片需要处理跨域问题，不然就截取不到图片，这个其实是 canvas 的问题</p>
-<blockquote>
-<p>尽管不通过 CORS 就可以在画布中使用图片，但是这会污染画布。一旦画布被污染，你就无法读取其数据。例如，你不能再使用画布的 toBlob(), toDataURL() 或 getImageData() 方法，调用它们会抛出安全错误。<br>这种机制可以避免未经许可拉取远程网站信息而导致的用户隐私泄露。</p>
-</blockquote>
-<p>但是很多对图片都是用的图床 cdn，不方便去设置跨域。所以解决方法一般都是将请求到的图片转化为 base64 后替换图片 src。</p>
-<p>另外在一种极限情况下，网页刚打开就去截图的时候，可能会由于图片没有渲染完毕或加载完毕导致截图截的是部分图片</p>
-<p>其他奇怪bug。。项目里面设置的一个弹窗竟然会顶导致生成的图片也被顶上去了。。。。此bug没找到原因，最后绕道而行了。。。</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>傻*苹果设计师，iphonex 顶部设计的很奇怪，底部的内容会被按钮给盖住，导致不好点击，观看。特别是底部的 fixed 元素</p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><h3 id="自己判断处理"><a href="#自己判断处理" class="headerlink" title="自己判断处理"></a>自己判断处理</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">isIphoneX</span><span class="params">()</span></span> &#123;</span><br><span class="line">  return /iphone/gi.test(navigator.userAgent) &amp;&amp; (screen<span class="selector-class">.height</span> == <span class="number">812</span> &amp;&amp; screen<span class="selector-class">.width</span> == <span class="number">375</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>进行判断之后对元素增加边距</p>
+<h3 id="ios-提供标准"><a href="#ios-提供标准" class="headerlink" title="ios 提供标准"></a>ios 提供标准</h3><p>设置 meta 属性 <code>&lt;meta name=&quot;viewport&quot;  viewport-fit=cover&quot;&gt;</code>，之后可以使用 ios 提供的属性<code>safe-area-inset-top safe-area-inset-bottom safe-area-inset-left safe-area-inset-right</code>来处理。比如对于底部可以设置如下，这样在 iphonex 中就会有一个 padding-bottom，将底部向上抬<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">padding</span>-<span class="keyword">bottom: </span>constant(safe-<span class="meta">area</span>-inset-<span class="keyword">bottom); </span><span class="comment">/* 兼容 iOS &lt; 11.2 */</span></span><br><span class="line"><span class="symbol">padding</span>-<span class="keyword">bottom: </span>env(safe-<span class="meta">area</span>-inset-<span class="keyword">bottom); </span><span class="comment">/* 兼容 iOS &gt;= 11.2 */</span></span><br></pre></td></tr></table></figure></p>
+<p>constant 和 env 分别是不同版本 ios 支持的关键词，是一个意思，本质相当于是一个常量，比如 50px 的固定数值，且只有被支持时才会生效</p>
+<p>对于 fixed 元素另外单独设置 <code>env(safe-area-inset-bottom)</code> ，不仅限与<code>padding-bottom</code>，只要是用数量单位的比如<code>left,margin</code>都可以使用</p>
 
       
     </div>
@@ -369,8 +357,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/09/new/移动端滚动穿透/" rel="next" title="移动端滚动穿透">
-                <i class="fa fa-chevron-left"></i> 移动端滚动穿透
+              <a href="/2018/04/09/new/html2canvas/" rel="next" title="html2canvas">
+                <i class="fa fa-chevron-left"></i> html2canvas
               </a>
             
           </div>
@@ -378,10 +366,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/17/new/iphonex适配/" rel="prev" title="iphonex适配">
-                iphonex适配 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -501,7 +485,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原理"><span class="nav-number">2.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#html2canvas"><span class="nav-number">3.</span> <span class="nav-text">html2canvas</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#坑"><span class="nav-number">4.</span> <span class="nav-text">坑</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方法"><span class="nav-number">2.</span> <span class="nav-text">解决方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#自己判断处理"><span class="nav-number">2.1.</span> <span class="nav-text">自己判断处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ios-提供标准"><span class="nav-number">2.2.</span> <span class="nav-text">ios 提供标准</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -621,9 +605,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'yuicer';
-      var disqus_identifier = '2018/04/09/new/html2canvas/';
+      var disqus_identifier = '2018/04/17/new/iphonex适配/';
 
-      var disqus_title = "html2canvas";
+      var disqus_title = "iphonex适配";
 
 
       function run_disqus_script(disqus_script) {
