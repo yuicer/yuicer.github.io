@@ -28,21 +28,42 @@ html2canvas(document.body).then(function(canvas) {
 });
 ```
 
-这个库简化了将 dom 转化为 canvas 上的图像一过程。同时它也有很多的限制，作者也明确说了这个东西是在实验阶段，不建议用到开发环境。btw需求需要。。
+这个库简化了将 dom 转化为 canvas 上的图像一过程。同时它也有很多的限制
 
 ## 坑
 它对浏览器有要求，需要支持 promise，用个 ployfill 可以解决
 
 对 css 样式有部分不支持。但是基本够用了
 
-图片生成可能会模糊，网上确实能找到很多办法，其实无非就是将 canvas 元素宽高设大，样式设小，等同与将高倍画布缩小。而且可能是版本问题，网上大部分方法无效【自己生成一个canvas传入】，最后使用大官方提供的属性 scale ，其实感觉这个属性也不是很好用， 测试就只有设置为 1 的时候效果最好，但是这个最好的效果还是比较模糊
+图片生成可能会模糊，有两个方法，第一个是在最新版本 html2canvas 中有提供 scale 属性
+```
+me.html2canvas(dom, {
+  scale: 2,
+})
+```
+
+还有提供其他很多的[选项](https://html2canvas.hertzen.com/configuration)，
+
+另一种则是自己去设置 canvas，通过放大 canvas 到绘画内容，缩小 canvas 到样式宽高来达到目的，原理就是样式是去拉伸 canvas，而 js 中设置的宽高是实际宽高
+```
+canvas {
+  width: 100%;
+}
+
+var canvas = document.querySelector('canvas')
+var scale = 2
+canvas.width = document.documentElement.clientWidth * scale
+canvas.height = 100 * scale
+var ctx = canvas.getContext('2d')
+ctx.scale(scale, scale)
+```
 
 图片需要处理跨域问题，不然就截取不到图片，这个其实是 canvas 的问题
 
 >尽管不通过 CORS 就可以在画布中使用图片，但是这会污染画布。一旦画布被污染，你就无法读取其数据。例如，你不能再使用画布的 toBlob(), toDataURL() 或 getImageData() 方法，调用它们会抛出安全错误。
 这种机制可以避免未经许可拉取远程网站信息而导致的用户隐私泄露。
 
-但是很多对图片都是用的图床 cdn，不方便去设置跨域。所以解决方法一半都是将请求到的图片转化为 base64 后替换图片 src。
+但是很多对图片都是用的图床 cdn，不方便去设置跨域。所以解决方法一般都是将请求到的图片转化为 base64 后替换图片 src。
 
 另外在一种极限情况下，网页刚打开就去截图的时候，可能会由于图片没有渲染完毕或加载完毕导致截图截的是部分图片
 
