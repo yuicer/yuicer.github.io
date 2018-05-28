@@ -59,13 +59,13 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:title" content="移动端滚动穿透">
-<meta property="og:url" content="http://yuicer.com/2018/04/09/new/移动端滚动穿透/index.html">
+<meta property="og:title" content="mongodb(一)">
+<meta property="og:url" content="http://yuicer.com/2017/06/07/尺工/mongodb(一)/index.html">
 <meta property="og:site_name" content="yuicer">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-09T11:01:39.584Z">
+<meta property="og:updated_time" content="2018-05-28T09:14:35.316Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="移动端滚动穿透">
+<meta name="twitter:title" content="mongodb(一)">
 
 
 
@@ -93,13 +93,13 @@
 
 
 
-  <link rel="canonical" href="http://yuicer.com/2018/04/09/new/移动端滚动穿透/"/>
+  <link rel="canonical" href="http://yuicer.com/2017/06/07/尺工/mongodb(一)/"/>
 
 
 
 
 
-  <title> 移动端滚动穿透 | yuicer </title>
+  <title> mongodb(一) | yuicer </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -249,7 +249,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yuicer.com/2018/04/09/new/移动端滚动穿透/">
+  <link itemprop="mainEntityOfPage" href="http://yuicer.com/2017/06/07/尺工/mongodb(一)/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="yuicer">
@@ -273,7 +273,7 @@
             
             
               
-                移动端滚动穿透
+                mongodb(一)
               
             
           </h1>
@@ -286,8 +286,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-09T18:09:17+08:00">
-                2018-04-09
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-07T09:21:44+08:00">
+                2017-06-07
               </time>
             
 
@@ -338,11 +338,18 @@
 
       
         <p></p><p></p><br><a id="more"></a><p></p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>作移动端项目的时候经常会遇到一个场景，一个全屏幕的遮罩层，然后内部可以滚动，外部不能滚动。讲道理这个需求看起来不麻烦。。。但是意外的实现起来很麻烦。</p>
-<h2 id="浏览器行为"><a href="#浏览器行为" class="headerlink" title="浏览器行为"></a>浏览器行为</h2><p>默认滚动的都是 document.documentElement 这个最外层元素，当内层再出现一个滚动框后滚动行为会变成滚动内层时到达顶部或者底部的时候就去滚动外层元素。</p>
-<p>之前在 pc 端时通过 mousewheel 属性的方向以及内部是否滚动到底部和顶部来判断。。现在想起来真是一个蠢方法。。。。</p>
-<p>在移动端的时候又遇到了这个问题，然后去搜了下。发现可以采用另一种不同的思路来实现。css 属性的 absolute fixed 属性会默认禁止滚动，利用这个特性就可以很好的去实现这个效果，当遮罩层出现的时候给 body 【或者其他的】元素设置为 fixed，但是这样会丢失滚动记录，fixed不可滚动，所以就需要记录当前屏幕滚动的 scrollTop 值，设置 body 元素的 top，定位过来，当遮罩层消失的时候再设置为 static 就可以完美的实现这个需求了</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> me = <span class="keyword">this</span></span><br><span class="line"><span class="keyword">var</span> dom = <span class="built_in">document</span>.querySelector(<span class="string">'#app'</span>)</span><br><span class="line"><span class="keyword">if</span> (!me.isShow) &#123;</span><br><span class="line">  me.scrollTop = <span class="built_in">document</span>.documentElement.scrollTop || <span class="built_in">document</span>.body.scrollTop</span><br><span class="line">  dom.style.position = <span class="string">'fixed'</span></span><br><span class="line">  dom.style.top = <span class="string">`-<span class="subst">$&#123;me.scrollTop&#125;</span>px`</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  dom.style.position = <span class="string">'static'</span></span><br><span class="line">  <span class="built_in">document</span>.body.scrollTop = <span class="built_in">document</span>.documentElement.scrollTop = me.scrollTop</span><br><span class="line">&#125;</span><br><span class="line">me.isShow = !me.isShow</span><br></pre></td></tr></table></figure>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>node+mongodb</p>
+<h2 id="后台框架"><a href="#后台框架" class="headerlink" title="后台框架"></a>后台框架</h2><p>直接用了 express 生成了一个，方便好用。由于是基于node的，文件引入用require。<br>项目结构也比较简单。</p>
+<blockquote>
+<p>servre<br>  +bin  脚本命令<br>  +log  日志<br>  +public  静态文件,访问public下的dist,localhost:3000/dist<br>  +routes  路由，接口<br>  +views   模板视图，用 jade 编写，也可以改成 html。<br>  -app.js  主控制文件<br>  -package.json</p>
+</blockquote>
+<p>如果要新增加接口就在路由里面多建立一个文件，然后 app.js 引用就好。<br>这是个典型的 mvc 模式，</p>
+<h2 id="mongodb"><a href="#mongodb" class="headerlink" title="mongodb"></a>mongodb</h2><p>windows 下用 mongodb 打开比较麻烦，所以就写了个 .bat 方便打开<br><figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">c:</span><br><span class="line">cd <span class="symbol">\P</span>rogram Files<span class="symbol">\M</span>ongoDB<span class="symbol">\S</span>erver<span class="symbol">\3</span>.4<span class="symbol">\b</span>in</span><br><span class="line">mongod.exe --dbpath d:<span class="symbol">\m</span>ongo<span class="symbol">\d</span>b</span><br><span class="line">pause</span><br></pre></td></tr></table></figure></p>
+<p>之后本机的 27017 端口就可以连接<br>也可以写入全局变量然后运行</p>
+<h3 id="robomongo"><a href="#robomongo" class="headerlink" title="robomongo"></a>robomongo</h3><p>这是一个 mongodb 的可视化工具，挺方便的。</p>
+<h3 id="连接"><a href="#连接" class="headerlink" title="连接"></a>连接</h3><p>用 mongoskin 或者 mongoose 都可以，不过用 mongoose 的多很多<br>连接端口号<code>mongodb://localhost:27017/test</code><br>之后直接返回就可以<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">router.get(<span class="string">'/'</span>, <span class="function"><span class="keyword">function</span> <span class="params">(req, res, next)</span> </span>&#123;	</span><br><span class="line">		res.send(something)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>test为你的某一个数据库，之后就可以进行操作了。这里我用的是mongoose，这个再找一篇说这个。</p>
+
       
     </div>
 
@@ -355,8 +362,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/09/new/日常小技巧（五）/" rel="next" title="日常小技巧（五）">
-                <i class="fa fa-chevron-left"></i> 日常小技巧（五）
+              <a href="/2017/06/01/new/服务器部署node/" rel="next" title="linux服务器部署node">
+                <i class="fa fa-chevron-left"></i> linux服务器部署node
               </a>
             
           </div>
@@ -365,8 +372,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/04/09/new/html2canvas/" rel="prev" title="html2canvas">
-                html2canvas <i class="fa fa-chevron-right"></i>
+              <a href="/2017/06/12/尺工/mongodb(二)/" rel="prev" title="mongodb(二)">
+                mongodb(二) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -487,7 +494,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浏览器行为"><span class="nav-number">2.</span> <span class="nav-text">浏览器行为</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#后台框架"><span class="nav-number">2.</span> <span class="nav-text">后台框架</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mongodb"><span class="nav-number">3.</span> <span class="nav-text">mongodb</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#robomongo"><span class="nav-number">3.1.</span> <span class="nav-text">robomongo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#连接"><span class="nav-number">3.2.</span> <span class="nav-text">连接</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -607,9 +614,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'yuicer';
-      var disqus_identifier = '2018/04/09/new/移动端滚动穿透/';
+      var disqus_identifier = '2017/06/07/尺工/mongodb(一)/';
 
-      var disqus_title = "移动端滚动穿透";
+      var disqus_title = "mongodb(一)";
 
 
       function run_disqus_script(disqus_script) {
