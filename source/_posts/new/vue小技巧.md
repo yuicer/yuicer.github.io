@@ -8,6 +8,21 @@ date: 2018-02-28 18:23:44
 <p></p>
 <!-- more -->
 
+## refs
+这个可以去取dom，其实不算什么技巧
+```
+<div ref="video"></div>
+
+this.$refs.video // get dom 
+```
+## 事件监听
+如果想自己实现一个事件分发系统的话可以用 vue 的 $on $emit 来伪装实现，远离就是新建立一个 vue 实例，然后用这个实例去做事件的分发，但是这样得注意一下事件的销毁，不然会出现在两个组件中都被触发自定义事件
+```js
+vm.$on('test', function (msg) {
+  console.log(msg)
+})
+vm.$emit('test', 'hi')
+```
 ## 批量读取模块
 vue-router
 ```js
