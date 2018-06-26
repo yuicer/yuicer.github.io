@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[git基本操作了解一下]]></title>
+    <url>%2F2018%2F06%2F25%2Fnew%2Fgit%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E4%BA%86%E8%A7%A3%E4%B8%80%E4%B8%8B%2F</url>
+    <content type="text"><![CDATA[前言一直依赖 vscode 提供的 git 操作，对于命令行的 git 以及一些操作完全学不来，所以学习记录一下一些基本操作 杂项vi 和 vimvi 是文本编辑器，vim 是ide工具，不过一般都会默认将 vim 软连接指向 vi，可以输入 vi，发现和 输入 vim 是一样的进入 vim a 变成输入模式， esc 结束， :q 退出 :q! 强制退出 :wq 保存并退出 folk看到好的项目之后，可以自己拿过来看看，folk 和 clone 的区别在于 folk 可以继续修改，进行 push 操作。 folk 之后有一个问题是同步，可以设置一个新的远端，然后主动 pull 下来进行更新一般项目默认有个远端叫做 origin，是指向的自己的项目地址，pull 进行的操作都是从这个默认端。git pull origin == git pull这里需要新增一个远端git remote add newOrigin https:// github.com/baseProject.git然后git remote -v 就可以看到有两个 origin ，newOrigin ，之后指定拉取 newOrigin 的内容就可以 git pull newOrigin master 进行对应分支的跟新 ps::移除远端git remote rm newOrigin pull request这个和 gitlab 上的 merge request 是一样的。都是提交给他人请求合并，同时也可以方便的 review 代码。 版本控制git reset –hard 了解一下推荐廖雪峰 ps: HEAD 指的是当前版本回退上上个版本git reset --hard HEAD^^查看历史版本,这时就可以看到历史的版本和版本号git log or git log --pretty=oneline查看所有 log，可以看到所有操作git reflog跳到某个版本git reset --hard [hash code]]]></content>
+      <categories>
+        <category>尺工</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[charles配置]]></title>
     <url>%2F2018%2F06%2F24%2Fnew%2Fcharles%E9%85%8D%E7%BD%AE%2F</url>
     <content type="text"><![CDATA[前言有时候做开发移动端页面找bug很头疼，所以记录几个抓包的办法 safari对于有 mac 和 iphone 测试机的可以直接用 usb 进行连接之后两端同时打开 safiri 浏览器，在 mac 的 safiri 上有一个开发选项，点击之后就可以直接进行调试 charles一个很强大的抓包工具，之前有看过一次，不过那时被复杂的操作吓跑了，表示学不会。。。然鹅再次被安利了之后又去看了看。。。。发现是真的强，直接能抓包 http/https 请求 首先得下载 charles 下载之后 点击 help 下面的 ssl proxying，点击 install charles root certificate 给自己的电脑安装证书，并用钥匙串添加始终信任 打开手机的 wifi，此时需要和电脑在同一wifi下，然后点击添加代理，选择手动之后，输入自己的 ip地址【ipconfig/ifconfig ev0】 ，然后端口输入 8080【charles 默认的是这个】，确认之后手机再访问任何网页都会连接不上，然后在 charles 上都会有显示。但是都是 unknow，这时需要给手机页安装证书 给手机安装证书，根据不同手机安装会很麻烦，iPhone 手机在设置代理后，访问 chls.pro/ssl 就可以下载，如果没有成功下载，确认下代理设置对不对。下完之后安装，然后在 设置–&gt;通用–&gt;关于本机–&gt;证书信任设置 对证书进行信任就可以了。小米手机的话不能用自带的浏览器下，需要用三方浏览器，下载完成后通过 wifi 高级 安装证书 妈妈再用不用担心找不到 bug 啦]]></content>
