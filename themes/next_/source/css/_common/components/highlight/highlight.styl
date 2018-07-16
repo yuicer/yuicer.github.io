@@ -15,13 +15,14 @@ $code-block {
 }
 
 pre, code { font-family: $code-font-family; }
-
+code > a{
+  color: currentColor;
+}
 code {
-  padding: 2px 18px;
+  padding: 1px 18px;
   word-wrap: break-word;
   color: $highlight-foreground;
   background: $highlight-background;
-  
   border-radius: $code-border-radius;
   font-size $code-font-size;
 }
