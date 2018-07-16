@@ -59,13 +59,13 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:title" content="git基本操作了解一下">
-<meta property="og:url" content="http://yuicer.com/2018/06/25/new/git基本操作了解一下/index.html">
+<meta property="og:title" content="postCss">
+<meta property="og:url" content="http://yuicer.com/2018/07/13/new/postCss/index.html">
 <meta property="og:site_name" content="yuicer">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-16T02:37:06.688Z">
+<meta property="og:updated_time" content="2018-07-16T09:13:34.109Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git基本操作了解一下">
+<meta name="twitter:title" content="postCss">
 
 
 
@@ -93,13 +93,13 @@
 
 
 
-  <link rel="canonical" href="http://yuicer.com/2018/06/25/new/git基本操作了解一下/"/>
+  <link rel="canonical" href="http://yuicer.com/2018/07/13/new/postCss/"/>
 
 
 
 
 
-  <title> git基本操作了解一下 | yuicer </title>
+  <title> postCss | yuicer </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -249,7 +249,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yuicer.com/2018/06/25/new/git基本操作了解一下/">
+  <link itemprop="mainEntityOfPage" href="http://yuicer.com/2018/07/13/new/postCss/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="yuicer">
@@ -273,7 +273,7 @@
             
             
               
-                git基本操作了解一下
+                postCss
               
             
           </h1>
@@ -286,8 +286,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-25T16:45:40+08:00">
-                2018-06-25
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-13T14:05:30+08:00">
+                2018-07-13
               </time>
             
 
@@ -338,22 +338,54 @@
 
       
         <p></p><p></p><br><a id="more"></a><p></p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>一直依赖 vscode 提供的 git 操作，对于命令行的 git 以及一些操作完全学不来，所以学习记录一下一些基本操作</p>
-<h2 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a>杂项</h2><h3 id="vi-和-vim"><a href="#vi-和-vim" class="headerlink" title="vi 和 vim"></a>vi 和 vim</h3><p>vi 是文本编辑器，vim 是ide工具，不过一般都会默认将 vim 软连接指向 vi，可以输入 vi，发现和 输入 vim 是一样的<br>进入 vim </p>
-<ol>
-<li>a 变成输入模式，</li>
-<li>esc 结束，</li>
-<li>:q 退出 </li>
-<li>:q! 强制退出 </li>
-<li>:wq 保存并退出</li>
-</ol>
-<h2 id="folk"><a href="#folk" class="headerlink" title="folk"></a>folk</h2><p>看到好的项目之后，可以自己拿过来看看，folk 和 clone 的区别在于 folk 可以继续修改，进行 push 操作。</p>
-<p>folk 之后有一个问题是同步，可以设置一个新的远端，然后主动 pull 下来进行更新<br>一般项目默认有个远端叫做 origin，是指向的自己的项目地址，pull 进行的操作都是从这个默认端。<br><code>git pull origin == git pull</code><br>这里需要新增一个远端<br><code>git remote add newOrigin https:// github.com/baseProject.git</code><br>然后<br><code>git remote -v</code><br> 就可以看到有两个 origin ，newOrigin ，之后指定拉取 newOrigin 的内容就可以<br> <code>git pull newOrigin master</code><br> 进行对应分支的跟新</p>
-<p>ps::移除远端<br><code>git remote rm newOrigin</code></p>
-<h3 id="pull-request"><a href="#pull-request" class="headerlink" title="pull request"></a>pull request</h3><p>这个和 gitlab 上的 merge request 是一样的。都是提交给他人请求合并，同时也可以方便的 review 代码。</p>
-<h2 id="版本控制"><a href="#版本控制" class="headerlink" title="版本控制"></a>版本控制</h2><h3 id="git-reset-–hard-了解一下"><a href="#git-reset-–hard-了解一下" class="headerlink" title="git reset –hard 了解一下"></a>git reset –hard 了解一下</h3><p>推荐<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013744142037508cf42e51debf49668810645e02887691000" target="_blank" rel="noopener">廖雪峰</a> </p>
-<p>ps: HEAD 指的是当前版本<br>回退上上个版本<br><code>git reset --hard HEAD^^</code><br>查看历史版本,这时就可以看到历史的版本和版本号<br><code>git log or git log --pretty=oneline</code><br>查看所有 log，可以看到所有操作<br><code>git reflog</code><br>跳到某个版本<br><code>git reset --hard [hash code]</code> </p>
-<h2 id="切换分支缓存"><a href="#切换分支缓存" class="headerlink" title="切换分支缓存"></a>切换分支缓存</h2><p>当在当前分支有了修改但是又需要切到另一个分支的时候，可以用 git stash 存储，之后切换就会有一个干净的分支。之后回来的时候可以 <code>git stash apply</code> 再取出来，或者使用另一个命令 <code>git stash pop</code> 它相当于 <code>git stash apply &amp;&amp; git stash drop</code>，当没有冲突的时候会直接取出缓存区并清理缓存区。</p>
+<h2 id="postCss"><a href="#postCss" class="headerlink" title="postCss"></a>postCss</h2><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在之前使用 vue-cli webpack 模版的时候一直有个问题，它对有些 css 属性，例如多行溢出  <code>-webkit-box-orient: vertical;</code> 在编译之后会被干掉，但是在热编译的时候却是存在的。之前因为一时找不到原因，而且时间紧所以没去仔细研究到底是什么导致了这个问题，为什么官方的模版会有这个问题。</p>
+<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>先把能用的解决方法写在下面，把下面对应的代码更改如下，即增加一个 <code>autoprefixer: false</code><br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">//</span> <span class="string">webpack.prod.conf.js</span></span><br><span class="line"><span class="string">new</span> <span class="string">OptimizeCSSPlugin(&#123;</span></span><br><span class="line"><span class="attr">  cssProcessorOptions:</span> <span class="string">config.build.productionSourceMap</span></span><br><span class="line">    <span class="string">?</span> <span class="string">&#123;</span> <span class="attr">safe:</span> <span class="literal">true</span><span class="string">,</span> <span class="attr">map:</span> <span class="string">&#123;</span> <span class="attr">inline:</span> <span class="literal">false</span> <span class="string">&#125;,</span> <span class="attr">autoprefixer:</span> <span class="literal">false</span><span class="string">&#125;</span></span><br><span class="line">    <span class="string">:</span> <span class="string">&#123;</span> <span class="attr">safe:</span> <span class="literal">true</span> <span class="string">&#125;</span></span><br><span class="line"><span class="string">&#125;),</span></span><br></pre></td></tr></table></figure></p>
+<p>取而代之使用的是一些内连的样式或者是在 index.html 这类不会被编译的文件里面去写样式。【为什么不在 static 里面，因为觉得路径管理很麻烦】</p>
+<h3 id="postCss-1"><a href="#postCss-1" class="headerlink" title="postCss"></a>postCss</h3><p>首先肯定能明确它是一个编译问题，更准确一点是 webpack 在进行 build 打包的时候采取了某些策略干掉了这个样式。<br>查找的时候发现是 autoprefixer 捣的鬼，而它是 postCss 喜爱的一个工具，所以就从头开始理一下</p>
+<p><a href="https://github.com/postcss/postcss" target="_blank" rel="noopener">postCss</a></p>
+<ul>
+<li><p>PostCSS 是一个允许使用 JS 插件转换样式的工具。 这些插件可以检查（lint）你的 CSS，支持 CSS Variables 和 Mixins， 编译尚未被浏览器广泛支持的先进的 CSS 语法，内联图片，以及其它很多优秀的功能。</p>
+</li>
+<li><p>PostCSS 在工业界被广泛地应用，其中不乏很多有名的行业领导者，如：维基百科，Twitter，阿里巴巴， JetBrains。PostCSS 的 Autoprefixer 插件是最流行的 CSS 处理工具之一。</p>
+</li>
+<li><p>PostCSS 接收一个 CSS 文件并提供了一个 API 来分析、修改它的规则（通过把 CSS 规则转换成一个抽象语法树的方式）。在这之后，这个 API 便可被许多插件利用来做有用的事情，比如寻错或自动添加 CSS vendor 前缀。</p>
+</li>
+</ul>
+<p>个人理解可能比较像一种 css loader，它和 webpack 一样，也有很多的插件，而 autoprefixer 是其中比较出名的一个，它允许根据设置来自动增加 css 兼容或者删除一些老旧的样式，比如我们只用写 <code>transition: height 0.4s;</code> 会自动编译成 <code>-webkit-transition: height 0.4s;</code></p>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>首先在 webpack 里面需要增加 postCss 的 loader<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    <span class="built_in">module</span>: &#123;</span><br><span class="line">        rules: [</span><br><span class="line">            &#123;</span><br><span class="line">                test: <span class="regexp">/\.css$/</span>,</span><br><span class="line">                exclude: <span class="regexp">/node_modules/</span>,</span><br><span class="line">                use: [</span><br><span class="line">                    &#123;</span><br><span class="line">                        loader: <span class="string">'style-loader'</span>,</span><br><span class="line">                    &#125;,</span><br><span class="line">                    &#123;</span><br><span class="line">                        loader: <span class="string">'css-loader'</span>,</span><br><span class="line">                        options: &#123;</span><br><span class="line">                            importLoaders: <span class="number">1</span>,</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;,</span><br><span class="line">                    &#123;</span><br><span class="line">                        loader: <span class="string">'postcss-loader'</span></span><br><span class="line">                    &#125;</span><br><span class="line">                ]</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>然后去设置 postCss 的配置，这里设置有很多种方法，具体可以看<a href="https://github.com/michael-ciniawsky/postcss-load-config" target="_blank" rel="noopener">这篇</a></p>
+<p>在 vue-cli 里面采用的是使用 <code>.postcssrc.js</code><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  <span class="string">"plugins"</span>: &#123;</span><br><span class="line">    <span class="string">"postcss-import"</span>: &#123;&#125;,</span><br><span class="line">    <span class="string">"postcss-url"</span>: &#123;&#125;,</span><br><span class="line">    <span class="comment">// to edit target browsers: use "browserslist" field in package.json</span></span><br><span class="line">    <span class="string">"autoprefixer"</span>: &#123;&#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>以及在 package.json 中的 Browserslist<br><a href="https://github.com/browserslist/browserslist" target="_blank" rel="noopener">Browserslist</a> 是用来配置浏览器兼容版本的工具，babel autoprefixer 等都可以根据在 Browserslist 中提供的需要兼容的浏览器版本进行有选择性的降级打包。<a href="http://browserl.ist/?q=defaults" target="_blank" rel="noopener">这个网站可以查询不同的配置兼容哪些浏览器 </a>，一般来说我们配置成 defaults 就👌，或者就用 vue-cli webpack 模版里的。</p>
+<p>除了这种正规的使用 loader 的配置 autoprefixer 的，还有另外一个插件也捣了鬼 <code>OptimizeCSSPlugin</code>，<br>实际上 loader 中的配置根本就没有去删除 <code>-webkit-box-orient: vertical;</code>，而是<code>OptimizeCSSPlugin</code> webpack 插件干的事，loader 中的配置确实跟随了 <code>package.json</code> 下的 <code>browserslist</code> 去做对应浏览器中的配置。如果直接将 <code>webpack.prod.conf.js</code> 中的 <code>new OptimizeCSSPlugin</code> 给注释掉就会发现多行的样式没有被编译干掉回来了。</p>
+<h3 id="OptimizeCSSPlugin"><a href="#OptimizeCSSPlugin" class="headerlink" title="OptimizeCSSPlugin"></a><a href="https://github.com/NMFR/optimize-css-assets-webpack-plugin" target="_blank" rel="noopener">OptimizeCSSPlugin</a></h3><p>那么这个东西到底是干什么用的呢，模版中解释如下</p>
+<blockquote>
+<p>Compress extracted CSS. We are using this plugin so that possible duplicated CSS from different components can be deduped.</p>
+</blockquote>
+<p>官方解释如下</p>
+<blockquote>
+<p>It will search for CSS assets during the Webpack build and will optimize \ minimize the CSS (by default it uses cssnano but a custom CSS processor can be specified).</p>
+</blockquote>
+<blockquote>
+<p>Solves extract-text-webpack-plugin CSS duplication problem:<br>Since extract-text-webpack-plugin only bundles (merges) text chunks, if its used to bundle CSS, the bundle might have duplicate entries (chunks can be duplicate free but when merged, duplicate CSS can be created).</p>
+</blockquote>
+<p>它也是一个用于压缩，优化 css 文件的插件，默认用的 cssnano 处理器。主要是对打包的 css 去重<br>接下来跳到 <a href="https://github.com/cssnano/cssnano" target="_blank" rel="noopener">cssnano</a> </p>
+<p>官方说明</p>
+<blockquote>
+<p>cssnano is a modern, modular compression tool written on top of the PostCSS ecosystem, which allows us to use a lot of powerful features in order to compact CSS appropriately.</p>
+</blockquote>
+<blockquote>
+<p>Our preset system allow you to load cssnano in a different configuration depending on your needs; the default preset performs safe transforms, whereas the advanced preset performs more aggressive transforms that are safe only when your site meets the requirements; but regardless of the preset you choose, we handle more than whitespace transforms!</p>
+</blockquote>
+<blockquote>
+<p>Optimisations range from compressing colors &amp; removing comments, to discarding overridden at-rules, normalising unicode-range descriptors, even mangling gradient parameters for a smaller output value! In addition, where it’s made sense for a transform, we’ve added Browserslist to provide different output depending on the browsers that you support.</p>
+</blockquote>
+<p>然后重点来了，他喵的这个玩意在 advanced 模式（OptimizeCSSPlugin默认开了这个模式）下默认会启用 autoprefixer，但是它的这个模式和上面所说的 autoprefixer 并不一样！它只删除<br><code>autoprefixer: Removes unnecessary prefixes based on the browsers option. Note that by default, it will not add new prefixes to the CSS file.</code></p>
+<p>所以这里就真相大白了。这个破玩意的设置导致了整个问题的发生，而且它藏的如此之深，and somehow 在 package.json 中的 Browserslist 并没有被它看到，它又有一个自己单独到设置浏览器到选项，所以它就任性的删除了我们最开始的那一条样式<code>-webkit-box-orient: vertical;</code></p>
+<p>其实这个问题已经被人提过，而且已经被修复<br><a href="https://github.com/webpack-contrib/css-loader/issues/281" target="_blank" rel="noopener">issue1</a><br><a href="https://github.com/cssnano/cssnano/issues/252" target="_blank" rel="noopener">issue2</a><br><a href="https://github.com/cssnano/cssnano/releases/tag/v4.0.0-rc.0" target="_blank" rel="noopener">release 4.0</a><br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">By default, <span class="keyword">the</span> following transforms are no longer applied <span class="built_in">to</span> <span class="keyword">any</span> input CSS.</span><br><span class="line">You may see <span class="keyword">an</span> increased output <span class="built_in">file</span> size <span class="keyword">as</span> <span class="keyword">a</span> <span class="built_in">result</span>:</span><br><span class="line"></span><br><span class="line">autoprefixer</span><br><span class="line">postcss-discard-unused</span><br><span class="line">postcss-<span class="built_in">merge</span>-idents</span><br><span class="line">postcss-reduce-idents</span><br><span class="line">postcss-zindex</span><br></pre></td></tr></table></figure></p>
+<p>只是<code>OptimizeCSSPlugin</code>并没有跟新，所以这个问题依旧存在</p>
+<p>anyway。。问题依旧没有那么简单，当我把<code>OptimizeCSSPlugin</code>升级到5.0之后再运行，又报了一个新的错误<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Cannot <span class="keyword">read</span> property <span class="string">'compilation'</span> of undefined</span><br><span class="line">   at OptimizeCssAssetsWebpackPlugin.apply (<span class="regexp">/Users/m</span>fw<span class="regexp">/mfw_webpack/</span>activity_city<span class="regexp">/node_modules/</span>last-<span class="keyword">call</span>-webpack-plugin<span class="regexp">/src/i</span>ndex.js:<span class="number">170</span>:<span class="number">20</span>)</span><br></pre></td></tr></table></figure></p>
+<p>= =. 跟到这里没想到又是一个坑。好吧，继续跟！</p>
+<p>然鹅。。。发现了新版本只能在 webpack 4.0 中使用。so 如果想永久解决的话可能需要考虑下升级到 webpack4，但是升级到webpack4需要巨大的勇气，webpack4 本身还好，但是那一堆插件要找一个合适的能降级的就太麻烦了</p>
 
       
     </div>
@@ -367,8 +399,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/06/24/new/charles配置/" rel="next" title="charles配置">
-                <i class="fa fa-chevron-left"></i> charles配置
+              <a href="/2018/06/25/new/git基本操作了解一下/" rel="next" title="git基本操作了解一下">
+                <i class="fa fa-chevron-left"></i> git基本操作了解一下
               </a>
             
           </div>
@@ -376,10 +408,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/07/13/new/postCss/" rel="prev" title="postCss">
-                postCss <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -499,7 +527,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#杂项"><span class="nav-number">2.</span> <span class="nav-text">杂项</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#vi-和-vim"><span class="nav-number">2.1.</span> <span class="nav-text">vi 和 vim</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#folk"><span class="nav-number">3.</span> <span class="nav-text">folk</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#pull-request"><span class="nav-number">3.1.</span> <span class="nav-text">pull request</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#版本控制"><span class="nav-number">4.</span> <span class="nav-text">版本控制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#git-reset-–hard-了解一下"><span class="nav-number">4.1.</span> <span class="nav-text">git reset –hard 了解一下</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#切换分支缓存"><span class="nav-number">5.</span> <span class="nav-text">切换分支缓存</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#postCss"><span class="nav-number">1.</span> <span class="nav-text">postCss</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决方法"><span class="nav-number">1.2.</span> <span class="nav-text">解决方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#postCss-1"><span class="nav-number">1.3.</span> <span class="nav-text">postCss</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用"><span class="nav-number">1.4.</span> <span class="nav-text">使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OptimizeCSSPlugin"><span class="nav-number">1.5.</span> <span class="nav-text">OptimizeCSSPlugin</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -619,9 +647,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'yuicer';
-      var disqus_identifier = '2018/06/25/new/git基本操作了解一下/';
+      var disqus_identifier = '2018/07/13/new/postCss/';
 
-      var disqus_title = "git基本操作了解一下";
+      var disqus_title = "postCss";
 
 
       function run_disqus_script(disqus_script) {
