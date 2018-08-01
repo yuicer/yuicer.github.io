@@ -59,13 +59,13 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:title" content="charles配置">
-<meta property="og:url" content="http://yuicer.com/2018/06/24/new/charles配置/index.html">
+<meta property="og:title" content="web调试">
+<meta property="og:url" content="http://yuicer.com/2018/06/24/new/web调试/index.html">
 <meta property="og:site_name" content="yuicer">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-24T07:35:34.936Z">
+<meta property="og:updated_time" content="2018-08-01T06:19:50.727Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="charles配置">
+<meta name="twitter:title" content="web调试">
 
 
 
@@ -93,13 +93,13 @@
 
 
 
-  <link rel="canonical" href="http://yuicer.com/2018/06/24/new/charles配置/"/>
+  <link rel="canonical" href="http://yuicer.com/2018/06/24/new/web调试/"/>
 
 
 
 
 
-  <title> charles配置 | yuicer </title>
+  <title> web调试 | yuicer </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -249,7 +249,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yuicer.com/2018/06/24/new/charles配置/">
+  <link itemprop="mainEntityOfPage" href="http://yuicer.com/2018/06/24/new/web调试/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="yuicer">
@@ -273,7 +273,7 @@
             
             
               
-                charles配置
+                web调试
               
             
           </h1>
@@ -340,6 +340,8 @@
         <p></p><p></p><br><a id="more"></a><p></p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>有时候做开发移动端页面找bug很头疼，所以记录几个抓包的办法</p>
 <h3 id="safari"><a href="#safari" class="headerlink" title="safari"></a>safari</h3><p>对于有 mac 和 iphone 测试机的可以直接用 usb 进行连接之后两端同时打开 safiri 浏览器，在 mac 的 safiri 上有一个开发选项，点击之后就可以直接进行调试</p>
+<p>—跟新—<br>这里一般的方法是只能看到手机上 safiri 中打开的网页，对于 app 内的 webview 页面是抓不到的，如果想要抓到就必须得找客户端同学协助一下，将手机的 uuid 加到配置中重新 build 一个包</p>
+<h3 id="安卓"><a href="#安卓" class="headerlink" title="安卓"></a>安卓</h3><p>对于安卓方法都有说使用 chrom://inspect 但是实际去试了试发现并不能走通，一种情况是只显示了 remote 列表，并不显示页面，另一种虽然显示了页面但是点击打开是空白。第一种没有找到原因，第二种查了之后发现需要设置网络？但是虽然连了 vpn 依然无效。。。</p>
 <h3 id="charles"><a href="#charles" class="headerlink" title="charles"></a>charles</h3><p>一个很强大的抓包工具，之前有看过一次，不过那时被复杂的操作吓跑了，表示学不会。。。<br>然鹅再次被安利了之后又去看了看。。。。发现是真的强，直接能抓包 http/https 请求</p>
 <ol>
 <li><p>首先得下载 charles </p>
@@ -351,7 +353,7 @@
 <li><p>给手机安装证书，根据不同手机安装会很麻烦，iPhone 手机在设置代理后，访问 chls.pro/ssl 就可以下载，如果没有成功下载，确认下代理设置对不对。下完之后安装，然后在 设置–&gt;通用–&gt;关于本机–&gt;证书信任设置 对证书进行信任就可以了。小米手机的话不能用自带的浏览器下，需要用三方浏览器，下载完成后通过 wifi 高级 安装证书</p>
 </li>
 </ol>
-<p>妈妈再用不用担心找不到 bug 啦</p>
+<p>妈妈再用不用担心找不到 bug 啦<br>麻烦的是对于每个手机都得安装证书，而且对于有些非接口的问题还是不太好找</p>
 
       
     </div>
@@ -497,7 +499,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#safari"><span class="nav-number">1.1.</span> <span class="nav-text">safari</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#charles"><span class="nav-number">1.2.</span> <span class="nav-text">charles</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#safari"><span class="nav-number">1.1.</span> <span class="nav-text">safari</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安卓"><span class="nav-number">1.2.</span> <span class="nav-text">安卓</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#charles"><span class="nav-number">1.3.</span> <span class="nav-text">charles</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -617,9 +619,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'yuicer';
-      var disqus_identifier = '2018/06/24/new/charles配置/';
+      var disqus_identifier = '2018/06/24/new/web调试/';
 
-      var disqus_title = "charles配置";
+      var disqus_title = "web调试";
 
 
       function run_disqus_script(disqus_script) {

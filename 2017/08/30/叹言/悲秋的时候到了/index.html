@@ -59,13 +59,13 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:title" content="A-FRAME(一)">
-<meta property="og:url" content="http://yuicer.com/2017/09/13/new/A-FRAME(一)/index.html">
+<meta property="og:title" content="悲秋的时候到了">
+<meta property="og:url" content="http://yuicer.com/2017/08/30/叹言/悲秋的时候到了/index.html">
 <meta property="og:site_name" content="yuicer">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-28T02:44:39.149Z">
+<meta property="og:updated_time" content="2018-02-28T02:44:39.162Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="A-FRAME(一)">
+<meta name="twitter:title" content="悲秋的时候到了">
 
 
 
@@ -93,13 +93,13 @@
 
 
 
-  <link rel="canonical" href="http://yuicer.com/2017/09/13/new/A-FRAME(一)/"/>
+  <link rel="canonical" href="http://yuicer.com/2017/08/30/叹言/悲秋的时候到了/"/>
 
 
 
 
 
-  <title> A-FRAME(一) | yuicer </title>
+  <title> 悲秋的时候到了 | yuicer </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -249,7 +249,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yuicer.com/2017/09/13/new/A-FRAME(一)/">
+  <link itemprop="mainEntityOfPage" href="http://yuicer.com/2017/08/30/叹言/悲秋的时候到了/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="yuicer">
@@ -273,7 +273,7 @@
             
             
               
-                A-FRAME(一)
+                悲秋的时候到了
               
             
           </h1>
@@ -286,8 +286,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-13T13:09:48+08:00">
-                2017-09-13
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-30T14:23:37+08:00">
+                2017-08-30
               </time>
             
 
@@ -305,8 +305,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/尺工/" itemprop="url" rel="index">
-                    <span itemprop="name">尺工</span>
+                  <a href="/categories/叹言/" itemprop="url" rel="index">
+                    <span itemprop="name">叹言</span>
                   </a>
                 </span>
 
@@ -338,35 +338,9 @@
 
       
         <p></p><p></p><br><a id="more"></a><p></p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>接着上篇的 <a href="/2017/08/17/new/VR/">VR</a> 介绍这个新出的库</p>
-<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>嗯。。这个库已经明说了是对 three.js 的封装。而且既然还是 <a href="/2017/08/07/尺工/ECS/">ECS</a> 模式的<br>看来和这个库还真是有缘。</p>
-<p>在这个框架里面。代码依赖在 dom 上，通过对属性的重写来实现 3d 组件，如常规的场景，摄像机，灯光，实体等。<br>这种绑在 dom 上的写法刚开始很不习惯。。什么都往 dom 上加，然后通过选择器选 dom 进行操作，<code>setAttibute addeventlistener</code> 来进行操作。另外因为之前都用 <code>requestAniamtionFrame</code> 来主动控制，添加场景实体等操作，所以对于这种非主动控制的有点无从下手。</p>
-<p>不过熟悉之后发现，这种写法还是很好的。通过注册组件来自定义行为，将组件作为属性加到 dom 上使其自动渲染生效。</p>
-<h3 id="下面是一段简单的例子"><a href="#下面是一段简单的例子" class="headerlink" title="下面是一段简单的例子"></a>下面是一段简单的例子</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;a-box </span><br><span class="line">		position=<span class="string">"-1 0 -5"</span> </span><br><span class="line">		rotation=<span class="string">"45 45 0"</span> </span><br><span class="line">		color=<span class="string">"#4CC3D9"</span></span><br><span class="line">		float=<span class="string">"to: -1 0.5 -5;"</span></span><br><span class="line">&gt;&lt;/a-box&gt;</span><br><span class="line"></span><br><span class="line">AFRAME.registerComponent(<span class="string">'float'</span>, &#123;</span><br><span class="line">	schema: &#123;</span><br><span class="line">		animation: &#123;</span><br><span class="line">			type: <span class="string">'string'</span>,</span><br><span class="line">			<span class="keyword">default</span>: <span class="string">"property: position; dir: alternate; dur: 2000;loop:true; easing: easeInOutSine;"</span></span><br><span class="line">		&#125;,</span><br><span class="line">		to: &#123;</span><br><span class="line">			type: <span class="string">'string'</span>,</span><br><span class="line">			<span class="keyword">default</span>: <span class="string">'0 0 0;'</span></span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;,</span><br><span class="line">	init: function () &#123;</span><br><span class="line">		<span class="keyword">var</span> <span class="keyword">data</span> = <span class="keyword">this</span>.<span class="keyword">data</span>;</span><br><span class="line">		<span class="keyword">this</span>.el.setAttribute(<span class="string">'animation__float'</span>, <span class="keyword">data</span>.animation + <span class="string">'to:'</span> + <span class="keyword">data</span>.to);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p><code>position rotation color</code> 这些是自带的一些组件。animation 则是一个三方的<a href="https://github.com/ngokevin/kframe/tree/master/components/animation/" target="_blank" rel="noopener">库</a>，官方主动说建议放弃自己的 <code>&lt;a-animation&gt;</code> 标签而使用这个。。</p>
-<p>A-FRAME 框架自动集成了很多东西，也有很多默认值。大多数还是挺方便，少部分找不到对应的 api 就很麻烦。而且由于它把所有的过程都封装了，所以对渲染的流程可能会有些不清楚。</p>
-<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">AFRAME</span><span class="selector-class">.registerComponent</span>(<span class="string">'bar'</span>, &#123;</span><br><span class="line">  <span class="attribute">schema</span>: &#123;</span><br><span class="line">    <span class="attribute">size</span>: &#123;<span class="attribute">type</span>: <span class="string">'number'</span>, <span class="attribute">default</span>: <span class="number">5</span>&#125;</span><br><span class="line">  &#125;</span><br><span class="line">  init()&#123;&#125;,</span><br><span class="line">  update()&#123;&#125;,</span><br><span class="line">  remove()&#123;&#125;,</span><br><span class="line">  play()&#123;&#125;,</span><br><span class="line">  pause()&#123;&#125;,</span><br><span class="line">  tick()&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="schema"><a href="#schema" class="headerlink" title="schema"></a>schema</h3><p>只是用来检测数据，和 mongoose 的 schema 差不多。<br>type 有很多种，不过不支持对象类型，当传的数据类型不对时会报错。<br>default 是默认值，如果不传值的时候默认按这个。</p>
-<h3 id="init"><a href="#init" class="headerlink" title="init"></a>init</h3><p>初始化时调用一次</p>
-<h3 id="update"><a href="#update" class="headerlink" title="update"></a>update</h3><p>初始化或属性更新的时候调用</p>
-<h3 id="remove"><a href="#remove" class="headerlink" title="remove"></a>remove</h3><p>属性被移除【通过 removeAttribute removeChild】</p>
-<h3 id="tick"><a href="#tick" class="headerlink" title="tick"></a>tick</h3><p>场景渲染的每一帧调用</p>
-<p>基本都是字面意思。。不写了</p>
-<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ol>
-<li><p>系统间依赖顺序</p>
-<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">AFRAME.registerComponent(<span class="string">'a'</span>, &#123;</span><br><span class="line"><span class="symbol">  dependencies:</span> [<span class="string">'b'</span>]</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// Initializes second.</span></span><br><span class="line">AFRAME.registerComponent(<span class="string">'b'</span>, &#123;</span><br><span class="line"><span class="symbol">  dependencies:</span> [<span class="string">'c'</span>]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>多个实例</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">AFRAME.registerComponent(<span class="string">'foo'</span>, &#123;</span><br><span class="line">  multiple: <span class="literal">true</span>,</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>默认只能有一个实例，开启后可增加多个，如 float__1  float__2，可通过 id 判断区分</p>
-<ol>
-<li>获取组件<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> components = <span class="built_in">document</span>.<span class="built_in">querySelector</span>(<span class="string">'[components_name]'</span>).components.components_name;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><h3 id="this-data"><a href="#this-data" class="headerlink" title="this.data"></a>this.data</h3><p>获取 schema 中的数据</p>
-<h3 id="this-el"><a href="#this-el" class="headerlink" title="this.el"></a>this.el</h3><p>获取绑定的 dom</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=33854265&auto=1&height=66"></iframe>
+
+<p>为赋新词强说愁</p>
 
       
     </div>
@@ -380,8 +354,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/10/叹言/反省/" rel="next" title="反省">
-                <i class="fa fa-chevron-left"></i> 反省
+              <a href="/2017/08/25/尺工/分享/" rel="next" title="分享">
+                <i class="fa fa-chevron-left"></i> 分享
               </a>
             
           </div>
@@ -390,8 +364,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/09/15/尺工/百度站长/" rel="prev" title="百度站长">
-                百度站长 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/09/10/叹言/反省/" rel="prev" title="反省">
+                反省 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -446,17 +420,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://olti9qjwg.bkt.clouddn.com/qiniu/img/me.config/me.png"
@@ -502,22 +467,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#概念"><span class="nav-number">2.</span> <span class="nav-text">概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下面是一段简单的例子"><span class="nav-number">2.1.</span> <span class="nav-text">下面是一段简单的例子</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法"><span class="nav-number">3.</span> <span class="nav-text">方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#schema"><span class="nav-number">3.1.</span> <span class="nav-text">schema</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#init"><span class="nav-number">3.2.</span> <span class="nav-text">init</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#update"><span class="nav-number">3.3.</span> <span class="nav-text">update</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#remove"><span class="nav-number">3.4.</span> <span class="nav-text">remove</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tick"><span class="nav-number">3.5.</span> <span class="nav-text">tick</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他"><span class="nav-number">3.6.</span> <span class="nav-text">其他</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#属性"><span class="nav-number">4.</span> <span class="nav-text">属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#this-data"><span class="nav-number">4.1.</span> <span class="nav-text">this.data</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#this-el"><span class="nav-number">4.2.</span> <span class="nav-text">this.el</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
     </div>
@@ -632,9 +581,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'yuicer';
-      var disqus_identifier = '2017/09/13/new/A-FRAME(一)/';
+      var disqus_identifier = '2017/08/30/叹言/悲秋的时候到了/';
 
-      var disqus_title = "A-FRAME(一)";
+      var disqus_title = "悲秋的时候到了";
 
 
       function run_disqus_script(disqus_script) {
