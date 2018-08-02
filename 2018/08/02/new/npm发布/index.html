@@ -1,0 +1,791 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="yuicer的闲言乱语" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="npm发布">
+<meta property="og:url" content="http://yuicer.com/2018/08/02/new/npm发布/index.html">
+<meta property="og:site_name" content="yuicer">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-08-02T09:02:08.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="npm发布">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: "",
+      labels: ""
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yuicer.com/2018/08/02/new/npm发布/"/>
+
+
+
+
+
+  <title> npm发布 | yuicer </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?fc515cb84f85ab78c6ddae0d885911db";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="//s95.cnzz.com/z_stat.php?id=1261001148&web_id=1261001148" language="JavaScript"></script>
+  </div>
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">yuicer</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">colorful wanted</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-game">
+          <a href="/catice" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-gamepad"></i> <br />
+            
+            游戏
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-diary">
+          <a href="/diary" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-columns"></i> <br />
+            
+            日记
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-album">
+          <a href="/album" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-photo"></i> <br />
+            
+            相册
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yuicer.com/2018/08/02/new/npm发布/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="yuicer">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="http://olti9qjwg.bkt.clouddn.com/qiniu/img/me.config/me.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="yuicer">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="yuicer" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                npm发布
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-02T10:23:37+08:00">
+                2018-08-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/尺工/" itemprop="url" rel="index">
+                    <span itemprop="name">尺工</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+<!--shandiao-->
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p></p><p></p><br><a id="more"></a><p></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>代码写多了之后就会自然对有积累，但是积累需要一个地方，最以前是在 github 中放在一个公共文件夹里，然后 clone 下来之后把需要对代码复制粘贴到需要对地方，但是这么做会比较麻烦，而且有很大对缺陷是不好管理版本，只能通过打 tag 打方式来进行。所以决定还是放在 npm 上。</p>
+<h2 id="npm发布"><a href="#npm发布" class="headerlink" title="npm发布"></a>npm发布</h2><p><a href="https://docs.npmjs.com/getting-started/publishing-npm-packages" target="_blank" rel="noopener">文档</a></p>
+<p>npm 除了通常用打 npm install npm uninstall 之外还有许多功能。比如直接发布一个包到 npm 上供大家下载使用。<br>具体步骤</p>
+<h3 id="注册用户"><a href="#注册用户" class="headerlink" title="注册用户"></a>注册用户</h3><p><code>npm add user</code> 或者去 npm 官网上注册</p>
+<h3 id="登陆"><a href="#登陆" class="headerlink" title="登陆"></a>登陆</h3><p><code>npm login</code></p>
+<h3 id="编写需要上传的库"><a href="#编写需要上传的库" class="headerlink" title="编写需要上传的库"></a>编写需要上传的库</h3><p><code>npm init --yes</code> 创建 package.json 文件<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"name"</span>: <span class="string">"ttt"</span>,</span><br><span class="line">  <span class="attr">"version"</span>: <span class="string">"1.0.0"</span>,</span><br><span class="line">  <span class="attr">"description"</span>: <span class="string">""</span>,</span><br><span class="line">  <span class="attr">"main"</span>: <span class="string">"index.js"</span>,</span><br><span class="line">  <span class="attr">"scripts"</span>: &#123;</span><br><span class="line">    <span class="attr">"test"</span>: <span class="string">"echo \"Error: no test specified\" &amp;&amp; exit 1"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">"keywords"</span>: [],</span><br><span class="line">  <span class="attr">"author"</span>: <span class="string">""</span>,</span><br><span class="line">  <span class="attr">"license"</span>: <span class="string">"ISC"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这里简单介绍一下字段作用</p>
+<ul>
+<li>name ： npm发布包的名字</li>
+<li>version ： npm版本标志</li>
+<li>description ： npm发布之后在别人可以看到的描述，如果没有则会从 readme 中选取</li>
+<li>main ： 文件入口</li>
+<li>scripts ： 运行命令</li>
+<li>keywords ： npm 上搜索的关键词</li>
+<li>author ： 作者简介，联系方式等</li>
+<li>license ： 版权方式</li>
+</ul>
+<p>其他还有很多字段，<a href="https://docs.npmjs.com/files/package.json" target="_blank" rel="noopener">文档</a></p>
+<h4 id="name-scope"><a href="#name-scope" class="headerlink" title="name/scope"></a>name/scope</h4><p>name 字段需要注意的是不能重复，如果已经在 npm 上有人发布了同名的包就会发布失败。<br>为了避免这个问题 npm 有 scoped 这个解决方法，每个人都有自己的一个 @scope[@username]，既在每个人下面新增加一个层级。此时 name 字段需要写成 <code>@yuicer/package</code> ，下载的时候同样也需要 <code>npm i @yucier/package</code> ，此时在 node_modules 下面的目录会变成 <code>yuicer/package</code> 即多了一层 scoped 目录，所以引用的时候也是需要加上这个 scoped </p>
+<p>npm init –scope=yuicer 可以自动生成 name 字段<br>scoped package 默认是为私人的，需要是付费用户才能使用，不过可以手动声明它是公用包<br><code>npm publish --access=public</code></p>
+<h4 id="version"><a href="#version" class="headerlink" title="version"></a>version</h4><p>version 字段用来管理版本。有几个常用命令如下，以初始版本 1.0.0 举例<br><code>npm verison patch</code>  更新版本为 1.0.1<br><code>npm version minor</code>  更新版本为 1.1.0<br><code>npm version major</code>  更新版本为 2.0.0</p>
+
+      
+    </div>
+
+<!--/删掉一段-->
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/23/叹言/天空之城/" rel="next" title="天空之城">
+                <i class="fa fa-chevron-left"></i> 天空之城
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://olti9qjwg.bkt.clouddn.com/qiniu/img/me.config/me.png"
+               alt="yuicer" />
+          <p class="site-author-name" itemprop="name">yuicer</p>
+          <p class="site-description motion-element" itemprop="description">秋露坠。滴尽楚兰红泪。往事旧欢何限意。思量如梦寐。人貌老于前岁。风月宛然无异。座有嘉宾尊有桂。莫辞终夕醉。</p>
+        </div>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/yuicer" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  Github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://space.bilibili.com/3069623" target="_blank" title="BiliBili">
+                  
+                    <i class="fa fa-fw fa-play"></i>
+                  
+                  BiliBili
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#npm发布"><span class="nav-number">2.</span> <span class="nav-text">npm发布</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#注册用户"><span class="nav-number">2.1.</span> <span class="nav-text">注册用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#登陆"><span class="nav-number">2.2.</span> <span class="nav-text">登陆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编写需要上传的库"><span class="nav-number">2.3.</span> <span class="nav-text">编写需要上传的库</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#name-scope"><span class="nav-number">2.3.1.</span> <span class="nav-text">name/scope</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#version"><span class="nav-number">2.3.2.</span> <span class="nav-text">version</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">yuicer</span>
+</div>
+
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'yuicer';
+      var disqus_identifier = '2018/08/02/new/npm发布/';
+
+      var disqus_title = "npm发布";
+
+
+      function run_disqus_script(disqus_script) {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+
+      
+        var disqus_config = function () {
+            this.page.url = disqus_url;
+            this.page.identifier = disqus_identifier;
+            this.page.title = disqus_title;
+        };
+        run_disqus_script('embed.js');
+      
+
+    </script>
+  
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
