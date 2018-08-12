@@ -57,3 +57,13 @@ ps: HEAD 指的是当前版本
 
 ## 切换分支缓存
 当在当前分支有了修改但是又需要切到另一个分支的时候，可以用 git stash 存储，之后切换就会有一个干净的分支。之后回来的时候可以 `git stash apply` 再取出来，或者使用另一个命令 `git stash pop` 它相当于 `git stash apply && git stash drop`，当没有冲突的时候会直接取出缓存区并清理缓存区。
+
+## git 合并
+这个功能有很多种方式，个人经常用的是 `git pull origin targetBranch`
+
+其他的还有 `git fetch` `git merge`
+
+或者 `git rebase` 
+
+个人对后面这两种不是很熟悉。第一种实际上等同于第二种，只不过第二种把命令拆分开来。
+第三种没有实际去试过功能
