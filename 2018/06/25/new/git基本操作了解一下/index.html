@@ -63,7 +63,7 @@
 <meta property="og:url" content="http://yuicer.com/2018/06/25/new/git基本操作了解一下/index.html">
 <meta property="og:site_name" content="yuicer">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-16T02:37:06.688Z">
+<meta property="og:updated_time" content="2018-08-12T08:56:59.387Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git基本操作了解一下">
 
@@ -354,6 +354,10 @@
 <h2 id="版本控制"><a href="#版本控制" class="headerlink" title="版本控制"></a>版本控制</h2><h3 id="git-reset-–hard-了解一下"><a href="#git-reset-–hard-了解一下" class="headerlink" title="git reset –hard 了解一下"></a>git reset –hard 了解一下</h3><p>推荐<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013744142037508cf42e51debf49668810645e02887691000" target="_blank" rel="noopener">廖雪峰</a> </p>
 <p>ps: HEAD 指的是当前版本<br>回退上上个版本<br><code>git reset --hard HEAD^^</code><br>查看历史版本,这时就可以看到历史的版本和版本号<br><code>git log or git log --pretty=oneline</code><br>查看所有 log，可以看到所有操作<br><code>git reflog</code><br>跳到某个版本<br><code>git reset --hard [hash code]</code> </p>
 <h2 id="切换分支缓存"><a href="#切换分支缓存" class="headerlink" title="切换分支缓存"></a>切换分支缓存</h2><p>当在当前分支有了修改但是又需要切到另一个分支的时候，可以用 git stash 存储，之后切换就会有一个干净的分支。之后回来的时候可以 <code>git stash apply</code> 再取出来，或者使用另一个命令 <code>git stash pop</code> 它相当于 <code>git stash apply &amp;&amp; git stash drop</code>，当没有冲突的时候会直接取出缓存区并清理缓存区。</p>
+<h2 id="git-合并"><a href="#git-合并" class="headerlink" title="git 合并"></a>git 合并</h2><p>这个功能有很多种方式，个人经常用的是 <code>git pull origin targetBranch</code></p>
+<p>其他的还有 <code>git fetch</code> <code>git merge</code></p>
+<p>或者 <code>git rebase</code> </p>
+<p>个人对后面这两种不是很熟悉。第一种实际上等同于第二种，只不过第二种把命令拆分开来。<br>第三种没有实际去试过功能</p>
 
       
     </div>
@@ -499,7 +503,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#杂项"><span class="nav-number">2.</span> <span class="nav-text">杂项</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#vi-和-vim"><span class="nav-number">2.1.</span> <span class="nav-text">vi 和 vim</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#folk"><span class="nav-number">3.</span> <span class="nav-text">folk</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#pull-request"><span class="nav-number">3.1.</span> <span class="nav-text">pull request</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#版本控制"><span class="nav-number">4.</span> <span class="nav-text">版本控制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#git-reset-–hard-了解一下"><span class="nav-number">4.1.</span> <span class="nav-text">git reset –hard 了解一下</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#切换分支缓存"><span class="nav-number">5.</span> <span class="nav-text">切换分支缓存</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#杂项"><span class="nav-number">2.</span> <span class="nav-text">杂项</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#vi-和-vim"><span class="nav-number">2.1.</span> <span class="nav-text">vi 和 vim</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#folk"><span class="nav-number">3.</span> <span class="nav-text">folk</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#pull-request"><span class="nav-number">3.1.</span> <span class="nav-text">pull request</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#版本控制"><span class="nav-number">4.</span> <span class="nav-text">版本控制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#git-reset-–hard-了解一下"><span class="nav-number">4.1.</span> <span class="nav-text">git reset –hard 了解一下</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#切换分支缓存"><span class="nav-number">5.</span> <span class="nav-text">切换分支缓存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-合并"><span class="nav-number">6.</span> <span class="nav-text">git 合并</span></a></li></ol></div>
             
 
           </div>
