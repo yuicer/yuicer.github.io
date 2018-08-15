@@ -67,3 +67,10 @@ ps: HEAD 指的是当前版本
 
 个人对后面这两种不是很熟悉。第一种实际上等同于第二种，只不过第二种把命令拆分开来。
 第三种没有实际去试过功能
+
+## 切换到远程分支
+`git fetch`
+
+`git checkout targetBranch`
+
+在1.6以上的版本可以直接用这个命令就可以切换到远程分支上。或者用 `git chekout -b targetBranch origin/targetBranch`
