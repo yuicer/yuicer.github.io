@@ -63,7 +63,7 @@
 <meta property="og:url" content="http://yuicer.com/2018/04/09/new/日常小技巧（五）/index.html">
 <meta property="og:site_name" content="yuicer">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-12T09:03:16.340Z">
+<meta property="og:updated_time" content="2018-08-28T12:45:45.163Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="日常小技巧（五）">
 
@@ -338,6 +338,18 @@
 
       
         <p></p><p></p><br><a id="more"></a><p></p>
+<h2 id="vertical-align"><a href="#vertical-align" class="headerlink" title="vertical-align"></a>vertical-align</h2><p>当在这样的一个结构时，特别是第二个 span 设置为了 bfc 盒子的时候，会出现某些问题，两行文字对不齐<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span>&gt;</span>1<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span>&gt;</span>2<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>这个时候可以设置第一个 span 的 <code>vertical-align: top</code> 来解决这个问题</p>
+<p>或者给第二个 span 设置增加 <code>vertical-align: bottom</code></p>
+<p>这个问题的原因是当成为 bfc 盒子之后，它的对齐方式会改变,此时是整个这个盒子 span2 相对于基线对齐，而 span1 则是盒子里面文字本身相对与于基线对齐。</p>
+<p><a href="https://www.zhangxinxu.com/wordpress/2015/08/css-deep-understand-vertical-align-and-line-height/comment-page-1/" target="_blank" rel="noopener">张鑫旭大佬有一篇文章讲对比较细</a></p>
+<p>里面有一句比较重要的话</p>
+<p><code>The baseline of an ‘inline-block’ is the baseline of its last line box in the normal flow, unless it has either no in-flow line boxes or if its ‘overflow’ property has a computed value other than ‘visible’, in which case the baseline is the bottom margin edge.</code></p>
+<p>谷歌翻译如下</p>
+<p><code>“内联块”的基线是正常流程中其最后一个线框的基线，除非它没有流入线框或者其“溢出”属性具有“可见”以外的计算值， 在哪种情况下，基线是底部边缘边缘。</code></p>
+<p>张鑫旭大佬翻译如下</p>
+<p><code>’inline-block’的基线是正常流中最后一个line box的基线, 除非，这个line box里面既没有line boxes或者本身’overflow’属性的计算值不是’visible’, 这种情况下基线是margin底边缘。</code></p>
+<p><code>一个inline-block元素，如果里面没有inline内联元素，或者overflow不是visible，则该元素的基线就是其margin底边缘，否则，其基线就是元素里面最后一行内联元素的基线。</code></p>
 <h2 id="ios-bug"><a href="#ios-bug" class="headerlink" title="ios bug"></a>ios bug</h2><ol>
 <li>全局设置对 <code>user-selected: *</code> 会使 input textarea 不能被选中，弹起输入框</li>
 <li><p>fixed 在部分ios手机中，滑动对时候会消失，滑动停止后又出来。解决方法可以将 fixed 区域整个拿出来，不放在滚动区域内，或者设置如下。</p>
@@ -495,7 +507,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ios-bug"><span class="nav-number">1.</span> <span class="nav-text">ios bug</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#m3u8"><span class="nav-number">2.</span> <span class="nav-text">m3u8</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#promise"><span class="nav-number">3.</span> <span class="nav-text">promise</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#vertical-align"><span class="nav-number">1.</span> <span class="nav-text">vertical-align</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ios-bug"><span class="nav-number">2.</span> <span class="nav-text">ios bug</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#m3u8"><span class="nav-number">3.</span> <span class="nav-text">m3u8</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#promise"><span class="nav-number">4.</span> <span class="nav-text">promise</span></a></li></ol></div>
             
 
           </div>
