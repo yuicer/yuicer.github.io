@@ -59,13 +59,13 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:title" content="网易云的hash检测。。">
-<meta property="og:url" content="http://yuicer.com/2017/11/13/new/网易云的hash检测/index.html">
+<meta property="og:title" content="23">
+<meta property="og:url" content="http://yuicer.com/2018/08/15/叹言/23/index.html">
 <meta property="og:site_name" content="yuicer">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-28T02:44:39.152Z">
+<meta property="og:updated_time" content="2018-08-30T01:19:47.102Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="网易云的hash检测。。">
+<meta name="twitter:title" content="23">
 
 
 
@@ -93,13 +93,13 @@
 
 
 
-  <link rel="canonical" href="http://yuicer.com/2017/11/13/new/网易云的hash检测/"/>
+  <link rel="canonical" href="http://yuicer.com/2018/08/15/叹言/23/"/>
 
 
 
 
 
-  <title> 网易云的hash检测。。 | yuicer </title>
+  <title> 23 | yuicer </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -249,7 +249,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yuicer.com/2017/11/13/new/网易云的hash检测/">
+  <link itemprop="mainEntityOfPage" href="http://yuicer.com/2018/08/15/叹言/23/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="yuicer">
@@ -273,7 +273,7 @@
             
             
               
-                网易云的hash检测。。
+                23
               
             
           </h1>
@@ -286,8 +286,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-13T17:21:40+08:00">
-                2017-11-13
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-15T16:38:33+08:00">
+                2018-08-15
               </time>
             
 
@@ -305,8 +305,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/尺工/" itemprop="url" rel="index">
-                    <span itemprop="name">尺工</span>
+                  <a href="/categories/叹言/" itemprop="url" rel="index">
+                    <span itemprop="name">叹言</span>
                   </a>
                 </span>
 
@@ -338,8 +338,21 @@
 
       
         <p></p><p></p><br><a id="more"></a><p></p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>闲着没事爬了下<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isHashChangeSupported</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> a = <span class="string">"onhashchange"</span>,</span><br><span class="line">        b = a <span class="keyword">in</span> <span class="built_in">document</span>.body;</span><br><span class="line">    <span class="keyword">return</span> b || (<span class="built_in">document</span>.body.setAttribute(a, <span class="string">"return;"</span>), b = <span class="string">"function"</span> == <span class="keyword">typeof</span> <span class="built_in">document</span>.body[a]), b &amp;&amp; (<span class="keyword">void</span> <span class="number">0</span> === <span class="built_in">document</span>.documentMode || <span class="built_in">document</span>.documentMode &gt; <span class="number">7</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">hashToObject</span>(<span class="params">a</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> b, c, d, e, f, g;</span><br><span class="line">    <span class="keyword">if</span> (<span class="string">"[object String]"</span> === <span class="built_in">Object</span>.prototype.toString.call(a)) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="number">0</span> === a.indexOf(<span class="string">"#"</span>) &amp;&amp; (a = a.substr(<span class="number">1</span>)), b = &#123;&#125;, c = a.split(<span class="string">"&amp;"</span>), f = <span class="number">0</span>, g = c.length; g &gt; f; f++) d = c[f], e = d.split(<span class="string">"="</span>), e[<span class="number">0</span>] &amp;&amp; (b[<span class="built_in">decodeURIComponent</span>(e[<span class="number">0</span>])] = <span class="built_in">decodeURIComponent</span>(e[<span class="number">1</span>]));</span><br><span class="line">        <span class="keyword">return</span> b</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">onHashChange</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> b, c, d, e;</span><br><span class="line">    location.hash &amp;&amp; <span class="number">1</span> !== location.hash.length &amp;&amp; (b = location.hash.slice(<span class="number">1</span>), c = hashToObject(b), c.to &amp;&amp; c.message &amp;&amp; (d = top.document.getElementById(c.to), e = d.src, d.contentWindow.location.replace(e.replace(<span class="regexp">/#.*$/</span>, <span class="string">""</span>) + <span class="string">"#"</span> + <span class="built_in">encodeURIComponent</span>(c.message))))</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> monitor = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> a = location.href;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> b = location.href;</span><br><span class="line">        b !== a &amp;&amp; (onHashChange(&#123;</span><br><span class="line">            type: <span class="string">"hashchange"</span>,</span><br><span class="line">            oldURL: a,</span><br><span class="line">            newURL: b</span><br><span class="line">        &#125;), a = b)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;();</span><br><span class="line">isHashChangeSupported() ? <span class="built_in">window</span>.onhashchange = onHashChange : <span class="built_in">window</span>.setInterval(monitor, <span class="number">100</span>);</span><br></pre></td></tr></table></figure></p>
-<p>然后去查了一下这个 hashchange，发现了一个新的方法<br><code>window.addEventListener(&#39;hashchange&#39;,function(){console.log(1)})</code><br>查了下<a href="https://caniuse.com/#search=hashchange" target="_blank" rel="noopener">兼容</a>，辣鸡 ie 不行，其他挺好的<br>感叹做兼容真是辛苦</p>
+<p>突然发觉，最近叹气的次数愈来越多了。<br>————罗伦斯《狼于香辛料》</p>
+<p>现在的我，大概处于的就是没有遇到赫罗之前的罗伦斯那样的状态吧。</p>
+<p>突然想起，这个时候的罗伦斯经常会坐在马车上对着马屁股，想起曾经的马店老板在他买马的时候劝他买母马，还讲了美妙的传说，【在旅途中，母马突然变成了少女来安慰落魄行商人，最后幸福的在一起的故事】，那时的罗伦斯回答老板的是【就算变成人也是过来讨债的才对。】不过23的罗伦斯这个时候也有了当时要是买的是母马就好了这种想法。</p>
+<p>类似的想法，在我经常对着电脑的时候也经常有，与其说是对着电脑，不如说是对着电脑发呆。最近发呆的功力增长特别快。发呆状态简直就是瞬间切换，如丝般柔滑。两眼虽然对着电脑，但是并不聚焦，大脑看着像什么也没想，实际上也真的什么都没想。往往回过神的时候就已经过了三五分钟了。这之后往往会接着一次深呼吸再一口气吐出来。然后继续搬砖。</p>
+<p>变的越来越想和人说话了</p>
+<p>变的越来越不想和人说话了</p>
+<p>我觉得我要爆炸了，为此做的傻事，说的傻话。每一次每一次都会事后后悔，我已经受够这种循环了，为什么会是我啊，为什么我要受这种折磨啊！！！</p>
+<p>半年之后如果还没有改变的话，我就应该换个生活方式过一年再回来了</p>
+<ol>
+<li>回去种种田【小森林一样】</li>
+<li>回家啃老一年</li>
+<li>出走一年</li>
+<li>考国外研究生</li>
+</ol>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=405315&auto=1&height=66"></iframe>
 
       
     </div>
@@ -353,8 +366,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/13/new/noteOfNode(一)/" rel="next" title="noteOfNode(一)">
-                <i class="fa fa-chevron-left"></i> noteOfNode(一)
+              <a href="/2018/08/02/new/npm发布/" rel="next" title="npm发布">
+                <i class="fa fa-chevron-left"></i> npm发布
               </a>
             
           </div>
@@ -363,8 +376,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/11/14/new/noteOfNode(二)/" rel="prev" title="noteOfNode(二)">
-                noteOfNode(二) <i class="fa fa-chevron-right"></i>
+              <a href="/2018/08/30/new/木原神拳（腿）/" rel="prev" title="木原神拳（腿）">
+                木原神拳（腿） <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -419,17 +432,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://olti9qjwg.bkt.clouddn.com/qiniu/img/me.config/me.png"
@@ -475,22 +479,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
     </div>
@@ -605,9 +593,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'yuicer';
-      var disqus_identifier = '2017/11/13/new/网易云的hash检测/';
+      var disqus_identifier = '2018/08/15/叹言/23/';
 
-      var disqus_title = "网易云的hash检测。。";
+      var disqus_title = "23";
 
 
       function run_disqus_script(disqus_script) {
