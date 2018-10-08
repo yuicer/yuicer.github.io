@@ -59,13 +59,13 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:title" content="悲秋的时候到了">
-<meta property="og:url" content="http://yuicer.com/2017/08/30/叹言/悲秋的时候到了/index.html">
+<meta property="og:title" content="日常小技巧（五）">
+<meta property="og:url" content="http://yuicer.com/2018/09/09/new/日常小技巧（五）/index.html">
 <meta property="og:site_name" content="yuicer">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-28T02:44:39.162Z">
+<meta property="og:updated_time" content="2018-09-20T01:30:08.343Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="悲秋的时候到了">
+<meta name="twitter:title" content="日常小技巧（五）">
 
 
 
@@ -93,13 +93,13 @@
 
 
 
-  <link rel="canonical" href="http://yuicer.com/2017/08/30/叹言/悲秋的时候到了/"/>
+  <link rel="canonical" href="http://yuicer.com/2018/09/09/new/日常小技巧（五）/"/>
 
 
 
 
 
-  <title> 悲秋的时候到了 | yuicer </title>
+  <title> 日常小技巧（五） | yuicer </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -249,7 +249,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yuicer.com/2017/08/30/叹言/悲秋的时候到了/">
+  <link itemprop="mainEntityOfPage" href="http://yuicer.com/2018/09/09/new/日常小技巧（五）/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="yuicer">
@@ -273,7 +273,7 @@
             
             
               
-                悲秋的时候到了
+                日常小技巧（五）
               
             
           </h1>
@@ -286,8 +286,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-30T14:23:37+08:00">
-                2017-08-30
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-09T16:52:40+08:00">
+                2018-09-09
               </time>
             
 
@@ -305,8 +305,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/叹言/" itemprop="url" rel="index">
-                    <span itemprop="name">叹言</span>
+                  <a href="/categories/尺工/" itemprop="url" rel="index">
+                    <span itemprop="name">尺工</span>
                   </a>
                 </span>
 
@@ -338,9 +338,34 @@
 
       
         <p></p><p></p><br><a id="more"></a><p></p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=33854265&auto=1&height=66"></iframe>
-
-<p>为赋新词强说愁</p>
+<h2 id="document-elementFromPoint"><a href="#document-elementFromPoint" class="headerlink" title="document.elementFromPoint"></a>document.elementFromPoint</h2><p>获取某个坐标的位置对应的 dom。支持性贼好。。</p>
+<h2 id="clientHeight-offsetHeight-scrollHeight"><a href="#clientHeight-offsetHeight-scrollHeight" class="headerlink" title="clientHeight offsetHeight scrollHeight"></a>clientHeight offsetHeight scrollHeight</h2><p>clientHeight 为不包括 border,滚动条的视口内高度，offsetHeighta 为包括上面那些的高度，scrollHeight 为包括内容滚动区域的所有高度</p>
+<h2 id="vertical-align"><a href="#vertical-align" class="headerlink" title="vertical-align"></a>vertical-align</h2><p>当在这样的一个结构时，特别是第二个 span 设置为了 bfc 盒子的时候，会出现某些问题，两行文字对不齐<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span>&gt;</span>1<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span>&gt;</span>2<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>这个时候可以设置第一个 span 的 <code>vertical-align: top</code> 来解决这个问题</p>
+<p>或者给第二个 span 设置增加 <code>vertical-align: bottom</code></p>
+<p>这个问题的原因是当成为 bfc 盒子之后，它的对齐方式会改变,此时是整个这个盒子 span2 相对于基线对齐，而 span1 则是盒子里面文字本身相对与于基线对齐。</p>
+<p><a href="https://www.zhangxinxu.com/wordpress/2015/08/css-deep-understand-vertical-align-and-line-height/comment-page-1/" target="_blank" rel="noopener">张鑫旭大佬有一篇文章讲对比较细</a></p>
+<p>里面有一句比较重要的话</p>
+<p><code>The baseline of an ‘inline-block’ is the baseline of its last line box in the normal flow, unless it has either no in-flow line boxes or if its ‘overflow’ property has a computed value other than ‘visible’, in which case the baseline is the bottom margin edge.</code></p>
+<p>谷歌翻译如下</p>
+<p><code>“内联块”的基线是正常流程中其最后一个线框的基线，除非它没有流入线框或者其“溢出”属性具有“可见”以外的计算值， 在哪种情况下，基线是底部边缘边缘。</code></p>
+<p>张鑫旭大佬翻译如下</p>
+<p><code>’inline-block’的基线是正常流中最后一个line box的基线, 除非，这个line box里面既没有line boxes或者本身’overflow’属性的计算值不是’visible’, 这种情况下基线是margin底边缘。</code></p>
+<p><code>一个inline-block元素，如果里面没有inline内联元素，或者overflow不是visible，则该元素的基线就是其margin底边缘，否则，其基线就是元素里面最后一行内联元素的基线。</code></p>
+<h2 id="ios-bug"><a href="#ios-bug" class="headerlink" title="ios bug"></a>ios bug</h2><ol>
+<li>全局设置对 <code>user-selected: *</code> 会使 input textarea 不能被选中，弹起输入框</li>
+<li><p>fixed 在部分ios手机中，滑动对时候会消失，滑动停止后又出来。解决方法可以将 fixed 区域整个拿出来，不放在滚动区域内，或者设置如下。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.fixed</span>&#123;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">translate3d</span>(0,0,0);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.fixed</span> * &#123;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">translate3d</span>(0,0,0);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>滚动区域卡顿，设置<code>-webkit-overflow-scrolling: touch;</code></p>
+</li>
+<li><p>ios 默认滑动可以弹出正常网页区域，出现空白。解决可以整个页面禁止滑动，让滚动条不出现，或者用三方库 iscroll 之类的</p>
+</li>
+</ol>
+<h2 id="m3u8"><a href="#m3u8" class="headerlink" title="m3u8"></a>m3u8</h2><p>对于这种格式的视频，需要给设置 video 的source 为 <code>&lt;source src=&quot;video.url&quot; type=&quot;application/x-mpegURL&quot;&gt;&lt;/source&gt;</code> 在电脑上不支持播放</p>
+<h2 id="promise"><a href="#promise" class="headerlink" title="promise"></a>promise</h2><p>promise.then().catch().finally()</p>
+<p>finally 有兼容，很多没有实现这个功能</p>
+<p>当链式调用中没有参数【回调函数】时会返回传入的 promise 对象<br>，有【回调函数】作参数时会返回【一个返回值为回调函数 return 的值的 promise 对象】传给下一个链式调用</p>
 
       
     </div>
@@ -354,8 +379,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/08/25/尺工/分享/" rel="next" title="分享">
-                <i class="fa fa-chevron-left"></i> 分享
+              <a href="/2018/08/02/new/npm发布/" rel="next" title="npm发布">
+                <i class="fa fa-chevron-left"></i> npm发布
               </a>
             
           </div>
@@ -363,10 +388,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/09/10/叹言/反省/" rel="prev" title="反省">
-                反省 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -420,8 +441,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://olti9qjwg.bkt.clouddn.com/qiniu/img/me.config/me.png"
@@ -467,6 +497,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#document-elementFromPoint"><span class="nav-number">1.</span> <span class="nav-text">document.elementFromPoint</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#clientHeight-offsetHeight-scrollHeight"><span class="nav-number">2.</span> <span class="nav-text">clientHeight offsetHeight scrollHeight</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vertical-align"><span class="nav-number">3.</span> <span class="nav-text">vertical-align</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ios-bug"><span class="nav-number">4.</span> <span class="nav-text">ios bug</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#m3u8"><span class="nav-number">5.</span> <span class="nav-text">m3u8</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#promise"><span class="nav-number">6.</span> <span class="nav-text">promise</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
@@ -581,9 +627,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'yuicer';
-      var disqus_identifier = '2017/08/30/叹言/悲秋的时候到了/';
+      var disqus_identifier = '2018/09/09/new/日常小技巧（五）/';
 
-      var disqus_title = "悲秋的时候到了";
+      var disqus_title = "日常小技巧（五）";
 
 
       function run_disqus_script(disqus_script) {
