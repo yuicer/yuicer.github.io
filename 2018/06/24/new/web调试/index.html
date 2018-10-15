@@ -63,7 +63,7 @@
 <meta property="og:url" content="http://yuicer.com/2018/06/24/new/web调试/index.html">
 <meta property="og:site_name" content="yuicer">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-01T06:19:50.727Z">
+<meta property="og:updated_time" content="2018-10-15T02:35:10.782Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="web调试">
 
@@ -340,8 +340,11 @@
         <p></p><p></p><br><a id="more"></a><p></p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>有时候做开发移动端页面找bug很头疼，所以记录几个抓包的办法</p>
 <h3 id="safari"><a href="#safari" class="headerlink" title="safari"></a>safari</h3><p>对于有 mac 和 iphone 测试机的可以直接用 usb 进行连接之后两端同时打开 safiri 浏览器，在 mac 的 safiri 上有一个开发选项，点击之后就可以直接进行调试</p>
-<p>—跟新—<br>这里一般的方法是只能看到手机上 safiri 中打开的网页，对于 app 内的 webview 页面是抓不到的，如果想要抓到就必须得找客户端同学协助一下，将手机的 uuid 加到配置中重新 build 一个包</p>
+<p>—跟新—<br>这里一般的方法是只能看到手机上 safiri 中打开的网页，对于 app 内的 webview 页面是抓不到的，如果想要抓到就必须得找客户端同学协助一下，将手机的 id 加到配置中重新 build 一个包</p>
 <h3 id="安卓"><a href="#安卓" class="headerlink" title="安卓"></a>安卓</h3><p>对于安卓方法都有说使用 chrom://inspect 但是实际去试了试发现并不能走通，一种情况是只显示了 remote 列表，并不显示页面，另一种虽然显示了页面但是点击打开是空白。第一种没有找到原因，第二种查了之后发现需要设置网络？但是虽然连了 vpn 依然无效。。。</p>
+<ul>
+<li>可能和手机有关，换了个手机可以使用-</li>
+</ul>
 <h3 id="charles"><a href="#charles" class="headerlink" title="charles"></a>charles</h3><p>一个很强大的抓包工具，之前有看过一次，不过那时被复杂的操作吓跑了，表示学不会。。。<br>然鹅再次被安利了之后又去看了看。。。。发现是真的强，直接能抓包 http/https 请求</p>
 <ol>
 <li><p>首先得下载 charles </p>

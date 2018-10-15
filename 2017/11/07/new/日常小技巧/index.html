@@ -59,13 +59,13 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue小技巧">
-<meta property="og:url" content="http://yuicer.com/2018/02/28/new/vue小技巧/index.html">
+<meta property="og:title" content="日常小技巧">
+<meta property="og:url" content="http://yuicer.com/2017/11/07/new/日常小技巧/index.html">
 <meta property="og:site_name" content="yuicer">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-28T09:07:04.602Z">
+<meta property="og:updated_time" content="2018-10-15T02:18:34.225Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vue小技巧">
+<meta name="twitter:title" content="日常小技巧">
 
 
 
@@ -93,13 +93,13 @@
 
 
 
-  <link rel="canonical" href="http://yuicer.com/2018/02/28/new/vue小技巧/"/>
+  <link rel="canonical" href="http://yuicer.com/2017/11/07/new/日常小技巧/"/>
 
 
 
 
 
-  <title> vue小技巧 | yuicer </title>
+  <title> 日常小技巧 | yuicer </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -249,7 +249,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yuicer.com/2018/02/28/new/vue小技巧/">
+  <link itemprop="mainEntityOfPage" href="http://yuicer.com/2017/11/07/new/日常小技巧/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="yuicer">
@@ -273,7 +273,7 @@
             
             
               
-                vue小技巧
+                日常小技巧
               
             
           </h1>
@@ -286,8 +286,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-28T18:23:44+08:00">
-                2018-02-28
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-07T01:18:40+08:00">
+                2017-11-07
               </time>
             
 
@@ -338,22 +338,19 @@
 
       
         <p></p><p></p><br><a id="more"></a><p></p>
-<h2 id="refs"><a href="#refs" class="headerlink" title="refs"></a>refs</h2><p>这个可以去取dom，其实不算什么技巧<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">div</span> ref=<span class="string">"video"</span>&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">this.<span class="variable">$refs</span><span class="selector-class">.video</span> <span class="comment">// get dom</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="事件监听"><a href="#事件监听" class="headerlink" title="事件监听"></a>事件监听</h2><p>如果想自己实现一个事件分发系统的话可以用 vue 的 $on $emit 来伪装实现，远离就是新建立一个 vue 实例，然后用这个实例去做事件的分发，但是这样得注意一下事件的销毁，不然会出现在两个组件中都被触发自定义事件<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vm.$on(<span class="string">'test'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">msg</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(msg)</span><br><span class="line">&#125;)</span><br><span class="line">vm.$emit(<span class="string">'test'</span>, <span class="string">'hi'</span>)</span><br></pre></td></tr></table></figure></p>
-<h2 id="批量读取模块"><a href="#批量读取模块" class="headerlink" title="批量读取模块"></a>批量读取模块</h2><p>vue-router<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> Modules = <span class="built_in">require</span>.context(<span class="string">"./../component/pages"</span>, <span class="literal">true</span>, /\.vue$/);</span><br><span class="line">Modules.keys().forEach(<span class="function"><span class="keyword">function</span>(<span class="params">v, i</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> key = v.replace(<span class="regexp">/(\.\/|\.vue)/g</span>, <span class="string">''</span>);</span><br><span class="line">    routesObj.push(&#123;</span><br><span class="line">        path: <span class="string">'/'</span> + key,</span><br><span class="line">        name: key,</span><br><span class="line">        component: Modules(v)[<span class="string">'default'</span>]</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<p><code>Modules(v)[&#39;default&#39;]</code> 为引入的模块</p>
-<h2 id="设置请求域名"><a href="#设置请求域名" class="headerlink" title="设置请求域名"></a>设置请求域名</h2><p>var url = Vue.config.devtools ? ‘//test.xxx.com/api’ : ‘/api’<br>Vue.http.options.root = url</p>
-<h2 id="proxyTable"><a href="#proxyTable" class="headerlink" title="proxyTable"></a>proxyTable</h2><p>解决跨域，会将 请求 localhost 的请求转发<br><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">proxyTable: &#123;</span><br><span class="line">	<span class="string">'/api'</span>: &#123;</span><br><span class="line">		target: <span class="string">'http://www.xxx.com/some/api'</span>,</span><br><span class="line">		changeOrigin: true,</span><br><span class="line">		pathRewrite: &#123;</span><br><span class="line">			<span class="string">'^/api'</span>: <span class="string">''</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">...</span><br><span class="line">$http.get(<span class="string">'api'</span>)</span><br></pre></td></tr></table></figure></p>
-<h2 id="webpack-anaylzer"><a href="#webpack-anaylzer" class="headerlink" title="webpack anaylzer"></a>webpack anaylzer</h2><p>可以用來检查哪些文件过大可以优化<br><code>npm install --save-dev webpack-bundle-analyzer</code><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> BundleAnalyzerPlugin = <span class="built_in">require</span>(<span class="string">'webpack-bundle-analyzer'</span>).BundleAnalyzerPlugin;</span><br><span class="line"> </span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line">plugins: [<span class="keyword">new</span> BundleAnalyzerPlugin()]</span><br></pre></td></tr></table></figure></p>
-<h2 id="dom中执行方法"><a href="#dom中执行方法" class="headerlink" title="dom中执行方法"></a>dom中执行方法</h2><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="keyword">div</span> v-<span class="keyword">if</span>=<span class="string">"isF"</span>&gt;f()&lt;<span class="keyword">div</span>&gt;</span><br></pre></td></tr></table></figure>
-<p>这种写法很取巧，一般是监听$store.state或者其他数据的时候这么写，其实不正规，还是应该用$store.actions或者mutations来对数据进行监测。</p>
-<h2 id="v-for-数据显示开关"><a href="#v-for-数据显示开关" class="headerlink" title="v-for 数据显示开关"></a>v-for 数据显示开关</h2><p>当有一大推数据且需要对每一条数据设置一个开关时可以这么做<br>在当前组件中<br><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">data()&#123;</span><br><span class="line">	<span class="keyword">return</span>&#123;</span><br><span class="line">	<span class="keyword">switch</span>: <span class="keyword">new</span> Array(size)</span><br><span class="line">&#125;</span><br><span class="line">&#125;,</span><br><span class="line">methods:&#123;</span><br><span class="line">	change_switch(<span class="keyword">index</span>)&#123;</span><br><span class="line">	<span class="keyword">this</span>.<span class="keyword">switch</span>.splice(<span class="keyword">index</span>,<span class="number">1</span>,<span class="keyword">this</span>.<span class="keyword">switch</span>[<span class="keyword">index</span>])</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>这样做就可以比较方便的为每一条数据设置一个开关。<br>唯一不足是 size 可能不知道，就只能设置一个比较大的数。且开销比直接设置 = [] 大</p>
-<h2 id="监听vue数据"><a href="#监听vue数据" class="headerlink" title="监听vue数据"></a>监听vue数据</h2><p>在 dom 中写三元表达式判断<br><figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$store</span>.<span class="keyword">state</span>.some == <span class="literal">any</span> ? func() : else()</span><br></pre></td></tr></table></figure></p>
-<p>这样就可以知道 vuex 数据更改然后进行操作</p>
-<h2 id="vue-resource-root"><a href="#vue-resource-root" class="headerlink" title="vue-resource root"></a>vue-resource root</h2><p>vue-resource 中可以设置 url 的公共部分，方便测试转正式<br>在 main.js 中<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Vue.http.<span class="keyword">options</span>.root = url;</span><br><span class="line">Vue.http.<span class="keyword">options</span>.emulateJSON = <span class="keyword">true</span>;</span><br></pre></td></tr></table></figure></p>
-<p>之后可以通过 vue 实例(vm)来访问<br>vm.$http.options.root</p>
-<h2 id="数据渲染"><a href="#数据渲染" class="headerlink" title="数据渲染"></a>数据渲染</h2><p>vue 的数据绑定渲染对数组和对象的检测是浅复制的检测<br>所以当更改数组或对象的时候需要用到 js 方法 splice push 等</p>
+<h2 id="网页截屏"><a href="#网页截屏" class="headerlink" title="网页截屏"></a>网页截屏</h2><p>html2canvas 可以将某个 dom 转化成 canvas，再转为图片<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">html2canvas(<span class="built_in">document</span>.querySelector(<span class="string">'#box'</span>)).then(<span class="function"><span class="keyword">function</span> (<span class="params">canvas</span>) </span>&#123;</span><br><span class="line">		<span class="keyword">var</span> src = canvas.toDataURL(<span class="string">"image/png"</span>)</span><br><span class="line">		<span class="built_in">console</span>.log(src)</span><br><span class="line">		<span class="keyword">var</span> img = <span class="keyword">new</span> Image()</span><br><span class="line">		img.src = src</span><br><span class="line">		img.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">			<span class="built_in">document</span>.body.appendChild(img)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>但是它作用有很多限制，对于写在 style 中的 css 样式可能会不生效，必须加到 dom 上 style=””，另外对于部分 css 不支持<br>而且不能实现截屏，只能选中某个 dom</p>
+<h2 id="打印输出改变样式-c-后的部分样式会被改变"><a href="#打印输出改变样式-c-后的部分样式会被改变" class="headerlink" title="打印输出改变样式 %c 后的部分样式会被改变"></a>打印输出改变样式 %c 后的部分样式会被改变</h2><p>console.log(‘%c red’,’color: red; font-size:50px’)</p>
+<h2 id="url-格式"><a href="#url-格式" class="headerlink" title="url 格式"></a>url 格式</h2><p><code>&lt;scheme&gt;://&lt;user&gt;:&lt;password&gt;@&lt;host&gt;:&lt;port&gt;/&lt;url-path&gt;</code></p>
+<h2 id="npm-i-–save"><a href="#npm-i-–save" class="headerlink" title="npm i –save"></a>npm i –save</h2><p>存储包并保存到 package.json 的 dependencies 中<br>devDependencies 存放一些依赖工具包，比如 es-lint babel webpack 等</p>
+<h2 id="cross-env-webpack-包"><a href="#cross-env-webpack-包" class="headerlink" title="cross-env webpack 包"></a>cross-env webpack 包</h2><p>设置不同系统下的 node_env, windows/linux 等</p>
+<h2 id="传回调函数去获取异步函数的值"><a href="#传回调函数去获取异步函数的值" class="headerlink" title="传回调函数去获取异步函数的值"></a>传回调函数去获取异步函数的值</h2><figure class="highlight qml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="built_in">url</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">callback</span>(<span class="params">url_</span>) </span>&#123;</span><br><span class="line">	<span class="built_in">url</span> = url_;</span><br><span class="line">&#125;</span><br><span class="line">yibu(callback)</span><br><span class="line"><span class="comment">//异步函数中</span></span><br><span class="line">callback(<span class="built_in">url</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="webpack-中如果想要引用入口文件，设置如下"><a href="#webpack-中如果想要引用入口文件，设置如下" class="headerlink" title="webpack 中如果想要引用入口文件，设置如下"></a>webpack 中如果想要引用入口文件，设置如下</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">entry: &#123;</span><br><span class="line">  <span class="selector-tag">a</span>: <span class="string">"./a"</span>, <span class="comment">// a requires b</span></span><br><span class="line">  <span class="selector-tag">b</span>: [<span class="string">"./b"</span>] <span class="comment">// workaround: "./b" can now be in another bundle</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这样就可以直接去引用 b 入口文件，加[]就好 </p>
+<h2 id="文件上传"><a href="#文件上传" class="headerlink" title="文件上传"></a>文件上传</h2><p><code>&lt;input type=&quot;file&quot; accept=&quot;image/jpeg,image/jpg,image/png&quot;&gt;</code><br>选择特定类型文件上传，如果用image/* 的话匹配的会很慢，导致打开很慢</p>
+<h2 id="markdown如何前空2格"><a href="#markdown如何前空2格" class="headerlink" title="markdown如何前空2格"></a>markdown如何前空2格</h2><p>输入法圆角输入2个空格 【圆角切换快捷键 shift+space】</p>
+<h2 id="qq表情"><a href="#qq表情" class="headerlink" title="qq表情"></a>qq表情</h2><p>qq空间评论里输下面的代码可以生成滑稽这个表情。不过不知道这个以后会不会被改掉<br>[em]e248[/em]    滑稽</p>
+<h2 id="查询端口占用情况"><a href="#查询端口占用情况" class="headerlink" title="查询端口占用情况"></a>查询端口占用情况</h2><p>cmd &gt; netstat -ano<br>查询8080端口是否被占用<br>cmd &gt; netstat -ano|</p>
 
       
     </div>
@@ -367,8 +364,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/02/28/new/mac环境/" rel="next" title="mac环境">
-                <i class="fa fa-chevron-left"></i> mac环境
+              <a href="/2017/11/02/new/读取文件/" rel="next" title="读取文件">
+                <i class="fa fa-chevron-left"></i> 读取文件
               </a>
             
           </div>
@@ -377,8 +374,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/03/04/new/日常小技巧（四）/" rel="prev" title="日常小技巧（四）">
-                日常小技巧（四） <i class="fa fa-chevron-right"></i>
+              <a href="/2017/11/13/new/noteOfNode(一)/" rel="prev" title="noteOfNode(一)">
+                noteOfNode(一) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -499,7 +496,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#refs"><span class="nav-number">1.</span> <span class="nav-text">refs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件监听"><span class="nav-number">2.</span> <span class="nav-text">事件监听</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#批量读取模块"><span class="nav-number">3.</span> <span class="nav-text">批量读取模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置请求域名"><span class="nav-number">4.</span> <span class="nav-text">设置请求域名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#proxyTable"><span class="nav-number">5.</span> <span class="nav-text">proxyTable</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webpack-anaylzer"><span class="nav-number">6.</span> <span class="nav-text">webpack anaylzer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dom中执行方法"><span class="nav-number">7.</span> <span class="nav-text">dom中执行方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#v-for-数据显示开关"><span class="nav-number">8.</span> <span class="nav-text">v-for 数据显示开关</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#监听vue数据"><span class="nav-number">9.</span> <span class="nav-text">监听vue数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vue-resource-root"><span class="nav-number">10.</span> <span class="nav-text">vue-resource root</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据渲染"><span class="nav-number">11.</span> <span class="nav-text">数据渲染</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#网页截屏"><span class="nav-number">1.</span> <span class="nav-text">网页截屏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打印输出改变样式-c-后的部分样式会被改变"><span class="nav-number">2.</span> <span class="nav-text">打印输出改变样式 %c 后的部分样式会被改变</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#url-格式"><span class="nav-number">3.</span> <span class="nav-text">url 格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#npm-i-–save"><span class="nav-number">4.</span> <span class="nav-text">npm i –save</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cross-env-webpack-包"><span class="nav-number">5.</span> <span class="nav-text">cross-env webpack 包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#传回调函数去获取异步函数的值"><span class="nav-number">6.</span> <span class="nav-text">传回调函数去获取异步函数的值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webpack-中如果想要引用入口文件，设置如下"><span class="nav-number">7.</span> <span class="nav-text">webpack 中如果想要引用入口文件，设置如下</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件上传"><span class="nav-number">8.</span> <span class="nav-text">文件上传</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#markdown如何前空2格"><span class="nav-number">9.</span> <span class="nav-text">markdown如何前空2格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#qq表情"><span class="nav-number">10.</span> <span class="nav-text">qq表情</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查询端口占用情况"><span class="nav-number">11.</span> <span class="nav-text">查询端口占用情况</span></a></li></ol></div>
             
 
           </div>
@@ -619,9 +616,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'yuicer';
-      var disqus_identifier = '2018/02/28/new/vue小技巧/';
+      var disqus_identifier = '2017/11/07/new/日常小技巧/';
 
-      var disqus_title = "vue小技巧";
+      var disqus_title = "日常小技巧";
 
 
       function run_disqus_script(disqus_script) {

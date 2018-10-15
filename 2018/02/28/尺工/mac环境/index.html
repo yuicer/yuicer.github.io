@@ -59,13 +59,13 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:title" content="es6整理">
-<meta property="og:url" content="http://yuicer.com/2017/02/03/new/es6整理/index.html">
+<meta property="og:title" content="mac环境">
+<meta property="og:url" content="http://yuicer.com/2018/02/28/尺工/mac环境/index.html">
 <meta property="og:site_name" content="yuicer">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-28T02:44:39.149Z">
+<meta property="og:updated_time" content="2018-10-15T02:34:09.626Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="es6整理">
+<meta name="twitter:title" content="mac环境">
 
 
 
@@ -93,13 +93,13 @@
 
 
 
-  <link rel="canonical" href="http://yuicer.com/2017/02/03/new/es6整理/"/>
+  <link rel="canonical" href="http://yuicer.com/2018/02/28/尺工/mac环境/"/>
 
 
 
 
 
-  <title> es6整理 | yuicer </title>
+  <title> mac环境 | yuicer </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -249,7 +249,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yuicer.com/2017/02/03/new/es6整理/">
+  <link itemprop="mainEntityOfPage" href="http://yuicer.com/2018/02/28/尺工/mac环境/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="yuicer">
@@ -273,7 +273,7 @@
             
             
               
-                es6整理
+                mac环境
               
             
           </h1>
@@ -286,8 +286,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-03T17:06:01+08:00">
-                2017-02-03
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-28T11:50:21+08:00">
+                2018-02-28
               </time>
             
 
@@ -338,19 +338,29 @@
 
       
         <p></p><p></p><br><a id="more"></a><p></p>
-<h2 id="let"><a href="#let" class="headerlink" title="let"></a>let</h2><p>let 是新增的变量声明标志，它和 var 有什么不同呢？</p>
-<h3 id="let是一个块级作用变量"><a href="#let是一个块级作用变量" class="headerlink" title="let是一个块级作用变量"></a>let是一个块级作用变量</h3><p>就是 <strong>{}</strong> 这个东西，它只在自己声明的块中可用，而 var 则是在声明的函数区域可用，下面附上一个简明易懂的例子<br><figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">function</span> () &#123;</span><br><span class="line">	if (<span class="number">1</span>) &#123;</span><br><span class="line">		let a1 = <span class="string">"a1"</span></span><br><span class="line">		var a2 = <span class="string">"a2"</span></span><br><span class="line">		console.log(<span class="name">a1</span>, a2)</span><br><span class="line">	&#125;</span><br><span class="line">	try &#123;</span><br><span class="line">		console.log(<span class="name">a1</span>, a2)</span><br><span class="line">	&#125; catch (<span class="name">error</span>) &#123;</span><br><span class="line">		console.log(<span class="string">"let不能在块作用域外使用"</span>)</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure></p>
-<p>用这个特性去解决循环闭包问题<br><strong>得到数组全是5</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">box</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> arr = [];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">5</span>;i++)&#123;</span><br><span class="line">        arr[i] = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> i;                            </span><br><span class="line">        &#125;                                        </span><br><span class="line">    &#125;                                            </span><br><span class="line">    <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><strong>解决将 var i 改为 let i即可，因为原先的所有赋值都指向的是一个唯一 i，改后每次块作用域内的 i 都不同了。for 看作每一次循环重新定义</strong><br>这里用到了另一个特性，</p>
-<h3 id="let-不能重复定义"><a href="#let-不能重复定义" class="headerlink" title="let 不能重复定义"></a>let 不能重复定义</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">var</span> a = <span class="number">2</span>; <span class="comment">// ok</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> b = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">let</span> b = <span class="number">2</span>;<span class="comment">// error</span></span><br></pre></td></tr></table></figure>
-<p>所以上面解决闭包的原理如下<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(<span class="number">1</span>)&#123;</span><br><span class="line">		<span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">let</span> b = <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">if</span>(<span class="number">1</span>)&#123;</span><br><span class="line">		<span class="keyword">var</span> a = <span class="number">2</span>; <span class="comment">// 和上面的 a 是同一个，跨作用块重复声明了。</span></span><br><span class="line">		<span class="keyword">let</span> b = <span class="number">2</span>; <span class="comment">// 和上面的 b 不是同一个</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure></p>
-<h3 id="let-不存在变量提升"><a href="#let-不存在变量提升" class="headerlink" title="let 不存在变量提升"></a>let 不存在变量提升</h3><p>这个直接给个例子吧<br><figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">function</span> () &#123;</span><br><span class="line">	try &#123;</span><br><span class="line">		console.log(<span class="name">a2</span>)</span><br><span class="line">		console.log(<span class="name">a1</span>)</span><br><span class="line">		let a1 = <span class="string">"a1"</span></span><br><span class="line">		var a2 = <span class="string">"a2"</span></span><br><span class="line">	&#125; catch (<span class="name">error</span>) &#123;</span><br><span class="line">		console.log(<span class="string">"let没有变量提升"</span>)</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure></p>
-<p>所谓的变量提升就是指 <code>var a2 = &quot;a2&quot;</code> 会被这样解析，首先将 var a2; 这句提到函数开头，然后再原本的地方进行赋值</p>
-<h3 id="let-不能给window绑上属性"><a href="#let-不能给window绑上属性" class="headerlink" title="let 不能给window绑上属性"></a>let 不能给window绑上属性</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">let</span> b = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">window</span>.a <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">window</span>.b <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
-<h2 id="const"><a href="#const" class="headerlink" title="const"></a>const</h2><p>常量，不可被改变，但注意对象和数组能够增减属性、值</p>
-<h2 id="解构赋值"><a href="#解构赋值" class="headerlink" title="解构赋值"></a>解构赋值</h2><p>自动匹配对应结构并且赋值<br>交换变量<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">var</span> <span class="selector-tag">a</span> = <span class="number">1</span>, <span class="selector-tag">b</span> = <span class="number">0</span></span><br><span class="line">[<span class="selector-tag">a</span>, b] = [<span class="selector-tag">b</span>, a]</span><br></pre></td></tr></table></figure></p>
-<h2 id="for-of-amp-for-in"><a href="#for-of-amp-for-in" class="headerlink" title="for of &amp; for in"></a>for of &amp; for in</h2><p>of 遍历 values<br>in 遍历 keys</p>
-<p>且，in会把遍历对象所有可枚举的属性都输出<br>推荐数组用 of，对象用 in</p>
+<h2 id="homebrew"><a href="#homebrew" class="headerlink" title="homebrew"></a>homebrew</h2><p>mac 下安装各种软件包，通过 npm 的方式来安装，<code>brew install thing brew uninstall thing</code>，而且他会自动关联对应的链接，比较方便</p>
+<h2 id="iterm"><a href="#iterm" class="headerlink" title="iterm"></a>iterm</h2><p>一个命令行工具，比自带的终端好用</p>
+<h2 id="命令行操作"><a href="#命令行操作" class="headerlink" title="命令行操作"></a>命令行操作</h2><blockquote>
+<p>mkdir 建立文件夹<br>rm [-rf] 移除文件[文件夹]<br>mv one two target 移动[重命名]文件[夹]<br>clear 清屏<br>ls -a 显示隐藏文件</p>
+</blockquote>
+<h2 id="mac-操作"><a href="#mac-操作" class="headerlink" title="mac 操作"></a>mac 操作</h2><p>mac 和 linux 系统很像，没有 windows 类的桌面，文件的图形化操作系统。mac 下操作用到命令行会很多，而且会有很多权限问题。</p>
+<blockquote>
+<p><code>commond + 回车</code>可以唤出应用搜索工具，快速打开<br>commond 键相当与 windows 的 ctrl<br><code>双指触摸板点击</code> 等于右键点击<br><code>commond + z</code> 撤回<br><code>commond + shift + z</code> 反撤回<br><code>commond + ctrl + f</code> 全屏</p>
+</blockquote>
+<h3 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h3><blockquote>
+<p><code>commond + r</code>页面刷新<br><code>双指操作</code>左右滑动前进后退</p>
+</blockquote>
+<h3 id="更改用户"><a href="#更改用户" class="headerlink" title="更改用户"></a>更改用户</h3><p>emmmm，这个特别坑，本来是想改登陆账户的名字，在用户和群组里面试着改了一下，结果把账号权限改没了。。然后登陆也登不上。后来网上找了个办法<br><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">按开机键的时候按住 <span class="keyword">command</span>+s </span><br><span class="line">出现命令行终端的时候按照以下顺序输入命令： </span><br><span class="line"><span class="string">/sbin/mount</span> -uaw </span><br><span class="line">rm var/db/<span class="string">.applesetupdone</span> </span><br><span class="line">reboot</span><br></pre></td></tr></table></figure></p>
+<h3 id="DS-Store"><a href="#DS-Store" class="headerlink" title=".DS_Store"></a>.DS_Store</h3><p>mac 隐藏文件。。很可能不小心就给传 git 上去了，</p>
+<ol>
+<li><p>删除项目中的.DS_Store</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">find . -name <span class="string">.DS_Store</span> -print0 | xargs -0 git rm -f –ignore-unmatch </span><br><span class="line">将 <span class="string">.DS_Store</span> 加入到 <span class="string">.gitignore</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">echo</span> <span class="string">.DS_Store</span> &gt;&gt; ~<span class="string">/.gitignore</span> </span><br><span class="line">更新项目</span><br><span class="line"></span><br><span class="line">git add –all</span><br><span class="line"></span><br><span class="line">git commit -m ‘<span class="string">.DS_Store</span> banished!’</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>给 git 添加全局配置<br>在 gitconfig 文件目录下新建一个<code>vim gitignore_global</code>文件，写入忽略 .DS_Store,然后再添加到 gitconfig 中，添加方式有两种，一种直接打开 gitconfig 文件，写入 </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[core]</span><br><span class="line">	excludesfile = <span class="regexp">/Users/y</span>ou/.gitignore_global</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>或者再命令行中输入<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git<span class="built_in"> config </span>--global core.excludesfile ~/.gitignore_global</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -364,8 +374,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/01/17/尺工/WebViewJavascriptBridge/" rel="next" title="WebViewJavascriptBridge">
-                <i class="fa fa-chevron-left"></i> WebViewJavascriptBridge
+              <a href="/2018/01/24/new/日常小技巧(三)/" rel="next" title="日常小技巧(三)">
+                <i class="fa fa-chevron-left"></i> 日常小技巧(三)
               </a>
             
           </div>
@@ -374,8 +384,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/02/04/尺工/webpack配置/" rel="prev" title="webpack配置">
-                webpack配置 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/03/04/new/日常小技巧（四）/" rel="prev" title="日常小技巧（四）">
+                日常小技巧（四） <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -496,7 +506,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#let"><span class="nav-number">1.</span> <span class="nav-text">let</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#let是一个块级作用变量"><span class="nav-number">1.1.</span> <span class="nav-text">let是一个块级作用变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#let-不能重复定义"><span class="nav-number">1.2.</span> <span class="nav-text">let 不能重复定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#let-不存在变量提升"><span class="nav-number">1.3.</span> <span class="nav-text">let 不存在变量提升</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#let-不能给window绑上属性"><span class="nav-number">1.4.</span> <span class="nav-text">let 不能给window绑上属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#const"><span class="nav-number">2.</span> <span class="nav-text">const</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解构赋值"><span class="nav-number">3.</span> <span class="nav-text">解构赋值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#for-of-amp-for-in"><span class="nav-number">4.</span> <span class="nav-text">for of &amp; for in</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#homebrew"><span class="nav-number">1.</span> <span class="nav-text">homebrew</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iterm"><span class="nav-number">2.</span> <span class="nav-text">iterm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命令行操作"><span class="nav-number">3.</span> <span class="nav-text">命令行操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mac-操作"><span class="nav-number">4.</span> <span class="nav-text">mac 操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器"><span class="nav-number">4.1.</span> <span class="nav-text">浏览器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更改用户"><span class="nav-number">4.2.</span> <span class="nav-text">更改用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DS-Store"><span class="nav-number">4.3.</span> <span class="nav-text">.DS_Store</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -616,9 +626,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'yuicer';
-      var disqus_identifier = '2017/02/03/new/es6整理/';
+      var disqus_identifier = '2018/02/28/尺工/mac环境/';
 
-      var disqus_title = "es6整理";
+      var disqus_title = "mac环境";
 
 
       function run_disqus_script(disqus_script) {
