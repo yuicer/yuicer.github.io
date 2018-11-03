@@ -18,5 +18,6 @@ deploy:
   github-token: ${ACCESS_TOKEN} # Set in the settings page of your repository, as a secure variable
   keep-history: true
   committer-from-gh: true
+  target-branch: master
   on:
     branch: hexo
