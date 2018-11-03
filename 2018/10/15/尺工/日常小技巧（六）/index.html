@@ -63,7 +63,7 @@
 <meta property="og:url" content="http://yuicer.com/2018/10/15/尺工/日常小技巧（六）/index.html">
 <meta property="og:site_name" content="yuicer">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-25T01:20:35.826Z">
+<meta property="og:updated_time" content="2018-11-03T08:59:37.616Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="日常小技巧（六）">
 
@@ -286,7 +286,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-15T11:22:40+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-15T11:22:40+00:00">
                 2018-10-15
               </time>
             
@@ -307,28 +307,6 @@
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/尺工/" itemprop="url" rel="index">
                     <span itemprop="name">尺工</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/尺工/杂乱/" itemprop="url" rel="index">
-                    <span itemprop="name">杂乱</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/尺工/杂乱/叹言/" itemprop="url" rel="index">
-                    <span itemprop="name">叹言</span>
                   </a>
                 </span>
 
@@ -360,6 +338,7 @@
 
       
         <p></p><p></p><br><a id="more"></a><p></p>
+<h2 id="crossorigin-’anonymous’"><a href="#crossorigin-’anonymous’" class="headerlink" title="crossorigin=’anonymous’"></a>crossorigin=’anonymous’</h2><p>跨域安全中是允许 script ，video，img 标签去跨域拉取数据的，但是处于一些额外的原因，比如在 canvas 中如果使用这种不在同域的图片，标准规范处于是不可以使用 toDataUrl() 等方法的，另外对于 script 脚本是获取不到错误信息的。所以有这么一个新属性可以改善上述说的这两个问题，而它的原理我理解就是将该资源标志为是属于跨域请求，并强制让服务端去处理这些请求，所以加上此字段之后，必须要服务端对这些请求做处理，负责会报跨域问题。成功加上之后，这些资源就会被浏览器认为是安全资源，所以开头说的两个问题就不存在了。</p>
 <h2 id="shell"><a href="#shell" class="headerlink" title="shell"></a>shell</h2><p>简单了解下，发现这个东西用的话还是挺方便的，就是不怎么了解命令和底层的一些概念。。都怪上学的时候不好好学 linux ，觉得反正自己用 windows 无所谓就。。。</p>
 <p>echo 输出<br>var=123 echo $var 对变量赋值引用，赋值等号两侧不能空格</p>
 <p>emmmmm，太多了。。不写了</p>
@@ -382,7 +361,8 @@
 <h2 id="nsfw"><a href="#nsfw" class="headerlink" title="nsfw"></a>nsfw</h2><p>not safe for work，emmmm</p>
 <h2 id="nerd"><a href="#nerd" class="headerlink" title="nerd"></a>nerd</h2><p>nerd == otaku ?</p>
 <h2 id="npx"><a href="#npx" class="headerlink" title="npx"></a>npx</h2><p>emmm，就感觉是可以直接执行，省了一步操作。。然后没有安装的存储</p>
-<figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1</span></span><br><span class="line">$ npm i <span class="params">-D</span> webpack</span><br><span class="line">$ npx webpack <span class="params">...</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//2 </span></span><br><span class="line">$ npm rm webpack</span><br><span class="line">$ npx webpack -- <span class="params">...</span></span><br><span class="line">$ cat package.json</span><br><span class="line"><span class="params">...</span>webpack <span class="literal">not</span> <span class="keyword">in</span> <span class="string">"devDependencies"</span><span class="params">...</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//3 </span></span><br><span class="line">$ npx github:piuccio/cowsay</span><br><span class="line"><span class="params">...</span><span class="literal">or</span><span class="params">...</span></span><br><span class="line">$ npx git+ssh:<span class="comment">//my.hosted.git:cowsay.git#semver:^1</span></span><br><span class="line"><span class="params">...</span>etc<span class="params">...</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//4</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1</span></span><br><span class="line">$ npm i <span class="params">-D</span> webpack</span><br><span class="line">$ npx webpack <span class="params">...</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//2</span></span><br><span class="line">$ npm rm webpack</span><br><span class="line">$ npx webpack -- <span class="params">...</span></span><br><span class="line">$ cat package.json</span><br><span class="line"><span class="params">...</span>webpack <span class="literal">not</span> <span class="keyword">in</span> <span class="string">"devDependencies"</span><span class="params">...</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//3</span></span><br><span class="line">$ npx github:piuccio/cowsay</span><br><span class="line"><span class="params">...</span><span class="literal">or</span><span class="params">...</span></span><br><span class="line">$ npx git+ssh:<span class="comment">//my.hosted.git:cowsay.git#semver:^1</span></span><br><span class="line"><span class="params">...</span>etc<span class="params">...</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//4</span></span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -523,7 +503,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#shell"><span class="nav-number">1.</span> <span class="nav-text">shell</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件权限"><span class="nav-number">2.</span> <span class="nav-text">文件权限</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nsfw"><span class="nav-number">3.</span> <span class="nav-text">nsfw</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nerd"><span class="nav-number">4.</span> <span class="nav-text">nerd</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#npx"><span class="nav-number">5.</span> <span class="nav-text">npx</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#crossorigin-’anonymous’"><span class="nav-number">1.</span> <span class="nav-text">crossorigin=’anonymous’</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#shell"><span class="nav-number">2.</span> <span class="nav-text">shell</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件权限"><span class="nav-number">3.</span> <span class="nav-text">文件权限</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nsfw"><span class="nav-number">4.</span> <span class="nav-text">nsfw</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nerd"><span class="nav-number">5.</span> <span class="nav-text">nerd</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#npx"><span class="nav-number">6.</span> <span class="nav-text">npx</span></a></li></ol></div>
             
 
           </div>
