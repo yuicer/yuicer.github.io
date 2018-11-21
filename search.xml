@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[日常小技巧（六）]]></title>
+    <url>%2F2018%2F11%2F14%2Fnew%2F%E6%97%A5%E5%B8%B8%E5%B0%8F%E6%8A%80%E5%B7%A7%EF%BC%88%E5%85%AD%EF%BC%89%2F</url>
+    <content type="text"><![CDATA[packages 设置命令在 package.json 中写上 bin 命令，链接到可执行文件，然后很重要很重要的一点是需要在可执行文件的第一行加上 #!/usr/bin/env node 格式有两种 12"name": "execute","bin": "index.js", 1234"bin": &#123; "execute": "index.js"&#125;, 第一种默认命令名字是 name 名字，第二种是键值 vue 跨域设置好久没用都忘记了 123456proxyTable: &#123; '/api': &#123; target: 'https://target.cn', changeOrigin: true, &#125;&#125; 里面内置的是http-proxy-middleware新发现是，这种设置可以让手机连着用，贼 hi 学不动一脱离舒适区就发现好多东西没听过没用过。学不动啊学不动 async 异常对于 async/await 的异常捕获可以写在 async 方法之后链式.catch，或者写在 await 语句之后，或者用 try catch 块 env(safe-area-inset-top)这个属性原本只会在 ios 中生效的，不知道为什么最近最新的安卓里也会生效，逻辑并不是之前的这条属性不识别，而是这个值会被当作是 0 来处理 选项赋值123456789var a = (&#123; pkg = &#123;&#125;, plugins = [], completeCbs = [], files = &#123;&#125;, invoking = false&#125; = &#123;&#125;) =&gt; &#123; console.log(pkg)&#125;]]></content>
+      <categories>
+        <category>尺工</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[惨痛的教训]]></title>
+    <url>%2F2018%2F11%2F12%2F%E6%9D%82%E4%B9%B1%2F%E6%83%A8%E7%97%9B%E7%9A%84%E6%95%99%E8%AE%AD%2F</url>
+    <content type="text"><![CDATA[今天是个悲惨的一天，早上因为连接数据库不成功，不知道为什么装了两个 mysql，一个好用，一个不好用。然后把好用的 mysql 删除了。。就下来删不好用的 mysql 的时候不小心把 usr/local/bin 里的东西全给干掉了。。之后虽然复制了一份别人的文件过来，但是有太多的软连接不可用，想着把这些东西全给干掉再自己装一遍的时候手一抖。。。。把 rm -rf ./* 打成了 rm -rf /*。。。 之后不得已只能重新新建一个用户。。 使用这个来拯救一下npm install --global trash-cli]]></content>
+      <categories>
+        <category>杂乱</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[无法成为野兽的我们]]></title>
     <url>%2F2018%2F11%2F05%2Fnew%2F%E6%97%A0%E6%B3%95%E6%88%90%E4%B8%BA%E9%87%8E%E5%85%BD%E7%9A%84%E6%88%91%E4%BB%AC%2F</url>
     <content type="text"><![CDATA[深海晶 为什么这么努力，这么认真生活的人周围都是废渣呢？ 因为，废渣虽然喜欢闪光，但是自己成为不了闪光，而且觉得废渣的生活方式更轻松，更适合废渣。因为。只要放弃那一点点的追求和念想就可以活的无比轻松，用一世的懊悔换取一世的安逸不是很赚吗？ 所以就成了一边说着喜欢闪光，一边继续往废渣的更深层走下去 如果能放弃就好了，如果。]]></content>
