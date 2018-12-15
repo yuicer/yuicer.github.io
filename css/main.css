@@ -1679,7 +1679,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff21ff;
+  background: #7aade2;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2449,7 +2449,7 @@ a.search-result {
   display: none;
 }
 body {
-  background: url("http://olti9qjwg.bkt.clouddn.com/qiniu/img/bg/beach.jpg") no-repeat;
+  background: url("http://yuicer.com/images/bg/beach.jpg") no-repeat;
   background-size: 100vw;
   background-attachment: fixed;
   background-size: cover;
