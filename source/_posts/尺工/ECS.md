@@ -9,7 +9,7 @@ date: 2017-08-07 17:58:57
 <!-- more -->
 ## ECS
 这是一种设计模式，主要用于游戏中
-<img src="http://olti9qjwg.bkt.clouddn.com/qiniu/img/photos/ow.png">
+<img src="http://yuicer.com/images/photos/ow.png">
 
 1. Entity
 2. Component

@@ -105,7 +105,7 @@ function DownLoad(i, src, max) {
 放点爬到的猫片
 他喵的，竟然做了防盗链，访问403，我还是传七牛吧。
 
-<img src="http://olti9qjwg.bkt.clouddn.com/qiniu/img/photos/cat0.jpg">
-<img src="http://olti9qjwg.bkt.clouddn.com/qiniu/img/photos/cat1.jpg"> 
-<img src="http://olti9qjwg.bkt.clouddn.com/qiniu/img/photos/cat2.jpg"> 
+<img src="http://yuicer.com/images/photos/cat0.jpg">
+<img src="http://yuicer.com/images/photos/cat1.jpg"> 
+<img src="http://yuicer.com/images/photos/cat2.jpg"> 
 
