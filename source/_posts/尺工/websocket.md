@@ -95,7 +95,7 @@ Query String Parameters
   42["typing",{"username":"test"}]	32	16:47:00.984
 ```
 
-上面是基于 [engine.io](https://github.com/socketio/engine.io-protocol/blob/master/README.md)的格式遍写的内容
+上面是基于 [engine.io](https://github.com/socketio/engine.io-protocol/blob/master/README.md#packet)的格式遍写的内容
 初始的帧格式如下
 
 ```
