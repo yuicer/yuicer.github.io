@@ -63,7 +63,7 @@
 <meta property="og:url" content="http://yuicer.com/2017/03/31/尺工/活动页开发(一)/index.html">
 <meta property="og:site_name" content="yuicer">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-14T11:24:57.466Z">
+<meta property="og:updated_time" content="2019-02-01T21:57:44.803Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="活动页开发(一)">
 
@@ -346,7 +346,7 @@
 <hr>
 <pre><code>蠢，，，v-if v-else v-if-else 
 </code></pre><hr>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;transition name=<span class="string">"fade"</span> mode=<span class="string">"out-in"</span>&gt;</span><br><span class="line">            &lt;router-view id=<span class="string">"zhezhao"</span>&gt;</span><br><span class="line">            &lt;<span class="regexp">/router-view&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>transition&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">transition</span> <span class="attr">name</span>=<span class="string">"fade"</span> <span class="attr">mode</span>=<span class="string">"out-in"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">router-view</span> <span class="attr">id</span>=<span class="string">"zhezhao"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">router-view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">transition</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>如果站点不在根目录，webpack 需要更改脚本命令 build 中路径，改为相对 <code>assetsPublicPath: &#39;./&#39;,</code></p>
 <p>还有一个遇到的坑是在动画里面，像<code>@-webkit-keyframes</code>这样的，webpack打包的时候不知道为什么会出错，在打包后的文件里面你就找不到这个前缀，所以动画有的时候就不执行，后来把这个放到静态文件里面 require 进来。</p>
 <p>另外在用 vue-resource 的时候很奇怪的发现在安卓 4.2 的 vivo 机上不起作用。不知道是请求没有发还是请求发了接受后处理的时候出了问题，后来没办法用上了 jq 里封装的 ajax 方法去请求接口。而且这个 jq 用 require 竟然还进不来，只能用 script 标签</p>

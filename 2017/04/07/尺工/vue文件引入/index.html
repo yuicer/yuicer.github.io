@@ -63,7 +63,7 @@
 <meta property="og:url" content="http://yuicer.com/2017/04/07/尺工/vue文件引入/index.html">
 <meta property="og:site_name" content="yuicer">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-14T11:24:57.466Z">
+<meta property="og:updated_time" content="2019-02-01T21:57:44.799Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue文件引入">
 
@@ -372,7 +372,7 @@
 <p>这个可以确定作用域。</p>
 <h2 id="vue-加载图片"><a href="#vue-加载图片" class="headerlink" title="vue 加载图片"></a>vue 加载图片</h2><ol>
 <li><p>html 中<br>写 <code>src = &#39;~assets/logo.png&#39;</code> 或者 :src = ‘img.src’<br>这里的 img.src 为 data 的数据。这个数据中的 src 不能直接写原路径，必须写解析后的 src<br>由于图片会被 loader 给解析，可能会变成 base64 格式，或者被改名加 hash 后缀等。写法如下</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> img = <span class="built_in">require</span>(<span class="string">'path/to/img'</span>)</span><br><span class="line">img.src = img;</span><br></pre></td></tr></table></figure>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">var img</span> = require(<span class="string">'path/to/img'</span>)</span><br><span class="line">img.src = img;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>css 中，<br><code>src = &#39;~assets/logo.png&#39;</code></p>
 </li>
