@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[memory_qiniu]]></title>
+    <url>%2F2019%2F02%2F07%2F%E5%B0%BA%E5%B7%A5%2Fmemory-qiniu%2F</url>
+    <content type="text"><![CDATA[1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768const fs = require('fs')const path = './qiniu'const path_album = './qiniu/img/album'const path_imgsrc = './source/album/imgsrc.txt'var qiniu = require('qiniu'), file_path = [], album_file_path = [], key = [], token = []//需要填写你的 Access Key 和 Secret Keyqiniu.conf.ACCESS_KEY = 'JSKV4FPbjCQKWAANAn3b9y4IdDGICQY1KGUtzF6q'qiniu.conf.SECRET_KEY = 'kfN_LcAhfjtyOVFqNd7PZNRPtIpNh0P0kH29mJuR'//取得所有资源名字并上传到七牛function get_file_path(path) &#123; let files = fs.readdirSync(path) for (let i = 0; i &lt; files.length; i++) &#123; if (fs.statSync(path + '/' + files[i]).isFile()) &#123; file_path.push(path + '/' + files[i]) if (path == path_album) album_file_path.push(path_album + '/' + files[i]) &#125; else get_file_path(path + '/' + files[i]) &#125;&#125;get_file_path(path)//存储 album 下图片的名字fs.writeFile(path_imgsrc, album_file_path, err =&gt; &#123; if (err) throw err console.log("It's saved!")&#125;)//要上传的空间bucket = 'yuicer'//上传到七牛后保存的文件名for (let i in file_path) &#123; key[i] = file_path[i].substring(2)&#125;//构建上传策略函数function uptoken(bucket, key) &#123; var putPolicy = new qiniu.rs.PutPolicy(bucket + ':' + key) return putPolicy.token()&#125;//生成上传 Tokenfor (let i in file_path) &#123; token[i] = uptoken(bucket, key[i])&#125;//构造上传函数function uploadFile(uptoken, key, localFile) &#123; var extra = new qiniu.io.PutExtra() qiniu.io.putFile(uptoken, key, localFile, extra, function(err, ret) &#123; if (!err) &#123; // 上传成功， 处理返回值 console.log(ret.hash, ret.key, ret.persistentId) &#125; else &#123; // 上传失败， 处理返回代码 console.log(err) &#125; &#125;)&#125;//调用 uploadFile 上传for (let i in file_path) &#123; uploadFile(token[i], key[i], file_path[i])&#125;]]></content>
+      <categories>
+        <category>尺工</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[新年2019回家]]></title>
     <url>%2F2019%2F02%2F02%2F%E5%8F%B9%E8%A8%80%2F%E6%96%B0%E5%B9%B42019%2F</url>
     <content type="text"><![CDATA[等飞机的百无聊赖中，突然觉得还是写东西好了。 今天早上本来都做好骑自行车来机场的准备了。。。因为前一天死活预约不到车啊。下了好几个 app 一个都没用，当时想着要不来机场睡要不第二天骑自行车来。。。所幸的是第二天真的打到了车。危险系数太高了 啊，深呼吸了一下，然后再一口气呼出来，已经 2019 了啊。夹杂者机场的特殊味道，北京 5 点的冷空气，些许寂寞，些许兴奋。想想这一年真是发生了好多事情，改变了很多。在马蜂窝的这一年，现在想想应该算是人生中的重大改变了吧。年初从武汉来到北京，第一次租了 5500 一个月的房子，第一次加班到深夜 2 点半，第一次做飞机，第一次负责面试，第一次去滑雪，第一次喜欢上了逛 muji 和优衣库，第一次真的希望有人能陪伴自己。不过，一年中也有很多的失望和无奈。和人的相处，渴望的真物，以及发现了自己其实是嘴上喊着我是好人的恶人这个事实。 不管怎么说，这一年对我真的很有意义。 在此希望，2019 在字节跳动的一年，能有更多的惊喜，有更多的有意思的事情，能得到自己的真物，然后稍微期待一下会不会有新的相遇 hhh。 怀着少年心气，走向成年人的世界吧]]></content>
