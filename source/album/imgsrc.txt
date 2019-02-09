@@ -1,1 +1,1 @@
-./qiniu/img/album/ (1).jpg,./qiniu/img/album/ (10).jpg,./qiniu/img/album/ (11).jpg,./qiniu/img/album/ (12).jpg,./qiniu/img/album/ (13).jpg,./qiniu/img/album/ (2).jpg,./qiniu/img/album/ (3).jpg,./qiniu/img/album/ (4).jpg,./qiniu/img/album/ (5).jpg,./qiniu/img/album/ (6).jpg,./qiniu/img/album/ (7).jpg,./qiniu/img/album/ (8).jpg,./qiniu/img/album/ (9).jpg
+album/(1).jpg,album/(10).jpg,album/(11).jpg,album/(12).jpg,album/(13).jpg,album/(2).jpg,album/(3).jpg,album/(4).jpg,album/(5).jpg,album/(6).jpg,album/(7).jpg,album/(8).jpg,album/(9).jpg
