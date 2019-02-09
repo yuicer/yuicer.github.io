@@ -59,13 +59,13 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:title" content="日常小技巧(二)">
-<meta property="og:url" content="http://yuicer.com/2018/01/15/new/日常小技巧(二)/index.html">
+<meta property="og:title" content="promise">
+<meta property="og:url" content="http://yuicer.com/2019/02/07/尺工/promise/index.html">
 <meta property="og:site_name" content="yuicer">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-06T17:08:05.932Z">
+<meta property="og:updated_time" content="2019-02-09T02:37:12.510Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="日常小技巧(二)">
+<meta name="twitter:title" content="promise">
 
 
 
@@ -93,13 +93,13 @@
 
 
 
-  <link rel="canonical" href="http://yuicer.com/2018/01/15/new/日常小技巧(二)/"/>
+  <link rel="canonical" href="http://yuicer.com/2019/02/07/尺工/promise/"/>
 
 
 
 
 
-  <title> 日常小技巧(二) | yuicer </title>
+  <title> promise | yuicer </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -249,7 +249,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yuicer.com/2018/01/15/new/日常小技巧(二)/">
+  <link itemprop="mainEntityOfPage" href="http://yuicer.com/2019/02/07/尺工/promise/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="yuicer">
@@ -273,7 +273,7 @@
             
             
               
-                日常小技巧(二)
+                promise
               
             
           </h1>
@@ -286,8 +286,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-15T15:04:35+00:00">
-                2018-01-15
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-07T23:45:58+00:00">
+                2019-02-07
               </time>
             
 
@@ -338,19 +338,31 @@
 
       
         <p></p><p></p><br><a id="more"></a><p></p>
-<h2 id="触发-bfc"><a href="#触发-bfc" class="headerlink" title="触发 bfc"></a>触发 bfc</h2><p>float的值不为none。<br>overflow的值为auto,scroll或hidden。<br>display的值为table-cell, table-caption, inline-block中的任何一个。<br>position的值不为relative和static</p>
-<h2 id="inline-元素可以设置-padding，不能设置-margin-top-margin-bottom"><a href="#inline-元素可以设置-padding，不能设置-margin-top-margin-bottom" class="headerlink" title="inline 元素可以设置 padding，不能设置 margin-top margin-bottom"></a>inline 元素可以设置 padding，不能设置 margin-top margin-bottom</h2><h2 id="position"><a href="#position" class="headerlink" title="position"></a>position</h2><p>fixed 定位当祖先有 transform 属性时，会相对于该祖先定位<br>sticky 新属性，目前兼容还不太好<br>sticky 是 relative 和 fixed 混合的元素，元素在跨越特定阈值前为相对定位，之后为固定定位。他可以很方便的解决滚动覆盖的应用场景</p>
-<h2 id="initial-inherit"><a href="#initial-inherit" class="headerlink" title="initial inherit"></a>initial inherit</h2><p>initial 可以理解为不继承，保持原来属性</p>
-<h2 id="encodeURI-encodeURIComponent"><a href="#encodeURI-encodeURIComponent" class="headerlink" title="encodeURI encodeURIComponent"></a>encodeURI encodeURIComponent</h2><p>后者会把 : / 也转义</p>
-<h2 id="currentTarget-冒泡或捕获触发的目标dom"><a href="#currentTarget-冒泡或捕获触发的目标dom" class="headerlink" title="currentTarget : 冒泡或捕获触发的目标dom"></a>currentTarget : 冒泡或捕获触发的目标dom</h2><p>target : 点击的dom<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"fa"</span>&gt;fa</span><br><span class="line">    &lt;div id=<span class="string">"son"</span>&gt;son&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">  &lt;/</span>div&gt;</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="keyword">var</span> fa = <span class="built_in">document</span>.querySelector(<span class="string">'#fa'</span>)</span><br><span class="line">  <span class="keyword">var</span> son = <span class="built_in">document</span>.querySelector(<span class="string">'#son'</span>)</span><br><span class="line">  son.addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(e.currentTarget, e.target)</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'son'</span>)</span><br><span class="line">  &#125;)</span><br><span class="line">  fa.addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(e.currentTarget, e.target)</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'fa'</span>)</span><br><span class="line">  &#125;)</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
-<p>冒泡 false 或者 默认<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#son</span> #son</span><br><span class="line">son</span><br><span class="line"><span class="selector-id">#fa</span> #son</span><br><span class="line">fa</span><br></pre></td></tr></table></figure></p>
-<p>捕获<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#fa</span> #son</span><br><span class="line">fa</span><br><span class="line"><span class="selector-id">#son</span> #son</span><br><span class="line">son</span><br></pre></td></tr></table></figure></p>
-<h2 id="url-中-以后的部分不会发送给服务端"><a href="#url-中-以后的部分不会发送给服务端" class="headerlink" title="url 中 # 以后的部分不会发送给服务端"></a>url 中 # 以后的部分不会发送给服务端</h2><h2 id="prototype"><a href="#prototype" class="headerlink" title="prototype"></a>prototype</h2><p>Object.prototype构造出Function.prototype，然后Function.prototype构造出Object和Function。</p>
-<h2 id="new-操作符"><a href="#new-操作符" class="headerlink" title="new 操作符"></a>new 操作符</h2><p>创建类的实例。它是<strong>proto</strong>属性设置为的空对象F.prototype。<br>初始化实例。该函数F被传递的参数调用并this设置为实例。<br>返回实例<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">New</span> (<span class="params">f</span>) </span>&#123; </span><br><span class="line"></span><br><span class="line">  <span class="comment">/*1*/</span>  </span><br><span class="line">  <span class="keyword">var</span> n = &#123; <span class="string">'__proto__'</span>: f.prototype &#125;; </span><br><span class="line">      </span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; </span><br><span class="line">    <span class="comment">/*2*/</span>    </span><br><span class="line">    f.apply(n, <span class="built_in">arguments</span>); </span><br><span class="line">    <span class="comment">/*3*/</span>    </span><br><span class="line">    <span class="keyword">return</span> n; </span><br><span class="line">  &#125;; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h2><p>发送 http 请求时会自动在 header 上带上 cookie，当服务端设置 cookie 之后会自动在客户端写入 cookie<br>session 和 cookie 差不多，一个在本地一个在服务端，不过 session 也是通过 req header cookie 来进行查找判断找出对应状态从而实现有状态的<br>cookie 设置<br><figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">maxAge: a number representing the milliseconds <span class="keyword">from</span> <span class="built_in">Date</span>.now() <span class="keyword">for</span> expiry</span><br><span class="line">signed: sign the cookie value</span><br><span class="line">expires: a <span class="built_in">Date</span> <span class="keyword">for</span> cookie expiration</span><br><span class="line">path: cookie path, /<span class="comment">' by default</span></span><br><span class="line">domain: cookie domain</span><br><span class="line">secure: secure cookie</span><br><span class="line">httpOnly: server-accessible cookie, <span class="literal">true</span> <span class="keyword">by</span> <span class="keyword">default</span></span><br><span class="line">overwrite: a <span class="built_in">boolean</span> indicating whether <span class="keyword">to</span> overwrite previously <span class="keyword">set</span> cookies <span class="keyword">of</span> the same name (<span class="literal">false</span> <span class="keyword">by</span> <span class="keyword">default</span>). <span class="keyword">If</span> this <span class="keyword">is</span> <span class="literal">true</span>, all cookies <span class="keyword">set</span> during the same request <span class="keyword">with</span> the same name (regardless <span class="keyword">of</span> path <span class="keyword">or</span> domain) are filtered out <span class="keyword">of</span> the <span class="keyword">Set</span>-Cookie header <span class="keyword">when</span> setting this cookie.</span><br></pre></td></tr></table></figure></p>
-<h2 id="npm-实在装不动的时候换淘宝源"><a href="#npm-实在装不动的时候换淘宝源" class="headerlink" title="npm 实在装不动的时候换淘宝源"></a>npm 实在装不动的时候换淘宝源</h2><p>npm install –registry=<a href="http://registry.npm.taobao.org" target="_blank" rel="noopener">http://registry.npm.taobao.org</a></p>
-<h2 id="手机录像和录音不能同时开"><a href="#手机录像和录音不能同时开" class="headerlink" title="手机录像和录音不能同时开"></a>手机录像和录音不能同时开</h2>
+<h2 id="promise"><a href="#promise" class="headerlink" title="promise"></a>promise</h2><p>promise.then().catch().finally()</p>
+<p>finally 有兼容，很多没有实现这个功能</p>
+<p>当链式调用中没有参数【回调函数】时会返回传入的 promise 对象<br>，有【回调函数】作参数时会返回【一个返回值为回调函数 return 的值的 promise 对象】传给下一个链式调用</p>
+<h3 id="执行顺序"><a href="#执行顺序" class="headerlink" title="执行顺序"></a>执行顺序</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">3</span>)</span><br><span class="line">&#125;, <span class="number">0</span>)</span><br><span class="line"><span class="built_in">Promise</span>.resolve().then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">2</span>)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 1</span></span><br><span class="line"><span class="comment"> * 2</span></span><br><span class="line"><span class="comment"> * 3</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+<p>执行顺序类似 宏任务 微任务 =&gt; 宏任务[异步] 微任务 <a href="https://github.com/creeperyang/blog/issues/21" target="_blank" rel="noopener">参考</a></p>
+<p><strong>promise 确实是异步，只是类似于一个微任务 micro task</strong></p>
+<h3 id="microtask"><a href="#microtask" class="headerlink" title="microtask"></a>microtask</h3><p>promise.then<br>MutationObserver</p>
+<p><strong>process.nextTick 执行在 microtask 之前，task 之后，它不是 microtask</strong></p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Promise(<span class="function"><span class="params">(res)</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">1</span>)</span><br><span class="line">  res()</span><br><span class="line">&#125;).<span class="keyword">then</span>(<span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="number">2</span>))</span><br><span class="line"></span><br><span class="line">process.nextTick(<span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="number">3</span>))</span><br><span class="line"></span><br><span class="line"><span class="regexp">//</span> <span class="number">132</span></span><br></pre></td></tr></table></figure>
+<h3 id="promise-链式调用返回值"><a href="#promise-链式调用返回值" class="headerlink" title="promise 链式调用返回值"></a>promise 链式调用返回值</h3><p><strong><a href="https://promisesaplus.com/#point-26" target="_blank" rel="noopener">primise 规范</a></strong></p>
+<ul>
+<li><p>then must return a promise.</p>
+</li>
+<li><p>promise2 = promise1.then(onFulfilled, onRejected);</p>
+<ul>
+<li>If either onFulfilled or onRejected returns a value x, run the Promise Resolution Procedure <a href="promise2, x">[Resolve]</a>.</li>
+<li>If either onFulfilled or onRejected throws an exception e, promise2 must be rejected with e as the reason.</li>
+<li>If onFulfilled is not a function and promise1 is fulfilled, promise2 must be fulfilled with the same value as promise1.</li>
+<li>If onRejected is not a function and promise1 is rejected, promise2 must be rejected with the same reason as promise1</li>
+</ul>
+</li>
+</ul>
+<h3 id="promise-兼容实现"><a href="#promise-兼容实现" class="headerlink" title="promise 兼容实现"></a>promise 兼容实现</h3><p>查了一下有<a href="https://zhuanlan.zhihu.com/p/34421918" target="_blank" rel="noopener">文章</a>说是在执行 then 的时候会有一个 immediate 执行，利用 MutationObserver 这个去做检测<br>自己用 babel-pollyfill 看了一下，里面有这么一段代码，感觉这个 notify 方法就是用作 microtask / job 的。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Node.js</span></span><br><span class="line"><span class="keyword">if</span> (isNode) &#123;</span><br><span class="line">  notify = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    process.nextTick(flush)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// browsers with MutationObserver</span></span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (Observer) &#123;</span><br><span class="line">  <span class="keyword">var</span> toggle = <span class="literal">true</span></span><br><span class="line">  <span class="keyword">var</span> node = <span class="built_in">document</span>.createTextNode(<span class="string">''</span>)</span><br><span class="line">  <span class="keyword">new</span> Observer(flush).observe(node, &#123; <span class="attr">characterData</span>: <span class="literal">true</span> &#125;) <span class="comment">// eslint-disable-line no-new</span></span><br><span class="line">  notify = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    node.data = toggle = !toggle</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// environments with maybe non-completely correct, but existent Promise</span></span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="built_in">Promise</span> &amp;&amp; <span class="built_in">Promise</span>.resolve) &#123;</span><br><span class="line">  <span class="keyword">var</span> promise = <span class="built_in">Promise</span>.resolve()</span><br><span class="line">  notify = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    promise.then(flush)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// for other environments - macrotask based on:</span></span><br><span class="line">  <span class="comment">// - setImmediate</span></span><br><span class="line">  <span class="comment">// - MessageChannel</span></span><br><span class="line">  <span class="comment">// - window.postMessag</span></span><br><span class="line">  <span class="comment">// - onreadystatechange</span></span><br><span class="line">  <span class="comment">// - setTimeout</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  notify = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// strange IE + webpack dev server bug - use .call(global)</span></span><br><span class="line">    macrotask.call(global, flush)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -363,8 +375,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/02/new/网易2017活动页面学习/" rel="next" title="网易2017活动页面学习">
-                <i class="fa fa-chevron-left"></i> 网易2017活动页面学习
+              <a href="/2019/02/07/尺工/memory-qiniu/" rel="next" title="memory_qiniu">
+                <i class="fa fa-chevron-left"></i> memory_qiniu
               </a>
             
           </div>
@@ -372,10 +384,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/01/24/new/日常小技巧(三)/" rel="prev" title="日常小技巧(三)">
-                日常小技巧(三) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -495,7 +503,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#触发-bfc"><span class="nav-number">1.</span> <span class="nav-text">触发 bfc</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#inline-元素可以设置-padding，不能设置-margin-top-margin-bottom"><span class="nav-number">2.</span> <span class="nav-text">inline 元素可以设置 padding，不能设置 margin-top margin-bottom</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#position"><span class="nav-number">3.</span> <span class="nav-text">position</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#initial-inherit"><span class="nav-number">4.</span> <span class="nav-text">initial inherit</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#encodeURI-encodeURIComponent"><span class="nav-number">5.</span> <span class="nav-text">encodeURI encodeURIComponent</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#currentTarget-冒泡或捕获触发的目标dom"><span class="nav-number">6.</span> <span class="nav-text">currentTarget : 冒泡或捕获触发的目标dom</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#url-中-以后的部分不会发送给服务端"><span class="nav-number">7.</span> <span class="nav-text">url 中 # 以后的部分不会发送给服务端</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#prototype"><span class="nav-number">8.</span> <span class="nav-text">prototype</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#new-操作符"><span class="nav-number">9.</span> <span class="nav-text">new 操作符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cookie"><span class="nav-number">10.</span> <span class="nav-text">cookie</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#npm-实在装不动的时候换淘宝源"><span class="nav-number">11.</span> <span class="nav-text">npm 实在装不动的时候换淘宝源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#手机录像和录音不能同时开"><span class="nav-number">12.</span> <span class="nav-text">手机录像和录音不能同时开</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#promise"><span class="nav-number">1.</span> <span class="nav-text">promise</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#执行顺序"><span class="nav-number">1.1.</span> <span class="nav-text">执行顺序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#microtask"><span class="nav-number">1.2.</span> <span class="nav-text">microtask</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#promise-链式调用返回值"><span class="nav-number">1.3.</span> <span class="nav-text">promise 链式调用返回值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#promise-兼容实现"><span class="nav-number">1.4.</span> <span class="nav-text">promise 兼容实现</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -615,9 +623,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'yuicer';
-      var disqus_identifier = '2018/01/15/new/日常小技巧(二)/';
+      var disqus_identifier = '2019/02/07/尺工/promise/';
 
-      var disqus_title = "日常小技巧(二)";
+      var disqus_title = "promise";
 
 
       function run_disqus_script(disqus_script) {

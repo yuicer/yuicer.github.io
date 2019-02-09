@@ -59,13 +59,13 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:title" content="npm命令">
-<meta property="og:url" content="http://yuicer.com/2017/01/05/new/npm命令/index.html">
+<meta property="og:title" content="日常小技巧1">
+<meta property="og:url" content="http://yuicer.com/2017/11/07/new/日常小技巧1/index.html">
 <meta property="og:site_name" content="yuicer">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-06T17:08:05.932Z">
+<meta property="og:updated_time" content="2019-02-09T02:37:12.510Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="npm命令">
+<meta name="twitter:title" content="日常小技巧1">
 
 
 
@@ -93,13 +93,13 @@
 
 
 
-  <link rel="canonical" href="http://yuicer.com/2017/01/05/new/npm命令/"/>
+  <link rel="canonical" href="http://yuicer.com/2017/11/07/new/日常小技巧1/"/>
 
 
 
 
 
-  <title> npm命令 | yuicer </title>
+  <title> 日常小技巧1 | yuicer </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -249,7 +249,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yuicer.com/2017/01/05/new/npm命令/">
+  <link itemprop="mainEntityOfPage" href="http://yuicer.com/2017/11/07/new/日常小技巧1/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="yuicer">
@@ -273,7 +273,7 @@
             
             
               
-                npm命令
+                日常小技巧1
               
             
           </h1>
@@ -286,8 +286,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-05T12:16:19+00:00">
-                2017-01-05
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-07T01:18:40+00:00">
+                2017-11-07
               </time>
             
 
@@ -338,23 +338,20 @@
 
       
         <p></p><p></p><br><a id="more"></a><p></p>
-<h2 id="建立源仓库"><a href="#建立源仓库" class="headerlink" title="建立源仓库"></a>建立源仓库</h2><p><code>git init --bare</code> or <code>git init name.git --bare</code><br>前一个是把当前地址当作 git clone 目录，后一个是在当前目录再建立一个 name.git 以便 clone<br>加 –bare 则是会建立裸仓库，不包含工作目录，只有一个 git 目录文件，只做远端的接受推送。</p>
-<p>npm下载去官网或者安装node的时候会自带安装，之后在命令行使用就好。<br>打开命令行的快捷方式（windows下）</p>
-<ol>
-<li>shell脚本</li>
-<li>win + r</li>
-<li>当前文件夹按住 shift 时鼠标右键点击，菜单中会出现<strong>在此处打开命令行</strong></li>
-</ol>
-<p>查看全局安装的包</p>
-<h2 id="npm-list-g-–depth-0"><a href="#npm-list-g-–depth-0" class="headerlink" title="npm list -g –depth 0"></a>npm list -g –depth 0</h2><p>生成package.json文件</p>
-<h2 id="npm-init"><a href="#npm-init" class="headerlink" title="npm init"></a>npm init</h2><h2 id="npm-outdated"><a href="#npm-outdated" class="headerlink" title="npm outdated"></a>npm outdated</h2><p>列出需要更新的包<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">G</span>:\<span class="selector-tag">yuicer</span>\<span class="selector-tag">test</span>&gt;<span class="selector-tag">npm</span> <span class="selector-tag">outdated</span></span><br><span class="line"><span class="selector-tag">Package</span>                <span class="selector-tag">Current</span>         <span class="selector-tag">Wanted</span>  <span class="selector-tag">Latest</span>  <span class="selector-tag">Location</span></span><br><span class="line"><span class="selector-tag">babel-core</span>             <span class="selector-tag">MISSING</span>         6<span class="selector-class">.21</span><span class="selector-class">.0</span>  6<span class="selector-class">.21</span><span class="selector-class">.0</span>  <span class="selector-tag">test</span></span><br><span class="line"><span class="selector-tag">babel-loader</span>           <span class="selector-tag">MISSING</span>         6<span class="selector-class">.2</span><span class="selector-class">.10</span>  6<span class="selector-class">.2</span><span class="selector-class">.10</span>  <span class="selector-tag">test</span></span><br><span class="line"><span class="selector-tag">babel-preset-es2015</span>    <span class="selector-tag">MISSING</span>         6<span class="selector-class">.18</span><span class="selector-class">.0</span>  6<span class="selector-class">.18</span><span class="selector-class">.0</span>  <span class="selector-tag">test</span></span><br><span class="line"><span class="selector-tag">cross-env</span>              <span class="selector-tag">MISSING</span>          3<span class="selector-class">.1</span><span class="selector-class">.4</span>   3<span class="selector-class">.1</span><span class="selector-class">.4</span>  <span class="selector-tag">test</span></span><br><span class="line"><span class="selector-tag">css-loader</span>             <span class="selector-tag">MISSING</span>         0<span class="selector-class">.25</span><span class="selector-class">.0</span>  0<span class="selector-class">.26</span><span class="selector-class">.1</span>  <span class="selector-tag">test</span></span><br><span class="line"><span class="selector-tag">file-loader</span>            <span class="selector-tag">MISSING</span>          0<span class="selector-class">.9</span><span class="selector-class">.0</span>   0<span class="selector-class">.9</span><span class="selector-class">.0</span>  <span class="selector-tag">test</span></span><br><span class="line"><span class="selector-tag">vue</span>                    <span class="selector-tag">MISSING</span>          2<span class="selector-class">.1</span><span class="selector-class">.8</span>   2<span class="selector-class">.1</span><span class="selector-class">.8</span>  <span class="selector-tag">test</span></span><br><span class="line"><span class="selector-tag">vue-loader</span>             <span class="selector-tag">MISSING</span>         10<span class="selector-class">.0</span><span class="selector-class">.2</span>  10<span class="selector-class">.0</span><span class="selector-class">.2</span>  <span class="selector-tag">test</span></span><br><span class="line"><span class="selector-tag">vue-template-compiler</span>  <span class="selector-tag">MISSING</span>          2<span class="selector-class">.1</span><span class="selector-class">.8</span>   2<span class="selector-class">.1</span><span class="selector-class">.8</span>  <span class="selector-tag">test</span></span><br><span class="line"><span class="selector-tag">webpack</span>                <span class="selector-tag">MISSING</span>  2<span class="selector-class">.1</span><span class="selector-class">.0-beta</span><span class="selector-class">.28</span>  1<span class="selector-class">.14</span><span class="selector-class">.0</span>  <span class="selector-tag">test</span></span><br><span class="line"><span class="selector-tag">webpack-dev-server</span>     <span class="selector-tag">MISSING</span>  2<span class="selector-class">.1</span><span class="selector-class">.0-beta</span><span class="selector-class">.12</span>  1<span class="selector-class">.16</span><span class="selector-class">.2</span>  <span class="selector-tag">test</span></span><br></pre></td></tr></table></figure></p>
-<p><code>npm install package-name</code><br>如果不加包名则根据package.json去安装。<br><code>-g --save --save-dev</code><br>–save 安装到 dependencies –save-dev 安装到 devDependencies -g 全局安装</p>
-<h2 id="git-help-config"><a href="#git-help-config" class="headerlink" title="git help config"></a>git help config</h2><p>获取git的命令手册，在网页中打开</p>
-<h2 id="git-config"><a href="#git-config" class="headerlink" title="git config"></a>git config</h2><p>–list 检查git的配置 </p>
-<h2 id="生成ssh密钥，"><a href="#生成ssh密钥，" class="headerlink" title="生成ssh密钥，"></a>生成ssh密钥，</h2><p>在git-bash中，<code>cat ~/.ssh/id_rsa.pub</code>用来查看ssh密钥，<br>如果没有则创建 <code>ssh-keygen -t rsa -C &quot;you@mail.com&quot;</code>  【你的git邮箱】<br>windows下用<code>clip &lt; ~/.ssh/id_rsa.pub</code>来复制到剪贴板中</p>
-<h2 id="npm-install-npm-latest-g"><a href="#npm-install-npm-latest-g" class="headerlink" title="npm install npm@latest -g"></a>npm install npm@latest -g</h2><p>更新npm到最新版本，更新node去官网再下一个</p>
-<h2 id="npm-update"><a href="#npm-update" class="headerlink" title="npm update"></a>npm update</h2><p>跟新依赖</p>
-<h2 id="git-submodule-add"><a href="#git-submodule-add" class="headerlink" title="git submodule add"></a>git submodule add</h2><p>添加子模块<br>init 克隆下来后初始化<br>update 克隆下来后跟新</p>
+<h2 id="网页截屏"><a href="#网页截屏" class="headerlink" title="网页截屏"></a>网页截屏</h2><p>html2canvas 可以将某个 dom 转化成 canvas，再转为图片</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">html2canvas(<span class="built_in">document</span>.querySelector(<span class="string">'#box'</span>)).then(<span class="function"><span class="keyword">function</span>(<span class="params">canvas</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> src = canvas.toDataURL(<span class="string">'image/png'</span>)</span><br><span class="line">  <span class="built_in">console</span>.log(src)</span><br><span class="line">  <span class="keyword">var</span> img = <span class="keyword">new</span> Image()</span><br><span class="line">  img.src = src</span><br><span class="line">  img.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">document</span>.body.appendChild(img)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>但是它作用有很多限制，对于写在 style 中的 css 样式可能会不生效，必须加到 dom 上 style=””，另外对于部分 css 不支持<br>而且不能实现截屏，只能选中某个 dom</p>
+<h2 id="打印输出改变样式-c-后的部分样式会被改变"><a href="#打印输出改变样式-c-后的部分样式会被改变" class="headerlink" title="打印输出改变样式 %c 后的部分样式会被改变"></a>打印输出改变样式 %c 后的部分样式会被改变</h2><p>console.log(‘%c red’,’color: red; font-size:50px’)</p>
+<h2 id="url-格式"><a href="#url-格式" class="headerlink" title="url 格式"></a>url 格式</h2><p><code>&lt;scheme&gt;://&lt;user&gt;:&lt;password&gt;@&lt;host&gt;:&lt;port&gt;/&lt;url-path&gt;</code></p>
+<h2 id="npm-i-–save"><a href="#npm-i-–save" class="headerlink" title="npm i –save"></a>npm i –save</h2><p>存储包并保存到 package.json 的 dependencies 中<br>devDependencies 存放一些依赖工具包，比如 es-lint babel webpack 等</p>
+<h2 id="cross-env-webpack-包"><a href="#cross-env-webpack-包" class="headerlink" title="cross-env webpack 包"></a>cross-env webpack 包</h2><p>设置不同系统下的 node_env, windows/linux 等</p>
+<h2 id="传回调函数去获取异步函数的值"><a href="#传回调函数去获取异步函数的值" class="headerlink" title="传回调函数去获取异步函数的值"></a>传回调函数去获取异步函数的值</h2><figure class="highlight qml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="built_in">url</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">callback</span>(<span class="params">url_</span>) </span>&#123;</span><br><span class="line">	<span class="built_in">url</span> = url_;</span><br><span class="line">&#125;</span><br><span class="line">yibu(callback)</span><br><span class="line"><span class="comment">//异步函数中</span></span><br><span class="line">callback(<span class="built_in">url</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="webpack-中如果想要引用入口文件，设置如下"><a href="#webpack-中如果想要引用入口文件，设置如下" class="headerlink" title="webpack 中如果想要引用入口文件，设置如下"></a>webpack 中如果想要引用入口文件，设置如下</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">entry: &#123;</span><br><span class="line">  <span class="selector-tag">a</span>: <span class="string">"./a"</span>, <span class="comment">// a requires b</span></span><br><span class="line">  <span class="selector-tag">b</span>: [<span class="string">"./b"</span>] <span class="comment">// workaround: "./b" can now be in another bundle</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这样就可以直接去引用 b 入口文件，加[]就好</p>
+<h2 id="文件上传"><a href="#文件上传" class="headerlink" title="文件上传"></a>文件上传</h2><p><code>&lt;input type=&quot;file&quot; accept=&quot;image/jpeg,image/jpg,image/png&quot;&gt;</code><br>选择特定类型文件上传，如果用 image/* 的话匹配的会很慢，导致打开很慢</p>
+<h2 id="markdown-如何前空-2-格"><a href="#markdown-如何前空-2-格" class="headerlink" title="markdown 如何前空 2 格"></a>markdown 如何前空 2 格</h2><p>输入法圆角输入 2 个空格 【圆角切换快捷键 shift+space】</p>
+<h2 id="qq-表情"><a href="#qq-表情" class="headerlink" title="qq 表情"></a>qq 表情</h2><p>qq 空间评论里输下面的代码可以生成滑稽这个表情。不过不知道这个以后会不会被改掉<br>[em]e248[/em] 滑稽</p>
+<h2 id="查询端口占用情况"><a href="#查询端口占用情况" class="headerlink" title="查询端口占用情况"></a>查询端口占用情况</h2><p>cmd &gt; netstat -ano<br>查询 8080 端口是否被占用<br>cmd &gt; netstat -ano|</p>
 
       
     </div>
@@ -368,8 +365,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/28/叹言/想想12-28/" rel="next" title="想想12_28">
-                <i class="fa fa-chevron-left"></i> 想想12_28
+              <a href="/2017/11/02/new/读取文件/" rel="next" title="读取文件">
+                <i class="fa fa-chevron-left"></i> 读取文件
               </a>
             
           </div>
@@ -378,8 +375,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/01/17/尺工/WebViewJavascriptBridge/" rel="prev" title="WebViewJavascriptBridge">
-                WebViewJavascriptBridge <i class="fa fa-chevron-right"></i>
+              <a href="/2017/11/13/new/noteOfNode(一)/" rel="prev" title="noteOfNode(一)">
+                noteOfNode(一) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -500,7 +497,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#建立源仓库"><span class="nav-number">1.</span> <span class="nav-text">建立源仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#npm-list-g-–depth-0"><span class="nav-number">2.</span> <span class="nav-text">npm list -g –depth 0</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#npm-init"><span class="nav-number">3.</span> <span class="nav-text">npm init</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#npm-outdated"><span class="nav-number">4.</span> <span class="nav-text">npm outdated</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-help-config"><span class="nav-number">5.</span> <span class="nav-text">git help config</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-config"><span class="nav-number">6.</span> <span class="nav-text">git config</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生成ssh密钥，"><span class="nav-number">7.</span> <span class="nav-text">生成ssh密钥，</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#npm-install-npm-latest-g"><span class="nav-number">8.</span> <span class="nav-text">npm install npm@latest -g</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#npm-update"><span class="nav-number">9.</span> <span class="nav-text">npm update</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-submodule-add"><span class="nav-number">10.</span> <span class="nav-text">git submodule add</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#网页截屏"><span class="nav-number">1.</span> <span class="nav-text">网页截屏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打印输出改变样式-c-后的部分样式会被改变"><span class="nav-number">2.</span> <span class="nav-text">打印输出改变样式 %c 后的部分样式会被改变</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#url-格式"><span class="nav-number">3.</span> <span class="nav-text">url 格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#npm-i-–save"><span class="nav-number">4.</span> <span class="nav-text">npm i –save</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cross-env-webpack-包"><span class="nav-number">5.</span> <span class="nav-text">cross-env webpack 包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#传回调函数去获取异步函数的值"><span class="nav-number">6.</span> <span class="nav-text">传回调函数去获取异步函数的值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webpack-中如果想要引用入口文件，设置如下"><span class="nav-number">7.</span> <span class="nav-text">webpack 中如果想要引用入口文件，设置如下</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件上传"><span class="nav-number">8.</span> <span class="nav-text">文件上传</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#markdown-如何前空-2-格"><span class="nav-number">9.</span> <span class="nav-text">markdown 如何前空 2 格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#qq-表情"><span class="nav-number">10.</span> <span class="nav-text">qq 表情</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查询端口占用情况"><span class="nav-number">11.</span> <span class="nav-text">查询端口占用情况</span></a></li></ol></div>
             
 
           </div>
@@ -620,9 +617,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'yuicer';
-      var disqus_identifier = '2017/01/05/new/npm命令/';
+      var disqus_identifier = '2017/11/07/new/日常小技巧1/';
 
-      var disqus_title = "npm命令";
+      var disqus_title = "日常小技巧1";
 
 
       function run_disqus_script(disqus_script) {

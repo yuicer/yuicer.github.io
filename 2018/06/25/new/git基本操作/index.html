@@ -59,13 +59,13 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:title" content="日常小技巧">
-<meta property="og:url" content="http://yuicer.com/2017/11/07/new/日常小技巧/index.html">
+<meta property="og:title" content="git基本操作">
+<meta property="og:url" content="http://yuicer.com/2018/06/25/new/git基本操作/index.html">
 <meta property="og:site_name" content="yuicer">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-06T17:08:05.932Z">
+<meta property="og:updated_time" content="2019-02-09T02:37:12.510Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="日常小技巧">
+<meta name="twitter:title" content="git基本操作">
 
 
 
@@ -93,13 +93,13 @@
 
 
 
-  <link rel="canonical" href="http://yuicer.com/2017/11/07/new/日常小技巧/"/>
+  <link rel="canonical" href="http://yuicer.com/2018/06/25/new/git基本操作/"/>
 
 
 
 
 
-  <title> 日常小技巧 | yuicer </title>
+  <title> git基本操作 | yuicer </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -249,7 +249,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yuicer.com/2017/11/07/new/日常小技巧/">
+  <link itemprop="mainEntityOfPage" href="http://yuicer.com/2018/06/25/new/git基本操作/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="yuicer">
@@ -273,7 +273,7 @@
             
             
               
-                日常小技巧
+                git基本操作
               
             
           </h1>
@@ -286,8 +286,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-07T01:18:40+00:00">
-                2017-11-07
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-25T16:45:40+00:00">
+                2018-06-25
               </time>
             
 
@@ -338,19 +338,29 @@
 
       
         <p></p><p></p><br><a id="more"></a><p></p>
-<h2 id="网页截屏"><a href="#网页截屏" class="headerlink" title="网页截屏"></a>网页截屏</h2><p>html2canvas 可以将某个 dom 转化成 canvas，再转为图片<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">html2canvas(<span class="built_in">document</span>.querySelector(<span class="string">'#box'</span>)).then(<span class="function"><span class="keyword">function</span> (<span class="params">canvas</span>) </span>&#123;</span><br><span class="line">		<span class="keyword">var</span> src = canvas.toDataURL(<span class="string">"image/png"</span>)</span><br><span class="line">		<span class="built_in">console</span>.log(src)</span><br><span class="line">		<span class="keyword">var</span> img = <span class="keyword">new</span> Image()</span><br><span class="line">		img.src = src</span><br><span class="line">		img.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">			<span class="built_in">document</span>.body.appendChild(img)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;)</span><br></pre></td></tr></table></figure></p>
-<p>但是它作用有很多限制，对于写在 style 中的 css 样式可能会不生效，必须加到 dom 上 style=””，另外对于部分 css 不支持<br>而且不能实现截屏，只能选中某个 dom</p>
-<h2 id="打印输出改变样式-c-后的部分样式会被改变"><a href="#打印输出改变样式-c-后的部分样式会被改变" class="headerlink" title="打印输出改变样式 %c 后的部分样式会被改变"></a>打印输出改变样式 %c 后的部分样式会被改变</h2><p>console.log(‘%c red’,’color: red; font-size:50px’)</p>
-<h2 id="url-格式"><a href="#url-格式" class="headerlink" title="url 格式"></a>url 格式</h2><p><code>&lt;scheme&gt;://&lt;user&gt;:&lt;password&gt;@&lt;host&gt;:&lt;port&gt;/&lt;url-path&gt;</code></p>
-<h2 id="npm-i-–save"><a href="#npm-i-–save" class="headerlink" title="npm i –save"></a>npm i –save</h2><p>存储包并保存到 package.json 的 dependencies 中<br>devDependencies 存放一些依赖工具包，比如 es-lint babel webpack 等</p>
-<h2 id="cross-env-webpack-包"><a href="#cross-env-webpack-包" class="headerlink" title="cross-env webpack 包"></a>cross-env webpack 包</h2><p>设置不同系统下的 node_env, windows/linux 等</p>
-<h2 id="传回调函数去获取异步函数的值"><a href="#传回调函数去获取异步函数的值" class="headerlink" title="传回调函数去获取异步函数的值"></a>传回调函数去获取异步函数的值</h2><figure class="highlight qml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="built_in">url</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">callback</span>(<span class="params">url_</span>) </span>&#123;</span><br><span class="line">	<span class="built_in">url</span> = url_;</span><br><span class="line">&#125;</span><br><span class="line">yibu(callback)</span><br><span class="line"><span class="comment">//异步函数中</span></span><br><span class="line">callback(<span class="built_in">url</span>);</span><br></pre></td></tr></table></figure>
-<h2 id="webpack-中如果想要引用入口文件，设置如下"><a href="#webpack-中如果想要引用入口文件，设置如下" class="headerlink" title="webpack 中如果想要引用入口文件，设置如下"></a>webpack 中如果想要引用入口文件，设置如下</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">entry: &#123;</span><br><span class="line">  <span class="selector-tag">a</span>: <span class="string">"./a"</span>, <span class="comment">// a requires b</span></span><br><span class="line">  <span class="selector-tag">b</span>: [<span class="string">"./b"</span>] <span class="comment">// workaround: "./b" can now be in another bundle</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这样就可以直接去引用 b 入口文件，加[]就好 </p>
-<h2 id="文件上传"><a href="#文件上传" class="headerlink" title="文件上传"></a>文件上传</h2><p><code>&lt;input type=&quot;file&quot; accept=&quot;image/jpeg,image/jpg,image/png&quot;&gt;</code><br>选择特定类型文件上传，如果用image/* 的话匹配的会很慢，导致打开很慢</p>
-<h2 id="markdown如何前空2格"><a href="#markdown如何前空2格" class="headerlink" title="markdown如何前空2格"></a>markdown如何前空2格</h2><p>输入法圆角输入2个空格 【圆角切换快捷键 shift+space】</p>
-<h2 id="qq表情"><a href="#qq表情" class="headerlink" title="qq表情"></a>qq表情</h2><p>qq空间评论里输下面的代码可以生成滑稽这个表情。不过不知道这个以后会不会被改掉<br>[em]e248[/em]    滑稽</p>
-<h2 id="查询端口占用情况"><a href="#查询端口占用情况" class="headerlink" title="查询端口占用情况"></a>查询端口占用情况</h2><p>cmd &gt; netstat -ano<br>查询8080端口是否被占用<br>cmd &gt; netstat -ano|</p>
+<h2 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a>杂项</h2><h3 id="vi-和-vim"><a href="#vi-和-vim" class="headerlink" title="vi 和 vim"></a>vi 和 vim</h3><p>vi 是文本编辑器，vim 是 ide 工具，不过一般都会默认将 vim 软连接指向 vi，可以输入 vi，发现和 输入 vim 是一样的<br>进入 vim</p>
+<ol>
+<li>a 变成输入模式，</li>
+<li>esc 结束，</li>
+<li>:q 退出</li>
+<li>:q! 强制退出</li>
+<li>:wq 保存并退出</li>
+</ol>
+<h2 id="folk"><a href="#folk" class="headerlink" title="folk"></a>folk</h2><p>看到好的项目之后，可以自己拿过来看看，folk 和 clone 的区别在于 folk 可以继续修改，进行 push 操作。</p>
+<p>folk 之后有一个问题是同步，可以设置一个新的远端，然后主动 pull 下来进行更新<br>一般项目默认有个远端叫做 origin，是指向的自己的项目地址，pull 进行的操作都是从这个默认端。<br><code>git pull origin == git pull</code><br>这里需要新增一个远端<br><code>git remote add newOrigin https:// github.com/baseProject.git</code><br>然后<br><code>git remote -v</code><br>就可以看到有两个 origin ，newOrigin ，之后指定拉取 newOrigin 的内容就可以<br><code>git pull newOrigin master</code><br>进行对应分支的跟新</p>
+<p>ps::移除远端<br><code>git remote rm newOrigin</code></p>
+<h3 id="pull-request"><a href="#pull-request" class="headerlink" title="pull request"></a>pull request</h3><p>这个和 gitlab 上的 merge request 是一样的。都是提交给他人请求合并，同时也可以方便的 review 代码。</p>
+<h2 id="版本控制"><a href="#版本控制" class="headerlink" title="版本控制"></a>版本控制</h2><h3 id="git-reset-–hard-了解一下"><a href="#git-reset-–hard-了解一下" class="headerlink" title="git reset –hard 了解一下"></a>git reset –hard 了解一下</h3><p>推荐<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013744142037508cf42e51debf49668810645e02887691000" target="_blank" rel="noopener">廖雪峰</a></p>
+<p>ps: HEAD 指的是当前版本<br>回退上上个版本<br><code>git reset --hard HEAD^^</code><br>查看历史版本,这时就可以看到历史的版本和版本号<br><code>git log or git log --pretty=oneline</code><br>查看所有 log，可以看到所有操作<br><code>git reflog</code><br>跳到某个版本<br><code>git reset --hard [hash code]</code></p>
+<h2 id="切换分支缓存"><a href="#切换分支缓存" class="headerlink" title="切换分支缓存"></a>切换分支缓存</h2><p>当在当前分支有了修改但是又需要切到另一个分支的时候，可以用 git stash 存储，之后切换就会有一个干净的分支。之后回来的时候可以 <code>git stash apply</code> 再取出来，或者使用另一个命令 <code>git stash pop</code> 它相当于 <code>git stash apply &amp;&amp; git stash drop</code>，当没有冲突的时候会直接取出缓存区并清理缓存区。</p>
+<h2 id="git-合并"><a href="#git-合并" class="headerlink" title="git 合并"></a>git 合并</h2><p>这个功能有很多种方式，个人经常用的是 <code>git pull origin targetBranch</code></p>
+<p>其他的还有 <code>git fetch</code> <code>git merge</code></p>
+<p>或者 <code>git rebase</code></p>
+<p>个人对后面这两种不是很熟悉。第一种实际上等同于第二种，只不过第二种把命令拆分开来。<br>第三种没有实际去试过功能</p>
+<h2 id="切换到远程分支"><a href="#切换到远程分支" class="headerlink" title="切换到远程分支"></a>切换到远程分支</h2><p><code>git fetch</code></p>
+<p><code>git checkout targetBranch</code></p>
+<p>在 1.6 以上的版本可以直接用这个命令就可以切换到远程分支上。或者用 <code>git chekout -b targetBranch origin/targetBranch</code></p>
+<h2 id="丢弃保存的未提交的所有内容"><a href="#丢弃保存的未提交的所有内容" class="headerlink" title="丢弃保存的未提交的所有内容"></a>丢弃保存的未提交的所有内容</h2><p><code>git checkout .</code></p>
 
       
     </div>
@@ -364,8 +374,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/02/new/读取文件/" rel="next" title="读取文件">
-                <i class="fa fa-chevron-left"></i> 读取文件
+              <a href="/2018/06/24/new/web调试/" rel="next" title="web调试">
+                <i class="fa fa-chevron-left"></i> web调试
               </a>
             
           </div>
@@ -374,8 +384,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/11/13/new/noteOfNode(一)/" rel="prev" title="noteOfNode(一)">
-                noteOfNode(一) <i class="fa fa-chevron-right"></i>
+              <a href="/2018/07/13/new/postCss/" rel="prev" title="postCss">
+                postCss <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -496,7 +506,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#网页截屏"><span class="nav-number">1.</span> <span class="nav-text">网页截屏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打印输出改变样式-c-后的部分样式会被改变"><span class="nav-number">2.</span> <span class="nav-text">打印输出改变样式 %c 后的部分样式会被改变</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#url-格式"><span class="nav-number">3.</span> <span class="nav-text">url 格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#npm-i-–save"><span class="nav-number">4.</span> <span class="nav-text">npm i –save</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cross-env-webpack-包"><span class="nav-number">5.</span> <span class="nav-text">cross-env webpack 包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#传回调函数去获取异步函数的值"><span class="nav-number">6.</span> <span class="nav-text">传回调函数去获取异步函数的值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webpack-中如果想要引用入口文件，设置如下"><span class="nav-number">7.</span> <span class="nav-text">webpack 中如果想要引用入口文件，设置如下</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件上传"><span class="nav-number">8.</span> <span class="nav-text">文件上传</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#markdown如何前空2格"><span class="nav-number">9.</span> <span class="nav-text">markdown如何前空2格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#qq表情"><span class="nav-number">10.</span> <span class="nav-text">qq表情</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查询端口占用情况"><span class="nav-number">11.</span> <span class="nav-text">查询端口占用情况</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#杂项"><span class="nav-number">1.</span> <span class="nav-text">杂项</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#vi-和-vim"><span class="nav-number">1.1.</span> <span class="nav-text">vi 和 vim</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#folk"><span class="nav-number">2.</span> <span class="nav-text">folk</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#pull-request"><span class="nav-number">2.1.</span> <span class="nav-text">pull request</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#版本控制"><span class="nav-number">3.</span> <span class="nav-text">版本控制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#git-reset-–hard-了解一下"><span class="nav-number">3.1.</span> <span class="nav-text">git reset –hard 了解一下</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#切换分支缓存"><span class="nav-number">4.</span> <span class="nav-text">切换分支缓存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-合并"><span class="nav-number">5.</span> <span class="nav-text">git 合并</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#切换到远程分支"><span class="nav-number">6.</span> <span class="nav-text">切换到远程分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#丢弃保存的未提交的所有内容"><span class="nav-number">7.</span> <span class="nav-text">丢弃保存的未提交的所有内容</span></a></li></ol></div>
             
 
           </div>
@@ -616,9 +626,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'yuicer';
-      var disqus_identifier = '2017/11/07/new/日常小技巧/';
+      var disqus_identifier = '2018/06/25/new/git基本操作/';
 
-      var disqus_title = "日常小技巧";
+      var disqus_title = "git基本操作";
 
 
       function run_disqus_script(disqus_script) {

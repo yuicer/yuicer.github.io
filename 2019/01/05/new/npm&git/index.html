@@ -59,13 +59,13 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:title" content="git基本操作了解一下">
-<meta property="og:url" content="http://yuicer.com/2018/06/25/new/git基本操作了解一下/index.html">
+<meta property="og:title" content="npm&amp;git">
+<meta property="og:url" content="http://yuicer.com/2019/01/05/new/npm&git/index.html">
 <meta property="og:site_name" content="yuicer">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-06T17:08:05.932Z">
+<meta property="og:updated_time" content="2019-02-09T02:37:12.510Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git基本操作了解一下">
+<meta name="twitter:title" content="npm&amp;git">
 
 
 
@@ -93,13 +93,13 @@
 
 
 
-  <link rel="canonical" href="http://yuicer.com/2018/06/25/new/git基本操作了解一下/"/>
+  <link rel="canonical" href="http://yuicer.com/2019/01/05/new/npm&git/"/>
 
 
 
 
 
-  <title> git基本操作了解一下 | yuicer </title>
+  <title> npm&git | yuicer </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -249,7 +249,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yuicer.com/2018/06/25/new/git基本操作了解一下/">
+  <link itemprop="mainEntityOfPage" href="http://yuicer.com/2019/01/05/new/npm&git/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="yuicer">
@@ -273,7 +273,7 @@
             
             
               
-                git基本操作了解一下
+                npm&git
               
             
           </h1>
@@ -286,8 +286,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-25T16:45:40+00:00">
-                2018-06-25
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-05T12:16:19+00:00">
+                2019-01-05
               </time>
             
 
@@ -338,29 +338,32 @@
 
       
         <p></p><p></p><br><a id="more"></a><p></p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>一直依赖 vscode 提供的 git 操作，对于命令行的 git 以及一些操作完全学不来，所以学习记录一下一些基本操作</p>
-<h2 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a>杂项</h2><h3 id="vi-和-vim"><a href="#vi-和-vim" class="headerlink" title="vi 和 vim"></a>vi 和 vim</h3><p>vi 是文本编辑器，vim 是ide工具，不过一般都会默认将 vim 软连接指向 vi，可以输入 vi，发现和 输入 vim 是一样的<br>进入 vim </p>
+<h3 id="建立源仓库"><a href="#建立源仓库" class="headerlink" title="建立源仓库"></a>建立源仓库</h3><p><code>git init --bare</code> or <code>git init name.git --bare</code><br>前一个是把当前地址当作 git clone 目录，后一个是在当前目录再建立一个 name.git 以便 clone<br>加 –bare 则是会建立裸仓库，不包含工作目录，只有一个 git 目录文件，只做远端的接受推送。</p>
+<p>npm 下载去官网或者安装 node 的时候会自带安装，之后在命令行使用就好。<br>打开命令行的快捷方式（windows 下）</p>
 <ol>
-<li>a 变成输入模式，</li>
-<li>esc 结束，</li>
-<li>:q 退出 </li>
-<li>:q! 强制退出 </li>
-<li>:wq 保存并退出</li>
+<li>shell 脚本</li>
+<li>win + r</li>
+<li>当前文件夹按住 shift 时鼠标右键点击，菜单中会出现<strong>在此处打开命令行</strong></li>
 </ol>
-<h2 id="folk"><a href="#folk" class="headerlink" title="folk"></a>folk</h2><p>看到好的项目之后，可以自己拿过来看看，folk 和 clone 的区别在于 folk 可以继续修改，进行 push 操作。</p>
-<p>folk 之后有一个问题是同步，可以设置一个新的远端，然后主动 pull 下来进行更新<br>一般项目默认有个远端叫做 origin，是指向的自己的项目地址，pull 进行的操作都是从这个默认端。<br><code>git pull origin == git pull</code><br>这里需要新增一个远端<br><code>git remote add newOrigin https:// github.com/baseProject.git</code><br>然后<br><code>git remote -v</code><br> 就可以看到有两个 origin ，newOrigin ，之后指定拉取 newOrigin 的内容就可以<br> <code>git pull newOrigin master</code><br> 进行对应分支的跟新</p>
-<p>ps::移除远端<br><code>git remote rm newOrigin</code></p>
-<h3 id="pull-request"><a href="#pull-request" class="headerlink" title="pull request"></a>pull request</h3><p>这个和 gitlab 上的 merge request 是一样的。都是提交给他人请求合并，同时也可以方便的 review 代码。</p>
-<h2 id="版本控制"><a href="#版本控制" class="headerlink" title="版本控制"></a>版本控制</h2><h3 id="git-reset-–hard-了解一下"><a href="#git-reset-–hard-了解一下" class="headerlink" title="git reset –hard 了解一下"></a>git reset –hard 了解一下</h3><p>推荐<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013744142037508cf42e51debf49668810645e02887691000" target="_blank" rel="noopener">廖雪峰</a> </p>
-<p>ps: HEAD 指的是当前版本<br>回退上上个版本<br><code>git reset --hard HEAD^^</code><br>查看历史版本,这时就可以看到历史的版本和版本号<br><code>git log or git log --pretty=oneline</code><br>查看所有 log，可以看到所有操作<br><code>git reflog</code><br>跳到某个版本<br><code>git reset --hard [hash code]</code> </p>
-<h2 id="切换分支缓存"><a href="#切换分支缓存" class="headerlink" title="切换分支缓存"></a>切换分支缓存</h2><p>当在当前分支有了修改但是又需要切到另一个分支的时候，可以用 git stash 存储，之后切换就会有一个干净的分支。之后回来的时候可以 <code>git stash apply</code> 再取出来，或者使用另一个命令 <code>git stash pop</code> 它相当于 <code>git stash apply &amp;&amp; git stash drop</code>，当没有冲突的时候会直接取出缓存区并清理缓存区。</p>
-<h2 id="git-合并"><a href="#git-合并" class="headerlink" title="git 合并"></a>git 合并</h2><p>这个功能有很多种方式，个人经常用的是 <code>git pull origin targetBranch</code></p>
-<p>其他的还有 <code>git fetch</code> <code>git merge</code></p>
-<p>或者 <code>git rebase</code> </p>
-<p>个人对后面这两种不是很熟悉。第一种实际上等同于第二种，只不过第二种把命令拆分开来。<br>第三种没有实际去试过功能</p>
-<h2 id="切换到远程分支"><a href="#切换到远程分支" class="headerlink" title="切换到远程分支"></a>切换到远程分支</h2><p><code>git fetch</code></p>
-<p><code>git checkout targetBranch</code></p>
-<p>在1.6以上的版本可以直接用这个命令就可以切换到远程分支上。或者用 <code>git chekout -b targetBranch origin/targetBranch</code></p>
+<p>查看全局安装的包</p>
+<h3 id="npm-list-g-–depth-0"><a href="#npm-list-g-–depth-0" class="headerlink" title="npm list -g –depth 0"></a>npm list -g –depth 0</h3><p>生成 package.json 文件</p>
+<h3 id="npm-init-y"><a href="#npm-init-y" class="headerlink" title="npm init -y"></a>npm init -y</h3><p>自动生成默认到 package.json 配置</p>
+<h3 id="npm-outdated"><a href="#npm-outdated" class="headerlink" title="npm outdated"></a>npm outdated</h3><p>列出需要更新的包</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">G</span>:\<span class="selector-tag">yuicer</span>\<span class="selector-tag">test</span>&gt;<span class="selector-tag">npm</span> <span class="selector-tag">outdated</span></span><br><span class="line"><span class="selector-tag">Package</span>                <span class="selector-tag">Current</span>         <span class="selector-tag">Wanted</span>  <span class="selector-tag">Latest</span>  <span class="selector-tag">Location</span></span><br><span class="line"><span class="selector-tag">babel-core</span>             <span class="selector-tag">MISSING</span>         6<span class="selector-class">.21</span><span class="selector-class">.0</span>  6<span class="selector-class">.21</span><span class="selector-class">.0</span>  <span class="selector-tag">test</span></span><br><span class="line"><span class="selector-tag">babel-loader</span>           <span class="selector-tag">MISSING</span>         6<span class="selector-class">.2</span><span class="selector-class">.10</span>  6<span class="selector-class">.2</span><span class="selector-class">.10</span>  <span class="selector-tag">test</span></span><br><span class="line"><span class="selector-tag">babel-preset-es2015</span>    <span class="selector-tag">MISSING</span>         6<span class="selector-class">.18</span><span class="selector-class">.0</span>  6<span class="selector-class">.18</span><span class="selector-class">.0</span>  <span class="selector-tag">test</span></span><br><span class="line"><span class="selector-tag">cross-env</span>              <span class="selector-tag">MISSING</span>          3<span class="selector-class">.1</span><span class="selector-class">.4</span>   3<span class="selector-class">.1</span><span class="selector-class">.4</span>  <span class="selector-tag">test</span></span><br><span class="line"><span class="selector-tag">css-loader</span>             <span class="selector-tag">MISSING</span>         0<span class="selector-class">.25</span><span class="selector-class">.0</span>  0<span class="selector-class">.26</span><span class="selector-class">.1</span>  <span class="selector-tag">test</span></span><br><span class="line"><span class="selector-tag">file-loader</span>            <span class="selector-tag">MISSING</span>          0<span class="selector-class">.9</span><span class="selector-class">.0</span>   0<span class="selector-class">.9</span><span class="selector-class">.0</span>  <span class="selector-tag">test</span></span><br><span class="line"><span class="selector-tag">vue</span>                    <span class="selector-tag">MISSING</span>          2<span class="selector-class">.1</span><span class="selector-class">.8</span>   2<span class="selector-class">.1</span><span class="selector-class">.8</span>  <span class="selector-tag">test</span></span><br><span class="line"><span class="selector-tag">vue-loader</span>             <span class="selector-tag">MISSING</span>         10<span class="selector-class">.0</span><span class="selector-class">.2</span>  10<span class="selector-class">.0</span><span class="selector-class">.2</span>  <span class="selector-tag">test</span></span><br><span class="line"><span class="selector-tag">vue-template-compiler</span>  <span class="selector-tag">MISSING</span>          2<span class="selector-class">.1</span><span class="selector-class">.8</span>   2<span class="selector-class">.1</span><span class="selector-class">.8</span>  <span class="selector-tag">test</span></span><br><span class="line"><span class="selector-tag">webpack</span>                <span class="selector-tag">MISSING</span>  2<span class="selector-class">.1</span><span class="selector-class">.0-beta</span><span class="selector-class">.28</span>  1<span class="selector-class">.14</span><span class="selector-class">.0</span>  <span class="selector-tag">test</span></span><br><span class="line"><span class="selector-tag">webpack-dev-server</span>     <span class="selector-tag">MISSING</span>  2<span class="selector-class">.1</span><span class="selector-class">.0-beta</span><span class="selector-class">.12</span>  1<span class="selector-class">.16</span><span class="selector-class">.2</span>  <span class="selector-tag">test</span></span><br></pre></td></tr></table></figure>
+<p><code>npm install package-name</code><br>如果不加包名则根据 package.json 去安装。</p>
+<p>–save -S 安装到 dependencies –save-dev -D 安装到 devDependencies -g 全局安装</p>
+<p>现在默认会安装到 dependencies ， 加 -D 会安装到 devDependencies</p>
+<h2 id="git-config"><a href="#git-config" class="headerlink" title="git config"></a>git config</h2><p>–list 检查 git 的配置</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config user.name ddd</span><br><span class="line">git config user.email ddd@email</span><br></pre></td></tr></table></figure>
+<h2 id="npm-install-package-latest-next"><a href="#npm-install-package-latest-next" class="headerlink" title="npm install package@latest | @next"></a>npm install package@latest | @next</h2><p>latest 更新 npm 到最新版本<br>next 跟新 npm 到作者发布到 next 版本</p>
+<h2 id="git-submodule-add"><a href="#git-submodule-add" class="headerlink" title="git submodule add"></a>git submodule add</h2><p>添加子模块<br>init 克隆下来后初始化<br>update 克隆下来后跟新</p>
+<h3 id="npm-link"><a href="#npm-link" class="headerlink" title="npm link"></a>npm link</h3><p>在一个有规范的 package.json 文件目录下使用改命令后会创建一个全局状态的符号链接，即类似于全局安装了这个包<br>在其他目录下使用 <code>npm link thisPackage</code> 会在这里也创建一个包放在 node_modules 下<br>这个命令有点类似于 <code>npm install</code><br>取消用 <code>npm unlink</code></p>
+<h3 id="git-ssh"><a href="#git-ssh" class="headerlink" title="git ssh"></a>git ssh</h3><p>mac 用 git 的时候，ssh 已经配置过，但是每次还是得输密码 <code>Enter passphrase for key &#39;xxxx&#39;</code><br>解决方法： <code>ssh-add -K xxx</code><br>emmmmmmm….<br>竟然不能保存，每回开机都得重新来一次。终极解决方法，在.ssh/文件下，就是放密钥的地方编辑一个 config 文件，如果没有就新建。输入以下内容</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">Host</span> <span class="string">*</span></span><br><span class="line">  <span class="string">AddKeysToAgent</span> <span class="literal">yes</span></span><br><span class="line">  <span class="string">UseKeychain</span> <span class="literal">yes</span></span><br><span class="line">  <span class="string">IdentityFile</span> <span class="string">/Users/mfw/.ssh/id_rsa</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>生成 ssh 密钥，</li>
+</ul>
+<p>在 git-bash 中，<code>cat ~/.ssh/id_rsa.pub</code>用来查看 ssh 密钥，<br>如果没有则创建 <code>ssh-keygen -t rsa -C &quot;you@mail.com&quot;</code> 【你的 git 邮箱】<br>windows 下用<code>clip &lt; ~/.ssh/id_rsa.pub</code>来复制到剪贴板中</p>
 
       
     </div>
@@ -374,8 +377,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/06/24/new/web调试/" rel="next" title="web调试">
-                <i class="fa fa-chevron-left"></i> web调试
+              <a href="/2018/12/11/new/vue-typescript/" rel="next" title="vue-typescript">
+                <i class="fa fa-chevron-left"></i> vue-typescript
               </a>
             
           </div>
@@ -384,8 +387,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/07/13/new/postCss/" rel="prev" title="postCss">
-                postCss <i class="fa fa-chevron-right"></i>
+              <a href="/2019/01/08/尺工/websocket/" rel="prev" title="websocket">
+                websocket <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -506,7 +509,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#杂项"><span class="nav-number">2.</span> <span class="nav-text">杂项</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#vi-和-vim"><span class="nav-number">2.1.</span> <span class="nav-text">vi 和 vim</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#folk"><span class="nav-number">3.</span> <span class="nav-text">folk</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#pull-request"><span class="nav-number">3.1.</span> <span class="nav-text">pull request</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#版本控制"><span class="nav-number">4.</span> <span class="nav-text">版本控制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#git-reset-–hard-了解一下"><span class="nav-number">4.1.</span> <span class="nav-text">git reset –hard 了解一下</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#切换分支缓存"><span class="nav-number">5.</span> <span class="nav-text">切换分支缓存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-合并"><span class="nav-number">6.</span> <span class="nav-text">git 合并</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#切换到远程分支"><span class="nav-number">7.</span> <span class="nav-text">切换到远程分支</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#建立源仓库"><span class="nav-number">1.</span> <span class="nav-text">建立源仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#npm-list-g-–depth-0"><span class="nav-number">2.</span> <span class="nav-text">npm list -g –depth 0</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#npm-init-y"><span class="nav-number">3.</span> <span class="nav-text">npm init -y</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#npm-outdated"><span class="nav-number">4.</span> <span class="nav-text">npm outdated</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-config"><span class="nav-number"></span> <span class="nav-text">git config</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#npm-install-package-latest-next"><span class="nav-number"></span> <span class="nav-text">npm install package@latest | @next</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-submodule-add"><span class="nav-number"></span> <span class="nav-text">git submodule add</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#npm-link"><span class="nav-number">1.</span> <span class="nav-text">npm link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-ssh"><span class="nav-number">2.</span> <span class="nav-text">git ssh</span></a></li></ol></div>
             
 
           </div>
@@ -626,9 +629,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'yuicer';
-      var disqus_identifier = '2018/06/25/new/git基本操作了解一下/';
+      var disqus_identifier = '2019/01/05/new/npm&git/';
 
-      var disqus_title = "git基本操作了解一下";
+      var disqus_title = "npm&git";
 
 
       function run_disqus_script(disqus_script) {

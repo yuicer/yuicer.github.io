@@ -59,13 +59,13 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:title" content="travis">
-<meta property="og:url" content="http://yuicer.com/2018/11/03/new/travis/index.html">
+<meta property="og:title" content="日常小技巧5">
+<meta property="og:url" content="http://yuicer.com/2018/09/09/new/日常小技巧5/index.html">
 <meta property="og:site_name" content="yuicer">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-06T17:08:05.932Z">
+<meta property="og:updated_time" content="2019-02-09T02:37:12.510Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="travis">
+<meta name="twitter:title" content="日常小技巧5">
 
 
 
@@ -93,13 +93,13 @@
 
 
 
-  <link rel="canonical" href="http://yuicer.com/2018/11/03/new/travis/"/>
+  <link rel="canonical" href="http://yuicer.com/2018/09/09/new/日常小技巧5/"/>
 
 
 
 
 
-  <title> travis | yuicer </title>
+  <title> 日常小技巧5 | yuicer </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -249,7 +249,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yuicer.com/2018/11/03/new/travis/">
+  <link itemprop="mainEntityOfPage" href="http://yuicer.com/2018/09/09/new/日常小技巧5/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="yuicer">
@@ -273,7 +273,7 @@
             
             
               
-                travis
+                日常小技巧5
               
             
           </h1>
@@ -286,8 +286,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-03T17:03:08+00:00">
-                2018-11-03
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-09T16:52:40+00:00">
+                2018-09-09
               </time>
             
 
@@ -338,14 +338,34 @@
 
       
         <p></p><p></p><br><a id="more"></a><p></p>
-<p>master .github.io config avalon</p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>今天看到大佬的项目【<a href="https://www.calibur.tv/】,里面有一个" target="_blank" rel="noopener">https://www.calibur.tv/】,里面有一个</a> travis.yml 的东西，然后研究了一下。是一个 github 专用的 cicd 工具。所以研究了一下。。</p>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p><a href="https://travis-ci.com/" target="_blank" rel="noopener">去 travis 官网</a>，授权 github，然后关联想要加的项目。这样当 github push 上去后就会触发这个钩子。</p>
-<p>它的本质是在另一个环境里面去进行一系列的操作，类似于微服务的概念，可以构建不同的环境【支持各种主流语言】，传入不同当变量。然后执行命令。</p>
-<p>所以对于博客的话就会很方便。push 之后触发钩子，在 travis 上编译静态资源，然后 push 到 github pages 的分支上。<br>所以针对我们的这个功能，它是需要一个 github 仓库的密钥的。</p>
-<h2 id="环境参数密钥-access-token"><a href="#环境参数密钥-access-token" class="headerlink" title="环境参数密钥 access_token"></a>环境参数密钥 access_token</h2><p>由于我们执行 travis 是需要 github 的权限，但是又不能直接写文件上。所以我们需要借助一下 travis 的定义变量。在关联的仓库项目中设置 Environment Variables 。添加一个自己的 github 的 access token。在 github 个人设置的 Settings / Developer settings / Personal access tokens 中新建立一个 travis_token 权限只给一个 repo 的就可以了，然后在 travis 填写这个 token，比如 ACCESS_TOKEN 123456789</p>
-<h2 id="具体配置"><a href="#具体配置" class="headerlink" title="具体配置"></a>具体配置</h2><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 选择服务语言</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">node_js</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 版本</span></span><br><span class="line"><span class="attr">node_js:</span> <span class="number">8.12</span><span class="number">.0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 缓存</span></span><br><span class="line"><span class="attr">cache:</span></span><br><span class="line"><span class="attr">  bundler:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  yarn:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  directories:</span> <span class="string">node_modules</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 固定钩子 install</span></span><br><span class="line"><span class="attr">install:</span> <span class="string">npm</span> <span class="string">install</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 固定钩子 script</span></span><br><span class="line"><span class="attr">script:</span> <span class="string">hexo</span> <span class="string">clean</span> <span class="string">&amp;&amp;</span> <span class="string">hexo</span> <span class="string">g</span></span><br><span class="line"></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="comment"># 取哪个文件的内容传</span></span><br><span class="line"><span class="attr">  local-dir:</span> <span class="string">'./public'</span></span><br><span class="line">  <span class="comment"># 使用 githubPage 服务</span></span><br><span class="line"><span class="attr">  provider:</span> <span class="string">pages</span></span><br><span class="line">  <span class="comment"># 不删除内容，避免在 build 之后删除了想要上传的内容</span></span><br><span class="line"><span class="attr">  skip-cleanup:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># 你的 github 项目 personal access token</span></span><br><span class="line"><span class="attr">  github-token:</span> <span class="string">$&#123;ACCESS_TOKEN&#125;</span> <span class="comment"># Set in the settings page of your repository, as a secure variable</span></span><br><span class="line">  <span class="comment"># 保存记录</span></span><br><span class="line"><span class="attr">  keep-history:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># 使用 github 的 name email 进行提交</span></span><br><span class="line"><span class="attr">  committer-from-gh:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># 提交到哪个分支，默认是 gh-pages</span></span><br><span class="line"><span class="attr">  target-branch:</span> <span class="string">master</span></span><br><span class="line">  <span class="comment"># hexo branch 触发</span></span><br><span class="line"><span class="attr">  on:</span></span><br><span class="line"><span class="attr">    branch:</span> <span class="string">hexo</span></span><br></pre></td></tr></table></figure>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>类似于 ci cd 的东西确实挺好用，比如加 eslint 检查，编译部署之类的功能。把这些都集成到 git push 操作上确实很方便。<br>唯一麻烦的一点就是现在这种工具太多了，而且针对 github gitlab 什么的不太一样。还需要一直学习啊</p>
+<h2 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h2><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Value</span>               function   typeof</span><br><span class="line">-------------------------------------</span><br><span class="line"><span class="string">"foo"</span>               <span class="type">String</span>     string</span><br><span class="line"><span class="keyword">new</span> <span class="type">String</span>(<span class="string">"foo"</span>)   <span class="type">String</span>     <span class="class"><span class="keyword">object</span></span></span><br><span class="line"><span class="class">1.2                 <span class="title">Number</span>     <span class="title">number</span></span></span><br><span class="line"><span class="class"><span class="title">new</span> <span class="title">Number</span>(<span class="params">1.2</span>)     <span class="title">Number</span>     <span class="title">object</span></span></span><br><span class="line"><span class="class"><span class="title">true</span>                <span class="title">Boolean</span>    <span class="title">boolean</span></span></span><br><span class="line"><span class="class"><span class="title">new</span> <span class="title">Boolean</span>(<span class="params">true</span>)   <span class="title">Boolean</span>    <span class="title">object</span></span></span><br><span class="line"><span class="class"><span class="title">new</span> <span class="title">Date</span>(<span class="params"></span>)          <span class="title">Date</span>       <span class="title">object</span></span></span><br><span class="line"><span class="class"><span class="title">new</span> <span class="title">Error</span>(<span class="params"></span>)         <span class="title">Error</span>      <span class="title">object</span></span></span><br><span class="line"><span class="class">[1,2,3]             <span class="title">Array</span>      <span class="title">object</span></span></span><br><span class="line"><span class="class"><span class="title">new</span> <span class="title">Array</span>(<span class="params">1, 2, 3</span>)  <span class="title">Array</span>      <span class="title">object</span></span></span><br><span class="line"><span class="class"><span class="title">new</span> <span class="title">Function</span>(<span class="params">""</span>)    <span class="title">Function</span>   <span class="title">function</span></span></span><br><span class="line"><span class="class"><span class="title">/abc/g</span>              <span class="title">RegExp</span>     <span class="title">object</span></span></span><br><span class="line"><span class="class"><span class="title">new</span> <span class="title">RegExp</span>(<span class="params">"meow"</span>)  <span class="title">RegExp</span>     <span class="title">object</span></span></span><br><span class="line"><span class="class"></span>&#123;&#125;                  <span class="type">Object</span>     <span class="class"><span class="keyword">object</span></span></span><br><span class="line"><span class="class"><span class="title">new</span> <span class="title">Object</span>(<span class="params"></span>)        <span class="title">Object</span>     <span class="title">object</span></span></span><br></pre></td></tr></table></figure>
+<h2 id="document-elementFromPoint"><a href="#document-elementFromPoint" class="headerlink" title="document.elementFromPoint"></a>document.elementFromPoint</h2><p>获取某个坐标的位置对应的 dom。支持性贼好。。</p>
+<h2 id="clientHeight-offsetHeight-scrollHeight"><a href="#clientHeight-offsetHeight-scrollHeight" class="headerlink" title="clientHeight offsetHeight scrollHeight"></a>clientHeight offsetHeight scrollHeight</h2><p>clientHeight 为不包括 border,滚动条的视口内高度，offsetHeighta 为包括上面那些的高度，scrollHeight 为包括内容滚动区域的所有高度</p>
+<h2 id="vertical-align"><a href="#vertical-align" class="headerlink" title="vertical-align"></a>vertical-align</h2><p>当在这样的一个结构时，特别是第二个 span 设置为了 bfc 盒子的时候，会出现某些问题，两行文字对不齐</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span>&gt;</span>1<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span>&gt;</span>2<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这个时候可以设置第一个 span 的 <code>vertical-align: top</code> 来解决这个问题</p>
+<p>或者给第二个 span 设置增加 <code>vertical-align: bottom</code></p>
+<p>这个问题的原因是当成为 bfc 盒子之后，它的对齐方式会改变,此时是整个这个盒子 span2 相对于基线对齐，而 span1 则是盒子里面文字本身相对与于基线对齐。</p>
+<p><a href="https://www.zhangxinxu.com/wordpress/2015/08/css-deep-understand-vertical-align-and-line-height/comment-page-1/" target="_blank" rel="noopener">张鑫旭大佬有一篇文章讲对比较细</a></p>
+<p>里面有一句比较重要的话</p>
+<p><code>The baseline of an ‘inline-block’ is the baseline of its last line box in the normal flow, unless it has either no in-flow line boxes or if its ‘overflow’ property has a computed value other than ‘visible’, in which case the baseline is the bottom margin edge.</code></p>
+<p>谷歌翻译如下</p>
+<p><code>“内联块”的基线是正常流程中其最后一个线框的基线，除非它没有流入线框或者其“溢出”属性具有“可见”以外的计算值， 在哪种情况下，基线是底部边缘边缘。</code></p>
+<p>张鑫旭大佬翻译如下</p>
+<p><code>’inline-block’的基线是正常流中最后一个line box的基线, 除非，这个line box里面既没有line boxes或者本身’overflow’属性的计算值不是’visible’, 这种情况下基线是margin底边缘。</code></p>
+<p><code>一个inline-block元素，如果里面没有inline内联元素，或者overflow不是visible，则该元素的基线就是其margin底边缘，否则，其基线就是元素里面最后一行内联元素的基线。</code></p>
+<h2 id="ios-bug"><a href="#ios-bug" class="headerlink" title="ios bug"></a>ios bug</h2><ol>
+<li>全局设置对 <code>user-selected: *</code> 会使 input textarea 不能被选中，弹起输入框</li>
+<li>fixed 在部分 ios 手机中，滑动对时候会消失，滑动停止后又出来。解决方法可以将 fixed 区域整个拿出来，不放在滚动区域内，或者设置如下。</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.fixed</span>&#123;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">translate3d</span>(0,0,0);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.fixed</span> * &#123;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">translate3d</span>(0,0,0);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li><p>滚动区域卡顿，设置<code>-webkit-overflow-scrolling: touch;</code></p>
+</li>
+<li><p>ios 默认滑动可以弹出正常网页区域，出现空白。解决可以整个页面禁止滑动，让滚动条不出现，或者用三方库 iscroll 之类的</p>
+</li>
+</ol>
+<h2 id="m3u8"><a href="#m3u8" class="headerlink" title="m3u8"></a>m3u8</h2><p>对于这种格式的视频，需要给设置 video 的 source 为 <code>&lt;source src=&quot;video.url&quot; type=&quot;application/x-mpegURL&quot;&gt;&lt;/source&gt;</code> 在电脑上不支持播放</p>
 
       
     </div>
@@ -359,8 +379,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/10/15/尺工/日常小技巧（六）/" rel="next" title="日常小技巧（六）">
-                <i class="fa fa-chevron-left"></i> 日常小技巧（六）
+              <a href="/2018/08/30/叹言/木原神拳（腿）/" rel="next" title="木原神拳（腿）">
+                <i class="fa fa-chevron-left"></i> 木原神拳（腿）
               </a>
             
           </div>
@@ -369,8 +389,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/11/05/叹言/无法成为野兽的我们/" rel="prev" title="无法成为野兽的我们">
-                无法成为野兽的我们 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/10/15/叹言/霾/" rel="prev" title="霾">
+                霾 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -491,7 +511,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用"><span class="nav-number">2.</span> <span class="nav-text">使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#环境参数密钥-access-token"><span class="nav-number">3.</span> <span class="nav-text">环境参数密钥 access_token</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#具体配置"><span class="nav-number">4.</span> <span class="nav-text">具体配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他"><span class="nav-number">5.</span> <span class="nav-text">其他</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#typeof"><span class="nav-number">1.</span> <span class="nav-text">typeof</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#document-elementFromPoint"><span class="nav-number">2.</span> <span class="nav-text">document.elementFromPoint</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#clientHeight-offsetHeight-scrollHeight"><span class="nav-number">3.</span> <span class="nav-text">clientHeight offsetHeight scrollHeight</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vertical-align"><span class="nav-number">4.</span> <span class="nav-text">vertical-align</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ios-bug"><span class="nav-number">5.</span> <span class="nav-text">ios bug</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#m3u8"><span class="nav-number">6.</span> <span class="nav-text">m3u8</span></a></li></ol></div>
             
 
           </div>
@@ -611,9 +631,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'yuicer';
-      var disqus_identifier = '2018/11/03/new/travis/';
+      var disqus_identifier = '2018/09/09/new/日常小技巧5/';
 
-      var disqus_title = "travis";
+      var disqus_title = "日常小技巧5";
 
 
       function run_disqus_script(disqus_script) {
