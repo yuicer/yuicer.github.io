@@ -2,7 +2,7 @@
 title: travis
 categories:
   - 尺工
-date: 2018-11-03 17:03:08
+date: 2019-2-03 17:03:08
 ---
 
 <p></p>
@@ -72,3 +72,8 @@ deploy:
 
 类似于 ci cd 的东西确实挺好用，比如加 eslint 检查，编译部署之类的功能。把这些都集成到 git push 操作上确实很方便。
 唯一麻烦的一点就是现在这种工具太多了，而且针对 github gitlab 什么的不太一样。还需要一直学习啊
+
+### 补充
+
+最近 travis-ci 也进行了迁移，原来的 .org => .com ，然后也开始使用起了 github app，感觉完全强过了 circle-ci,
+不过迁移需要发个邮件让 travis 他们开个迁移权限。。【找了好久】
