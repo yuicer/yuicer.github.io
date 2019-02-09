@@ -25,14 +25,6 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[新年2019回家]]></title>
-    <url>%2F2019%2F02%2F02%2F%E5%8F%B9%E8%A8%80%2F%E6%96%B0%E5%B9%B42019%2F</url>
-    <content type="text"><![CDATA[等飞机的百无聊赖中，突然觉得还是写东西好了。 今天早上本来都做好骑自行车来机场的准备了。。。因为前一天死活预约不到车啊。下了好几个 app 一个都没用，当时想着要不来机场睡要不第二天骑自行车来。。。所幸的是第二天真的打到了车。危险系数太高了 啊，深呼吸了一下，然后再一口气呼出来，已经 2019 了啊。夹杂者机场的特殊味道，北京 5 点的冷空气，些许寂寞，些许兴奋。想想这一年真是发生了好多事情，改变了很多。在马蜂窝的这一年，现在想想应该算是人生中的重大改变了吧。年初从武汉来到北京，第一次租了 5500 一个月的房子，第一次加班到深夜 2 点半，第一次做飞机，第一次负责面试，第一次去滑雪，第一次喜欢上了逛 muji 和优衣库，第一次真的希望有人能陪伴自己。不过，一年中也有很多的失望和无奈。和人的相处，渴望的真物，以及发现了自己其实是嘴上喊着我是好人的恶人这个事实。 不管怎么说，这一年对我真的很有意义。 在此希望，2019 在字节跳动的一年，能有更多的惊喜，有更多的有意思的事情，能得到自己的真物，然后稍微期待一下会不会有新的相遇 hhh。 怀着少年心气，走向成年人的世界吧]]></content>
-      <categories>
-        <category>叹言</category>
-      </categories>
-  </entry>
-  <entry>
     <title><![CDATA[箭头函数]]></title>
     <url>%2F2019%2F01%2F14%2Fnew%2F%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0%2F</url>
     <content type="text"><![CDATA[区别 写法不同，箭头函数有很多缩写表达式function 没有手动写 return 的话返回值会是一个 undefined, 箭头函数虽然一般也是这样，但是存在一个特殊写法 res=&gt;res.result 这个时候默认返回的是 res.result 的值。 箭头函数 this 指向这个基本大家都知道。。。一个调用者，一个上下文 箭头函数不能用 bind apply call 等这里表现很奇怪，使用不报错，但是没效果。。。 123456789101112window.a = 1var A = &#123; a: 2&#125;var func = function() &#123; console.log(this.a)&#125;var arrow = () =&gt; &#123; console.log(this.a)&#125;func.apply(A) // 2arrow.apply(A) // 1 箭头函数没有 arguments 对象 箭头函数不能当构造函数使用【不能使用 new】 todo有时间找个 polyfill 看一下 箭头函数 是怎么转换的]]></content>
@@ -81,38 +73,6 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[想写点东西]]></title>
-    <url>%2F2018%2F11%2F09%2F%E5%8F%B9%E8%A8%80%2F%E6%83%B3%E5%86%99%E7%82%B9%E4%B8%9C%E8%A5%BF%2F</url>
-    <content type="text"><![CDATA[嘛，总之先来说明一下情况。 现在是周五点晚上10点钟，在开往河北崇礼雪场点大巴上，因为之前公司群里有发一个滑雪点活动，价格比较便宜，然后因为想起之前看到东野圭吾点《风雪追击》所以对滑雪稍稍有一些兴趣，然后就在犹豫中犹豫中报了名。所以为什么10点钟还在大巴上呢？虽然是7点出发点，但是意外点路上很堵，就算是现在也好像还需要2个小时才能到旅馆睡觉的样子。。。 还是说说最近点情况吧，怎么说呢。啊，对。有一个之前想起来的比方，虽然不知道恰不恰当，还是说出来吧。每一条咸鱼在被咸着的时候都会很难受，但是只要一直咸着咸着，最终还是会摆脱咸鱼的状态。 每一短时间都有那种感觉，自己好咸啊，好失败啊，好想放弃啊，好累啊，自己好渣啊之类对。这种时候就算想做什么也打不起劲头真的去做什么，只能日复一日的加重自己负面情绪，直到有一天，突然看到了碧蓝对天空，金色的树叶，就仿佛世界一下子变明亮一样，抬起了耷拉的眼皮睁大了眼睛，觉得世界真好啊。然后就摆脱了负面状态。 最近发现自己意外的很渣，或许不是意外。只是自己一直误以为自己是比较好的人？一直向往着那种优秀的人，向往多了竟然也发生了觉得自己也有那么一点点算是其中一人的感觉。呵，自欺欺人哪 刚好最近看了《无法成为野兽的我们》，把自己代入了花井京谷，那种明明在做错事，但是自己却不觉得，也不想改的样子真是和jojo神父的恶一模一样。 觉得自己达不到想象中的样子，成为不了理想的自己。做出自己都觉得恶心的事情。真的是，差劲]]></content>
-      <categories>
-        <category>杂乱</category>
-      </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[十一]]></title>
-    <url>%2F2018%2F11%2F09%2F%E5%8F%B9%E8%A8%80%2F%E5%8D%81%E4%B8%80%2F</url>
-    <content type="text"><![CDATA[やさしくて、そしで強い君には、とてもきれいで、残酷です もかえなくで。]]></content>
-      <categories>
-        <category>杂乱</category>
-      </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[无法成为野兽的我们]]></title>
-    <url>%2F2018%2F11%2F05%2F%E5%8F%B9%E8%A8%80%2F%E6%97%A0%E6%B3%95%E6%88%90%E4%B8%BA%E9%87%8E%E5%85%BD%E7%9A%84%E6%88%91%E4%BB%AC%2F</url>
-    <content type="text"><![CDATA[深海晶 为什么这么努力，这么认真生活的人周围都是废渣呢？ 因为，废渣虽然喜欢闪光，但是自己成为不了闪光，而且觉得废渣的生活方式更轻松，更适合废渣。因为。只要放弃那一点点的追求和念想就可以活的无比轻松，用一世的懊悔换取一世的安逸不是很赚吗？ 所以就成了一边说着喜欢闪光，一边继续往废渣的更深层走下去 如果能放弃就好了，如果。]]></content>
-      <categories>
-        <category>叹言</category>
-      </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[霾]]></title>
-    <url>%2F2018%2F10%2F15%2F%E5%8F%B9%E8%A8%80%2F%E9%9C%BE%2F</url>
-    <content type="text"><![CDATA[夢ならばどれほどよかったでしょう最近两天有很严重的霾，所以天空的颜色就是阴沉，昏黄的。 其实最近上天已经给我很多优待了，但是，自己缺乏自知和自觉，让一件开心的事变成了懊悔对事。果然没有那么容易呐，找到一个可以当作归属的地方。 从这次的事情中，暴露出来的东西很多，其中最明显的一点，就是我其实并不了解我自己这一点。自己完全不像自己想象的那样，而仅仅是一个普普通通的人。有着很多欲望，面对事情也往往会不知所措，时常被感情冲昏头脑。简单而言就是一个词 naive，原本我以为自己是一个不会那么受感情影响的人。 naive 。 自己一个人的话怎么都好说，但是一涉及到他人的话，我就真的不知道怎么做才好了。 啊。我所能做的也就只有再去不断的提升自己了吧， kamisama yo，dou ga。]]></content>
-      <categories>
-        <category>叹言</category>
-      </categories>
-  </entry>
-  <entry>
     <title><![CDATA[日常小技巧5]]></title>
     <url>%2F2018%2F09%2F09%2Fnew%2F%E6%97%A5%E5%B8%B8%E5%B0%8F%E6%8A%80%E5%B7%A75%2F</url>
     <content type="text"><![CDATA[typeof1234567891011121314151617Value function typeof-------------------------------------"foo" String stringnew String("foo") String object1.2 Number numbernew Number(1.2) Number objecttrue Boolean booleannew Boolean(true) Boolean objectnew Date() Date objectnew Error() Error object[1,2,3] Array objectnew Array(1, 2, 3) Array objectnew Function("") Function function/abc/g RegExp objectnew RegExp("meow") RegExp object&#123;&#125; Object objectnew Object() Object object document.elementFromPoint获取某个坐标的位置对应的 dom。支持性贼好。。 clientHeight offsetHeight scrollHeightclientHeight 为不包括 border,滚动条的视口内高度，offsetHeighta 为包括上面那些的高度，scrollHeight 为包括内容滚动区域的所有高度 vertical-align当在这样的一个结构时，特别是第二个 span 设置为了 bfc 盒子的时候，会出现某些问题，两行文字对不齐 1234&lt;p&gt; &lt;span&gt;1&lt;/span&gt; &lt;span&gt;2&lt;/span&gt;&lt;/p&gt; 这个时候可以设置第一个 span 的 vertical-align: top 来解决这个问题 或者给第二个 span 设置增加 vertical-align: bottom 这个问题的原因是当成为 bfc 盒子之后，它的对齐方式会改变,此时是整个这个盒子 span2 相对于基线对齐，而 span1 则是盒子里面文字本身相对与于基线对齐。 张鑫旭大佬有一篇文章讲对比较细 里面有一句比较重要的话 The baseline of an ‘inline-block’ is the baseline of its last line box in the normal flow, unless it has either no in-flow line boxes or if its ‘overflow’ property has a computed value other than ‘visible’, in which case the baseline is the bottom margin edge. 谷歌翻译如下 “内联块”的基线是正常流程中其最后一个线框的基线，除非它没有流入线框或者其“溢出”属性具有“可见”以外的计算值， 在哪种情况下，基线是底部边缘边缘。 张鑫旭大佬翻译如下 ’inline-block’的基线是正常流中最后一个line box的基线, 除非，这个line box里面既没有line boxes或者本身’overflow’属性的计算值不是’visible’, 这种情况下基线是margin底边缘。 一个inline-block元素，如果里面没有inline内联元素，或者overflow不是visible，则该元素的基线就是其margin底边缘，否则，其基线就是元素里面最后一行内联元素的基线。 ios bug 全局设置对 user-selected: * 会使 input textarea 不能被选中，弹起输入框 fixed 在部分 ios 手机中，滑动对时候会消失，滑动停止后又出来。解决方法可以将 fixed 区域整个拿出来，不放在滚动区域内，或者设置如下。 123456.fixed&#123; transform: translate3d(0,0,0);&#125;.fixed * &#123; transform: translate3d(0,0,0);&#125; 滚动区域卡顿，设置-webkit-overflow-scrolling: touch; ios 默认滑动可以弹出正常网页区域，出现空白。解决可以整个页面禁止滑动，让滚动条不出现，或者用三方库 iscroll 之类的 m3u8对于这种格式的视频，需要给设置 video 的 source 为 &lt;source src=&quot;video.url&quot; type=&quot;application/x-mpegURL&quot;&gt;&lt;/source&gt; 在电脑上不支持播放]]></content>
@@ -121,35 +81,11 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[木原神拳（腿）]]></title>
-    <url>%2F2018%2F08%2F30%2F%E5%8F%B9%E8%A8%80%2F%E6%9C%A8%E5%8E%9F%E7%A5%9E%E6%8B%B3%EF%BC%88%E8%85%BF%EF%BC%89%2F</url>
-    <content type="text"><![CDATA[闲扯今天因为下雨的关系，上班迟到了，嘛，不过也有因为昨天终于睡了一个好觉的部分原因，所以虽然是已经迟到了，但是还是慢悠悠的一步一步走在路上。话说为什么会是昨天终于睡了一个好觉呢，这点我自己也不是很清楚，自从参加了公司组织的新员工培训，每天晚上变的固定只能睡7个小时了，以前都是没有9个小时都会困的要死啊。不知道是不是因为这个原因导致的生物钟混乱，这几天都很难受。因为这点时间压根睡不好，虽然醒了但是却很困，而且无论如何怎么都不能再睡着了。 所以对于今天能睡满8个小时是一个很大的进步！和这一点相比，迟到15分钟反而觉得不是很大的事情了。我是不是太品性恶劣了 哎，公司最近也开始打卡了，这一点我觉得非常不好。 木原神拳（腿）好，还是继续把话题扯回来。今天早上在走路的时候，还是被脚尖带起的水滴把脚前尖部分给打湿了，虽然我想可能也和我的鞋子有关，毕竟是夏天的透气网眼鞋，不过这一点很不爽。因为人走路的时候实际上可以近似看成是以胯部为中心的圆摆运动，可以想想那种挂在墙上的挂钟。所以当脚在抬起和换脚的时候肯定会带起水滴，除非改变走路方式，【但是改变走路方式又很累，而且重要的是被别人看到会很奇怪】。 ps，脚跟因为鞋跟比较厚的原因所以一般不会湿掉，当然也有例外，比如在下楼梯的时候就很麻烦，这个时候就可以采用跟换走路方式的方法，具体是这样。在把脚向下走的时间段，首先第一步是固定脚踝，让脚和地面平行，只用小腿大腿的力量来移动脚，以斜上方45度左右移动一段距离之后停住大概0.3s，然后再垂直下落，注意，下落的时候也得先用脚尖碰到地面，之后再把脚跟缓缓放下来。 emmmmmm，怎么感觉一不小心又扯多了，好了，还是回到今天的主题 木原神拳（腿） 具体方法很简单，就是在抬脚的瞬间【因为现在是坐着打字，一瞬间竟然还忘记了走路是怎么抬脚的。。。】，抓住时机一下子把脚往回收，注意并不需要收多少，只是瞬间改变力的方向，让水滴没有那个向自己的惯性方向【勾向身体】而变成完全向外的方向。听着可能觉得很简单，但是实际上可是很难的。特别是把握时机和发力方式，时机如果不准的话可能就会造成水滴已经沾到脚尖了或者完全没有卵用，而发力方式如果没掌握好就会打乱自己原先的走路方式导致在别人的眼中自己就是一个畸形种hhhhhh 不要觉得这个很难学还觉得没用哦，如果想痛打一方，抱回最后之作的话作为普通人的我们就只要这个方法啦。笑]]></content>
-      <categories>
-        <category>叹言</category>
-      </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[23]]></title>
-    <url>%2F2018%2F08%2F15%2F%E5%8F%B9%E8%A8%80%2F23%2F</url>
-    <content type="text"><![CDATA[突然发觉，最近叹气的次数愈来越多了。————罗伦斯《狼于香辛料》 现在的我，大概处于的就是没有遇到赫罗之前的罗伦斯那样的状态吧。 突然想起，这个时候的罗伦斯经常会坐在马车上对着马屁股，想起曾经的马店老板在他买马的时候劝他买母马，还讲了美妙的传说，【在旅途中，母马突然变成了少女来安慰落魄行商人，最后幸福的在一起的故事】，那时的罗伦斯回答老板的是【就算变成人也是过来讨债的才对。】不过23的罗伦斯这个时候也有了当时要是买的是母马就好了这种想法。 类似的想法，在我经常对着电脑的时候也经常有，与其说是对着电脑，不如说是对着电脑发呆。最近发呆的功力增长特别快。发呆状态简直就是瞬间切换，如丝般柔滑。两眼虽然对着电脑，但是并不聚焦，大脑看着像什么也没想，实际上也真的什么都没想。往往回过神的时候就已经过了三五分钟了。这之后往往会接着一次深呼吸再一口气吐出来。然后继续搬砖。 变的越来越想和人说话了 变的越来越不想和人说话了 我觉得我要爆炸了，为此做的傻事，说的傻话。每一次每一次都会事后后悔，我已经受够这种循环了，为什么会是我啊，为什么我要受这种折磨啊！！！ 半年之后如果还没有改变的话，我就应该换个生活方式过一年再回来了 回去种种田【小森林一样】 回家啃老一年 出走一年 考国外研究生]]></content>
-      <categories>
-        <category>叹言</category>
-      </categories>
-  </entry>
-  <entry>
     <title><![CDATA[npm发布]]></title>
     <url>%2F2018%2F08%2F02%2F%E5%B0%BA%E5%B7%A5%2Fnpm%E5%8F%91%E5%B8%83%2F</url>
     <content type="text"><![CDATA[前言代码写多了之后就会自然对有积累，但是积累需要一个地方，最以前是在 github 中放在一个公共文件夹里，然后 clone 下来之后把需要对代码复制粘贴到需要对地方，但是这么做会比较麻烦，而且有很大对缺陷是不好管理版本，只能通过打 tag 打方式来进行。所以决定还是放在 npm 上。 npm 发布文档 npm 除了通常用打 npm install npm uninstall 之外还有许多功能。比如直接发布一个包到 npm 上供大家下载使用。具体步骤 注册用户npm add user 或者去 npm 官网上注册 登陆npm login 编写需要上传的库npm init --yes 创建 package.json 文件 123456789101112&#123; "name": "ttt", "version": "1.0.0", "description": "", "main": "index.js", "scripts": &#123; "test": "echo \"Error: no test specified\" &amp;&amp; exit 1" &#125;, "keywords": [], "author": "", "license": "ISC"&#125; 这里简单介绍一下字段作用 name : npm 发布包的名字 version : npm 版本标志 description : npm 发布之后在  别人可以看到的描述，如果没有则会从 readme 中选取 main : 文件入口 scripts : 运行命令 keywords : npm 上搜索的关键词 author : 作者简介，联系方式等 license : 版权方式 其他还有很多字段，文档 files: npm i 时候安装下来的文件，默认为 * 所有文件，指定之后只会下载包含指定文件的压缩包 bin : 可执行命令，安装之后就会在 node_modules 下面的 .bin 文件夹中注册你的命令。同时需要注意，bin 字段链接到的文件必须以#!/usr/bin/env node开头 module : es6 格式的包使用dist/es.module.js，打包工具会首先使用 module 字段，这有会很方便 tree-shaking name/scopename 字段需要注意的是不能重复，如果已经在 npm 上有人发布了同名的包就会发布失败。为了避免这个问题 npm 有 scoped 这个解决方法，每个人都有自己的一个 @scope[@username]，既在每个人下面新增加一个层级。此时 name 字段需要写成 @yuicer/package ，下载的时候同样也需要 npm i @yucier/package ，此时在 node_modules 下面的目录会变成 yuicer/package 即多了一层 scoped 目录，所以引用的时候也是需要加上这个 scoped npm init –scope=yuicer 可以自动生成 name 字段scoped package 默认是为私人的，需要是付费用户才能使用，不过可以手动声明它是公用包npm publish --access=public versionversion 字段用来管理版本。有几个常用命令如下，以初始版本 1.0.0 举例npm verison patch 更新版本为 1.0.1npm version minor 更新版本为 1.1.0npm version major 更新版本为 2.0.0 lerna这个是社区最近出现的，用于管理 monorepo 的包管理工具，可以自动帮你处理依赖安装lerna bootstrap。方便发布。下载 lerna 后， lerna init 会生成几个文件，在 package 文件夹下放入自己需要的包。在 lerna.json中写入配置选项 1234567lerna initlerna notice cli v3.4.3lerna info Initializing Git repositorylerna info Creating package.jsonlerna info Creating lerna.jsonlerna info Creating packages directorylerna success Initialized Lerna files lerna 有好几个模式，不过一般用默认模式就好， lerna publish 会检测 git 变化，自动给出提示 prompt]]></content>
       <categories>
         <category>尺工</category>
-      </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[天空之城]]></title>
-    <url>%2F2018%2F07%2F23%2F%E5%8F%B9%E8%A8%80%2F%E5%A4%A9%E7%A9%BA%E4%B9%8B%E5%9F%8E%2F</url>
-    <content type="text"><![CDATA[林晨雨不知道自己为什么会在这里。他刚醒来就发现自己好像飘在天上，脚下都是一块一块悬浮着的砖地。一伸手就能摸到云彩。他楞了好久突然一拍脸然，我肯定在做梦，于是紧紧闭了闭眼。可是等闭了好一会再睁开的，眼前却还是一幅奇妙的景色。就这么闭着眼睛来回想了三分钟后，他觉得，是时候找个人问问好了。于是站起了身拍了拍屁股上的灰，迈脚走了起来。 虽然刚刚醒来的时候觉得身边的地方真是不可思议，大地居然漂在天上，一晃一晃的跟坐船一样的感觉，可是再不可思议的地方等到他走了大半天之后也习以为常了，一直朝北走的林晨雨来到了一个小镇子上，不过与其说是叫小镇子还不如叫小集市，因为遍地都是摆摊卖东西的。他找了路边好几个人问了问情况，可是问的人越多他却越糊涂。虽然大家都回答他说这里是天空之城，可是他们有的说自己是从悬空城上来的，有的却是从魔法密林坐船来的。但是问到别人自己是怎么来的的时候大家都是打量打量了他之后摇摇头说不清楚。搞不明白的他摸着自己咕咕叫的肚子觉得自己既然搞不清楚状况，又不知道去哪，还是先想办法吃饱饭再慢慢商量把。 林晨雨在一个小杂货店找了份杂工，虽然钱给的很多，但是因为住处很贵，所以还是得省吃俭用的过，不过让他觉得很开心的是每天能看到各种各样的人，听他们说各种各样奇妙惊险的事情。虽然他自己完全没去过这些地方，但是听的多了就感觉自己也厉害了起来，时不时的也对那些像是新手的人炫耀一般，看到别人眼中冒出的惊叹和佩服，心中不由的得意起来。 就这么过了一个月，林晨雨打杂干的越来越顺手，有时掌柜的不在，他也能担起来，对客人要的各种各样的红药蓝药的价格也一清二楚。时不时还能做点小账，投机倒卖，赚点私钱。闲暇的时候还能抽空去天空之城的其他地方溜达溜达，学学有些来店里的游吟诗人，唱唱小调，画点画，偷得半日浮生。可是唯一一点让他觉得不舒服的是他依旧不知道自己为什么在这里。虽然他得空都会问问客人们他们为什么在这来做做参考，不过客人们都会说这里打钱快啊，经验多啊，装备好买啊等等云里雾里的话来饶他，还有少部分客人说的是什么自己以后不会在儿，地图太小得换大地图。不说说的这些话他是完全摸不着头脑。 就这样过了好久的一天，林晨雨和往常一样对一个跑来卖装备的人问了问这个问题，只看到这个客人一边脱下了身上所有的装备一边别过眼神张口轻飘飘的说了句退游回家。刚说完连卖全身的装备找回的钱都不要直接往路边一跑，对着下边的云就跳了下去。厚厚的云被他这一跳冲出了个小洞，惊慌失措的林晨雨刚反应过来跑过去想拉住他，这个小洞就已经被周围的云给飘过来盖住了。 然而，跑过去的林晨雨在看到那个小洞下面景色的刹那，静静的呆在了那里，路上人来人往，虽然显的他很怪异，可是也没谁太注意，毕竟天空之城里什么人都有，说不定这人隔这儿发疯，于是都绕道走。所以在林晨雨的身旁还形成了一个安静的角落。一直看着那块云直到晚上的林晨雨刚刚迈开脚，发现店里的掌柜突然出现在旁边，骂骂咧咧的说他不干活出来摸鱼这老长时间，赶紧回去，一大堆事等着你干，想不想要工钱了？?。一把抓住他的手就往店里拉，被拽的踉踉跄跄的林晨雨一直回头看着云盖着的那个小洞，直到最后别过了头，回到店里继续了往常的生活]]></content>
-      <categories>
-        <category>叹言</category>
       </categories>
   </entry>
   <entry>
@@ -174,22 +110,6 @@
     <content type="text"><![CDATA[前言有时候做开发移动端页面找 bug 很头疼，所以记录几个抓包的办法 safari对于有 mac 和 iphone 测试机的可以直接用 usb 进行连接之后两端同时打开 safiri 浏览器，在 mac 的 safiri 上有一个开发选项，点击之后就可以直接进行调试 —跟新—这里一般的方法是只能看到手机上 safiri 中打开的网页，对于 app 内的 webview 页面是抓不到的，如果想要抓到就必须得找客户端同学协助一下，将手机的 id 加到配置中重新 build 一个包 安卓对于安卓方法都有说使用 chrome://inspect 但是实际去试了试发现并不能走通，一种情况是只显示了 remote 列表，并不显示页面，另一种虽然显示了页面但是点击打开是空白。第一种没有找到原因，第二种查了之后发现需要设置网络？但是虽然连了 vpn 依然无效。。。 可能和手机有关，换了个手机可以使用- charles一个很强大的抓包工具，之前有看过一次，不过那时被复杂的操作吓跑了，表示学不会。。。然鹅再次被安利了之后又去看了看。。。。发现是真的强，直接能抓包 http/https 请求 首先得下载 charles 下载之后 点击 help 下面的 ssl proxying，点击 install charles root certificate 给自己的电脑安装证书，并用钥匙串添加始终信任 打开手机的 wifi，此时需要和电脑在同一 wifi 下，然后点击添加代理，选择手动之后，输入自己的 ip 地址【ipconfig/ifconfig ev0】 ，然后端口输入 8080【charles 默认的是这个】，确认之后手机再访问任何网页都会连接不上，然后在 charles 上都会有显示。但是都是 unknow，这时需要给手机页安装证书 给手机安装证书，根据不同手机安装会很麻烦，iPhone 手机在设置代理后，访问 chls.pro/ssl 就可以下载，如果没有成功下载，确认下代理设置对不对。下完之后安装，然后在 设置–&gt;通用–&gt;关于本机–&gt;证书信任设置 对证书进行信任就可以了。小米手机的话不能用自带的浏览器下，需要用三方浏览器，下载完成后通过 wifi 高级 安装证书 妈妈再用不用担心找不到 bug 啦麻烦的是对于每个手机都得安装证书，而且对于有些非接口的问题还是不太好找]]></content>
       <categories>
         <category>尺工</category>
-      </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[凉夏]]></title>
-    <url>%2F2018%2F06%2F06%2F%E5%8F%B9%E8%A8%80%2F%E5%87%89%E5%A4%8F%2F</url>
-    <content type="text"><![CDATA[不知不觉就已经到了6月，北京这边少雨，除了刚过年过来的时候有过一次人工降雪，其他基本没有降雨，夏天也来的很早，5月就感觉很热了。比较舒服的时间是清明那段时间，有时候在园区走走真有那种路上行人欲断魂的感觉 时间过的可真是快。在公司已经3个月了，一直在做活动中和即将做活动的状态中。在这边也遇见了不少人，国外回国度假的，毕业offer任选的。自己前不久前搬了次家，选了个稍微便宜点的主卧，每个月房租比以前都能省1000下来，虽然现在房租还是死贵。昨天抢小米手机还是依然没抢到，感叹小米手机现在都出到8代了，听人安利买了switch，结果发现 switch 游戏才是更大的坑。就连 oor 也发现了另一个相似乐队 my first story，一查发现是兄弟关系hhhh 一切都过的像理所当然，过的如过眼云烟。偶尔会想起大老师的真物，【春物好久没跟新了！】，偶尔会循环福笑，偶尔会梦见回到过去，偶尔会看着天花板发呆思考人生无意义。 然后发现 终究只是过客，其他人和事的精彩都是不属于你的，也终于能理解狼辛一直所说的融入感【竟然还在没事更点短篇，生命力真是。。。】 本物が欲しい面白いものが逢えたい]]></content>
-      <categories>
-        <category>叹言</category>
-      </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[迷茫]]></title>
-    <url>%2F2018%2F05%2F27%2F%E5%8F%B9%E8%A8%80%2F%E8%BF%B7%E8%8C%AB%2F</url>
-    <content type="text"><![CDATA[居无定所，无人牵挂，一觉醒来，四大皆空。 纵有一腔热血，无处安放也是累赘。 回首年少往事，无一可觉甚是留恋。 事与人皆无趣，墙角剑又蒙尘。 偶得梦中见，执剑战四方 泪眼惊坐起，嗤笑复睡去]]></content>
-      <categories>
-        <category>叹言</category>
       </categories>
   </entry>
   <entry>
@@ -249,22 +169,6 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[专精]]></title>
-    <url>%2F2018%2F02%2F17%2F%E5%8F%B9%E8%A8%80%2F%E4%B8%93%E7%B2%BE%2F</url>
-    <content type="text"><![CDATA[晚上看三月的狮子的时候，桐山狮子王战败后听米津玄师的 orion 的时候。男主角在雨里的画面让我突然想起以前有过人说过这样一句话特别喜欢下雨天不打伞，迎着雨踩着水回家。以前完全不能理解，但是突然感觉有那么点羡慕那种。 番里面有这么一句话，希望能有没有逃避的记忆。听到这句话真是深有感触。因为我对自己也说不出相信自己，你已经尽全力了这种话。仔细想想20多年来拼尽全力去做的事情好像真的没有，所有的事情差不多都是3分钟热度，之后就会自己犒劳自己，安慰自己说自己已经努力过了，稍微放松下劳逸结合才对。而且自己也是讨厌努力的人，于是就会放松下来。在3分钟的热度之后就会变得一直不温不热的状态，甚至是一不小心没燃料就会冷下去。 个人觉得那些为某件事情拼尽全力的人很闪耀，kirakira 一样。但是自己就像是羡慕这太阳的星星一样，对于太阳永远接近不了，而且自己的微光也随时会断掉一样。因为那样的事情做不来，那样的人因为性格也接近不了，只能在一旁看着而已。就是所谓在台下bb的吃瓜群众。 在山上闲逛的时候有想过这个问题，自己接近不了太阳的话，那自己成为太阳如何。自己只要在某一方面做的很好之后应该也可以 kirakira 。现在可以做的只要三方面，编程，电吉他，板绘。板绘自己可能真没什么天赋，而且太费时间划掉。编程和电吉他比较喜欢电吉他，但是编程是本质工作而且自己的电吉他水平稀烂。emmmmmmmmmmmmmmmmmmmmm，这两个都想要啊。所以两者就平分吧。时间就从游戏里面扣出来。游戏不能再和以前一样花太多时间在上面。有些时间完全是浪费，比如打守望一输再输之后就不服气，想看看到底能掉多少。。。到最后掉到鱼塘完全没有感情波动了还在继续打，这种完全就是浪费，玩游戏应该是快乐的才对。以后需要注意这些。相应的自控也得加强，不然这些都是废话。。。。= = 之后的一年时间，不，半年时间要拿出成效来。想要更波澜壮阔的人生，想要成为主角。]]></content>
-      <categories>
-        <category>叹言</category>
-      </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[面筋]]></title>
-    <url>%2F2018%2F02%2F08%2F%E5%8F%B9%E8%A8%80%2F%E9%9D%A2%E7%AD%8B%2F</url>
-    <content type="text"><![CDATA[感叹冬去春来，总算是把工作的事情稳定下来了，算是对半年前自己有了一个交代。接下来一定会是更加波澜壮阔的人生。其实毕业的时候就有想过换工作的事情，但是当时的自己贪图安逸就没有去做这些，而是想着推迟到年尾。不过，既然结尾是好的话，过程也不是那么重要 前端题目事件 什么是事件模型 什么是事件委托 target currentTarget 作用域 什么是闭包【具体题目】 123456789101112var foo = function()&#123; var a = 0 return function()&#123; return a++ &#125;&#125;var a = foo()a()a()var b = foo()b()// 0 1 0 let var 变量提升【函数表达式和函数声明区别】 this 1234567891011var foo = &#123; a: 1, bar()&#123; console.log(this.a) &#125;&#125;var bar = foo.barfoo.bar()bar()// 1 undefined// 改进输出1 `var bar = foo.bar.bind(foo)` bind apply call 123456// log 传多参数并再其前面加上一个 'hello'var log = function(...args)&#123; var _args = [].slice.call(args) _args.unshift('hello') console.log.apply(console,args)&#125; 1234567// 实现一个 bindvar bind = function(context)&#123; var me = this return function()&#123; me.apply(context,arguments) &#125;&#125; 异步 js 事件队列，异步队列 web worker promise async/await 123456789101112function async foo()&#123; var bar = function()&#123; return promise((resolve,reject)=&gt;&#123; setTimeout(()=&gt;&#123; resolve(1) //reject('err') &#125;,1000) &#125;) &#125; var a = await bar() console.log(a)&#125; 继承 写尽可能多的继承方法，并说明好坏 prototype 是什么 es6 网络 osi 7层及其代表应用 状态码 tcp 握手挥手，为什么不能两次 从输网址到展现发生了什么 优化加载速度 为什么加载 js 会使 dom 停止渲染 jsonp 原理 同源策略 解决跨域，前后端 session cookie 原理，localStorage sessionStorage 样式表 position 几个属性差别，应用场景 display 几个属性差别，应用场景 垂直居中方法 bfc 框架 vue 双向绑定原理 vue 挂载实例在哪个阶段 webpack 基础配置哪些，常用插件是什么 koa 和 express 相比，优点。主要逻辑【中间件】 如何写爬虫 其他 二叉树 链表和数组区别 环形网络 快排 中序遍历 sql tcp/udp 实时通讯【websocket】，实时对战【帧同步】 杂 最近做的项目 最难的项目，如何解决的 提个场景，给解决思路 个人项目爱好，技术博客 招聘信息网站 app主要也是那一些吧，首先第一个网络上的网站和手机 app，个人觉得好用点的就是拉钩了，拉钩的 app 很好用，网页倒是差一点。其他的比如 boss 直聘，智联，大街，100offer，51job都觉得不是很好用。所以主要的工具也就是拉钩 app，一天上限投十个，但是做点简单的任务可以加上线，上传简历这个功能觉得挺好用，不用去填一大堆表单。而且企业搜索比较全，唯一觉得不足的是对一些薪资和年限标注的可能和实际企业要求不是很符合。 某公司招聘页这个基本上每一个做的好点的企业都会在首页的 footer 下有一个加入我们的跳转链接，小点公司可能就是跳拉钩，或者是发邮箱。大一点的可能就需要你去登录注册填表单，超麻烦。而且这种形式被选中看到的机会也少，但是这种形式的话针对性很强，可以先去搜某公司主页，查看具体职位再找其他方式，拉钩或者邮箱投过去 内推这个肯定是最好的方法，找认识的或者朋友的朋友，或者网友等等，这样的机会会大的多，而且内推后不超过一周就会有消息。 招聘流程其实流程大多都是一样，可能有些小差异。看中简历，hr 联系，电面，视频面【不能直接过去的话】，现场面【包括两轮，面试官和 cto ，内容也会有很多不同，面试官主要会问跟职位有关的东西， cto 会问很多其他的问题，包括数据库，数据结构，网络协议这些基本的和一些项目有关的问题】， 最后就是人事沟通。之后就是等了。 参考网站Front-end-Developer-Interview-Questions面试一个前端开发者网络分析参考前端面试常见问题]]></content>
-      <categories>
-        <category>叹言</category>
-      </categories>
-  </entry>
-  <entry>
     <title><![CDATA[日常小技巧3]]></title>
     <url>%2F2018%2F01%2F24%2Fnew%2F%E6%97%A5%E5%B8%B8%E5%B0%8F%E6%8A%80%E5%B7%A73%2F</url>
     <content type="text"><![CDATA[withCredentials允许不同域情况下向后端发送 cookie 1234var xhr = new XMLHttpRequest();xhr.open('GET', 'http://example.com/', true);xhr.withCredentials = true;xhr.send(null); 9 arr 方法 map 对每一个元素都执行一个方法，并将返回值组成一个新的数组filter 对每个元素都执行一个方法，返回值为 true 的元素组成一个新的数组some 对每个元素都执行一个方法，当其中一个返回为 true 时，此方法返回为 trueevery 对每个元素都执行一个方法，当所有元素都返回为 true 时，此方法返回为 true 8 osi 7 层模型应用层 主要功能 ：用户接口、应用程序 典型设备：网关 典型协议、标准和应用：TELNET, FTP, HTTP 表示层 主要功能 ：数据的表示、压缩和加密 典型设备：网关 典型协议、标准和应用：ASCLL、PICT、TIFF、JPEG、 MIDI、MPEG 会话层 主要功能 ：会话的建立和结束 典型设备：网关 典型协议、标准和应用：RPC、SQL、NFS 、X WINDOWS、ASP 传输层 主要功能 ：端到端控制 典型设备：网关 典型协议、标准和应用：TCP、UDP、SPX 网络层 主要功能 ：路由，寻址 典型设备：路由器 典型协议、标准和应用：IP、IPX、APPLETALK、ICMP 数据链路层 主要功能 ：保证误差错的数据链路 典型设备：交换机、网桥、网卡 典型协议、标准和应用：802.2、802.3ATM、HDLC、FRAME RELAY 物理层 主要功能 ：传输比特流 典型设备：集线器、中继器 典型协议、标准和应用：V.35、EIA/TIA-232 Object.defineProperty，为某个对象新增属性1234567Object.defineProperty(obj, "key", &#123; enumerable: false, // 默认 false，可否被枚举 configurable: false, // 默认 false，可否被配置（删除） writable: false, // 默认 false，可否被修改 value: "static" // 要被定义的值&#125;);定义多个属性 123456789Object.defineProperties(obj, &#123; 'property1': &#123; value: true, writable: true &#125;, 'property2': &#123; value: 'Hello', writable: false &#125; mailto:yourmail.com邮箱协议，在支持的页面会自动调起邮箱程序 object.create这个感觉就是拿来做继承的 Object.create()方法创建一个新对象，使用现有的对象来提供新创建的对象的proto。 123456var son = function(name,value)&#123; father.call(this,name) this.value = value&#125;son.prototype = Object.create(father.prototype)son.prototype.constructor = son create 创建的是拷贝，所以更改 son.prototype 不会更改 father 的 prototype object.assign对象的浅复制，方法用于将所有可枚举属性的值从一个或多个源对象复制到目标对象。它将返回目标对象。 jsonp看着挺厉害，其实就是个漏洞。原理其实就是因为 js 的同源策略并没有对带有 src 标签的 dom 请求做限制，比如 img script 。所以就可以用 script 来取巧 123456&lt;script&gt; function say(param) &#123; console.log('jsonp'，param) &#125;&lt;/script&gt;&lt;script src="http://127.0.0.1:3000/"&gt;&lt;/script&gt; 第二个脚本服务端直接拼接字符串返回 say(‘data’)，就可以执行 say 输出了 javascript 垃圾回收 分配内存 内存读写 内存回收 在第三部的时候，如何判断哪些是可以回收的是个难点，js 中内置有垃圾自动回收机制，主要有两种，引用技术和标记清除。第一种是判断对象有没有被引用，第二种则是判断对象能不能被获得但是第一种对于一个循环引用的无法判断，现在大多是用的第二种，具体方法是从根元素开始(全局对象)，向下寻找所有对象。然后删除不能获得的对象 事件委托（代理）这个实际上就是通过事件机制（捕获，冒泡）来实现，比如一个场景，ul 下几个 li，与其给每个 li 加事件，也可以直接给 ul 加上事件，通过 target 来判断到底是哪个 li。]]></content>
@@ -318,14 +222,6 @@
     <content type="text"><![CDATA[砰！随手摔上了铁质的门锁，林哲雨使劲跺了跺脚好去适应略不合适的胶鞋。脚下穿的鞋子是公司最近才发下来的，回想起那天穿着橙色标志制服的人事管理对着台下一众穿着白色标志制服的员工，开了三个小时大会去讲这个事情，强调进一步统一大家的着装是为了增加员工的凝聚力，好发展出浓厚的企业文化。嘴角一撇的林哲雨把脑中出现的这些扔到脑后，朝着前方的交通站台走去。 2404年社会的交通方式已经不再是乘车，虽然仍有小部分人坚持这么做，但是大多数人都选择了传送这一简单快捷的方式。人们只需要走到指定的传送装置入口，验证成功后走进去就会被传送到另一个地方。仿佛几世纪前流行的哈利波特小说中所描写的壁炉传送一般的方式刚一出现就受到了很多年轻人的追捧。在这一方式普及成为社会日常交通的过程中，虽然也有过对这一技术的实现表示疑惑的声音和政府的不支持态态。但是随着时间的流逝这些反对和阻挠的也慢慢的消失。大家对这项划时代的技术也慢慢习以为常。林哲雨当时也是因为对这项技术感到好奇而进入到了这家公司。不过可惜的是进来之后从来没真正接近过这项技术，而是一直在开发app。 像往常一样的验证成功后进入到传送机内，林哲雨不耐烦的等待着舱门的关闭，随着光线慢慢暗了下来。闭上了眼睛的自己能感到幽绿的光线正扫描在身上，不到5秒后。自己就应该会出现在公司门口。但是随着舱门的慢慢打开，从里面走出来的林哲雨并没有看见主管那一贯的皱纹臭脸，而是惊讶的发现自己还是在家门口的传送装置前。 装置出问题了！？这是林哲雨的第一反应，自己转身准备重新去传送一遍，在验证身份的时候屏幕上和平时不大一样地在底部出现了一小行400的数字。担心着迟到扣钱的林哲雨没有在意它，直接大踏步走进了装置内。在装置内刚站定的自己突然想起来哪里好像不太对，这个400数字脑中隐约的有过影响。哦，对！刚进公司的时候由于对这项技术非常好奇，自己曾经偷偷的用主管的id卡进入过管理系统查看过一些资料，不过当自己尝试进入一个隐藏并带有密码的文件夹时由于输入密码错误被发现不是本人，直接被系统强制封锁了权限并触发了预警系统。正是由于这件事情导致了自己和主管一起被处罚，所以之后主管也一直对自己摆一张臭脸。那时输入密码错误的时候好像也是在最下行显示了400这个数字！。注意到情况不太对的自己在门马上要关闭的时候险之又险地跳出了装置，不过大衣却不小心给夹在门中。用力往外拽大衣的林哲雨没有想到大衣仿佛没被卡住一般直接拉了出来。由于双手一下子使错了力，一个踉跄倒在了地上。自己惊愕的低头看着手上拽着的大衣，上面有一股烧焦的味道，大衣角上有一道笔直的边缘切线，就仿佛是被激光切割掉一样。 林哲雨心中一阵后怕，立马拿起手机，打开公司的专用系统app去投诉这件事情，但是更奇怪的事情发生了。自己根本就登录不上系统，系统提示[不要重复登录]这不可能！林哲雨在技术部负责的就是app的登录注册和账号管理功能，这个系统提示是自己亲手写的，只有当已经登录后再尝试登录才会有这个提示。当时的自己还曾经向同事开玩笑说，我们的登录是通过眼球和皮肤下植入的芯片做登录确认的，已经登录成功之后怎么可能还有人能再正确输入这些登录状态？除非是一个完全一模一样的克隆人还佩戴着每个人都是唯一绑定的芯片才行吧。。不对，这样也不行啊，芯片的数据是实时更新的，而且克隆这个技术是严厉禁止的，也从来就没有人成功过啊。。。说到底做这个提示到底有什么用啊？。。当时的自己还怀疑过这个脑残的需求文档是不是写错了。 不过此时摸着被整齐切割的大衣边缘的自己想起这个曾经的玩笑却是起了一身的冷汗，难道，现在的我，不再是我？！！ 现在，有两个我！？？ 待续…… ps： 传送技术其实是先复制了所有的粒子信息，然后传送到另一边成功再构造之后清理掉这一边的数据来实现的哦~~(笑) ∑:)]]></content>
       <categories>
         <category>杂乱</category>
-      </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[不肝没钱就真的不能变强吗]]></title>
-    <url>%2F2017%2F11%2F25%2F%E5%8F%B9%E8%A8%80%2F%E5%8F%98%E5%BC%BA%2F</url>
-    <content type="text"><![CDATA[前言最近无聊又开始看起了主角起点就是占比人类比百分之一的人生赢家类的番，不由的想起当初为什么不喜欢看他的原因就是因为这种伪现实类番的会给我想变成他那样的，想体验那种人生这种很痛苦的梦想，然而这个梦想达成的概率比火星撞地球好小，然而然而就是因为它不为零，才是痛苦产生的根源。 把人生换成游戏来换句话说，困扰我的就是不肝没钱就真的不能变强吗这个严肃的问题 所以本咸鱼今天就特意深思一下这个问题 什么是变强如果把恶心的生活比作有趣的游戏的话，意外的能发现有很多东西是一样的，比如变强。在游戏里的话，变强一分为三种 充钱 爆肝 玄学 说到底怎么去定义变强这件事呢。游戏中的话很好理解，这个概念一出现的时候脑子里立马就能出现答案，网游就是比其他人更强，单机的话就是比怪物更强。或者换句话说比昨天的自己更强，因为有着数值上的直观表现，所以很容易知道自己是不是变强了。 那么现实生活呢？变强要怎么表现？或者说要怎么变成功？ 有更多的钱 有更多的亲友 有能力守护自己想要守护的事物 能做到自己或者他人想让自己做到的事 体验过更丰富的人生 能无所不能 想了想就以上这几种了 氪虽然我没钱，但是我对于钱是必须的而且作用接近万能的程度这一点深信不疑。以前有句老话总是说钱不是万能的，但是这句话很可疑。钱不是万能的大体在于你的原则阻止你为了钱做某件事情，但是原则这个东西真就那么坚固吗？把原则换个说法也就是衡量利益得失的一把天平，左边放上钱和钱能做到的事情，右边放上做这件事的成本和造成的后果影响，这里右边的东西的价值是随着人的认知而不断改变的。 拿钱说事有人会觉得恶俗，没有底线，没有原则。但是把钱换一种形式说，这笔钱能救你重病在床的亲人，让你的事业东山再起，让火箭研发这类高科技得以快速发展呢？ 但是。我没有钱。。 不强是你不够肝现实中的人对于变强来衡量很多是和其他人比，那些看上去就很厉害很成功的人。而不是和过去的自己来比。想拥有别人拥有的东西，但往往求而不得。也难怪，眼界狭窄，鸡汤喝多，被社交网络忽悠，就难免好高骛远，不知自己几斤几两。但是又说回来，想要变强这个想法本身有错吗？不能实现怪自己吗？我觉得更多应该怪这个垃圾游戏，现在的主流观点基本都是你做不到是你不够努力，把大多数你求而不得，失败的东西归结于你自己能力不够，不够努力。这个想法我觉得确实是对的，但是并不能把它加到很多事情上。拿个典型的例子，那些市面上的成功学一碗一碗的鸡汤基本都基于此。拿游戏里的话来说，不够肝是一方面，系统本身辣鸡更是一个原因。各种族阶级的出生各种设定值本来就偏差很大，这些设定除了表现出来的数值，还有不可见上限和下限，以及成长值等等。正是由于这些东西不可见，再加上这个数值系统没有一个明确统一的衡量方法【各个人对它的评定都不同】，导致把这一切都归功于你不努力。这种不强是你不够肝的话我个人觉得是不正确的。 肝然而努力确实是有限的方法中最好用的一个，抛开其他因素，这是每个人都能使用的方法。有很多人通过努力实现了自己的梦想。 但是对我这种咸鱼玩家来说，适度肝是可以的，爆肝那是不可能的。毕竟我个人觉得人生的目的和游戏一样是享受它带来的乐趣而不是痛苦。。爆肝这种本末倒置的行为绝对不会干。。 玄学这玩意说白了就是宗教，虽然看过很多中世纪欧洲里面的对于宗教的描述，但是总觉得这个东西就是通过自欺来达到欺人的效果，这种听天由命的事情还是不想干。。 咸鱼怎么变强？那么对我这种即没钱，又不爆肝，还没信仰的人究竟要怎么才能变强？ 写了这么长我想了这么我还是觉得不可能。。。。。。他喵的 但是，又舍弃不掉这个咸鱼的梦想。 哎，人生就是如此痛苦吧]]></content>
-      <categories>
-        <category>叹言</category>
       </categories>
   </entry>
   <entry>
@@ -433,22 +329,6 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[反省]]></title>
-    <url>%2F2017%2F09%2F10%2F%E5%8F%B9%E8%A8%80%2F%E5%8F%8D%E7%9C%81%2F</url>
-    <content type="text"><![CDATA[这一个月以来一直无所事事，比树懒还懒，整天觉得空虚无聊没意思。在网上晃来晃去，完全没有意义的在浪费时间。能做的事情，要做的事情都很多，但是却什么事情都不想做。回来之后就玩手机，不过连手机上的游戏都不想去肝，就上线看一下，然后看微博，那么多关注竟然都能看完，而且看微博那些无意义的视频就像吃药一样根本停不下来。期间还养成了各种不好的习惯。 现在太放纵自己了，因为目前的自由而随心所欲，完全就是人间失格叶藏的早期。闲逛的时候还沉迷进了很多不好的东西，辛亏自己还能清醒的停止自己不要深入，还能想起一些美好的东西。不然陷进去了真是可怕。感谢过去的我把我从深渊里拉起来。 为什么自己这近一个月会变成这个样子，现在想想真是偏离了正路好远。做事不再认真，得过且过。房间不想收拾，乱糟糟的。明明决定的事情却自己一而再的给找理由而推迟或者不做。同时被自己的欲望给牵着走，理智完全不见。每天坚持的弹琴画画也都觉得没有意义。 整体喊着这没意思，那没意义的我真是没救了。明明早就知道所有的事情必须自己觉得有意思，自己去认真做才会让自己和他人满意。明明早就知道什么是该做的却觉得不想走固定的计划好的路而不去做，因为想遇见更好的人，更好的事而反向的去刻意交结，讨好别人。为了打发时间，填满空虚的内心而去说些无意义的话。我所期待的更好的人绝不是这个样子，虽然目前仍然不知道是否可以遇到，怎样做才可以。但是现在的这个样子即使遇到了别人也会绕道而走。我应该尽可能的使自己更好，走到更高的地方才会有更大的可能。 另一方面，我自己在人际交往上也有很大的问题。自己并不擅长和人相处，就像周国平说过的，和人相处时，既不想让自己显的有趣又不想和无聊的人共处，还是一个人静坐比较好。可我现在只达到了第一阶段，或许连第一阶段也没有。因为我并没有对对方的了解，所以并不知道对方是否无聊。这是一项需要时间的技术，可是现在的社会环境根本没有这些时间，而我又是死宅，大门不出，二门不迈。所以我并不能去知道对方，但是却自大的把周围的人都定义成无聊的人，其实我自己才是最无聊最垃圾的人。这样的我却还渴望着遇见知音，恐怕神都满足不了我。 其实仔细想想，我身边就有很多很好的人，他们在不同的方面都是值得我去学习的，人是有很多方面的，也是复杂的。我不能因为某一面而全盘否定。产生这种问题的原因是自己的内心还太软弱，不想吃苦却想一步登天，渴望回报却不想付出，有野心欲望却没有动力和执行力。太容易放弃，我是什么时候成了这样的人呢。 自己怕麻烦是很久以来就有，但是因为怕麻烦而不去做只能招惹更多的麻烦，奉太郎说过的，必要的事情尽快做，不必要的事情不做。那么怕麻烦的他都有如此的信条，自己确实应该改正。 另外我自己似乎也很希望有蔷薇色，希望有一段美好的回忆，啊不，记忆。这似乎和我口中一直说的没兴趣，没想法，不想交异性朋友相矛盾。可能我期待的只是次元的美好，而深知自己这样的宅心理变态是没可能，而且还有很多麻烦事情。比如现在社会事事都要让着，宠着对方。女性为尊一样。我虽然不讨厌这种，但是绝谈不上喜欢。我所喜欢的社会是明国，日本二战时期，中世纪欧洲这类的社会模式。虽然君子绅士在现在都变成了笑谈，不过我觉得那样很帅。在蔷薇色这一方我是失败者，迷途者，又是满怀憧憬，期待的祈祷者。既然不知道方法，像我之前那样的胡乱去找只能找到腐烂色。那么还是顺其自然吧。几於病态的这份心情还是安抚下来收好。 那么到现在，已经知道自己的原因是想有人交流和期待蔷薇色，这两者我唯一能做的是自己变的更好然后静静等待。这一个月的闹剧到此为止吧。我需要恢复自己觉得无聊，程序化的日常，慢慢的积累自己。好在来年有更好的选择。 现在我要做的是下列几项 做出自己认为好的游戏 提高自己的素养 加强自制力 坚持弹琴和画画 看书，电影和番剧我竟然忘记了第五条，我曾经赖以生存的一条。]]></content>
-      <categories>
-        <category>叹言</category>
-      </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[悲秋的时候到了]]></title>
-    <url>%2F2017%2F08%2F30%2F%E5%8F%B9%E8%A8%80%2F%E6%82%B2%E7%A7%8B%E7%9A%84%E6%97%B6%E5%80%99%E5%88%B0%E4%BA%86%2F</url>
-    <content type="text"><![CDATA[为赋新词强说愁]]></content>
-      <categories>
-        <category>叹言</category>
-      </categories>
-  </entry>
-  <entry>
     <title><![CDATA[分享]]></title>
     <url>%2F2017%2F08%2F25%2F%E5%B0%BA%E5%B7%A5%2F%E5%88%86%E4%BA%AB%2F</url>
     <content type="text"><![CDATA[分享哇，这个东西烦了我一天。 原理主要是用到 jsBridge 来实现网页和应用之间的通信。实现可以互相发状态 这个主要得看不同 app 内的实现，去找他们的 api。 微信微信页面分享比较麻烦。首先得有微信公众号，然后得到 appId,之后要在微信公众平台上设置受访域名。之后外链微信的 jsdk ，它会注册一个 window 下的全局对象 wx。然后这里需要服务端做一个逻辑，返回给你一些设置信息去初始化设置 wx.config()当 wx.config() 这个接口完成后会触发 wx.ready(cb)。然后执行回调 cb 这个自己写的方法。这时才能用微信的方法 qqqq浏览器比较简答，但是不知道有时候不生效是个什么鬼。。 代码12&lt;script src="http://open.mobile.qq.com/sdk/qqapi.js"&gt;&lt;/script&gt;&lt;script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"&gt;&lt;/script&gt; share.js123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119import vm from './main.js'var share = &#123; config: &#123; title: '', link: '', img: '', desc: '', appid: '', &#125;, init() &#123; vm.$http.post('http://test.mrpyq.com/api/weixin/jsapi_sign', &#123; url: location.href.split("#")[0] //不带hash，query &#125;).then( (res) =&gt; &#123; wx.config(&#123; debug: false, appId: share.config.appid, timestamp: res.body.timestamp, nonceStr: res.body.noncestr, signature: res.body.signature, jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ', 'onMenuShareQZone'] //需要使用的微信方法 &#125;); this.wx(); &#125; ) this.qq(); &#125;, wx() &#123; if (window.wx) &#123; wx.ready(function () &#123; wx.onMenuShareTimeline(&#123; title: share.config.title, // 分享标题 link: share.config.link, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致 imgUrl: share.config.img, // 分享图标 success: function () &#123; // 用户确认分享后执行的回调函数 &#125;, cancel: function () &#123; // 用户取消分享后执行的回调函数 &#125; &#125;); wx.onMenuShareAppMessage(&#123; title: share.config.title, // 分享标题 desc: share.config.desc, // 分享描述 link: share.config.link, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致 imgUrl: share.config.img, // 分享图标 type: '', // 分享类型,music、video或link，不填默认为link dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空 success: function () &#123; // 用户确认分享后执行的回调函数 &#125;, cancel: function () &#123; // 用户取消分享后执行的回调函数 &#125; &#125;); wx.onMenuShareQQ(&#123; title: share.config.title, // 分享标题 desc: share.config.desc, // 分享描述 link: share.config.link, // 分享链接 imgUrl: share.config.img, // 分享图标 success: function () &#123; // 用户确认分享后执行的回调函数 &#125;, cancel: function () &#123; // 用户取消分享后执行的回调函数 &#125; &#125;); wx.onMenuShareQZone(&#123; title: share.config.title, // 分享标题 desc: share.config.desc, // 分享描述 link: share.config.link, // 分享链接 imgUrl: share.config.img, // 分享图标 success: function () &#123; // 用户确认分享后执行的回调函数 &#125;, cancel: function () &#123; // 用户取消分享后执行的回调函数 &#125; &#125;); &#125;) wx.error(function (res) &#123; &#125;); &#125; &#125;, qq() &#123; if (window.mqq) &#123; if (mqq.ui.setOnShareHandler) &#123; mqq.ui.setOnShareHandler(function (type) &#123; mqq.ui.shareMessage(&#123; title: share.config.title, desc: share.config.desc, share_type: type, share_url: window.OPEN_DATA.shareurlk, image_url: share.config.img, back: true &#125;, function (result) &#123; //result &#125;); &#125;); &#125; if (mqq.invoke) &#123; window.mqq.invoke("data", "setShareInfo", &#123; share_url: window.OPEN_DATA &amp;&amp; window.OPEN_DATA.shareurl, title: share.config.title, desc: share.config.desc, image_url: share.config.img, callback: function () &#123;&#125; &#125;); &#125; &#125; &#125;,&#125;export default share; 配置填下 config微信的话接口需要后台做些逻辑，比如生成签名另外 qq 说 meta 也有用，不过我试了下没用123&lt;meta itemprop="name" content="标题" /&gt;&lt;meta itemprop="image" content="图片地址" /&gt;&lt;meta name="description" itemprop="description" content="描述" /&gt;]]></content>
@@ -521,14 +401,6 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[blue_bird]]></title>
-    <url>%2F2017%2F06%2F14%2F%E5%8F%B9%E8%A8%80%2Fblue-bird%2F</url>
-    <content type="text"><![CDATA[幸福的青鸟小王子有一天突然想出发寻找幸福。因为国内最伟大的巫师告诉他：「幸福是一只青色的鸟，有着世界上最美妙清脆的歌喉，找到了之后得马上把它关进黄金做成的笼子里，这样，你就可以得到你想要的幸福。 他不顾国王及王后的哀求及挽留，只带了一个黄金笼子就踏上找寻幸福之路。小王子是英勇的，一路上虽有高山峻岭阻挡，但是他都不以为惧，只因为心中的那股执着在支撑着他。他经过了许多国度，得到了很多以前从没看过、从没听闻的知识，成了一个见闻广博的人。 小王子抓过不少青色的鸟，但是总在放进黄金鸟笼后，鸟便不知为何的死去。他知道，那不是他所要寻的幸福。 后来，黄金笼显得有些旧了，小王子也不再年轻。他突然强烈地忆起远方的双亲。小王子回到了自己的王国，才发现人事已非。国王和王后早在他离去后没多久，就因为过度的悲伤及思念而相继过世。由于没有继承人，所以这个王国的人民为了享有庇护，渐渐的搬离到邻国，现在的城镇只剩下几户人家。 小王子落寞的走在荒凉的街头，忽然有一个人拉住了他的衣角，盯着他怀里的黄金笼子。那是一个发鬓斑白的老人。 「大巫师！」小王子认出了他，失声叫出。 「王子，我对不起你，当初不应该鼓励你去找寻青鸟。」老人哽咽地说着，从破旧的口袋里掏出了一件物品。「这是国王及王后临终前要我交给你的东西，希望你好好珍藏。」说完，老巫师便摇着头，哀伤的离开了。 小王子一看，原来那是国王为幼时的自己雕的一只黄莺。刹那间，所有的回忆不断地出现，悲伤的眼泪涌出小王子的眼，他把木鸟紧紧的抱在胸前，十分地懊悔。突然，怀里的木鸟动了动，叫出了声音，小王子一呆，一不注意，就让黄莺给飞走了。 那是幸福的青鸟，而他却来不及将它放进黄金笼]]></content>
-      <categories>
-        <category>叹言</category>
-      </categories>
-  </entry>
-  <entry>
     <title><![CDATA[mongodb(二)]]></title>
     <url>%2F2017%2F06%2F12%2F%E5%B0%BA%E5%B7%A5%2Fmongodb(%E4%BA%8C)%2F</url>
     <content type="text"><![CDATA[概述 nosql这是个和口号一样的玩意，和 sql 没啥关系，sql 只是一个查询语言，mysql 才是关系型数据库的一个代表。nosql 并非就没有 sql 查询，它也不代表非关系型数据库。非关系数据库在社交应用，聊天通讯等使用较多。 mongooseelegant mongodb object modeling for node.js这是官方的介绍，优雅。。 个人理解它是相当于对 mongodb 做了一个中间层，对数据进行处理。 使用 安装连接npm install mongoose在原来的 express 框架中做些修改。我采用的是如下结构根目录下新建文件夹 model 来建立 mongoose 结构1234567891011var mongoose = require('mongoose'), con = mongoose.createConnection('mongodb://localhost:27017/test'), UsersSchema = new mongoose.Schema(&#123; name: String &#125;, &#123; versionKey: false &#125;);var users = con.model('users', UsersSchema)module.exports = users 首先引入依赖之后连接数据库，本地 27017 端口下的 test 数据库这里使用的是 createConnection(),它和文档上使用的有区别。1mongoose.connect('mongodb://user:pass@localhost:port/database'); 文档中的是建立的是默认的数据库连接，之后建立 model 也是用的这个默认，1var Tank = mongoose.model('Tank', schema); 这样就可以连接多个数据库做不同处理 schema,model,documentsschema 我理解它为一个抽象的对数据定义的结构，它本身有可以定义许多方法。但本身并不能进行操作model 是从它这里继承下来，并与数据库绑定，相当于 collections，可进行操作从 model 中 new 出来的实体对象 documents 则相当于是每一条数据。 数据验证 1234567891011121314151617181920212223242526var mongoose = require('mongoose'), con = mongoose.createConnection('mongodb://10.10.1.3:27017/test'), UsersSchema = new mongoose.Schema(&#123; name: &#123; type: String, required: [true, 'name is required'], validate: &#123; validator: function (v) &#123; return typeof v == 'string' &#125;, message: 'name is not a string' &#125; &#125;, age: &#123; type: Number, required: [true, 'age is required'], max: 12, min:0 &#125; &#125;, &#123; versionKey: false //取消版本锁，否则每条数据都会有个 _v 字段 &#125;);var users = con.model('users', UsersSchema)module.exports = users 以上建立了一个简单的 users 集合。以上定义了一个具有简单验证的 schema，如果出错，会在 err.errors 中显示错误信息type: 确定参数为指定类型，不是则报错，【为string的时候会自动把其他类型进行转换】required: 此字段为必须validata: 自定义验证函数，当返回为 false 时报错，附带 message 字段 number类型特有min,max，可确定范围string类型特有 enum, match, maxlength, minlengthenum: 确定字符串为给定枚举中的match: 正则匹配 bug在 mongoose 中，你给 model 定的名字会自动给你转成复数形式，【什么坑爹玩意】。除非你显示声明123456789var schema = new Schema(&#123; name: String &#125;, &#123; collection: 'actor' &#125;);// orschema.set('collection', 'actor');// orvar M = mongoose.model('Actor', schema, 'Actor');]]></content>
@@ -566,14 +438,6 @@
     <content type="text"><![CDATA[前言因为毕设涉及到 3d 模型的原因，一直在想怎么去做，刚开始一直是想找先成的模型看有合适的就直接导入进去，找了很久没发现合适的，但是发现几个不错的网站【2333】，模型找不到后又琢磨着直接用 three 去控制顶点进行建模【这种简约风格也挺好看】，比如这个，后来稍微去看了下里面说的什么顶点生成器啥的，woc，这玩意简直不是一般的麻烦，然后这个念头也灭了，最后偶然琢磨 blender 的时候突然发现，我可以用这货直接建模啊，【很早以前也有去想学过 3d 建模啥的，3dmax 也下过，不过看着太麻烦就放弃了，到头还是绕不过去。。】调查了下发现 blender 要比其他的软件好上手很多，于是然后我就开始了又一个新坑。 基本设置上面罗里吧嗦的说了一大堆，现在来设置一些基础的东西，【其实我都是把教程上的扣下来。。】教程 blender 下载最开始是随便在网上找了一个下，今天偶然发现 steam 上竟然有，毫不犹豫的删掉了以前的又下一遍。steam 喜+1.。下载后设置一下中文语言啊，界面字体大小啥的，笔记本 1080p 看的字小的真是眼睛疼然后在设置里面把选中调成是鼠标左键选中，blender 默认的右键完全不符合人体习惯 快捷键a 全选/取消全选按住鼠标中键 旋转物体按住 shift + 鼠标中键 移动摄像机按住shift/ctrl + 滑轮 上下/左右滑动界面小键盘 调整看物体的角度ctrl + ↑ 全屏看这一部分ctrl + ← 切换模式ctrl + r 环切ctrl + u 当前工程默认为启动工程ctrl + 鼠标左键 全套选中ctrl + alt + q 切换为4分图shift + space 放大当前视图shift + a 增加物体tab 切换物体模式，编辑模式z 切换到框架模式x 删除m 层操作t 显隐工具栏n 显隐工具栏s 放大缩小r 旋转f12 渲染预览小键盘0 摄影机视角k 切割 k + z，穿透切f 选中2边或4点后点f，可在中间生成面从入门到放弃 搁浅。。做了个马克杯之后发现做完整模型太麻烦了，还是去网上下了个带贴图的模型。。。建模这个东西再次搁浅]]></content>
       <categories>
         <category>尺工</category>
-      </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[蜕化]]></title>
-    <url>%2F2017%2F04%2F18%2F%E5%8F%B9%E8%A8%80%2F%E8%9C%95%E5%8C%96%2F</url>
-    <content type="text"><![CDATA[转眼都4月份了，再2个月就毕业了。每到一件事物即将消亡的时候，人都会变得伤感起来，并不是伤感它的消亡，而是伤感自己不再拥有它的存在，即使拥有与否没有任何变化。每一次经过蜕化的时候都会把以前的东西扔掉，然后期待新的东西。可是，扔掉这些东西的时候，手心会突然被刺一下。这种感觉很奇怪，说不清到底是属于哪一种感情，也没有道理，只是让人有些不快。期待的新东西到手时也没有想象中的快乐，当时感觉很棒，可一小时后，一天后就习以为常，淡然无味，呵，无穷欲望的人类啊。 一直都是这么过来的，只是这次的不快更加强烈。站在路旁看着以前的朋友们，以前的学校，以前的我。明明才过去半年多，却都不怎么熟悉了。这些都已经慢慢在变成记忆，在慢慢沉淀，在慢慢脱离现在的我。还没有蜕化完全的我，看着眼前的世界，已经会变成另一个和我无关的世界，还存在着自己的些微痕迹，感觉很奇怪，这些只有我能看得见的痕迹。这些能证明我曾存在过的痕迹。 应该变得更好，也会变得更好。一直怀着这样的信念走过来，磕磕绊绊，摇摇晃晃，即使付出代价。不过总感觉像是在逃离以前的我]]></content>
-      <categories>
-        <category>叹言</category>
       </categories>
   </entry>
   <entry>
@@ -649,14 +513,6 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[rock&roll!]]></title>
-    <url>%2F2017%2F02%2F25%2F%E5%8F%B9%E8%A8%80%2Frock%26roll%EF%BC%81%2F</url>
-    <content type="text"><![CDATA[已经不知道多少次被感染了。深深地吸一口气，然后慢慢的吐出来。现在，凌晨 0 点。就像是生化的t病毒一样，能够迅速的在人群中传播。坐着 抖腿 点头站着 瞎蹦 摆手 哦，不需要坐着。 一旦底鼓敲响，扭大音箱失真，潜伏在人体内的病毒就发作了。 发作病表地点the beginning mv发病taka 甩起红话筒的那一刹那 地点横滨演唱会 nothing helps发病tomoya 前奏的清脆双鼓点，以及排练瞎甩膀子时 地点枪花 Sweet Child O’ Mine发病slash 的指法练习 地点G5 yamato dying to survive发病开始到结束 地点武汉草莓音乐节 ko ko mo发病大叔犀利的solo和小哥站着打鼓的姿势，这2人演出太风骚了 地点上海梅赛德斯 oor发病wherever you are 的全场手机手电筒亮起]]></content>
-      <categories>
-        <category>叹言</category>
-      </categories>
-  </entry>
-  <entry>
     <title><![CDATA[next自定义相册]]></title>
     <url>%2F2017%2F02%2F23%2F%E5%B0%BA%E5%B7%A5%2Fnext_%E8%87%AA%E5%AE%9A%E4%B9%89%E7%9B%B8%E5%86%8C%2F</url>
     <content type="text"><![CDATA[前言对于hexo 的主题 next 搭建 blog ，还是感觉不怎么好用， 文件结构很混乱，想要改一个样式发现有好几个地方都能设置，但是效果竟然还不一样。 生成的文件也是有很多不需要的设置，臃肿。 对资源的加载速度太慢 定义了很多全局的变量，方法。自己想要在写个 js 还得考虑命名冲突问题，而且还不知道它到底定义了哪些 插件乱，虽然内置了很多插件，但是并不能很个性化的定制，还要自己一点点改。 不过。。。还是很感谢它帮我完成了自己的第一个博客吧。 相册在不少空间都有看到有很赞的图文模式，比如 lofter （pc）这样子的，所以也想去搞一个相册，放一些自己摸鱼啊拍照什么的。既然是自己写的话，就肯定做比较好用的，比如 cdn加速啊，自动化部署啊，图片懒加载啊，图片加载效果啊（比较喜欢知乎pc现在的图片加载方式） cdn加速这个就直接想到了用图床，速度肯定比我放 github 上快，并且 github 空间流量有限。所以就拿住所周知的七牛当图床了 七牛首先注册登录后就送了每月 10g 的空间和 10g 流量，还是很不错的之后就在对象存储里面创建一个存储空间，然后再开发文档里面找到 node.js sdk 照着上面 npm install qiniu 然后运行它给的那段代码就好了。之后就把链接换掉，用七牛的链接就好另外七牛可以设置图片的一些功能和样式也挺方便的 代码就比文档上给的多了一个取得所有文件名字的 node 操作。1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465var qiniu = require("qiniu");const fs = require('fs')const path = "./img"var file_name = [];//需要填写你的 Access Key 和 Secret Keyqiniu.conf.ACCESS_KEY = 'yours';qiniu.conf.SECRET_KEY = 'yours';//取得所有资源名字function get_file_name(path) &#123; let files = fs.readdirSync(path) for (let i = 0; i &lt; files.length; i++) &#123; if (fs.statSync(path + '/' + files[i]).isFile()) file_name.push(path + '/' + files[i]) else get_file_name(path + '/' + files[i]) &#125;&#125;get_file_name("./img") //要上传的空间bucket = 'yuicer';//上传到七牛后保存的文件名var key = []for (let i in file_name) &#123; key[i] = file_name[i].substring(2)&#125;//构建上传策略函数function uptoken(bucket, key) &#123; var putPolicy = new qiniu.rs.PutPolicy(bucket + ":" + key); return putPolicy.token();&#125;//生成上传 Tokenvar token = []for (let i in file_name) &#123; token[i] = uptoken(bucket, key[i]);&#125;//要上传文件的本地路径var filePath = []for (let i in file_name) &#123; filePath[i] = file_name[i]&#125;//构造上传函数function uploadFile(uptoken, key, localFile) &#123; var extra = new qiniu.io.PutExtra(); qiniu.io.putFile(uptoken, key, localFile, extra, function (err, ret) &#123; if (!err) &#123; // 上传成功， 处理返回值 console.log(ret.hash, ret.key, ret.persistentId); &#125; else &#123; // 上传失败， 处理返回代码 console.log(err); &#125; &#125;);&#125;//调用uploadFile上传for (let i in file_name) &#123; uploadFile(token[i], key[i], filePath[i]);&#125; 自动化部署每次加张图片还得去改代码太麻烦，所以就把图片地址单独抽出来放一个文件然后去引用它做到自动化。用 node 读取放图片的文件夹取得图片名字，然后修改后加上七牛前缀再写出到一个文本文件，之后在 js 里面去 ajax 请求这个文本文件获得地址，然后去替换 img 的 src 。因为 img 用的是 vue 的 for 循环渲染，所以相当得好替换。 破乎的加载方式先使用 canvas 显示个模糊的，可能请求了个小图然后配置到 canvas 上，然后等大图请求道后再赋到img标签上并且canvas隐藏，中间设置个动画。感觉挺麻烦的。。]]></content>
@@ -689,14 +545,6 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[想想12_28]]></title>
-    <url>%2F2016%2F12%2F28%2F%E5%8F%B9%E8%A8%80%2F%E6%83%B3%E6%83%B312-28%2F</url>
-    <content type="text"><![CDATA[练玩琴之后看了下426的视频，其中他说到3年前一毛钱都没有的独自一人飞去日本，3年后再回上海能看到这么多小伙伴的支持。看到这一刻真的是由衷的羡慕，然后自己也想跳进单反坑。。但是我的理性正在拼命阻止我，，老话说摄影穷三代，单反毁一生 一定要慎重啊。然后看了看支付宝余额的我默默的压下了这个念头。 理想丰满 现实骨感]]></content>
-      <categories>
-        <category>叹言</category>
-      </categories>
-  </entry>
-  <entry>
     <title><![CDATA[优雅的去掉滚动条]]></title>
     <url>%2F2016%2F12%2F26%2F%E5%B0%BA%E5%B7%A5%2F%E4%BC%98%E9%9B%85%E7%9A%84%E5%8E%BB%E6%8E%89%E6%BB%9A%E5%8A%A8%E6%9D%A1%2F</url>
     <content type="text"><![CDATA[问题众所周知，滚动条这个东西丑，不同浏览器对滚动条的显示样式还不一样，如果是在浏览器边缘的还可以忍受，如果在页面内部出现滚动条就会让人感觉肯定是有bug，而且它还有一个问题，如果是自适应，那么滚动条出现和消失的时候会突然增加17px，造成页面抖动，布局乱掉，所以只想要滚动条的滚动功能避免掉这些问题该怎么办呢 前要 visible 默认值。内容不会被修剪，会呈现在元素框之外。hidden 内容会被修剪，并且其余内容是不可见的。scroll 内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。auto 如果内容被修剪，则浏览器会显示滚动条以便查看其余的内容。inherit 规定应该从父元素继承 overflow 属性的值。滚动条高度17px 测试 谷歌 百度 火狐 ie9+滚动条出现时定宽高容器的实际宽或者高会自动减去滚动条的宽或者高进行改变 首先要知道滚动条的基本机制，为什么为有滚动条出现呢，我们假设有2个 div ，div2 在 div1 的内部，当 div1 的高度或者宽度超出 div2 的时候默认是显示超出的 div1 的，因为此时的 overflow 取值为默认值 visible ,设置 auto 之后滚动条就出来了。那么这里有一个让我很困惑的问题，浏览器的滚动条是怎么出来的呢？比方说我直接设置 body { height: 1200px }html { height: 1400px }就直接出现了滚动条，这里没有任何子元素超出父元素，但是依旧出现了滚动条，这个我是理解为浏览器的一种机制，它设置了body {overflow: auto} ，这个设置很浅，可以被 html 的 css 设置 overflow 给盖掉，这样当页面元素超出屏幕可以显示的范围的时候就会出现滚动提示。这个设想不严谨，需要再考虑 思路第一个问题，让滚动条消失有2个思路 滚动条被外部元素隐藏 滚动条设置样式隐藏 第二个问题， 让滚动条一直出现，不是啥好方法。。在这里不说了 给滚动条留出距离【这个距离根据滚动条有无进行变化来让页面不抖动】 问题1方法1123body&#123; overflow:hidden;&#125; 这个方法会直接让页面不能滚动，滚动条不出现 方法2123::-webkit-scrollbar &#123; width: 0px;&#125; 这个方法让滚动条隐藏，可以滚动，但是只支持webkit浏览器，有兼容问题 方法31234567891011121314151617#div0 &#123; width: 480px; overflow: hidden; background: #333;&#125;#div1 &#123; overflow: auto; width: 500px; height: 500px; background: #666;&#125;#div2 &#123; height: 900px; background: #999;&#125; div0 包括 div1 div2这个方法让滚动条隐藏，可以滚动，但是如果是自适应的话，【滚动条根据情况出现】就会造成抖动 问题2方法1123456789101112131415161718#div0 &#123; width: 483px; overflow: hidden; background: #333;&#125;#div1 &#123; overflow: auto; width: 500px; height: 80px; background: #666; word-break: break-all;&#125;#div2 &#123; padding-right: calc(100% - 483px); background: #999;&#125; 这个方法让滚动条隐藏，可以滚动，有没有滚动条div2内的内容都纹丝不动，原理就是有滚动条的时候 div1 的宽度会自动改变，被 div2 的 100% 自动获取，就可以实现内容 padding-right 自适应，但是这个方法不适用浏览器的滚动条。 div2文本容器。内容区域只设置内容样式，同时有个自适应的右边距，div1可滚动容器。设置宽高 overflow: auto 让区域可滚动，div0多余部分隐藏容器，隐藏div1的滚动条，方法21234567891011121314151617html &#123; overflow-y: scroll;&#125;:root &#123; overflow-y: auto; overflow-x: hidden;&#125;:root body &#123; position: absolute;&#125;body &#123; width: 100vw; overflow: hidden;&#125; 此方法来自张鑫旭大神的博客这个方法我也不是很懂里面 root 设置的属性。。。不过核心就是 body 的 width: 100vw 固定body宽不受滚动条影响，不过这个会导致出现横向滚动条，所以还得加上 overflow-x: hidden]]></content>
@@ -718,14 +566,6 @@
     <content type="text"><![CDATA[利用tcp或者http高逼格的回复对方，会惹对方生气，，尽量不用吧tcp对话 f 在吗?[5分钟延迟]t 在f 有个事你给帮个忙[5分钟延迟，且产生丢包]t 啊？f 就balabala这事，你尽快搞完然后回我t 哦 tcp过程产生延迟，丢包现象不可避免 http回应对方 418 卖萌200 好202 哦100 你继续301 找他吧，这事我不管302 这回你找他去吧404 你被我拉入黑名单403 拒绝你的要求500 不知所措503 现在不行，等会把]]></content>
       <categories>
         <category>杂乱</category>
-      </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[转变]]></title>
-    <url>%2F2016%2F12%2F21%2F%E5%8F%B9%E8%A8%80%2F%E8%BD%AC%E5%8F%98%2F</url>
-    <content type="text"><![CDATA[偶然的停下来看了看时间，现在是12月21号了，在公司上班也已经2个多月了，现在停下来想了想，9月份找工作的那一个星期好像离我很遥远了。不由的感叹时间真是能让人习惯任何事情。 记得那个时候天还很热，太阳还是晃眼睛，每天早出晚归到处跑招聘会。因为学校在三环外，去哪里都远，武汉的交通又差，所以坐了几次公交之后就开始滴滴打车，那几天真体会到什么叫花钱如流水。看着支付宝的那几个数字每天小一点，每天小一点。心疼的我只好安慰自己说这是给自己的投资。打车的时候遇到了好多司机，经常跟他们聊天。他们大多都是看着私家车出来挣点外快，其中和有几个司机的说话时真的感觉到人活着是很累的啊，人到三十，上有老，下有小，公司家庭压着，还谈个什么梦想，每天就纯粹为了挣钱罢了，不求大富大贵，只求平平安安。以前的我很是不屑平平安安，庸庸碌碌的活。想着自己是不同的，自己能够做到一切想做的事情。到了如今，我也慢慢觉得中庸也没什么不好，也理解到自己也是一个普通人，和几十亿人没什么不同。生活真是不容易 找工作的过程意外的不是很艰难，最开始的去投了bta这种大巨头。不过理所当然的挂了，记得当时接腾讯的面试电话一共就打了4分多钟，现在想想真是辛苦了那个面试官，碰到我这么一个小白，问啥啥不会，最后还得照顾我的心情，得委婉的挂电话。这通电话让我一下子清醒了过来，清清楚楚的把我身上打上了一个标记，让我认清了自己的能力，所以我还是很感谢这个和我说了4分钟话的面试官。招聘的分3批，第一批巨头9月或更早，第二批中等10月，第三批11月。这之后我对于能进大公司基本没抱期望了，去招聘会也纯当是去涨姿势了。不过不得不说，大公司里的人确实给人感觉不一样。记得最清楚的是小米招聘会的那个宣讲人，说话真的很厉害，就好像以前的那种贵族绅士一样，对人【即使是我们这些去招聘会的人】很尊重，位高的人能够对位低的人保持尊重，光这一点我就觉得很难了。说话也是给人一种聪明的感觉，一直在笑着，仿佛一切都在掌握。我自己对聪明的人是这么定义的【达成自己的目的的同时让他人感到开心】，这是我遇到的第一个做到了这一点的人，也让我感叹果然人和人的差距能够达到人和猴子这么大。 之后又面试了4次，其中的一次面试是在我宣讲会坐完卷子的第二天给我发了面试，当时以为是那个大公司，去了之后发现要我的是这个大公司进行投资了的一个小公司的老板，和这个大公司没任何关系。。。面了大概半个小时他就当场跟我说要我了，连工资都告诉我了。。。当时真的是超开心，因为这之前只面过一个58，而且面的当场我就感觉我挂了，因为他问我关于ie的时候，我直接说没研究过，也不打算去管他，这玩意早该过时。然后那个面试官就不开心了。。。 拿到了人生的这第一个offer之后我一下子觉得找工作不难，因为我自己对于前端在大学的水平属于切切图，排排版的水平，就在7,8月份的时候闭关2月做了一个个人介绍网站，网站分三块，第一块是个svg动画介绍我自己的，第二块是做了个播放器，第三块做了一个射击的小游戏。后来的事实证明，这个网站确实帮了我不少忙。拿到offer后整个人就松下来了，对于招聘会也是看的顺眼的才去，之后又跑了2天没什么进展就直接没跑了，就这样我找工作的事情就结束了，之后又收到了3家公司的面试，最后还是选择了这个当场要我的小公司。现在想想，如果我找到之后没有那么松懈，再多跑跑，今天是否会不一样呢？。 之后去公司发现这真的是个小公司，，前端就2人。。我一个，还一个一年的。整个公司就30人左右，woc，这没人带怎么搞，项目不会做怎么搞，当时老板甩给我任务的时候整个人都是楞逼的。看着前任留下来的代码死活看不懂，注释都没有，也没交接文档，吐血啊，后来跟另个人商量直接推掉重做了，之后2个星期就各种恶补，竟然还真给做出来了。。。前端这一套搞下来之后【虽然没自动测试和自动发布】，涨了一大堆经验，发现前端的路一下子宽了很多，要学的东西也还有很多，虽然磕磕绊绊的，现在的我也能够上手工作了，可喜可贺。在公司的这2个月真的学了很多东西，比起暑假那2个月见识开广了很多。 昨天摸鱼的时候偶然点开了保存了好久的一个莴苣的博客，转了一圈之后立马献出了我的膝盖。大家可以想象一下，一个高中生，但是做的项目是你的好几倍，而且会音乐，画画，看的书又多。而且而且还是一个高中生。这种人生真是让人羡慕。痛定思痛，反思了下我和莴苣大大的差距。自己的技能点都不知道瞎点到哪里去了，吃啥啥没够，干啥啥不精，不努力，还老贪玩。哎。。人艰不拆。 这2个月来真的让我变了不少，得到了很多，也失去了很多，想起yui的tokyo那首歌。何かを手離してそして手に入れる、そんな繰り返しかな。就这样慢慢的来吧，慢慢的越变越好。一年以后，我能够看的更远，飞的更高，]]></content>
-      <categories>
-        <category>叹言</category>
       </categories>
   </entry>
   <entry>
@@ -809,14 +649,6 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[我是谁]]></title>
-    <url>%2F2016%2F10%2F09%2F%E5%8F%B9%E8%A8%80%2F%E6%88%91%E6%98%AF%E8%B0%81%2F</url>
-    <content type="text"><![CDATA[最近几天没什么事，可以好好休息一下，所以就把对我是谁这个问题以前有过的想法整理整理。 对于唯心主义的三大问题之一，特别还是哲学问题，是没有答案的，或者说每个人都会有与别人不同的正确答案。那么就先对这个问题描述一下吧。 对于我是谁这个问题，随便找一个人问，估计大多都会回答，我是人这样子吧。但是人的定义是一个泛指，他并不是指个体，回答我是 人这个答案其实并没有正面回答，我是人的子集，（可能出现不是真子集的情况），所以所如何去定义我这个个体呢？ 现在很多人都会想到肉体，思想这些东西吧，那么首先就从肉体开始，举一个例子，哲学中一个很出名的特修斯之船，大意是这样，一艘船A，开始坏了船桨，于是给换了一个，A还是A吗？又过了很多年，船身也坏了，也给换掉了，A还是A吗？一直到最后，船的所有部分都给换掉了，那么A还是A吗？对于人的肉体也是一样，肉体无时无刻不在损坏，更新，可能你觉得这个幅度很小，那么看看婴儿的你和现在的你的照片，毫无疑问肉体有很大的变化，但是对此大多数人还是能毫不犹豫的回答说这就是我，那么，再往深处说，现在也有器官培养，修复。假如拿到了你的干细胞，培养成器官并且给别人换上，那么别人会变成你吗？更具有迷惑性的，未来如果用的基因克隆出另一个你，那么你和你的克隆谁才是你？ 上面一段是对于肉体来说，估计看到一半不到你就会觉得思想才是我，才是自己，毕竟有句话叫做我思故我在。关于思想这种的还又很多，比如精神，思维，灵魂，意识，我们就拿思想来做代表，这里就和人格同一性扯上了关系，因为灵魂也是具有变化性，很简单，一个人的思想变化是通过自己以前的思想来进行判断并进行改变，从这一点说，其实每个人都不具有独立思维，因为你的思维打一开始就都是从别人活着环境来的，即使是自己的判断，但是你所能判断，也是依靠着以前从别的地方获得来的。十年前的你，现在的你，五十年后的你，是否都是同一个你呢？恐怕你会回答那当然咯，这么回答也没有错，因为虽然思想是不断变化着的，但是你依然记得前一秒的自己，前几年的自己，也就是说存在思维链这个东西，所以你才那么肯定那就是我，如果采用这种说法，那么可以用弗洛伊德的话来说，你的过去只是你的记忆，虽然这句话听起来很偏激，但是不靠记忆你又怎么能证明前一秒的你就是现在的你呢？再举几个问题，一个突然失去记忆的人是否还能称作他自己？一个大脑受创的人突然性格大变是否还是他自己？ 那么，现在就可以说，我是谁这个问题，不能用自己的肉体或者是思想来定义，当然如果通过别人来告诉你就是你（很多人都是这么来定义自己的吧）就更可笑了。再往外扩展，一切的一切都是变化的，都是不能去准确的定义它到底是什么。所以我的个人观点是我是谁这个问题完全不重要啊，只要我觉得我是我就可以了。看到这里的你是不是很想打我呀？别急，听听我的解释吧，一个世界对于一个个体来说，存在的时间也就是这个个体从诞生到消亡的时间，你可能又会反驳我，地球存在这么多年。确实，地球存在很多年，但是对我这个给来说，它存在的时间也就是我能够感知到的时间，我诞生的时候，一切都诞生，我消亡的时候，一切都消亡（好中二啊。。），在我的认知中什么东西存在那它就是存在，我所不知道的都是不存在的（可能它以后又被我所知，那到那个时候它可能又被我定义为存在，从这个方面说它就很像薛定谔的猫，即存在又不存在，这在乎我的一念之间），这种唯我论的说法虽然很狂妄，但也确实存在。这种理论的核心应该就是自我对外界的感知吧，应为五感都是被转化为体内的信号才被自身感知，所以说如果没有了5感，你还能确定这个世界是存在的吗？ 不过，最近也不怎么信唯我论了，感觉太中二了，，现在看道德经，还有别的影响，倒是有这么一点感觉，所有的一切都是一个混沌，一个点，无所谓对错，分支，前进，差异。有点无为的意思在里面。]]></content>
-      <categories>
-        <category>叹言</category>
-      </categories>
-  </entry>
-  <entry>
     <title><![CDATA[http文档]]></title>
     <url>%2F2016%2F04%2F16%2F%E5%B0%BA%E5%B7%A5%2Fhttp%E6%96%87%E6%A1%A3%2F</url>
     <content type="text"><![CDATA[HTTP协议码住 简介HTTP协议（Hyper Text Transfer Protocol，超文本传输协议）,是用于从万维网（WWW:World Wide Web ）服务器传输超文本到本地浏览器的传送协议。HTTP基于TCP/IP通信协议来传递数据。HTTP基于客户端/服务端（C/S）架构模型，通过一个可靠的链接来交换信息，是一个无状态的请求/响应协议。 特点（1）HTTP是无连接：无连接的含义是限制每次连接只处理一个请求。服务器处理完客户的请求，并收到客户的应答后，即断开连接。采用这种方式可以节省传输时间。（2）HTTP是媒体独立的：只要客户端和服务器知道如何处理的数据内容，任何类型的数据都可以通过HTTP发送。客户端以及服务器指定使用适合的MIME-type内容类型。（3）HTTP是无状态：无状态是指协议对于事务处理没有记忆能力。缺少状态意味着如果后续处理需要前面的信息，则它必须重传，这样可能导致每次连接传送的数据量增大。另一方面，在服务器不需要先前信息时它的应答就较快。 通信流程消息结构HTTP使用统一资源标识符（Uniform Resource Identifiers, URI）来传输数据和建立连接。一旦建立连接后，数据消息就通过类似Internet邮件所使用的格式[RFC5322]和多用途Internet邮件扩展（MIME）[RFC2045]来传送。 客户端请求消息：请求行、请求头部、空行和请求数据。 GET /hello.txt HTTP/1.1 User-Agent: curl/7.16.3 libcurl/7.16.3 OpenSSL/0.9.7l zlib/1.2.3 Host: www.example.com Accept-Language: en, mi 服务端响应消息：状态行、消息报头、空行和响应正文。 HTTP/1.1 200 OK Date: Mon, 27 Jul 2009 12:28:53 GMT Server: Apache Last-Modified: Wed, 22 Jul 2009 19:15:56 GMT ETag: &quot;34aa387-d-1568eb00&quot; Accept-Ranges: bytes Content-Length: 51 Vary: Accept-Encoding Content-Type: text/plain 请求方法GET 请求指定的页面信息，并返回实体主体。HEAD 类似于get请求，只不过返回的响应中没有具体的内容，用于获取报头POST 向指定资源提交数据进行处理请求（例如提交表单或者上传文件）。数据被包含在请求体中。POST请求可能会导致新的资源的建立和/或已有资源的修改。PUT 从客户端向服务器传送的数据取代指定的文档的内容。DELETE 请求服务器删除指定的页面。CONNECT HTTP/1.1协议中预留给能够将连接改为管道方式的代理服务器。OPTIONS 允许客户端查看服务器的性能。TRACE 回显服务器收到的请求，主要用于测试或诊断。 状态码HTTP状态码分类 1** 信息，服务器收到请求，需要请求者继续执行操作2** 成功，操作被成功接收并处理3** 重定向，需要进一步的操作以完成请求4** 客户端错误，请求包含语法错误或无法完成请求5** 服务器错误，服务器在处理请求的过程中发生了错HTTP状态码列表 100 Continue 继续。客户端应继续其请求101 Switching Protocols 切换协议。服务器根据客户端的请求切换协议。只能切换到更高级的协议，例如，切换到HTTP的新版本协议200 OK 请求成功。一般用于GET与POST请求201 Created 已创建。成功请求并创建了新的资源202 Accepted 已接受。已经接受请求，但未处理完成203 Non-Authoritative Information 非授权信息。请求成功。但返回的meta信息不在原始的服务器，而是一个副本204 No Content 无内容。服务器成功处理，但未返回内容。在未更新网页的情况下，可确保浏览器继续显示当前文档205 Reset Content 重置内容。服务器处理成功，用户终端（例如：浏览器）应重置文档视图。可通过此返回码清除浏览器的表单域206 Partial Content 部分内容。服务器成功处理了部分GET请求300 Multiple Choices 多种选择。请求的资源可包括多个位置，相应可返回一个资源特征与地址的列表用于用户终端（例如：浏览器）选择301 Moved Permanently 永久移动。请求的资源已被永久的移动到新URI，返回信息会包括新的URI，浏览器会自动定向到新URI。今后任何新的请求都应使用新的URI代替302 Found 临时移动。与301类似。但资源只是临时被移动。客户端应继续使用原有URI303 See Other 查看其它地址。与301类似。使用GET和POST请求查看304 Not Modified 未修改。所请求的资源未修改，服务器返回此状态码时，不会返回任何资源。客户端通常会缓存访问过的资源，通过提供一个头信息指出客户端希望只返回在指定日期之后修改的资源305 Use Proxy 使用代理。所请求的资源必须通过代理访问306 Unused 已经被废弃的HTTP状态码307 Temporary Redirect 临时重定向。与302类似。使用GET请求重定向400 Bad Request 客户端请求的语法错误，服务器无法理解401 Unauthorized 请求要求用户的身份认证402 Payment Required 保留，将来使用403 Forbidden 服务器理解请求客户端的请求，但是拒绝执行此请求404 Not Found 服务器无法根据客户端的请求找到资源（网页）。通过此代码，网站设计人员可设置”您所请求的资源无法找到”的个性页面405 Method Not Allowed 客户端请求中的方法被禁止406 Not Acceptable 服务器无法根据客户端请求的内容特性完成请求407 Proxy Authentication Required 请求要求代理的身份认证，与401类似，但请求者应当使用代理进行授权408 Request Time-out 服务器等待客户端发送的请求时间过长，超时409 Conflict 服务器完成客户端的PUT请求是可能返回此代码，服务器处理请求时发生了冲突410 Gone 客户端请求的资源已经不存在。410不同于404，如果资源以前有现在被永久删除了可使用410代码，网站设计人员可通过301代码指定资源的新位置411 Length Required 服务器无法处理客户端发送的不带Content-Length的请求信息412 Precondition Failed 客户端请求信息的先决条件错误413 Request Entity Too Large 由于请求的实体过大，服务器无法处理，因此拒绝请求。为防止客户端的连续请求，服务器可能会关闭连接。如果只是服务器暂时无法处理，则会包含一个Retry-After的响应信息414 Request-URI Too Large 请求的URI过长（URI通常为网址），服务器无法处理415 Unsupported Media Type 服务器无法处理请求附带的媒体格式416 Requested range not satisfiable 客户端请求的范围无效417 Expectation Failed 服务器无法满足Expect的请求头信息418 当客户端给一个茶壶发送泡咖啡的请求时，茶壶就返回一个418错误状态码，表示“我是一个茶壶”。500 Internal Server Error 服务器内部错误，无法完成请求501 Not Implemented 服务器不支持请求的功能，无法完成请求502 Bad Gateway 充当网关或代理的服务器，从远端服务器接收到了一个无效的请求503 Service Unavailable 由于超载或系统维护，服务器暂时的无法处理客户端的请求。延时的长度可包含在服务器的Retry-After头信息中504 Gateway Time-out 充当网关或代理的服务器，未及时从远端服务器获取请求505 HTTP Version not supported 服务器不支持请求的HTTP协议的版本，无法完成处理]]></content>
@@ -833,14 +665,6 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[npc]]></title>
-    <url>%2F2015%2F08%2F19%2F%E5%8F%B9%E8%A8%80%2Fnpc%2F</url>
-    <content type="text"><![CDATA[曾经有过这样的想法，在这个世界上，除自己以外的人全部都是NPC。 这个想法其实差不多就是世界只有自己一个人，这和宇宙的中心就是自身这个说法相合。其他的人只是高智能高仿真的NPC，他们对你来说只是可以用来接任务升级的存在。 我不知道的东西一概可以不存在 世界其实并没有全部运行着，他只是存在于你能够触碰到的角落，比如我楼下的人家，现在我没有去他们家，我不知道他们存不存在。这时候世界为了节省能源，可能就会关闭它的存在，它只有结构存在，里面的一切东西都虚无化。然而当你去敲门的时候，这一切都会在你敲门的瞬间回来，所以当你敲门的时候，你可能会看到一张带着深深的厌恶和不耐烦给你开门的脸。 其实这个和那个虐猫狂人的说法很像，你不知道那只猫的死活，只有当你打开盒子的时候才知道，在那之前都是一片虚无。 如果这个成立的话， 那么你的人生不过是上帝开的一盘单机人生模拟游戏，他可能玩到一半角色被车撞，然后你就死掉，也可能到最后老死，不过他肯定会有玩完的那一天，所以我们终究会有死的那一刻。所以作为角色的自己只能希望上帝是个高玩233333 以上都是我自己胡扯]]></content>
-      <categories>
-        <category>叹言</category>
-      </categories>
-  </entry>
-  <entry>
     <title><![CDATA[设计原则]]></title>
     <url>%2F2015%2F07%2F10%2F%E5%B0%BA%E5%B7%A5%2F%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99%2F</url>
     <content type="text"><![CDATA[亲密对齐重复对比一本设计书上看到的，网页设计的三个概念，觉得不错就记一下，不过没有什么demo。 亲密：将相关的元素放在一起，可根据功能性，相似性，重要性等，来实现更好的组织布局，同时要避免过多的分组，孤立的元素，无意义的留白。对齐：老用居中不好，试试别的，可以用画线来增强感觉，线来进行块分，白纸黑线意外的有表现力，避免多种对齐方式同时使用重复：巧妙使用，和音乐里面的重复样的对比：这个用的很多了，不过得注意下颜色颜色这个我觉得其实是最重要的了吧，颜色给人的感觉，象征，暗示，根据使用情况搭配，虽然看过一些颜色的书，但是对这个还是不怎么会。。]]></content>
@@ -849,27 +673,11 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[一只风扇和一群风扇]]></title>
-    <url>%2F2015%2F06%2F20%2F%E5%8F%B9%E8%A8%80%2F%E9%A3%8E%E6%89%87%20%2F</url>
-    <content type="text"><![CDATA[关于群居和独居：独居具有完全的自由，自主，自我。相比群居，没有阶级性，社会性，所依赖的只是自己的能力。而如果是群居，打个比方。一群狼抓到一只鹿（一般鹿都是扮演被抓的嘛），然后，并非是抓到的人能先吃或吃的多。反而是群体的长者或者说是领导能够享受这个权利，然后依次按阶级向下，不过，这种应该还算好的，抓到鹿的那只狼不会是最后吃或者是没吃的那一群体。然而在人类社会，应为有了语言这一独特属性，会有各种戏剧性的事情，会谄谀讨好高位的无能力者，高位的裙带关系着，高位在意的着，这些毫无疑问百分之80的会排在有能力着之前，除了这些，如果能力者对周围的态度和关系如果哪一环除了错，也会导致吃不着。 这种出力不讨好的行为是显然的，但是确实广泛的存在的，为什么呢。 能力者的能力并不完善，比如他只有捕捉的能力而并没有找住处，防范危险，寻求配偶等等的能力，所以他通过依赖于群里通过自己捕捉的能力换取群体中的其他自己达不到的报酬（归所，羁绊，温暖，赞美，羡慕，） 能力者受制于更高能力者，也就是所谓的挟制。 能力者 为了某人因为某个原因而心甘情愿。 以上分别占80,，，，19，，，1，，，没有根据 说到底群体是因为个体的弱小而形成的。群体中的各个分子都能依赖于各样的东西而从群体中换到自己想要的东西。就像是每人都有自己的东西卖，而群体就是提供场所的市场，通过它在个体数目足够多的情况下能够满足每个个体各种各样的需求。 但是为什么像人类这么大的群体，人还是会说自己孤独呢。 是没有同类导致的孤独吗，然而这么大的世界同类是绝对会有的。 是得不到归属感吗，有可能。 是自己的欲望不能满足吗，这句话其实不能理解为自己的，因为大多不能满足的欲望中大部分都是有强加在别的个体上的某些要求和期待，当他们没能按照自己所想做的时候就会产生分歧，导致自己欲望落空，从而产生自己和别人的意见不同，自己是特别的，只有自己才这么想，所以自己是孤独的，这种当事人误以为自己是没有同类的孤独其实 只是自己强加的欲望没有实现罢了。 但是。群体之间的联系纽带不就是这种互相的需求吗？这正是群体之间存在的证明，那么这么说，由于一个人不可能总是由别人妥协，自己欲望达成。 所以可以得出结论在群体之中的人一定会感到孤独。 不过难道孤独就是不好的，就是错误的吗？并不是，例子是这世界上的哲学家全部都享受这孤独，甚至去追寻这个玩意。有个哲学家（玄学）说过这样的话，离群索居之人不是野兽便是神明，虽然不知道他的依据，不过我的认同率在50之间，因为我觉得人是势必要孤独的，必定要有离群的时刻的。但是即使离开了，也不是真正的离开吧。]]></content>
-      <categories>
-        <category>叹言</category>
-      </categories>
-  </entry>
-  <entry>
     <title><![CDATA[九州]]></title>
     <url>%2F2015%2F02%2F25%2F%E6%9D%82%E4%B9%B1%2F%E4%B9%9D%E5%B7%9E%2F</url>
     <content type="text"><![CDATA[为卿采莲兮涉水，为卿夺旗兮长战，为卿遥望兮辞宫阙，为卿白发兮缓缓歌。 昨日青丝，冢间红骨； 月色晚来枯，吊唱相和无； 悲喜总无泪也，是人间白发，剑胆成灰；琴木萧萧也，弦尽时秋风悲回，莫问从头； 英雄总无路，天下千年酒，不解此一愁。 我有屠龙之术，欲翻流云起舞；我有苍茫之志，欲煎七海成田；我怀绝世之锋，欲解抵天之柱；我是藏玉之璞，欲觅神匠成材。吾曾笑云梦乡里文皇帝，长生何须吞白玉；吾曾笑长锋空折武皇帝，挥军难渡雪河西。吾不惧青天之高，黄地之厚；独恨不逢琢玉手，晚生不见凤凰来。噫嘘兮，山之既高，神女空候；水之既深，龙死荒滩。 繁花落尽时,冥云散去间.长风啸雄骑,狂日逐波澜.血满英雄路,功成万骨枯.梦醒花犹存,铁甲依然在.]]></content>
       <categories>
         <category>杂乱</category>
-      </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[wind_song听后感]]></title>
-    <url>%2F2014%2F11%2F03%2F%E5%8F%B9%E8%A8%80%2Fwind-song%E5%90%AC%E5%90%8E%E6%84%9F%2F</url>
-    <content type="text"><![CDATA[被飞吹走的你啊，现在漂到了哪里呢。快回来吧，你的故乡在这里啊。那些存在过的回忆被你放在哪里了呢？多怀恋我们在一起欢笑的那些日子啊。回来吧，这里有牵挂你的人呐。别害怕，没有人会欺负你的呢。 被风吹走的你啊，在外面一定很艰难吧。我是明白的，你那近似于倔强的坚强。小时候你就一直如此呢。眼泪从来不让人看到，总是咬紧牙口，握紧拳头。别灰心，总是会有人爱你的啊。向前走，你会看到越来越广阔的风景的。 被风吹走的你啊，能否看见我的这份思恋呢。同在一片天空下的我们，却看着不一样的风景。我一直等待着，等待着疲倦的你的归来。等到那个时候，我一定露出最棒的微笑，这笑容将抚平你那杯风吹走的年华。]]></content>
-      <categories>
-        <category>叹言</category>
       </categories>
   </entry>
   <entry>
