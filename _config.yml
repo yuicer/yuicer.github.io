@@ -7,13 +7,13 @@ title: yuicer
 subtitle: colorful wanted
 description: 秋露坠。滴尽楚兰红泪。往事旧欢何限意。思量如梦寐。人貌老于前岁。风月宛然无异。座有嘉宾尊有桂。莫辞终夕醉。
 author: yuicer
-avatar: http://yuicer.com/images/me.config/me.png
+avatar: https://img.yuicer.com/me.config/me.png
 language: zh-Hans
-timezone: 
+timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yuicer.com
+url: https://yuicer.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -30,7 +30,6 @@ skip_render:
   - "album/vue.min.js"
   - "game/slime/**"
   - "demo/**"
-
 
 # Writing
 new_post_name: :title.md # File name of new posts

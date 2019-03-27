@@ -15,7 +15,7 @@ var album_box = new Vue({
         if (req.readyState == 4 && req.status == 200) {
           var imgsrc1 = req.responseText.split(',')
           for (var i = 0, l = imgsrc1.length; i < l; i++) {
-            me.imgsrc.unshift('https://yuicer.com/images/' + imgsrc1[i])
+            me.imgsrc.unshift('https://img.com/' + imgsrc1[i])
           }
         }
       }

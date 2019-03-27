@@ -2,9 +2,10 @@
 title: canvas_hosisora
 categories:
   - 尺工
- 
+
 date: 2017-03-16 23:49:00
 ---
+
 <p></p>
 <!-- more -->
 ## 前言
@@ -19,7 +20,9 @@ date: 2017-03-16 23:49:00
 4.循环控制
 
 ## 结构
+
 首先用对象的写法，并分开定义数据和方法,这样一来思路就可以很清晰，每一帧之间直接用下一帧覆盖而不是清空，星星和流星都是有 new 和 draw 两个方法，loop 用 window.requestAnimationFrame 来循环进行帧绘制。
+
 ```
 window.onload = function () {
     hoxisora.init()
@@ -51,13 +54,15 @@ var hoxisora = {
     },
     draw_star: function () {
     },
-    draw_meteor: function () {    
+    draw_meteor: function () {
     },
 }
 ```
 
 ## 夜空
+
 这个绘制很简单，运用 canvas 的线性渐变就能轻松的画出来。
+
 ```
  draw_bg: function () {
         var me = this,
@@ -68,14 +73,17 @@ var hoxisora = {
         me.ctx.fillRect(0, 0, me.width, me.height);
     },
 ```
+
 ## 星星
+
 主要问题是绕中心旋转以及旋转的时候全屏覆盖
 
 首先随机生成星星的对象数组，保存其位置，大小，移动速度，注意这里星星的 x，y 坐标点，生成星星的范围导致绕中心旋转的时候是否会出现屏幕的部分没有星星，即星星图的中心并不是屏幕的中心。
-<img src="http://yuicer.com/images/svg/hoxi.svg">
+<img src="https://img.yuicer.com/svg/hoxi.svg">
 星星的生成范围为
 横坐标：[(x-y)/2,(x+y)/2]
 纵坐标：[0,y]
+
 ```
  new_star: function () {
         var me = this;
@@ -89,7 +97,9 @@ var hoxisora = {
         }
     },
 ```
-save 和 restore 可以看成是新建图层和返回上一图层，translate 首先将中心移动到中点然后旋转当前画布【按时间去旋转】，不过这个时间的设定有个小bug，当一天过去时分秒毫秒都归零的时候旋转的角度会突变导致不平滑而产生卡帧的情况，也可以设到一点月或者年，一月或者一年过去的时候产生卡顿，旋转之后再将绘制相对坐标原点移回来绘制星星，这里星星采用圆点放射性渐变，注意最后 fillRect 生成的星星画布大小
+
+save 和 restore 可以看成是新建图层和返回上一图层，translate 首先将中心移动到中点然后旋转当前画布【按时间去旋转】，不过这个时间的设定有个小 bug，当一天过去时分秒毫秒都归零的时候旋转的角度会突变导致不平滑而产生卡帧的情况，也可以设到一点月或者年，一月或者一年过去的时候产生卡顿，旋转之后再将绘制相对坐标原点移回来绘制星星，这里星星采用圆点放射性渐变，注意最后 fillRect 生成的星星画布大小
+
 ```
    draw_star: function () {
         var me = this,
@@ -114,20 +124,26 @@ save 和 restore 可以看成是新建图层和返回上一图层，translate �
         }
     },
 ```
+
 这里也可以去修改星星的亮度变化，给星星加上闪烁效果，
+
 ## 流星
+
 主要问题是流星的随机生成【时间，位置，速度】和角度
 
 首先流星的生成是要有时间间隔，这里采用随机数来产生
+
 ```
  let i = Math.random();
         if (i > 0.99) {
             me.new_meteor();
         }
 ```
-这里注意流星的产生位置，首先是45度从右上到坐下，在屏幕中出现的范围设置为屏幕上边的[x/3,x],屏幕右边的[0,2y/3]
+
+这里注意流星的产生位置，首先是 45 度从右上到坐下，在屏幕中出现的范围设置为屏幕上边的[x/3,x],屏幕右边的[0,2y/3]
 所以流星的实际画布位置，纵坐标为了保持是在画布外出现为 -90
-<img src="http://yuicer.com/images/svg/ryuusei.svg">
+<img src="https://img.yuicer.com/svg/ryuusei.svg">
+
 ```
  new_meteor: function () {
         var me = this,
@@ -139,7 +155,9 @@ save 和 restore 可以看成是新建图层和返回上一图层，translate �
         me.meteors.push(meteor);
     },
 ```
-这里画流星用了线性渐变，先生成100的正方形，然后显示只显示长130，宽1。
+
+这里画流星用了线性渐变，先生成 100 的正方形，然后显示只显示长 130，宽 1。
+
 ```
   draw_meteor: function () {
         var me = this,
@@ -165,8 +183,11 @@ save 和 restore 可以看成是新建图层和返回上一图层，translate �
         }
     },
 ```
+
 ## 循环
-循环采用 window.requestAnimationFrame 
+
+循环采用 window.requestAnimationFrame
+
 ```
 loop: function () {
         var me = hoxisora;
@@ -183,9 +204,8 @@ loop: function () {
         me.rAF = window.requestAnimationFrame(me.loop);
     },
 ```
-## 手机端出现的bug
-1.浮点数绘制抖动，闪烁，后来都改为整数。无法根除。。
-2.星星数量多后浏览器卡，
-3.在苹果机，星星数量会影响 requestAnimationFrame 的频率。导致动画全部变慢。
-4.安卓机表现不知道为什么普遍比苹果机效果好。有可能和 requestAnimationFrame 有关。
+
+## 手机端出现的 bug
+
+1.浮点数绘制抖动，闪烁，后来都改为整数。无法根除。。 2.星星数量多后浏览器卡， 3.在苹果机，星星数量会影响 requestAnimationFrame 的频率。导致动画全部变慢。 4.安卓机表现不知道为什么普遍比苹果机效果好。有可能和 requestAnimationFrame 有关。
 5.ios 在 webview 里面，比如 app 里面或者微信，打开后再退回桌面【放到后台】，再进入网页的时候会卡掉，严重的崩溃。

@@ -111,8 +111,4 @@ function DownLoad(i, src, max) {
 之后我又换成 lofter 的网址，试了两种方式都可以。
 
 放点爬到的猫片
-他喵的，竟然做了防盗链，访问 403，我还是传七牛吧。
-
-<img src="http://yuicer.com/images/photos/cat0.jpg">
-<img src="http://yuicer.com/images/photos/cat1.jpg"> 
-<img src="http://yuicer.com/images/photos/cat2.jpg">
+-----他喵的，竟然做了防盗链，访问 403，我还是传七牛吧。
