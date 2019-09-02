@@ -63,7 +63,7 @@
 <meta property="og:url" content="https://yuicer.com/2017/08/15/new/跨域/index.html">
 <meta property="og:site_name" content="yuicer">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-08T12:51:07.726Z">
+<meta property="og:updated_time" content="2019-09-02T08:39:28.652Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="跨域">
 
@@ -328,7 +328,6 @@
 
       
         <p></p><p></p><br><a id="more"></a><p></p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近写服务端的接口时，遇到了很多新的东西。比如本来很熟悉的跨域</p>
 <h2 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a>跨域</h2><p>这个玩意基本上都是众所周知的东西，不在一个主机下，不在一个目录下的互相 xmlhttprequest 请求都算是跨域。并且不被允许（script 标签不算），主要为了防止一些恶意脚本<br>但是这导致网页开发很麻烦，不过后又有另外一个标准叫做 cors, 它允许请求进行跨域。目前浏览器支持良好。</p>
 <p>跨域资源共享标准新增了一组 HTTP 首部字段，允许服务器声明哪些源站有权限访问哪些资源。另外，规范要求，对那些可能对服务器数据产生副作用的 HTTP 请求方法（特别是 GET 以外的 HTTP 请求，或者搭配某些 MIME 类型的 POST 请求），浏览器必须首先使用 OPTIONS 方法发起一个预检请求（preflight request），从而获知服务端是否允许该跨域请求。服务器确认允许之后，才发起实际的 HTTP 请求。在预检请求的返回中，服务器端也可以通知客户端，是否需要携带身份凭证（包括 Cookies 和 HTTP 认证相关数据）。<br>以上来自 mdn，</p>
 <p>所以主要分两种请求</p>
@@ -498,7 +497,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#跨域"><span class="nav-number">2.</span> <span class="nav-text">跨域</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简单请求"><span class="nav-number">2.1.</span> <span class="nav-text">简单请求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复杂请求"><span class="nav-number">2.2.</span> <span class="nav-text">复杂请求</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#服务端配置"><span class="nav-number">3.</span> <span class="nav-text">服务端配置</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#跨域"><span class="nav-number">1.</span> <span class="nav-text">跨域</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简单请求"><span class="nav-number">1.1.</span> <span class="nav-text">简单请求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复杂请求"><span class="nav-number">1.2.</span> <span class="nav-text">复杂请求</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#服务端配置"><span class="nav-number">2.</span> <span class="nav-text">服务端配置</span></a></li></ol></div>
             
 
           </div>
