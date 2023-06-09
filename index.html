@@ -1,30 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="shortcut icon" href="https://yuicer.com/images/me.config/me.png" type="image/x-icon">
-  <title>yuicer</title>
-</head>
-<body>
-  <h3>
-    hexo 已经被弃用，转移到了 vuepress <a href="https://blog.yuicer.com">blog</a>
-  </h3>
-</body>
-</html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://img.yuicer.com/me.config/me.png" />
+    <title>Catice</title>
+  </head>
+  <body>
+    <div id="box">
+      <div id="wrapper">
+        <h1>Catice</h1>
+        <h2>
+          <a href="http://blog.yuicer.com"> Blog </a>
+          <p>Something more like a daily notes</p>
+        </h2>
+        <h2>
+          <a href="http://yuicer.com/flappycat"
+            >Flappy cat (play in h5 or pc)</a
+          >
+          <p>Inspired by flappy bird, just fly with click</p>
+        </h2>
+        <h2>
+          <a href="http://yuicer.com/klotski"> Klotski (h5+pc)</a>
+          <p>
+            HuaRong Road, click the pane to move, when you pass the level, click
+            the screen to upgrade
+          </p>
+        </h2>
+        <h2>
+          <a href="http://yuicer.com/rainbowCat"> Cat plane battle(pc)</a>
+          <p>Move with WASD key, fire with Space key</p>
+        </h2>
+        <h2>
+          <a href="http://yuicer.com/slime">Defeat the slime (pc)</a>
+          <p>
+            Move with WASD key, shoot with mouse click, better to attack the
+            back of slime
+          </p>
+        </h2>
+        <!-- <h2>
+          <a href="http://yuicer.com/maze">【迷宫】(pc)</a>
+          <p>wasd 方向键移动，进行迷宫宝藏探索</p>
+        </h2>
+        <h2>
+          <a href="http://yuicer.com/snake">【贪吃蛇】</a>
+          <p>吃掉其他方块，加载较慢</p>
+        </h2> -->
+      </div>
+    </div>
+    <script>
+      const color = [
+        '#58B2DC',
+        '#9E7A7A',
+        '#B5495B',
+        '#B47157',
+        '#7BA23F',
+        '#6E75A4',
+        '#0C0C0C',
+        '#707C74',
+      ];
+      const bgdom = document.querySelector('#box');
+      bgdom.style.backgroundColor =
+        color[Math.floor(Math.random() * color.length)];
+    </script>
+  </body>
+  <style scoped>
+    html {
+      font-size: calc(100vw / 3.75);
+    }
+    html,
+    body,
+    #box {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+    }
 
-<style>
-body{
-  background-color: mintcream;
-}
-h3{
-  color: #323232;
-  text-align: center;
-  margin-top: 20%;
-}
-a{
-  text-decoration: none;
-  color: #3370ff;
-}
-</style>
+    #box {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+      width: 100%;
+      height: 100%;
+      min-height: 600px;
+      min-width: 375px;
+      background-image: url('./texture.png');
+    }
+    #wrapper {
+      position: absolute;
+      left: 0;
+      width: 320px;
+      text-align: center;
+      left: 50%;
+      top: 30%;
+      transform: translate3d(-50%, -30%, 0);
+      /* margin-left: -160px; */
+      /* margin-top: -160px; */
+
+      color: #fff;
+      font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    h1 {
+      font-weight: bold;
+      font-size: 36px;
+      letter-spacing: 0.8em;
+      text-transform: uppercase;
+      margin-bottom: 50px;
+      margin-left: 20px;
+    }
+
+    h2 {
+      font-weight: normal;
+      font-size: 26px;
+      letter-spacing: 1em;
+      margin-bottom: 30px;
+      margin-left: 20px;
+      position: relative;
+    }
+    h2 > p {
+      font-size: 15px;
+    }
+    h2 {
+      font-size: 18px;
+      margin-left: -5px;
+      position: relative;
+      letter-spacing: 2px;
+    }
+    p {
+      font-size: 16px;
+      font-weight: lighter;
+      line-height: 2em;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+
+    a {
+      color: currentColor;
+      text-decoration: none;
+      font-weight: normal;
+      position: relative;
+    }
+  </style>
+</html>
